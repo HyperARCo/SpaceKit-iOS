@@ -19,7 +19,6 @@
 		C4E3772E28042D9700886C88 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4E3772C28042D9700886C88 /* LaunchScreen.storyboard */; };
 		C4E3773928042D9700886C88 /* SpaceKitSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E3773828042D9700886C88 /* SpaceKitSampleTests.swift */; };
 		C4E3774328042D9700886C88 /* SpaceKitSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E3774228042D9700886C88 /* SpaceKitSampleUITests.swift */; };
-		C4E3774528042D9700886C88 /* SpaceKitSampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E3774428042D9700886C88 /* SpaceKitSampleUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,7 +67,6 @@
 		C4E3773828042D9700886C88 /* SpaceKitSampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceKitSampleTests.swift; sourceTree = "<group>"; };
 		C4E3773E28042D9700886C88 /* SpaceKitSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpaceKitSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4E3774228042D9700886C88 /* SpaceKitSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceKitSampleUITests.swift; sourceTree = "<group>"; };
-		C4E3774428042D9700886C88 /* SpaceKitSampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceKitSampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C4E3775228042E4A00886C88 /* SpaceKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SpaceKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4E377562804304400886C88 /* SpaceKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SpaceKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -147,7 +145,6 @@
 			isa = PBXGroup;
 			children = (
 				C4E3774228042D9700886C88 /* SpaceKitSampleUITests.swift */,
-				C4E3774428042D9700886C88 /* SpaceKitSampleUITestsLaunchTests.swift */,
 			);
 			path = SpaceKitSampleUITests;
 			sourceTree = "<group>";
@@ -319,7 +316,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4E3774328042D9700886C88 /* SpaceKitSampleUITests.swift in Sources */,
-				C4E3774528042D9700886C88 /* SpaceKitSampleUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
