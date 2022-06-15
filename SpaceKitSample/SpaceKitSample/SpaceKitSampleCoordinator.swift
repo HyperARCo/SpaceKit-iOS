@@ -4,6 +4,8 @@ import SpaceKit
 class SpaceKitSampleCoordinator {
 	private let navigationController: UINavigationController
 	
+	private var listCoordinator: ListCoordinator?
+	
 	init(navigationController: UINavigationController) {
 		self.navigationController = navigationController
 	}
@@ -26,6 +28,13 @@ class SpaceKitSampleCoordinator {
 			case .success(let context):
 				let spaceKitViewController = SpaceKit.SpaceKitViewControllerFactory(context: context).make()
 				let rootViewController = RootViewController(spaceKitViewController: spaceKitViewController, spaceKitContext: context)
+				
+				rootViewController.listButtonAction = { [weak self] in
+					guard let self = self else { return }
+					self.listCoordinator = ListCoordinator(navigationController: self.navigationController)
+					self.listCoordinator?.start()
+				}
+				
 				navigationController.setViewControllers([rootViewController], animated: false)
 			}
 		}
@@ -59,6 +68,22 @@ class RootViewController: UIViewController {
 	private let spaceKitViewController: UIViewController
 	private let spaceKitContext: SpaceKit.Context
 	
+	var listButtonAction: () -> Void = { }
+	
+	private lazy var listButton: UIButton = {
+		let button = UIButton(type: .custom)
+		button.translatesAutoresizingMaskIntoConstraints = false
+		button.setTitle("Shopping List", for: .normal)
+		button.addTarget(self, action: #selector(listButtonTapped), for: .primaryActionTriggered)
+		button.backgroundColor = .white
+		button.setTitleColor(UIColor.systemBlue, for: .normal)
+		button.layer.cornerRadius = 10
+		button.layer.borderColor = UIColor.gray.cgColor
+		button.layer.borderWidth = 1
+		button.contentEdgeInsets = .init(top: 8, left: 8, bottom: 8, right: 8)
+		return button
+	}()
+	
 	init(spaceKitViewController: UIViewController, spaceKitContext: SpaceKit.Context) {
 		self.spaceKitViewController = spaceKitViewController
 		self.spaceKitContext = spaceKitContext
@@ -73,5 +98,17 @@ class RootViewController: UIViewController {
 		addChild(spaceKitViewController)
 		view.addSubview(spaceKitViewController.view)
 		spaceKitViewController.didMove(toParent: self)
+		
+		view.addSubview(listButton)
+		NSLayoutConstraint.activate([
+			listButton.trailingAnchor.constraint(equalTo: view.readableContentGuide.trailingAnchor),
+			listButton.topAnchor.constraint(equalTo: view.readableContentGuide.topAnchor),
+			listButton.heightAnchor.constraint(equalToConstant: 44),
+		])
+	}
+	
+	@objc
+	private func listButtonTapped() {
+		listButtonAction()
 	}
 }
