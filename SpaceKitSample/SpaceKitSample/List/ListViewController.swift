@@ -1,8 +1,13 @@
 import UIKit
 
 struct ListItem: Hashable {
+	enum AccessoryKind {
+		case plus, checkmark
+	}
+	
 	let identifier = UUID()
 	let name: String
+	var accessoryKind: AccessoryKind
 }
 
 class ListViewController: UITableViewController {
@@ -21,16 +26,8 @@ class ListViewController: UITableViewController {
 	typealias Item = ListItem
 	typealias Snapshot = NSDiffableDataSourceSnapshot<Section, Item>
 	
-	var listData = [
-		ListItem(name: "Apples"),
-		ListItem(name: "Bananas"),
-	]
-	
-	var productData = [
-		ListItem(name: "Carrots"),
-		ListItem(name: "Dates"),
-		ListItem(name: "Eggplant")
-	]
+	var listData = ["Apples", "Bananas"].map { ListItem(name: $0, accessoryKind: .checkmark) }
+	var productData = ["Carrots", "Dates", "Eggplant"].map { ListItem(name: $0, accessoryKind: .plus)}
 	
 	private lazy var dataSource = ListDataSource(tableView: tableView)
 	
@@ -53,7 +50,7 @@ class ListViewController: UITableViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		tableView.register(UITableViewCell.self, forCellReuseIdentifier: "reuse id")
+		tableView.register(ListCell.self, forCellReuseIdentifier: ListCell.reuseIdentifier)
 		
 		tableView.dataSource = dataSource
 		let snapshot = createSnapshot()
@@ -79,10 +76,12 @@ class ListViewController: UITableViewController {
 		
 		switch section {
 		case .list:
-			let listItem = listData.remove(at: indexPath.row)
+			var listItem = listData.remove(at: indexPath.row)
+			listItem.accessoryKind = .plus
 			productData.append(listItem)
 		case .products:
-			let productItem = productData.remove(at: indexPath.row)
+			var productItem = productData.remove(at: indexPath.row)
+			productItem.accessoryKind = .checkmark
 			listData.append(productItem)
 		}
 		
@@ -94,8 +93,11 @@ class ListViewController: UITableViewController {
 class ListDataSource: UITableViewDiffableDataSource<ListViewController.Section, ListViewController.Item> {
 	init(tableView: UITableView) {
 		super.init(tableView: tableView) { tableView, indexPath, itemIdentifier in
-			let cell = tableView.dequeueReusableCell(withIdentifier: "reuse id", for: indexPath)
-			cell.textLabel?.text = itemIdentifier.name
+			guard let cell = tableView.dequeueReusableCell(withIdentifier: ListCell.reuseIdentifier, for: indexPath) as? ListCell else {
+				return UITableViewCell()
+			}
+			
+			cell.configure(with: itemIdentifier)
 			return cell
 		}
 	}

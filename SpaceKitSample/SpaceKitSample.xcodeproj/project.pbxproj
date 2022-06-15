@@ -23,6 +23,7 @@
 		C4E3773928042D9700886C88 /* SpaceKitSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E3773828042D9700886C88 /* SpaceKitSampleTests.swift */; };
 		C4E3774328042D9700886C88 /* SpaceKitSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E3774228042D9700886C88 /* SpaceKitSampleUITests.swift */; };
 		C4EC318F285A09B500DFBD8A /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EC318E285A09B500DFBD8A /* RootViewController.swift */; };
+		C4EC3192285A217400DFBD8A /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EC3191285A217400DFBD8A /* ListCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		C4E3775228042E4A00886C88 /* SpaceKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SpaceKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4E377562804304400886C88 /* SpaceKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SpaceKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4EC318E285A09B500DFBD8A /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		C4EC3191285A217400DFBD8A /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,13 +135,12 @@
 			isa = PBXGroup;
 			children = (
 				C46C6AD42851F93100C5038F /* HMDF */,
+				C4EC3190285A215C00DFBD8A /* List */,
 				C4E3772128042D9600886C88 /* AppDelegate.swift */,
 				C4E3772328042D9600886C88 /* SceneDelegate.swift */,
 				C4E3772528042D9600886C88 /* AppCoordinator.swift */,
 				C4EC318E285A09B500DFBD8A /* RootViewController.swift */,
 				C418B3CD285A088000CA2507 /* LoadingViewController.swift */,
-				C418B3C92859D77A00CA2507 /* ListCoordinator.swift */,
-				C418B3CB2859D78100CA2507 /* ListViewController.swift */,
 				C4E3772A28042D9700886C88 /* Assets.xcassets */,
 				C4E3772C28042D9700886C88 /* LaunchScreen.storyboard */,
 				C4E3772F28042D9700886C88 /* Info.plist */,
@@ -171,6 +172,16 @@
 				C4E3775228042E4A00886C88 /* SpaceKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C4EC3190285A215C00DFBD8A /* List */ = {
+			isa = PBXGroup;
+			children = (
+				C418B3C92859D77A00CA2507 /* ListCoordinator.swift */,
+				C418B3CB2859D78100CA2507 /* ListViewController.swift */,
+				C4EC3191285A217400DFBD8A /* ListCell.swift */,
+			);
+			path = List;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -316,6 +327,7 @@
 				C4E3772228042D9600886C88 /* AppDelegate.swift in Sources */,
 				C4EC318F285A09B500DFBD8A /* RootViewController.swift in Sources */,
 				C418B3CC2859D78100CA2507 /* ListViewController.swift in Sources */,
+				C4EC3192285A217400DFBD8A /* ListCell.swift in Sources */,
 				C4E3772428042D9600886C88 /* SceneDelegate.swift in Sources */,
 				C418B3CE285A088000CA2507 /* LoadingViewController.swift in Sources */,
 			);
