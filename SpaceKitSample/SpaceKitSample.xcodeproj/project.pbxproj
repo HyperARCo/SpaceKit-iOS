@@ -17,11 +17,12 @@
 		C46C6AD92851FD7500C5038F /* geos in Embed Frameworks */ = {isa = PBXBuildFile; productRef = C46C6AD72851FD5800C5038F /* geos */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		C4E3772228042D9600886C88 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E3772128042D9600886C88 /* AppDelegate.swift */; };
 		C4E3772428042D9600886C88 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E3772328042D9600886C88 /* SceneDelegate.swift */; };
-		C4E3772628042D9600886C88 /* SpaceKitSampleCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E3772528042D9600886C88 /* SpaceKitSampleCoordinator.swift */; };
+		C4E3772628042D9600886C88 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E3772528042D9600886C88 /* AppCoordinator.swift */; };
 		C4E3772B28042D9700886C88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4E3772A28042D9700886C88 /* Assets.xcassets */; };
 		C4E3772E28042D9700886C88 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4E3772C28042D9700886C88 /* LaunchScreen.storyboard */; };
 		C4E3773928042D9700886C88 /* SpaceKitSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E3773828042D9700886C88 /* SpaceKitSampleTests.swift */; };
 		C4E3774328042D9700886C88 /* SpaceKitSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E3774228042D9700886C88 /* SpaceKitSampleUITests.swift */; };
+		C4EC318F285A09B500DFBD8A /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EC318E285A09B500DFBD8A /* RootViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,7 +67,7 @@
 		C4E3771E28042D9600886C88 /* SpaceKitSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceKitSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4E3772128042D9600886C88 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4E3772328042D9600886C88 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C4E3772528042D9600886C88 /* SpaceKitSampleCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceKitSampleCoordinator.swift; sourceTree = "<group>"; };
+		C4E3772528042D9600886C88 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		C4E3772A28042D9700886C88 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C4E3772D28042D9700886C88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C4E3772F28042D9700886C88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -76,6 +77,7 @@
 		C4E3774228042D9700886C88 /* SpaceKitSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceKitSampleUITests.swift; sourceTree = "<group>"; };
 		C4E3775228042E4A00886C88 /* SpaceKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SpaceKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4E377562804304400886C88 /* SpaceKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SpaceKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4EC318E285A09B500DFBD8A /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,7 +135,8 @@
 				C46C6AD42851F93100C5038F /* HMDF */,
 				C4E3772128042D9600886C88 /* AppDelegate.swift */,
 				C4E3772328042D9600886C88 /* SceneDelegate.swift */,
-				C4E3772528042D9600886C88 /* SpaceKitSampleCoordinator.swift */,
+				C4E3772528042D9600886C88 /* AppCoordinator.swift */,
+				C4EC318E285A09B500DFBD8A /* RootViewController.swift */,
 				C418B3CD285A088000CA2507 /* LoadingViewController.swift */,
 				C418B3C92859D77A00CA2507 /* ListCoordinator.swift */,
 				C418B3CB2859D78100CA2507 /* ListViewController.swift */,
@@ -309,8 +312,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C418B3CA2859D77A00CA2507 /* ListCoordinator.swift in Sources */,
-				C4E3772628042D9600886C88 /* SpaceKitSampleCoordinator.swift in Sources */,
+				C4E3772628042D9600886C88 /* AppCoordinator.swift in Sources */,
 				C4E3772228042D9600886C88 /* AppDelegate.swift in Sources */,
+				C4EC318F285A09B500DFBD8A /* RootViewController.swift in Sources */,
 				C418B3CC2859D78100CA2507 /* ListViewController.swift in Sources */,
 				C4E3772428042D9600886C88 /* SceneDelegate.swift in Sources */,
 				C418B3CE285A088000CA2507 /* LoadingViewController.swift in Sources */,
