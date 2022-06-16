@@ -4,16 +4,6 @@
 
 import UIKit
 
-struct ListItem: Hashable {
-	enum AccessoryKind {
-		case plus, checkmark
-	}
-	
-	let identifier = UUID()
-	let name: String
-	var accessoryKind: AccessoryKind
-}
-
 class ListViewController: UITableViewController {
 	enum Section: Int {
 		case list
@@ -30,8 +20,8 @@ class ListViewController: UITableViewController {
 	typealias Item = ListItem
 	typealias Snapshot = NSDiffableDataSourceSnapshot<Section, Item>
 	
-	var listData = ["Apples", "Bananas"].map { ListItem(name: $0, accessoryKind: .checkmark) }
-	var productData = ["Carrots", "Dates", "Eggplant"].map { ListItem(name: $0, accessoryKind: .plus)}
+	var listData = ["Apples", "Bananas"].map { ListItem(name: $0, accessory: .checkmark) }
+	var productData = ["Carrots", "Dates", "Eggplant"].map { ListItem(name: $0, accessory: .plus)}
 	
 	private lazy var dataSource = ListDataSource(tableView: tableView)
 	
@@ -81,11 +71,11 @@ class ListViewController: UITableViewController {
 		switch section {
 		case .list:
 			var listItem = listData.remove(at: indexPath.row)
-			listItem.accessoryKind = .plus
+			listItem.accessory = .plus
 			productData.append(listItem)
 		case .products:
 			var productItem = productData.remove(at: indexPath.row)
-			productItem.accessoryKind = .checkmark
+			productItem.accessory = .checkmark
 			listData.append(productItem)
 		}
 		

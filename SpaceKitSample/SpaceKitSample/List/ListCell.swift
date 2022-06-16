@@ -4,13 +4,41 @@
 
 import UIKit
 
+struct ListItem: Hashable {
+	enum Accessory {
+		case plus, checkmark
+		
+		static let checkmarkImage = UIImage(systemName: "checkmark.circle.fill")
+		static let plusImage = UIImage(systemName: "plus.circle.fill")
+		
+		var image: UIImage? {
+			switch self {
+			case .plus:
+				return Self.plusImage
+			case .checkmark:
+				return Self.checkmarkImage
+			}
+		}
+		
+		var tintColor: UIColor {
+			switch self {
+			case .plus:
+				return .systemGreen
+			case .checkmark:
+				return .systemBlue
+			}
+		}
+	}
+	
+	let identifier = UUID()
+	let name: String
+	var accessory: Accessory
+}
+
 class ListCell: UITableViewCell {
 	static let reuseIdentifier = String(describing: ListCell.self)
 	
-	private static let checkmarkImage = UIImage(systemName: "checkmark.circle.fill")
-	private static let plusImage = UIImage(systemName: "plus.circle.fill")
-	
-	private let accessoryImageView = UIImageView(image: plusImage)
+	private let accessoryImageView = UIImageView(image: ListItem.Accessory.plusImage)
 	
 	override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
 		super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -21,14 +49,7 @@ class ListCell: UITableViewCell {
 	
 	func configure(with item: ListItem) {
 		textLabel?.text = item.name
-		
-		switch item.accessoryKind {
-		case .checkmark:
-			accessoryImageView.image = Self.checkmarkImage
-			accessoryImageView.tintColor = .systemBlue
-		case .plus:
-			accessoryImageView.image = Self.plusImage
-			accessoryImageView.tintColor = .systemGreen
-		}
+		accessoryImageView.image = item.accessory.image
+		accessoryImageView.tintColor = item.accessory.tintColor
 	}
 }
