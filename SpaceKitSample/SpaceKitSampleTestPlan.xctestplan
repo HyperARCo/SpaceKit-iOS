@@ -1,0 +1,32 @@
+{
+  "configurations" : [
+    {
+      "id" : "2CCC0879-31E7-4A67-B7F1-AF3D0657B10E",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : false,
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:SpaceKitSample.xcodeproj",
+        "identifier" : "C4E3773328042D9700886C88",
+        "name" : "SpaceKitSampleTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:SpaceKitSample.xcodeproj",
+        "identifier" : "C4E3773D28042D9700886C88",
+        "name" : "SpaceKitSampleUITests"
+      }
+    }
+  ],
+  "version" : 1
+}
