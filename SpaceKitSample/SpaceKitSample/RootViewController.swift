@@ -14,7 +14,8 @@ class RootViewController: UIViewController {
 	private lazy var listButton: UIButton = {
 		let button = UIButton(type: .custom)
 		button.translatesAutoresizingMaskIntoConstraints = false
-		button.setTitle("Shopping List", for: .normal)
+		let config = UIImage.SymbolConfiguration(pointSize: 32)
+		button.setImage(UIImage(systemName: "cart", withConfiguration: config), for: .normal)
 		button.addTarget(self, action: #selector(listButtonTapped), for: .primaryActionTriggered)
 		button.backgroundColor = .white
 		button.setTitleColor(UIColor.systemBlue, for: .normal)
@@ -44,7 +45,6 @@ class RootViewController: UIViewController {
 		NSLayoutConstraint.activate([
 			listButton.trailingAnchor.constraint(equalTo: view.readableContentGuide.trailingAnchor),
 			listButton.topAnchor.constraint(equalTo: view.readableContentGuide.topAnchor),
-			listButton.heightAnchor.constraint(equalToConstant: 44),
 		])
 	}
 	
