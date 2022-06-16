@@ -19,7 +19,6 @@
 		C4E3772E28042D9700886C88 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4E3772C28042D9700886C88 /* LaunchScreen.storyboard */; };
 		C4E3773928042D9700886C88 /* SpaceKitSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E3773828042D9700886C88 /* SpaceKitSampleTests.swift */; };
 		C4E3774328042D9700886C88 /* SpaceKitSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E3774228042D9700886C88 /* SpaceKitSampleUITests.swift */; };
-		C4E3774528042D9700886C88 /* SpaceKitSampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E3774428042D9700886C88 /* SpaceKitSampleUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +56,7 @@
 /* Begin PBXFileReference section */
 		C411E5192857718500553A06 /* SpaceKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SpaceKit.xcframework; path = ../SpaceKit.xcframework; sourceTree = "<group>"; };
 		C46C6AD42851F93100C5038F /* HMDF */ = {isa = PBXFileReference; lastKnownFileType = folder; path = HMDF; sourceTree = "<group>"; };
+		C4E09729285B56FD00C51668 /* SpaceKitSampleTestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = SpaceKitSampleTestPlan.xctestplan; sourceTree = "<group>"; };
 		C4E3771E28042D9600886C88 /* SpaceKitSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceKitSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4E3772128042D9600886C88 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4E3772328042D9600886C88 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,7 +68,6 @@
 		C4E3773828042D9700886C88 /* SpaceKitSampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceKitSampleTests.swift; sourceTree = "<group>"; };
 		C4E3773E28042D9700886C88 /* SpaceKitSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpaceKitSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4E3774228042D9700886C88 /* SpaceKitSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceKitSampleUITests.swift; sourceTree = "<group>"; };
-		C4E3774428042D9700886C88 /* SpaceKitSampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceKitSampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C4E3775228042E4A00886C88 /* SpaceKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SpaceKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4E377562804304400886C88 /* SpaceKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SpaceKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -103,6 +102,7 @@
 		C4E3771528042D9600886C88 = {
 			isa = PBXGroup;
 			children = (
+				C4E09729285B56FD00C51668 /* SpaceKitSampleTestPlan.xctestplan */,
 				C4E3772028042D9600886C88 /* SpaceKitSample */,
 				C4E3773728042D9700886C88 /* SpaceKitSampleTests */,
 				C4E3774128042D9700886C88 /* SpaceKitSampleUITests */,
@@ -147,7 +147,6 @@
 			isa = PBXGroup;
 			children = (
 				C4E3774228042D9700886C88 /* SpaceKitSampleUITests.swift */,
-				C4E3774428042D9700886C88 /* SpaceKitSampleUITestsLaunchTests.swift */,
 			);
 			path = SpaceKitSampleUITests;
 			sourceTree = "<group>";
@@ -319,7 +318,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4E3774328042D9700886C88 /* SpaceKitSampleUITests.swift in Sources */,
-				C4E3774528042D9700886C88 /* SpaceKitSampleUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -531,7 +529,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = HA58MLGLMC;
+				DEVELOPMENT_TEAM = 344R59CSRM;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MARKETING_VERSION = 1.0;
@@ -551,7 +549,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = HA58MLGLMC;
+				DEVELOPMENT_TEAM = 344R59CSRM;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MARKETING_VERSION = 1.0;
@@ -570,15 +568,16 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = HA58MLGLMC;
+				DEVELOPMENT_TEAM = 344R59CSRM;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.simongoldring.SpaceKitDemoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = SpaceKitDemo;
+				TEST_TARGET_NAME = SpaceKitSample;
 			};
 			name = Debug;
 		};
@@ -588,15 +587,16 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = HA58MLGLMC;
+				DEVELOPMENT_TEAM = 344R59CSRM;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.simongoldring.SpaceKitDemoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = SpaceKitDemo;
+				TEST_TARGET_NAME = SpaceKitSample;
 			};
 			name = Release;
 		};
