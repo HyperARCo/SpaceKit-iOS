@@ -17,27 +17,26 @@ jobs:
       uses: actions/checkout@v3
 
     - name: Remove existing framework
-      run: rm -rf SpaceKit.xcframework 
+      run: rm -rf SpaceKit.xcframework
 
-    # - name: Download SpaceKit.xcframework artifact
-    #   uses: actions/download-artifact@v3
-    #   with:
-    #     name: xcframework
-
-    - name: Download SpaceKit.xcframeork artifact
+    - name: Download SpaceKit.xcframework artifact
       run: |
-        xcframework-artifact-id = $(gh api \
+        xcframework_artifact_id=$(gh api \
             -H "Accept: application/vnd.github.v3+json" \
             /repos/DentReality/iOS-Hyper/actions/artifacts \
             --jq '[.artifacts[]|select(.name=="xcframework")][0].id')
+
+        echo "Artifact ID: $xcframework_artifact_id"
         
         gh api \           
           -H "Accept: application/vnd.github.v3+json" \
-          "/repos/DentReality/iOS-Hyper/actions/artifacts/$xcframework-artifact-id/zip" > xcframework.zip
+          /repos/DentReality/iOS-Hyper/actions/artifacts/$xcframework_artifact_id/zip > xcframework.zip
 
         unzip xcframework.zip
 
         rm -rf xcframework.zip
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     # - name: Remove existing documentation archive
     #   run: rm -rf SpaceKit.doccarchive 
