@@ -1,0 +1,54 @@
+name: Update SpaceKit SDK
+
+on:
+    workflow_dispatch:
+
+env:
+  DEVELOPER_DIR: /Applications/Xcode_13.4.1.app/Contents/Developer
+
+jobs:
+  open_pull_request:
+    name: Open pull request
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Remove existing framework
+      run: rm -rf SpaceKit.xcframework 
+
+    # - name: Download SpaceKit.xcframework artifact
+    #   uses: actions/download-artifact@v3
+    #   with:
+    #     name: xcframework
+
+    - name: Download SpaceKit.xcframeork artifact
+      run: |
+        xcframework-artifact-id = $(gh api \
+            -H "Accept: application/vnd.github.v3+json" \
+            /repos/DentReality/iOS-Hyper/actions/artifacts \
+            --jq '[.artifacts[]|select(.name=="xcframework")][0].id')
+        
+        gh api \           
+          -H "Accept: application/vnd.github.v3+json" \
+          "/repos/DentReality/iOS-Hyper/actions/artifacts/$xcframework-artifact-id/zip" > xcframework.zip
+
+        unzip xcframework.zip
+
+        rm -rf xcframework.zip
+
+    # - name: Remove existing documentation archive
+    #   run: rm -rf SpaceKit.doccarchive 
+
+    # - name: Download SpaceKit.doccarchive artifact
+    #   uses: actions/download-artifact@v3
+    #   with:
+    #     name: doccarchive
+
+    # - name: Unzip documentation archive
+    #   run: unzip doccarchive.zip
+    
+    - name: Create pull request
+      uses: peter-evans/create-pull-request@v4
