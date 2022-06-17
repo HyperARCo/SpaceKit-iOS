@@ -32,6 +32,7 @@ struct ListItem: Hashable {
 	
 	let identifier = UUID()
 	let name: String
+	let iconName: String
 	var accessory: Accessory
 }
 
@@ -49,6 +50,7 @@ class ListCell: UITableViewCell {
 	
 	func configure(with item: ListItem) {
 		textLabel?.text = item.name
+		imageView?.image = UIImage(named: item.iconName)
 		accessoryImageView.image = item.accessory.image
 		accessoryImageView.tintColor = item.accessory.tintColor
 	}

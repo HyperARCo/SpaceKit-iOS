@@ -27,7 +27,7 @@ class ListViewController: UITableViewController {
 	
 	init(products: [Product]) {
 		self.productItems = products.map { product in
-			ListItem(name: product.name, accessory: .plus)
+			ListItem(name: product.name, iconName: product.icon, accessory: .plus)
 		}
 		super.init(style: .grouped)
 	}
