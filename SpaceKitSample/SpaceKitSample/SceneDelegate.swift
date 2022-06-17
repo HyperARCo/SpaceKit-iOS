@@ -1,9 +1,13 @@
+//
+// Copyright © 2022 Dent Reality. All rights reserved.
+//
+
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 	var window: UIWindow?
-	var coordinator: SpaceKitSampleCoordinator?
+	var appCoordinator: AppCoordinator?
 
 	func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
 		// Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
@@ -11,10 +15,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 		// This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
 		guard let windowScene = (scene as? UIWindowScene) else { return }
 		window = UIWindow(windowScene: windowScene)
+		
 		let navigationController = UINavigationController()
 		window?.rootViewController = navigationController
-		coordinator = SpaceKitSampleCoordinator(navigationController: navigationController)
-		coordinator?.start()
+		
+		appCoordinator = AppCoordinator(navigationController: navigationController)
+		appCoordinator?.start()
+		
 		window?.makeKeyAndVisible()
 	}
 

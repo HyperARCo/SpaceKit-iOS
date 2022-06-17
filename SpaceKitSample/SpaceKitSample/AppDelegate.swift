@@ -1,3 +1,7 @@
+//
+// Copyright © 2022 Dent Reality. All rights reserved.
+//
+
 import UIKit
 
 @main
