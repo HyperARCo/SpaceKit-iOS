@@ -16,6 +16,7 @@
 		C46C6AD82851FD5800C5038F /* geos in Frameworks */ = {isa = PBXBuildFile; productRef = C46C6AD72851FD5800C5038F /* geos */; };
 		C46C6AD92851FD7500C5038F /* geos in Embed Frameworks */ = {isa = PBXBuildFile; productRef = C46C6AD72851FD5800C5038F /* geos */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		C49D1D39285CDE8A00ED06BE /* CustomResources in Resources */ = {isa = PBXBuildFile; fileRef = C49D1D38285CDE8A00ED06BE /* CustomResources */; };
+		C4CFE2AF285CE4EF00DB19D0 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CFE2AE285CE4EF00DB19D0 /* Product.swift */; };
 		C4E3772228042D9600886C88 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E3772128042D9600886C88 /* AppDelegate.swift */; };
 		C4E3772428042D9600886C88 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E3772328042D9600886C88 /* SceneDelegate.swift */; };
 		C4E3772628042D9600886C88 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E3772528042D9600886C88 /* AppCoordinator.swift */; };
@@ -66,6 +67,7 @@
 		C418B3CD285A088000CA2507 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		C46C6AD42851F93100C5038F /* HMDF */ = {isa = PBXFileReference; lastKnownFileType = folder; path = HMDF; sourceTree = "<group>"; };
 		C49D1D38285CDE8A00ED06BE /* CustomResources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = CustomResources; sourceTree = "<group>"; };
+		C4CFE2AE285CE4EF00DB19D0 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		C4E09729285B56FD00C51668 /* SpaceKitSampleTestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = SpaceKitSampleTestPlan.xctestplan; sourceTree = "<group>"; };
 		C4E3771E28042D9600886C88 /* SpaceKitSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceKitSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4E3772128042D9600886C88 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				C4E3772128042D9600886C88 /* AppDelegate.swift */,
 				C4E3772328042D9600886C88 /* SceneDelegate.swift */,
 				C4E3772528042D9600886C88 /* AppCoordinator.swift */,
+				C4CFE2AE285CE4EF00DB19D0 /* Product.swift */,
 				C4EC318E285A09B500DFBD8A /* RootViewController.swift */,
 				C418B3CD285A088000CA2507 /* LoadingViewController.swift */,
 				C4E3772A28042D9700886C88 /* Assets.xcassets */,
@@ -329,6 +332,7 @@
 			files = (
 				C418B3CA2859D77A00CA2507 /* ListCoordinator.swift in Sources */,
 				C4E3772628042D9600886C88 /* AppCoordinator.swift in Sources */,
+				C4CFE2AF285CE4EF00DB19D0 /* Product.swift in Sources */,
 				C4E3772228042D9600886C88 /* AppDelegate.swift in Sources */,
 				C4EC318F285A09B500DFBD8A /* RootViewController.swift in Sources */,
 				C418B3CC2859D78100CA2507 /* ListViewController.swift in Sources */,

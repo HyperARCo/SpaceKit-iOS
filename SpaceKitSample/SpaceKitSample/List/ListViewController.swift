@@ -20,12 +20,15 @@ class ListViewController: UITableViewController {
 	typealias Item = ListItem
 	typealias Snapshot = NSDiffableDataSourceSnapshot<Section, Item>
 	
-	var listData = ["Apples", "Bananas"].map { ListItem(name: $0, accessory: .checkmark) }
-	var productData = ["Carrots", "Dates", "Eggplant"].map { ListItem(name: $0, accessory: .plus)}
+	var listItems = [ListItem]()
+	var productItems: [ListItem]
 	
 	private lazy var dataSource = ListDataSource(tableView: tableView)
 	
-	init() {
+	init(products: [Product]) {
+		self.productItems = products.map { product in
+			ListItem(name: product.name, accessory: .plus)
+		}
 		super.init(style: .grouped)
 	}
 	
@@ -54,9 +57,9 @@ class ListViewController: UITableViewController {
 	private func createSnapshot() -> Snapshot {
 		var snapshot = NSDiffableDataSourceSnapshot<Section, Item>()
 		snapshot.appendSections([.list])
-		snapshot.appendItems(listData)
+		snapshot.appendItems(listItems)
 		snapshot.appendSections([.products])
-		snapshot.appendItems(productData)
+		snapshot.appendItems(productItems)
 		return snapshot
 	}
 	
@@ -70,13 +73,13 @@ class ListViewController: UITableViewController {
 		
 		switch section {
 		case .list:
-			var listItem = listData.remove(at: indexPath.row)
+			var listItem = listItems.remove(at: indexPath.row)
 			listItem.accessory = .plus
-			productData.append(listItem)
+			productItems.append(listItem)
 		case .products:
-			var productItem = productData.remove(at: indexPath.row)
+			var productItem = productItems.remove(at: indexPath.row)
 			productItem.accessory = .checkmark
-			listData.append(productItem)
+			listItems.append(productItem)
 		}
 		
 		let snapshot = createSnapshot()
