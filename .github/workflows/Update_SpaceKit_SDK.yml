@@ -17,38 +17,59 @@ jobs:
       uses: actions/checkout@v3
 
     - name: Remove existing framework
-      run: rm -rf SpaceKit.xcframework 
+      run: rm -rf SpaceKit.xcframework
 
-    # - name: Download SpaceKit.xcframework artifact
-    #   uses: actions/download-artifact@v3
-    #   with:
-    #     name: xcframework
-
-    - name: Download SpaceKit.xcframeork artifact
+    - name: Download SpaceKit.xcframework artifact
       run: |
-        xcframework-artifact-id = $(gh api \
+        xcframework_artifact_id=$(gh api \
             -H "Accept: application/vnd.github.v3+json" \
             /repos/DentReality/iOS-Hyper/actions/artifacts \
             --jq '[.artifacts[]|select(.name=="xcframework")][0].id')
-        
-        gh api \           
-          -H "Accept: application/vnd.github.v3+json" \
-          "/repos/DentReality/iOS-Hyper/actions/artifacts/$xcframework-artifact-id/zip" > xcframework.zip
 
-        unzip xcframework.zip
+        echo "Artifact ID: $xcframework_artifact_id"
+
+        echo "path: /repos/DentReality/iOS-Hyper/actions/artifacts/$xcframework_artifact_id/zip"
+        
+        gh api \
+          -H "Accept: application/vnd.github.v3+json" \
+          /repos/DentReality/iOS-Hyper/actions/artifacts/$xcframework_artifact_id/zip > xcframework.zip
+
+        unzip xcframework.zip -d SpaceKit.xcframework
 
         rm -rf xcframework.zip
+      env:
+        GITHUB_TOKEN: ${{ secrets.HYPER_IOS_PAT }}
 
-    # - name: Remove existing documentation archive
-    #   run: rm -rf SpaceKit.doccarchive 
+    - name: Remove existing documentation archive
+      run: rm -rf SpaceKit.doccarchive
 
-    # - name: Download SpaceKit.doccarchive artifact
-    #   uses: actions/download-artifact@v3
-    #   with:
-    #     name: doccarchive
+    - name: Download SpaceKit.doccarchive documentation artifact
+      run: |
+        doccarchive_artifact_id=$(gh api \
+            -H "Accept: application/vnd.github.v3+json" \
+            /repos/DentReality/iOS-Hyper/actions/artifacts \
+            --jq '[.artifacts[]|select(.name=="doccarchive")][0].id')
 
-    # - name: Unzip documentation archive
-    #   run: unzip doccarchive.zip
+        echo "Artifact ID: $doccarchive_artifact_id"
+
+        echo "path: /repos/DentReality/iOS-Hyper/actions/artifacts/$doccarchive_artifact_id/zip"
+        
+        gh api \
+          -H "Accept: application/vnd.github.v3+json" \
+          /repos/DentReality/iOS-Hyper/actions/artifacts/$doccarchive_artifact_id/zip > doccarchive.zip
+
+        unzip doccarchive.zip -d doccarchive
+        mv -f doccarchive/doccarchive.zip doccarchive.zip
+        rm -rf doccarchive/
+      env:
+        GITHUB_TOKEN: ${{ secrets.HYPER_IOS_PAT }}
+
+    - name: Unzip documentation archive
+      run: |
+        unzip doccarchive.zip
+        rm -rf doccarchive.zip
     
     - name: Create pull request
       uses: peter-evans/create-pull-request@v4
+      with:
+        title: Update SpaceKit SDK
