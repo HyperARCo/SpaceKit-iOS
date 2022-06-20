@@ -71,3 +71,5 @@ jobs:
     
     - name: Create pull request
       uses: peter-evans/create-pull-request@v4
+      with:
+        title: Update SpaceKit SDK
