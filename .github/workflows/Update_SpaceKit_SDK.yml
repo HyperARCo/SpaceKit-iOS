@@ -27,8 +27,10 @@ jobs:
             --jq '[.artifacts[]|select(.name=="xcframework")][0].id')
 
         echo "Artifact ID: $xcframework_artifact_id"
+
+        echo "path: /repos/DentReality/iOS-Hyper/actions/artifacts/$xcframework_artifact_id/zip"
         
-        gh api \           
+        gh api \
           -H "Accept: application/vnd.github.v3+json" \
           /repos/DentReality/iOS-Hyper/actions/artifacts/$xcframework_artifact_id/zip > xcframework.zip
 
@@ -36,7 +38,7 @@ jobs:
 
         rm -rf xcframework.zip
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.HYPER_IOS_PAT }}
 
     # - name: Remove existing documentation archive
     #   run: rm -rf SpaceKit.doccarchive 
