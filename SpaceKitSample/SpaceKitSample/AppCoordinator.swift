@@ -10,6 +10,8 @@ class AppCoordinator {
 	
 	private var listCoordinator: ListCoordinator?
 	
+	private var products: [Product] = []
+	
 	init(navigationController: UINavigationController) {
 		self.navigationController = navigationController
 	}
@@ -18,9 +20,16 @@ class AppCoordinator {
 		let viewController = LoadingViewController()
 		navigationController.setViewControllers([viewController], animated: false)
 		
-		guard let hmdfURL = Bundle.main.urls(forResourcesWithExtension: "zip", subdirectory: "HMDF")?.first else {
+		guard
+			let productsURL = Bundle.main.url(forResource: "sampleProducts", withExtension: "json", subdirectory: "CustomResources"),
+			let productsData = try? Data(contentsOf: productsURL),
+			let products = try? JSONDecoder().decode([Product].self, from: productsData),
+			let hmdfURL = Bundle.main.urls(forResourcesWithExtension: "zip", subdirectory: "HMDF")?.first else
+		{
 			return
 		}
+		
+		self.products = products
 		
 		let venue = SpaceKitVenue(from: hmdfURL)
 		
@@ -35,7 +44,12 @@ class AppCoordinator {
 				
 				rootViewController.listButtonAction = { [weak self] in
 					guard let self = self else { return }
-					self.listCoordinator = ListCoordinator(navigationController: self.navigationController)
+					
+					self.listCoordinator = ListCoordinator(
+						navigationController: self.navigationController,
+						products: products
+					)
+					
 					self.listCoordinator?.start()
 				}
 				
