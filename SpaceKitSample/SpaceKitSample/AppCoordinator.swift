@@ -3,14 +3,20 @@
 //
 
 import UIKit
+import CoreLocation
+import AVFoundation
+
 import SpaceKit
 
 class AppCoordinator {
 	private let navigationController: UINavigationController
 	
+	private var listManager: ListManager?
 	private var listCoordinator: ListCoordinator?
 	
 	private var products: [Product] = []
+	
+	private let locationManager = CLLocationManager()
 	
 	init(navigationController: UINavigationController) {
 		self.navigationController = navigationController
@@ -29,31 +35,58 @@ class AppCoordinator {
 			return
 		}
 		
+		let listManager = ListManager(products: products)
+		self.listManager = listManager
+		
 		self.products = products
 		
 		let venue = SpaceKitVenue(from: hmdfURL)
 		
-		SpaceKitContextFactory(venue: venue).make { contextResult in
-			switch contextResult {
-			case .failure(_):
+		Task.detached(priority: .userInitiated) { [weak self] in
+			guard
+				let self = self,
+				let context = try? await SpaceKitContextFactory(venue: venue).make() else
+			{
 				return
-				
-			case .success(let context):
+			}
+			
+			DispatchQueue.main.async {
 				let spaceKitViewController = SpaceKit.SpaceKitViewControllerFactory(context: context).make()
 				let rootViewController = RootViewController(spaceKitViewController: spaceKitViewController, spaceKitContext: context)
+				
+				listManager.spaceKitContext = context
+				context.listDelegate = listManager
+				
+				context.requisitesDelegate = self
+				context.requestUnfulfilledRequisites(from: Requisite.allCases)
 				
 				rootViewController.listButtonAction = { [weak self] in
 					guard let self = self else { return }
 					
 					self.listCoordinator = ListCoordinator(
 						navigationController: self.navigationController,
-						products: products
+						listManager: listManager
 					)
 					
 					self.listCoordinator?.start()
 				}
 				
-				navigationController.setViewControllers([rootViewController], animated: false)
+				self.navigationController.setViewControllers([rootViewController], animated: false)
+			}
+		}
+	}
+}
+
+extension AppCoordinator: SpaceKitRequisitesDelegate {
+	func spaceKitContext(_ context: Context, requiresRequisites: [Requisite]) {
+		for requisite in requiresRequisites {
+			switch requisite {
+			case .locationPermission, .backgroundLocationPermisson:
+				locationManager.requestAlwaysAuthorization()
+			case .preciseLocationPermission:
+				break
+			case .cameraPermission:
+				AVCaptureDevice.requestAccess(for: .video) { _ in }
 			}
 		}
 	}
