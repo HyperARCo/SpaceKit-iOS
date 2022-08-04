@@ -5,7 +5,7 @@ Pod::Spec.new do |spec|
     spec.description        = "SpaceKit SDK for iOS"
     spec.homepage           = "https://www.dentreality.com"
     spec.documentation_url  = "https://github.com/DentReality/SpaceKit-iOS"
-#    spec.license            = { :type => "MIT" }
+    spec.license            = { :file => 'LICENSE.md' }
     spec.author             = { "SpaceKit" => "Dent Reality" }
     spec.source             = { :git => 'https://github.com/DentReality/SpaceKit-iOS', :tag => "#{spec.version}" }
     spec.swift_version      = "5.6"
