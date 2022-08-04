@@ -14,5 +14,5 @@ Pod::Spec.new do |spec|
     spec.ios.deployment_target  = "13.0"
   
     # Published binaries
-    vendored_frameworks = "SpaceKit.xcframework"
+    spec.vendored_frameworks = "SpaceKit.xcframework"
   end
