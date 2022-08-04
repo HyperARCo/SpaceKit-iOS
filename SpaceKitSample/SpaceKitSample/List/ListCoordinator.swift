@@ -7,19 +7,24 @@ import UIKit
 class ListCoordinator {
 	private let navigationController: UINavigationController
 	
-	private let products: [Product]
+	private let listManager: ListManager
 	
 	init(
 		navigationController: UINavigationController,
-		products: [Product])
+		listManager: ListManager)
 	{
 		self.navigationController = navigationController
-		self.products = products
+		self.listManager = listManager
 	}
 	
 	func start() {
-		let listViewController = ListViewController(products: products)
+		let listViewController = ListViewController(listManager: listManager)
 		let listNavigationController = UINavigationController(rootViewController: listViewController)
+		
+		listManager.updateListView = { [weak listViewController] in
+			listViewController?.updateList()
+		}
+		
 		navigationController.present(listNavigationController, animated: true)
 	}
 }

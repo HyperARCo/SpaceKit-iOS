@@ -20,15 +20,12 @@ class ListViewController: UITableViewController {
 	typealias Item = ListItem
 	typealias Snapshot = NSDiffableDataSourceSnapshot<Section, Item>
 	
-	var listItems = [ListItem]()
-	var productItems: [ListItem]
-	
 	private lazy var dataSource = ListDataSource(tableView: tableView)
 	
-	init(products: [Product]) {
-		self.productItems = products.map { product in
-			ListItem(name: product.name, iconName: product.icon, accessory: .plus)
-		}
+	private let listManager: ListManager
+	
+	init(listManager: ListManager) {
+		self.listManager = listManager
 		super.init(style: .grouped)
 	}
 	
@@ -50,6 +47,10 @@ class ListViewController: UITableViewController {
 		tableView.register(ListCell.self, forCellReuseIdentifier: ListCell.reuseIdentifier)
 		
 		tableView.dataSource = dataSource
+		updateList()
+	}
+	
+	func updateList() {
 		let snapshot = createSnapshot()
 		dataSource.apply(snapshot)
 	}
@@ -57,8 +58,16 @@ class ListViewController: UITableViewController {
 	private func createSnapshot() -> Snapshot {
 		var snapshot = NSDiffableDataSourceSnapshot<Section, Item>()
 		snapshot.appendSections([.list])
+		let listItems: [ListItem] = listManager.listItems.compactMap { identifier in
+			guard let product = listManager.product(with: identifier) else { return nil }
+			return ListItem(identifier: identifier, name: product.name, iconName: product.icon, accessory: .checkmark)
+		}
 		snapshot.appendItems(listItems)
 		snapshot.appendSections([.products])
+		let productItems: [ListItem] = listManager.productItems.compactMap { identifier in
+			guard let product = listManager.product(with: identifier) else { return nil }
+			return ListItem(identifier: identifier, name: product.name, iconName: product.icon, accessory: .plus)
+		}
 		snapshot.appendItems(productItems)
 		return snapshot
 	}
@@ -73,17 +82,10 @@ class ListViewController: UITableViewController {
 		
 		switch section {
 		case .list:
-			var listItem = listItems.remove(at: indexPath.row)
-			listItem.accessory = .plus
-			productItems.append(listItem)
+			listManager.removeListItem(at: indexPath.row)
 		case .products:
-			var productItem = productItems.remove(at: indexPath.row)
-			productItem.accessory = .checkmark
-			listItems.append(productItem)
+			listManager.addProduct(at: indexPath.row)
 		}
-		
-		let snapshot = createSnapshot()
-		dataSource.apply(snapshot)
 	}
 }
 

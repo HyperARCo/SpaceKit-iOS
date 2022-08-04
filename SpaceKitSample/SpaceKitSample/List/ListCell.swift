@@ -30,7 +30,7 @@ struct ListItem: Hashable {
 		}
 	}
 	
-	let identifier = UUID()
+	let identifier: String
 	let name: String
 	let iconName: String
 	var accessory: Accessory

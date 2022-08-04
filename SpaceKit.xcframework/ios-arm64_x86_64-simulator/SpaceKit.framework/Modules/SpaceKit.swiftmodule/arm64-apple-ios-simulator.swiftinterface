@@ -2,6 +2,7 @@
 // swift-compiler-version: Apple Swift version 5.6.1 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)
 // swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name SpaceKit
 import ARKit
+import AVFoundation
 import Combine
 import CoreGraphics
 import CoreLocation
@@ -46,14 +47,18 @@ public enum Requisite : Swift.CaseIterable {
   }
 }
 public protocol SpaceKitRequisitesDelegate : AnyObject {
-  func spaceKitContext(_ context: SpaceKit.Context, requiresRequisites: [SpaceKit.Requisite])
+  func spaceKitContext(_ context: SpaceKit.Context, requiresRequisites requisites: [SpaceKit.Requisite])
 }
 final public class SpaceKitVenue {
   public init(from url: Foundation.URL)
   @objc deinit
 }
 extension SpaceKit.SpaceKitVenue : SpaceKit.Venue {
-  final public func fetchMetadata(completion: (Swift.Result<SpaceKit.VenueMetadata, Swift.Error>) -> Swift.Void)
+  
+  #if compiler(>=5.3) && $AsyncAwait
+  final public func fetchMetadata() async throws -> SpaceKit.VenueMetadata
+  #endif
+
 }
 extension ARKit.ARSCNView {
   @_Concurrency.MainActor(unsafe) public var userSceneHeading: Swift.Float? {
@@ -65,16 +70,21 @@ extension ARKit.ARSCNView {
 }
 public struct SpaceKitContextFactory {
   public init(venue: SpaceKit.Venue)
-  public func make(completion: (Swift.Result<SpaceKit.Context, Swift.Error>) -> Swift.Void)
+  
+  #if compiler(>=5.3) && $AsyncAwait
+  public func make() async throws -> SpaceKit.Context
+  #endif
+
 }
-public struct ScanResult {
+public struct ScanResult : Swift.Equatable {
   public let stringValue: Swift.String
   public let symbology: Vision.VNBarcodeSymbology
   public init(stringValue: Swift.String, symbology: Vision.VNBarcodeSymbology)
+  public static func == (a: SpaceKit.ScanResult, b: SpaceKit.ScanResult) -> Swift.Bool
 }
 public protocol SpaceKitBarcodeDelegate : AnyObject {
-  func spaceKitContext(_ context: SpaceKit.Context, didScanBarcodeWithResult: SpaceKit.ScanResult)
-  func spaceKitContext(_ context: SpaceKit.Context, didScanBarcodeWithError: Swift.Error)
+  func spaceKitContext(_ context: SpaceKit.Context, didScanBarcodeWithResult result: SpaceKit.ScanResult)
+  func spaceKitContext(_ context: SpaceKit.Context, didScanBarcodeWithError error: Swift.Error)
 }
 public struct VenueManagerConfiguration {
   public let organizationIdentifier: Swift.String
@@ -93,13 +103,29 @@ public struct VenueMetadata {
   public init(hash: Swift.String, timestamp: Foundation.Date)
 }
 public protocol Venue {
-  func fetchMetadata(completion: (Swift.Result<SpaceKit.VenueMetadata, Swift.Error>) -> Swift.Void)
+  
+  #if compiler(>=5.3) && $AsyncAwait
+  func fetchMetadata() async throws -> SpaceKit.VenueMetadata
+  #endif
+
 }
 public protocol VenueManager {
   init(configuration: SpaceKit.VenueManagerConfiguration)
-  func fetchLocalVenues(forLocation coordinates: CoreLocation.CLLocationCoordinate2D, completion: @escaping (Swift.Result<[SpaceKit.LocalVenue], Swift.Error>) -> Swift.Void)
-  func fetchMetadata(forVenueWithIdentifier venueIdentifier: Swift.String, completion: @escaping (Swift.Result<SpaceKit.VenueMetadata, Swift.Error>) -> Swift.Void)
-  func fetchVenue(forVenueWithIdentifier venueIdentifier: Swift.String, completion: @escaping (Swift.Result<SpaceKit.Venue, Swift.Error>) -> Swift.Void)
+  
+  #if compiler(>=5.3) && $AsyncAwait
+  func fetchLocalVenues(forLocation coordinates: CoreLocation.CLLocationCoordinate2D) async throws -> [SpaceKit.LocalVenue]
+  #endif
+
+  
+  #if compiler(>=5.3) && $AsyncAwait
+  func fetchMetadata(forVenueWithIdentifier venueIdentifier: Swift.String) async throws -> SpaceKit.VenueMetadata
+  #endif
+
+  
+  #if compiler(>=5.3) && $AsyncAwait
+  func fetchVenue(forVenueWithIdentifier venueIdentifier: Swift.String) async throws -> SpaceKit.Venue
+  #endif
+
 }
 public struct VenueManagerFactory {
   public func make() -> SpaceKit.VenueManager
