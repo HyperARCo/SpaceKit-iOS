@@ -11,10 +11,13 @@ let package = Package(
     products: [
         .library(
             name: "SpaceKit",
-            targets: ["SpaceKit"]),
+            targets: ["SpaceKitSDK"]),
     ],
-    dependencies: [],
+    dependencies: [
+		.package(url: "https://github.com/GEOSwift/geos.git", from: "7.0.0"),
+	],
     targets: [
+		.target(name: "SpaceKitSDK", dependencies: ["SpaceKit", "geos"]),
         .binaryTarget(
             name: "SpaceKit",
             path: "SpaceKit.xcframework"),
