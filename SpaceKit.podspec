@@ -15,4 +15,7 @@ Pod::Spec.new do |spec|
   
     # Published binaries
     spec.vendored_frameworks = "SpaceKit.xcframework"
+
+    # Dependencies
+    spec.dependency 'geos', '~> 7.0.0'
   end
