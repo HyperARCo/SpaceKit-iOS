@@ -8,7 +8,7 @@ Pod::Spec.new do |spec|
     spec.license            = { :file => 'LICENSE.md' }
     spec.author             = { "SpaceKit" => "Dent Reality" }
     spec.source             = { :git => 'https://github.com/DentReality/SpaceKit-iOS.git', :tag => "#{spec.version}" }
-    spec.swift_version      = "5.6"
+    spec.swift_version      = "5.5"
   
     # Supported deployment targets
     spec.ios.deployment_target  = "13.0"
