@@ -3,17 +3,23 @@
 //
 
 struct Product: Decodable {
-	let upc: String
+	let itemCode: String
 	let name: String
 	let icon: String
 }
 
 extension Product: Comparable {
+	enum CodingKeys: String, CodingKey {
+		case itemCode = "item_code"
+		case name
+		case icon
+	}
+	
 	static func < (lhs: Product, rhs: Product) -> Bool {
 		lhs.name < rhs.name
 	}
 	
 	static func == (lhs: Product, rhs: Product) -> Bool {
-		lhs.upc == rhs.upc
+		lhs.itemCode == rhs.itemCode
 	}
 }

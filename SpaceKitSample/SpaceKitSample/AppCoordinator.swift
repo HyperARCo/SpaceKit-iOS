@@ -45,7 +45,7 @@ class AppCoordinator {
 		Task.detached(priority: .userInitiated) { [weak self] in
 			guard
 				let self = self,
-				let context = try? await SpaceKitContextFactory(venue: venue).make() else
+				let context = try? await SpaceKitContextFactory(venue: venue, isDebugEnabled: true).make() else
 			{
 				return
 			}

@@ -1,101 +1,101 @@
 [
     {
-        "upc": "123456789",
+        "item_code": "123456789",
         "name": "Bread",
         "icon": "bakery_icon"
     },
     {
-        "upc": "123456788",
+        "item_code": "123456788",
         "name": "Cheese",
         "icon": "dairy_icon"
     },
     {
-        "upc": "123456787",
+        "item_code": "123456787",
         "name": "Eggs",
         "icon": "eggs_icon"
     },
     {
-        "upc": "123456786",
+        "item_code": "123456786",
         "name": "Water",
         "icon": "water_icon"
     },
     {
-        "upc": "123456785",
+        "item_code": "123456785",
         "name": "Apple",
         "icon": "apples_icon"
     },
     {
-        "upc": "123456784",
+        "item_code": "123456784",
         "name": "Grapes",
         "icon": "grapes_icon"
     },
     {
-        "upc": "123456783",
+        "item_code": "123456783",
         "name": "Jelly Beans",
         "icon": "ambient_celebration_icon"
     },
     {
-        "upc": "123456782",
+        "item_code": "123456782",
         "name": "Salmon",
         "icon": "fish_icon"
     },
     {
-        "upc": "123456781",
+        "item_code": "123456781",
         "name": "Chicken",
         "icon": "poultry_icon"
     },
     {
-        "upc": "123456780",
+        "item_code": "123456780",
         "name": "Steak",
         "icon": "meat_icon"
     },
     {
-        "upc": "123456779",
+        "item_code": "123456779",
         "name": "Cake",
         "icon": "desserts_icon"
     },
     {
-        "upc": "123456778",
+        "item_code": "123456778",
         "name": "Cookies",
         "icon": "everyday_bisc_icon"
     },
     {
-        "upc": "123456777",
+        "item_code": "123456777",
         "name": "Aubergine",
         "icon": "cucumbers_icon"
     },
     {
-        "upc": "123456776",
+        "item_code": "123456776",
         "name": "Carrot",
         "icon": "carrots_icon"
     },
     {
-        "upc": "123456775",
+        "item_code": "123456775",
         "name": "Potato",
         "icon": "potatoes_icon"
     },
     {
-        "upc": "123456774",
+        "item_code": "123456774",
         "name": "Tuna",
         "icon": "canned_fish_icon"
     },
     {
-        "upc": "123456773",
+        "item_code": "123456773",
         "name": "Strawberries",
         "icon": "strawberries_icon"
     },
     {
-        "upc": "123456772",
+        "item_code": "123456772",
         "name": "Corn",
         "icon": "frozen_produce_icon"
     },
     {
-        "upc": "123456771",
+        "item_code": "123456771",
         "name": "Tea",
         "icon": "cafes_icon"
     },
     {
-        "upc": "123456770",
+        "item_code": "123456770",
         "name": "Chocolate",
         "icon": "chocolate_icon"
     }
