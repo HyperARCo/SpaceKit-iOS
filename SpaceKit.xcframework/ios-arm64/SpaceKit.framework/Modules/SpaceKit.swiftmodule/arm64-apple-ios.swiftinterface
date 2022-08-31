@@ -6,6 +6,7 @@ import AVFoundation
 import Combine
 import CoreGraphics
 import CoreLocation
+import CoreVideo
 import Foundation
 import SceneKit
 @_exported import SpaceKit
@@ -16,8 +17,10 @@ import UIKit.UIViewController
 import Vision.VNTypes
 import Vision
 import _Concurrency
+public typealias InfoViewFactory = () -> SpaceKit.InfoView
 public struct SpaceKitViewControllerFactory {
   public init(context: SpaceKit.Context)
+  public init(context: SpaceKit.Context, infoViewFactory: @autoclosure @escaping SpaceKit.InfoViewFactory)
   public func make() -> SpaceKit.SpaceKitViewController
 }
 public typealias SpaceKitImage = UIKit.UIImage
@@ -60,6 +63,25 @@ extension SpaceKit.SpaceKitVenue : SpaceKit.Venue {
   #endif
 
 }
+public protocol InfoViewIcon : AnyObject {
+  var image: UIKit.UIImage? { get set }
+}
+public protocol InfoViewLabel : AnyObject {
+  var text: Swift.String? { get set }
+}
+public protocol InfoViewButton : AnyObject {
+  func addAction(_ action: @escaping () -> Swift.Void)
+}
+public protocol InfoView : UIKit.UIView {
+  var iconView: SpaceKit.InfoViewIcon? { get }
+  var displayNameLabel: SpaceKit.InfoViewLabel? { get }
+  var gotItButton: SpaceKit.InfoViewButton? { get }
+}
+extension UIKit.UILabel : SpaceKit.InfoViewLabel {
+}
+extension UIKit.UIControl : SpaceKit.InfoViewButton {
+  @_Concurrency.MainActor(unsafe) public func addAction(_ action: @escaping () -> Swift.Void)
+}
 extension ARKit.ARSCNView {
   @_Concurrency.MainActor(unsafe) public var userSceneHeading: Swift.Float? {
     get
@@ -69,7 +91,7 @@ extension ARKit.ARSCNView {
   }
 }
 public struct SpaceKitContextFactory {
-  public init(venue: SpaceKit.Venue)
+  public init(venue: SpaceKit.Venue, isDebugEnabled: Swift.Bool = false)
   
   #if compiler(>=5.3) && $AsyncAwait
   public func make() async throws -> SpaceKit.Context
@@ -143,10 +165,12 @@ public protocol Context : AnyObject {
   var requisitesDelegate: SpaceKit.SpaceKitRequisitesDelegate? { get set }
   var listDelegate: SpaceKit.SpaceKitListDelegate? { get set }
   var barcodeDelegate: SpaceKit.SpaceKitBarcodeDelegate? { get set }
+  var isDebugEnabled: Swift.Bool { get }
   func setDestinations(_ destinations: [SpaceKit.Destination])
   func requestUnfulfilledRequisites(from requisites: [SpaceKit.Requisite])
 }
 public protocol SpaceKitViewController : UIKit.UIViewController {
+  var contentLayoutGuide: UIKit.UILayoutGuide { get }
 }
 extension SpaceKit.Requisite : Swift.Equatable {}
 extension SpaceKit.Requisite : Swift.Hashable {}
