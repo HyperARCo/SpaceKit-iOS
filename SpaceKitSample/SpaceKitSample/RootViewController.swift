@@ -6,7 +6,7 @@ import UIKit
 import SpaceKit
 
 class RootViewController: UIViewController {
-	private let spaceKitViewController: UIViewController
+	private let spaceKitViewController: SpaceKitViewController
 	private let spaceKitContext: SpaceKit.Context
 	
 	var listButtonAction: () -> Void = { }
@@ -15,18 +15,15 @@ class RootViewController: UIViewController {
 		let button = UIButton(type: .custom)
 		button.translatesAutoresizingMaskIntoConstraints = false
 		let config = UIImage.SymbolConfiguration(pointSize: 32)
-		button.setImage(UIImage(systemName: "cart", withConfiguration: config), for: .normal)
+		button.setImage(UIImage(systemName: "list.bullet", withConfiguration: config), for: .normal)
 		button.addTarget(self, action: #selector(listButtonTapped), for: .primaryActionTriggered)
 		button.backgroundColor = .white
-		button.setTitleColor(UIColor.systemBlue, for: .normal)
 		button.layer.cornerRadius = 10
-		button.layer.borderColor = UIColor.gray.cgColor
-		button.layer.borderWidth = 1
 		button.contentEdgeInsets = .init(top: 8, left: 8, bottom: 8, right: 8)
 		return button
 	}()
-	
-	init(spaceKitViewController: UIViewController, spaceKitContext: SpaceKit.Context) {
+	 
+	init(spaceKitViewController: SpaceKitViewController, spaceKitContext: SpaceKit.Context) {
 		self.spaceKitViewController = spaceKitViewController
 		self.spaceKitContext = spaceKitContext
 		super.init(nibName: nil, bundle: nil)
@@ -43,9 +40,17 @@ class RootViewController: UIViewController {
 		
 		view.addSubview(listButton)
 		NSLayoutConstraint.activate([
-			listButton.trailingAnchor.constraint(equalTo: view.readableContentGuide.trailingAnchor),
-			listButton.topAnchor.constraint(equalTo: view.readableContentGuide.topAnchor),
+			listButton.leadingAnchor.constraint(equalTo: spaceKitViewController.contentLayoutGuide.leadingAnchor),
+			listButton.bottomAnchor.constraint(equalTo: spaceKitViewController.contentLayoutGuide.bottomAnchor),
+			
+			listButton.widthAnchor.constraint(equalToConstant: 44),
+			listButton.heightAnchor.constraint(equalTo: listButton.widthAnchor),
 		])
+	}
+	
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
+		navigationController?.setNavigationBarHidden(true, animated: false)
 	}
 	
 	@objc

@@ -20,7 +20,7 @@ class ListManager {
 	}
 	
 	func product(with identifer: String) -> Product? {
-		products.first(where: { $0.upc == identifer })
+		products.first(where: { $0.itemCode == identifer })
 	}
 	
 	func removeListItem(at index: Int) {
@@ -50,10 +50,10 @@ class ListManager {
 	private func updateProductItems() {
 		self.productItems = products
 			.filter { product in
-				!listItems.contains(product.upc)
+				!listItems.contains(product.itemCode)
 			}
 			.sorted()
-			.map(\.upc)
+			.map(\.itemCode)
 	}
 }
 
