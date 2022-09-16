@@ -8,7 +8,7 @@ import AVFoundation
 
 import SpaceKit
 
-class AppCoordinator {
+@MainActor class AppCoordinator {
 	private let navigationController: UINavigationController
 	
 	private var listManager: ListManager?
@@ -42,38 +42,41 @@ class AppCoordinator {
 		
 		let venue = SpaceKitVenue(from: hmdfURL)
 		
-		Task.detached(priority: .userInitiated) { [weak self] in
-			guard
-				let self = self,
-				let context = try? await SpaceKitContextFactory(venue: venue, isDebugEnabled: true).make() else
-			{
+		Task.detached {
+			guard let context = try? await SpaceKitContextFactory(venue: venue, isDebugEnabled: true).make() else {
 				return
 			}
 			
-			DispatchQueue.main.async {
-				let spaceKitViewController = SpaceKit.SpaceKitViewControllerFactory(context: context).make()
-				let rootViewController = RootViewController(spaceKitViewController: spaceKitViewController, spaceKitContext: context)
-				
-				listManager.spaceKitContext = context
-				context.listDelegate = listManager
-				
-				context.requisitesDelegate = self
-				context.requestUnfulfilledRequisites(from: Requisite.allCases)
-				
-				rootViewController.listButtonAction = { [weak self] in
-					guard let self = self else { return }
-					
-					self.listCoordinator = ListCoordinator(
-						navigationController: self.navigationController,
-						listManager: listManager
-					)
-					
-					self.listCoordinator?.start()
-				}
-				
-				self.navigationController.setViewControllers([rootViewController], animated: false)
-			}
+			await self.setSpaceKitViewController(context: context)
 		}
+	}
+	
+	private func setSpaceKitViewController(context: Context) {
+		guard let listManager = listManager else {
+			return
+		}
+		
+		let spaceKitViewController = SpaceKit.SpaceKitViewControllerFactory(context: context).make()
+		let rootViewController = RootViewController(spaceKitViewController: spaceKitViewController, spaceKitContext: context)
+		
+		listManager.spaceKitContext = context
+		context.listDelegate = listManager
+		
+		context.requisitesDelegate = self
+		context.requestUnfulfilledRequisites(from: Requisite.allCases)
+		
+		rootViewController.listButtonAction = { [weak self] in
+			guard let self = self else { return }
+			
+			self.listCoordinator = ListCoordinator(
+				navigationController: self.navigationController,
+				listManager: listManager
+			)
+			
+			self.listCoordinator?.start()
+		}
+		
+		self.navigationController.setViewControllers([rootViewController], animated: false)
 	}
 }
 
