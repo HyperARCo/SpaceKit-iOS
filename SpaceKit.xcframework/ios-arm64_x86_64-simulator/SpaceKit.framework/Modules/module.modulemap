@@ -6,6 +6,6 @@ framework module SpaceKit {
 }
 
 module SpaceKit.Swift {
-    header "SpaceKit-Swift.h"
-    requires objc
+  header "SpaceKit-Swift.h"
+  requires objc
 }
