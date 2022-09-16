@@ -90,6 +90,8 @@ extension AppCoordinator: SpaceKitRequisitesDelegate {
 				break
 			case .cameraPermission:
 				AVCaptureDevice.requestAccess(for: .video) { _ in }
+			@unknown default:
+				break
 			}
 		}
 	}
