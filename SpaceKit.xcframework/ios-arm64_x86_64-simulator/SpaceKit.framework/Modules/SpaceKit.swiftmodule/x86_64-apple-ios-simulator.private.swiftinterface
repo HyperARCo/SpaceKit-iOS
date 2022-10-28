@@ -39,7 +39,6 @@ public protocol SpaceKitListDelegate : AnyObject {
 public enum Requisite : Swift.CaseIterable {
   case locationPermission
   case preciseLocationPermission
-  case backgroundLocationPermisson
   case cameraPermission
   public static func == (a: SpaceKit.Requisite, b: SpaceKit.Requisite) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
@@ -105,6 +104,14 @@ extension ARKit.ARSCNView {
   @_Concurrency.MainActor(unsafe) public var userVerticalOrientation: Swift.Float {
     get
   }
+}
+public struct LongPressLocationData {
+  public let levelIdentifier: Swift.String
+  public var levelOrdinal: Swift.Int?
+  public let point: CoreFoundation.CGPoint
+  public let pointToLocationTransform: (CoreFoundation.CGPoint) -> CoreLocation.CLLocationCoordinate2D?
+  public var confirmation: (() -> Swift.Void)?
+  public let completion: () -> Swift.Void
 }
 public struct SpaceKitContextFactory {
   public init(venue: SpaceKit.Venue, isDebugEnabled: Swift.Bool = false)
