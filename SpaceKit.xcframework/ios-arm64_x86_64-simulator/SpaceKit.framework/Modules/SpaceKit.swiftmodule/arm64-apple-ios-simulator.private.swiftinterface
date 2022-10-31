@@ -39,7 +39,6 @@ public protocol SpaceKitListDelegate : AnyObject {
 public enum Requisite : Swift.CaseIterable {
   case locationPermission
   case preciseLocationPermission
-  case backgroundLocationPermisson
   case cameraPermission
   public static func == (a: SpaceKit.Requisite, b: SpaceKit.Requisite) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)

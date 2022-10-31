@@ -84,8 +84,8 @@ extension AppCoordinator: SpaceKitRequisitesDelegate {
 	func spaceKitContext(_ context: Context, requiresRequisites: [Requisite]) {
 		for requisite in requiresRequisites {
 			switch requisite {
-			case .locationPermission, .backgroundLocationPermisson:
-				locationManager.requestAlwaysAuthorization()
+			case .locationPermission:
+				locationManager.requestWhenInUseAuthorization()
 			case .preciseLocationPermission:
 				break
 			case .cameraPermission:
