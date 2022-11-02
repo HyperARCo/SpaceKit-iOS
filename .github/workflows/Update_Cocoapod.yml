@@ -6,6 +6,19 @@ on:
     - main
 
 jobs:
+  paths-filter:
+    runs-on: ubuntu-latest
+    outputs:
+      output1: ${{ steps.filter.outputs.framework }}
+    steps:
+    - uses: actions/checkout@v2
+    - uses: dorny/paths-filter@v2
+      id: filter
+      with:
+        filters: |
+          framework:
+            - 'SpaceKit.xcframework/**'
+
   Update_Cocoapod:
     name: Update podspec version    
     runs-on: ubuntu-latest
