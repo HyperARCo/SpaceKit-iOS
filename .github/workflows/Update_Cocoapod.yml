@@ -20,13 +20,15 @@ jobs:
             - 'SpaceKit.xcframework/**'
 
   Update_Cocoapod:
-    name: Update podspec version    
+    name: Update podspec version
     runs-on: ubuntu-latest
+    needs: paths-filter
+    if: ${{ needs.paths-filter.outputs.framework == 'true' }}
     timeout-minutes: 60
 
     steps:
     - name: Set podspec version
-      run: exec ./.github/scripts/set_podpec_version.sh
+      run: exec ./.github/scripts/set_podspec_version.sh
 
     - name: Add podspec tag
       run: exec ./.github/scripts/add_podspec_tag.sh
