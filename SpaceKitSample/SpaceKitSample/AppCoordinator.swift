@@ -10,72 +10,92 @@ import SpaceKit
 
 @MainActor class AppCoordinator {
 	private let navigationController: UINavigationController
-	
+
 	private var listManager: ListManager?
 	private var listCoordinator: ListCoordinator?
-	
+
+	private var settingsManager: SettingsManager?
+	private var settingsCoordinator: SettingsCoordinator?
+
 	private var products: [Product] = []
-	
+
 	private let locationManager = CLLocationManager()
-	
+
 	init(navigationController: UINavigationController) {
 		self.navigationController = navigationController
 	}
-	
+
 	func start() {
 		let viewController = LoadingViewController()
 		navigationController.setViewControllers([viewController], animated: false)
-		
+
 		guard
-			let productsURL = Bundle.main.url(forResource: "sampleProducts", withExtension: "json", subdirectory: "CustomResources"),
+			let productsURL = Bundle.main.url(forResource: "sampleProducts", withExtension: "json",
+											  subdirectory: "CustomResources"),
 			let productsData = try? Data(contentsOf: productsURL),
 			let products = try? JSONDecoder().decode([Product].self, from: productsData),
 			let hmdfURL = Bundle.main.urls(forResourcesWithExtension: "zip", subdirectory: "HMDF")?.first else
 		{
 			return
 		}
-		
+
 		let listManager = ListManager(products: products)
 		self.listManager = listManager
-		
+
+		let settingsManager = SettingsManager()
+		self.settingsManager = settingsManager
+
 		self.products = products
-		
+
 		let venue = SpaceKitVenue(from: hmdfURL)
-		
+
 		Task.detached {
 			guard let context = try? await SpaceKitContextFactory(venue: venue, isDebugEnabled: true).make() else {
 				return
 			}
-			
+
 			await self.setSpaceKitViewController(context: context)
 		}
 	}
-	
+
 	private func setSpaceKitViewController(context: Context) {
-		guard let listManager = listManager else {
+		guard let listManager = listManager, let settingsManager = settingsManager else {
 			return
 		}
-		
+
 		let spaceKitViewController = SpaceKit.SpaceKitViewControllerFactory(context: context).make()
 		let rootViewController = RootViewController(spaceKitViewController: spaceKitViewController, spaceKitContext: context)
-		
+
 		listManager.spaceKitContext = context
 		context.listDelegate = listManager
-		
+
+		settingsManager.spaceKitContext = context
+
 		context.requisitesDelegate = self
 		context.requestUnfulfilledRequisites(from: Requisite.allCases)
-		
+
 		rootViewController.listButtonAction = { [weak self] in
 			guard let self = self else { return }
-			
+
 			self.listCoordinator = ListCoordinator(
 				navigationController: self.navigationController,
 				listManager: listManager
 			)
-			
+
 			self.listCoordinator?.start()
 		}
-		
+
+		rootViewController.settingsButtonAction = { [weak self] in
+			guard let self = self else { return }
+
+			self.settingsCoordinator = SettingsCoordinator(
+				navigationController: self.navigationController,
+				settingsManager: settingsManager
+			)
+
+			self.settingsCoordinator?.start()
+		}
+
 		self.navigationController.setViewControllers([rootViewController], animated: false)
 	}
 }
