@@ -11,7 +11,7 @@ jobs:
     outputs:
       framework: ${{ steps.filter.outputs.framework }}
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     - uses: dorny/paths-filter@v2
       id: filter
       with:
@@ -27,6 +27,7 @@ jobs:
     timeout-minutes: 60
 
     steps:
+    - uses: actions/checkout@v3
     - name: Set podspec version
       run: exec ./.github/scripts/set_podspec_version.sh
 
