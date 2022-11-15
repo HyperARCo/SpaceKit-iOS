@@ -7,3 +7,4 @@ TAG=$(grep -E 'spec.version *= "[0-9]+.[0-9]+.[0-9]+"' SpaceKit.podspec | grep -
 echo "Adding tag:" $TAG
 
 git tag $TAG
+git push origin $TAG
