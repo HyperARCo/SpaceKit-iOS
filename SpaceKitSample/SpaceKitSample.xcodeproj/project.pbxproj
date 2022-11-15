@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		63423E4A5D65B5F2C7819135 /* SpaceKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 579E009B161C7FBD580422AD /* SpaceKit.xcframework */; };
-		98943DD56DA46F8D4481A610 /* SpaceKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 579E009B161C7FBD580422AD /* SpaceKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3FD598C452C10A21B67103EB /* SpaceKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F609DE3BC5110D24CCF578A /* SpaceKit.xcframework */; };
+		9469636297D4F5CD0F698CBB /* SpaceKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7F609DE3BC5110D24CCF578A /* SpaceKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C2A34AA7290FF74D00F69B1D /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A34AA6290FF74D00F69B1D /* SettingsView.swift */; };
 		C2AE8385290C21F700E8D8E2 /* SettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AE8384290C21F700E8D8E2 /* SettingsCoordinator.swift */; };
 		C2BAE66029114AAD00D57437 /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BAE65F29114AAD00D57437 /* SettingsManager.swift */; };
@@ -57,7 +57,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				C46C6AD92851FD7500C5038F /* geos in Embed Frameworks */,
-				98943DD56DA46F8D4481A610 /* SpaceKit.xcframework in Embed Frameworks */,
+				9469636297D4F5CD0F698CBB /* SpaceKit.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -65,7 +65,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		579E009B161C7FBD580422AD /* SpaceKit.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = SpaceKit.xcframework; path = ../SpaceKit.xcframework; sourceTree = "<group>"; };
+		7F609DE3BC5110D24CCF578A /* SpaceKit.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = SpaceKit.xcframework; path = ../SpaceKit.xcframework; sourceTree = "<group>"; };
 		C2A34AA6290FF74D00F69B1D /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		C2AE8384290C21F700E8D8E2 /* SettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinator.swift; sourceTree = "<group>"; };
 		C2BAE65F29114AAD00D57437 /* SettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
@@ -98,7 +98,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C46C6AD82851FD5800C5038F /* geos in Frameworks */,
-				63423E4A5D65B5F2C7819135 /* SpaceKit.xcframework in Frameworks */,
+				3FD598C452C10A21B67103EB /* SpaceKit.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,7 +190,7 @@
 		C4E3775128042E4A00886C88 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				579E009B161C7FBD580422AD /* SpaceKit.xcframework */,
+				7F609DE3BC5110D24CCF578A /* SpaceKit.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
