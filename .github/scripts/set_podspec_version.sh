@@ -12,5 +12,6 @@ echo "Setting podspec version: " $BUILDSTRING
 
 sed -E -i '' "s/(\spec.version *= )(\"[0-9]+.[0-9]+.[0-9]+\")/\1\"$BUILDSTRING\"/" SpaceKit.podspec
 
+git add SpaceKit.podspec
 git commit -m "Bump podspec version to '$BUILDSTRING'"
-git push origin master
+git push origin main
