@@ -10,6 +10,7 @@ class RootViewController: UIViewController {
 	private let spaceKitContext: SpaceKit.Context
 	
 	var listButtonAction: () -> Void = { }
+	var settingsButtonAction: () -> Void = { }
 	
 	private lazy var listButton: UIButton = {
 		let button = UIButton(type: .custom)
@@ -20,6 +21,19 @@ class RootViewController: UIViewController {
 		button.backgroundColor = .white
 		button.layer.cornerRadius = 10
 		button.contentEdgeInsets = .init(top: 8, left: 8, bottom: 8, right: 8)
+		return button
+	}()
+	
+	private lazy var settingsButton: UIButton = {
+		let button = UIButton(type: .custom)
+		button.translatesAutoresizingMaskIntoConstraints = false
+		let config = UIImage.SymbolConfiguration(pointSize: 32)
+		button.setImage(UIImage(systemName: "gearshape.fill", withConfiguration: config), for: .normal)
+		button.addTarget(self, action: #selector(settingsButtonTapped), for: .primaryActionTriggered)
+		button.backgroundColor = .white
+		button.layer.cornerRadius = 10
+		button.contentEdgeInsets = .init(top: 8, left: 8, bottom: 8, right: 8)
+		
 		return button
 	}()
 	 
@@ -46,6 +60,14 @@ class RootViewController: UIViewController {
 			listButton.widthAnchor.constraint(equalToConstant: 44),
 			listButton.heightAnchor.constraint(equalTo: listButton.widthAnchor),
 		])
+		
+		view.addSubview(settingsButton)
+		NSLayoutConstraint.activate([
+			settingsButton.leadingAnchor.constraint(equalTo: spaceKitViewController.contentLayoutGuide.leadingAnchor),
+			settingsButton.bottomAnchor.constraint(equalTo: listButton.topAnchor, constant: -10),
+			settingsButton.widthAnchor.constraint(equalToConstant: 44),
+			settingsButton.heightAnchor.constraint(equalTo: settingsButton.widthAnchor),
+		])
 	}
 	
 	override func viewWillAppear(_ animated: Bool) {
@@ -56,5 +78,10 @@ class RootViewController: UIViewController {
 	@objc
 	private func listButtonTapped() {
 		listButtonAction()
+	}
+	
+	@objc
+	private func settingsButtonTapped() {
+		settingsButtonAction()
 	}
 }

@@ -171,6 +171,7 @@ public protocol Context : AnyObject {
   var listDelegate: SpaceKit.SpaceKitListDelegate? { get set }
   var barcodeDelegate: SpaceKit.SpaceKitBarcodeDelegate? { get set }
   var isDebugEnabled: Swift.Bool { get }
+  func setTraversalOptions(_ options: Swift.Set<SpaceKit.TraversalOption>)
   func setDestinations(_ destinations: [SpaceKit.Destination])
   func requestUnfulfilledRequisites(from requisites: [SpaceKit.Requisite])
   func subscribeToEvent(_ subscriptionEvent: SpaceKit.SubscriptionEvent) -> SpaceKit.SpaceKitSubscriptionToken
@@ -179,6 +180,23 @@ public protocol Context : AnyObject {
 public protocol SpaceKitViewController : UIKit.UIViewController {
   var contentLayoutGuide: UIKit.UILayoutGuide { get }
 }
+public enum TraversalOption : Swift.String, Swift.CaseIterable {
+  case elevator
+  case escalator
+  case stairs
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [SpaceKit.TraversalOption]
+  public typealias RawValue = Swift.String
+  public static var allCases: [SpaceKit.TraversalOption] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
 extension SpaceKit.SpaceKitViewControllerFactory : Swift.Sendable {}
 extension SpaceKit.Requisite : Swift.Equatable {}
 extension SpaceKit.Requisite : Swift.Hashable {}
+extension SpaceKit.TraversalOption : Swift.Equatable {}
+extension SpaceKit.TraversalOption : Swift.Hashable {}
+extension SpaceKit.TraversalOption : Swift.RawRepresentable {}
