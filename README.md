@@ -37,3 +37,7 @@ The Android repository can be found [here](https://github.com/DentReality/SpaceK
 2. Add [geos](https://github.com/GEOSwift/geos) as a dependency, using the method of your choosing (CocoaPods, SPM or manual).
 
 3. Embed and sign `SpaceKit` and `geos` in your project settings. 
+
+## Documentation
+
+API documentation is available [here](https://dentreality.github.io/SpaceKit-iOS/documentation/spacekit/).
