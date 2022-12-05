@@ -58,7 +58,11 @@ class ListManager {
 }
 
 extension ListManager: SpaceKit.SpaceKitListDelegate {
-	func spaceKitContext(_ context: Context, didUpdateOrderedDestinations orderedDestinations: [Destination]) {
+	func spaceKitContext(
+		_ context: SpaceKit.Context,
+		didUpdateOrderedDestinations orderedDestinations: [SpaceKit.Destination],
+		with levelTransitions: [[SpaceKit.LevelTransition]])
+	{
 		self.listItems = orderedDestinations.map(\.identifier)
 		updateProductItems()
 		updateListView?()

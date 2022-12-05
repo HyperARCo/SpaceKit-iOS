@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.7 (swiftlang-5.7.0.127.4 clang-1400.0.29.50)
+// swift-compiler-version: Apple Swift version 5.7.1 (swiftlang-5.7.1.135.3 clang-1400.0.29.51)
 // swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name SpaceKit
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import ARKit
@@ -33,8 +33,13 @@ public struct Destination : Swift.Equatable {
   public init(identifier: Swift.String, displayName: Swift.String, icon: SpaceKit.SpaceKitImage?)
   public static func == (a: SpaceKit.Destination, b: SpaceKit.Destination) -> Swift.Bool
 }
+public struct LevelTransition {
+  public let traversalOption: SpaceKit.TraversalOption
+  public let originOrdinal: Swift.Int
+  public let destinationOrdinal: Swift.Int
+}
 public protocol SpaceKitListDelegate : AnyObject {
-  func spaceKitContext(_ context: SpaceKit.Context, didUpdateOrderedDestinations orderedDestinations: [SpaceKit.Destination])
+  func spaceKitContext(_ context: SpaceKit.Context, didUpdateOrderedDestinations orderedDestinations: [SpaceKit.Destination], with levelTransitions: [[SpaceKit.LevelTransition]])
 }
 public enum Requisite : Swift.CaseIterable {
   case locationPermission
@@ -52,6 +57,11 @@ public enum Requisite : Swift.CaseIterable {
 }
 public protocol SpaceKitRequisitesDelegate : AnyObject {
   func spaceKitContext(_ context: SpaceKit.Context, requiresRequisites requisites: [SpaceKit.Requisite])
+}
+public protocol EventTrigger {
+}
+public protocol EventFactory {
+  func makeEvent(_ trigger: SpaceKit.EventTrigger, handler: @escaping () -> Swift.Void) -> SpaceKit.SubscriptionEvent
 }
 final public class SpaceKitVenue {
   public init(from url: Foundation.URL)
@@ -94,9 +104,6 @@ public protocol SubscriptionEvent {
   func onSubscribe()
   func evaluateFulfilled() -> Swift.Bool
 }
-public protocol SubscriptionsDelegate : AnyObject {
-  func spaceKitContext(_ spaceKitContext: SpaceKit.Context, didFulfillRequirementsOfEvent: SpaceKit.SubscriptionEvent)
-}
 extension ARKit.ARSCNView {
   @_Concurrency.MainActor(unsafe) public var userSceneHeading: Swift.Float? {
     get
@@ -108,7 +115,7 @@ extension ARKit.ARSCNView {
 public struct SpaceKitContextFactory {
   public init(venue: SpaceKit.Venue, isDebugEnabled: Swift.Bool = false)
   #if compiler(>=5.3) && $AsyncAwait
-  public func make() async throws -> SpaceKit.Context
+  public func make() async throws -> SpaceKit.Context & SpaceKit.EventFactory
   #endif
 }
 public struct ScanResult : Swift.Equatable {
@@ -171,14 +178,31 @@ public protocol Context : AnyObject {
   var listDelegate: SpaceKit.SpaceKitListDelegate? { get set }
   var barcodeDelegate: SpaceKit.SpaceKitBarcodeDelegate? { get set }
   var isDebugEnabled: Swift.Bool { get }
-  func setTraversalOptions(_ options: Swift.Set<SpaceKit.TraversalOption>)
+  func setRoutingOptions(_ options: SpaceKit.RoutingOptions)
   func setDestinations(_ destinations: [SpaceKit.Destination])
   func requestUnfulfilledRequisites(from requisites: [SpaceKit.Requisite])
   func subscribeToEvent(_ subscriptionEvent: SpaceKit.SubscriptionEvent) -> SpaceKit.SpaceKitSubscriptionToken
   func unsubscribeFromEventWithSubscriptionToken(_ subscriptionToken: SpaceKit.SpaceKitSubscriptionToken)
 }
+public struct RoutingOptions {
+  public init(traversalOptions: Swift.Set<SpaceKit.TraversalOption>)
+}
 public protocol SpaceKitViewController : UIKit.UIViewController {
   var contentLayoutGuide: UIKit.UILayoutGuide { get }
+}
+public struct ItemProximity {
+  public init(itemCode: Swift.String, threshold: Swift.Double)
+}
+public struct PathProximity {
+  public init(itemCode: Swift.String, threshold: Swift.Double)
+}
+public struct EnterSection {
+  public init(sectionIdentifier: Swift.String)
+}
+public struct SectionProximity {
+  public init(sectionIdentifier: Swift.String, threshold: Swift.Double)
+}
+public struct EnterLevel {
 }
 public enum TraversalOption : Swift.String, Swift.CaseIterable {
   case elevator
@@ -197,6 +221,11 @@ public enum TraversalOption : Swift.String, Swift.CaseIterable {
 extension SpaceKit.SpaceKitViewControllerFactory : Swift.Sendable {}
 extension SpaceKit.Requisite : Swift.Equatable {}
 extension SpaceKit.Requisite : Swift.Hashable {}
+extension SpaceKit.ItemProximity : SpaceKit.EventTrigger {}
+extension SpaceKit.PathProximity : SpaceKit.EventTrigger {}
+extension SpaceKit.EnterSection : SpaceKit.EventTrigger {}
+extension SpaceKit.SectionProximity : SpaceKit.EventTrigger {}
+extension SpaceKit.EnterLevel : SpaceKit.EventTrigger {}
 extension SpaceKit.TraversalOption : Swift.Equatable {}
 extension SpaceKit.TraversalOption : Swift.Hashable {}
 extension SpaceKit.TraversalOption : Swift.RawRepresentable {}
