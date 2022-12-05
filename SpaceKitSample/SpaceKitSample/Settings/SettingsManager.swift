@@ -31,6 +31,6 @@ class SettingsManager: ObservableObject {
 			options.insert(.elevator)
 		}
 
-		spaceKitContext?.setTraversalOptions(options)
+		spaceKitContext?.setRoutingOptions(RoutingOptions(traversalOptions: options))
 	}
 }
