@@ -1,4 +1,4 @@
-name: Update Cocoapod
+name: Update Cocoapoad and docs
 
 on:
   push:
