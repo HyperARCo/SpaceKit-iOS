@@ -10,6 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       framework: ${{ steps.filter.outputs.framework }}
+      docs: ${{ steps.filter.outputs.framework }}
     steps:
     - uses: actions/checkout@v3
     - uses: dorny/paths-filter@v2
@@ -18,6 +19,8 @@ jobs:
         filters: |
           framework:
             - 'SpaceKit.xcframework/**'
+          docs:
+            - 'SpaceKit.doccarchive/**'
 
   Update_Cocoapod:
     name: Update podspec version
@@ -27,9 +30,28 @@ jobs:
     timeout-minutes: 60
 
     steps:
-    - uses: actions/checkout@v3
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
     - name: Set podspec version
       run: exec ./.github/scripts/set_podspec_version.sh
 
     - name: Add podspec tag
       run: exec ./.github/scripts/add_podspec_tag.sh
+  
+  Publish_Docs:
+    name: Publish docs
+    runs-on: macos-12
+    needs: changes
+    if: ${{ needs.changes.outputs.docs == 'true' }}
+    timeout-minutes: 60
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+    
+    - name: Publish docs
+      env:
+        SPACEKIT_DOCS_DIRECTORY: ./docs
+        SPACEKIT_HOSTING_BASE_PATH: SpaceKit-iOS
+      run: exec ./.github/scripts/publish-docs.sh
