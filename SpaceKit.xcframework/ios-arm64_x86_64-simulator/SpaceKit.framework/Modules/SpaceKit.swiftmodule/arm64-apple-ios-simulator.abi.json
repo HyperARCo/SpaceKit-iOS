@@ -308,6 +308,244 @@
         "printedName": "Destination",
         "children": [
           {
+            "kind": "TypeDecl",
+            "name": "Priority",
+            "printedName": "Priority",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "first",
+                "printedName": "first",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(SpaceKit.Destination.Priority.Type) -> SpaceKit.Destination.Priority",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Priority",
+                        "printedName": "SpaceKit.Destination.Priority",
+                        "usr": "s:8SpaceKit11DestinationV8PriorityO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "SpaceKit.Destination.Priority.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Priority",
+                            "printedName": "SpaceKit.Destination.Priority",
+                            "usr": "s:8SpaceKit11DestinationV8PriorityO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:8SpaceKit11DestinationV8PriorityO5firstyA2EmF",
+                "mangledName": "$s8SpaceKit11DestinationV8PriorityO5firstyA2EmF",
+                "moduleName": "SpaceKit"
+              },
+              {
+                "kind": "Var",
+                "name": "last",
+                "printedName": "last",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(SpaceKit.Destination.Priority.Type) -> SpaceKit.Destination.Priority",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Priority",
+                        "printedName": "SpaceKit.Destination.Priority",
+                        "usr": "s:8SpaceKit11DestinationV8PriorityO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "SpaceKit.Destination.Priority.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Priority",
+                            "printedName": "SpaceKit.Destination.Priority",
+                            "usr": "s:8SpaceKit11DestinationV8PriorityO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:8SpaceKit11DestinationV8PriorityO4lastyA2EmF",
+                "mangledName": "$s8SpaceKit11DestinationV8PriorityO4lastyA2EmF",
+                "moduleName": "SpaceKit"
+              },
+              {
+                "kind": "Var",
+                "name": "unspecified",
+                "printedName": "unspecified",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(SpaceKit.Destination.Priority.Type) -> SpaceKit.Destination.Priority",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Priority",
+                        "printedName": "SpaceKit.Destination.Priority",
+                        "usr": "s:8SpaceKit11DestinationV8PriorityO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "SpaceKit.Destination.Priority.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Priority",
+                            "printedName": "SpaceKit.Destination.Priority",
+                            "usr": "s:8SpaceKit11DestinationV8PriorityO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:8SpaceKit11DestinationV8PriorityO11unspecifiedyA2EmF",
+                "mangledName": "$s8SpaceKit11DestinationV8PriorityO11unspecifiedyA2EmF",
+                "moduleName": "SpaceKit"
+              },
+              {
+                "kind": "Function",
+                "name": "==",
+                "printedName": "==(_:_:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Priority",
+                    "printedName": "SpaceKit.Destination.Priority",
+                    "usr": "s:8SpaceKit11DestinationV8PriorityO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Priority",
+                    "printedName": "SpaceKit.Destination.Priority",
+                    "usr": "s:8SpaceKit11DestinationV8PriorityO"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:8SpaceKit11DestinationV8PriorityO2eeoiySbAE_AEtFZ",
+                "mangledName": "$s8SpaceKit11DestinationV8PriorityO2eeoiySbAE_AEtFZ",
+                "moduleName": "SpaceKit",
+                "static": true,
+                "implicit": true,
+                "funcSelfKind": "NonMutating"
+              },
+              {
+                "kind": "Var",
+                "name": "hashValue",
+                "printedName": "hashValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:8SpaceKit11DestinationV8PriorityO9hashValueSivp",
+                "mangledName": "$s8SpaceKit11DestinationV8PriorityO9hashValueSivp",
+                "moduleName": "SpaceKit",
+                "implicit": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:8SpaceKit11DestinationV8PriorityO9hashValueSivg",
+                    "mangledName": "$s8SpaceKit11DestinationV8PriorityO9hashValueSivg",
+                    "moduleName": "SpaceKit",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Function",
+                "name": "hash",
+                "printedName": "hash(into:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Hasher",
+                    "printedName": "Swift.Hasher",
+                    "paramValueOwnership": "InOut",
+                    "usr": "s:s6HasherV"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:8SpaceKit11DestinationV8PriorityO4hash4intoys6HasherVz_tF",
+                "mangledName": "$s8SpaceKit11DestinationV8PriorityO4hash4intoys6HasherVz_tF",
+                "moduleName": "SpaceKit",
+                "implicit": true,
+                "funcSelfKind": "NonMutating"
+              }
+            ],
+            "declKind": "Enum",
+            "usr": "s:8SpaceKit11DestinationV8PriorityO",
+            "mangledName": "$s8SpaceKit11DestinationV8PriorityO",
+            "moduleName": "SpaceKit",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Equatable",
+                "printedName": "Equatable",
+                "usr": "s:SQ",
+                "mangledName": "$sSQ"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Hashable",
+                "printedName": "Hashable",
+                "usr": "s:SH",
+                "mangledName": "$sSH"
+              }
+            ]
+          },
+          {
             "kind": "Var",
             "name": "identifier",
             "printedName": "identifier",
@@ -459,9 +697,54 @@
             ]
           },
           {
+            "kind": "Var",
+            "name": "priority",
+            "printedName": "priority",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Priority",
+                "printedName": "SpaceKit.Destination.Priority",
+                "usr": "s:8SpaceKit11DestinationV8PriorityO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8SpaceKit11DestinationV8priorityAC8PriorityOvp",
+            "mangledName": "$s8SpaceKit11DestinationV8priorityAC8PriorityOvp",
+            "moduleName": "SpaceKit",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Priority",
+                    "printedName": "SpaceKit.Destination.Priority",
+                    "usr": "s:8SpaceKit11DestinationV8PriorityO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8SpaceKit11DestinationV8priorityAC8PriorityOvg",
+                "mangledName": "$s8SpaceKit11DestinationV8priorityAC8PriorityOvg",
+                "moduleName": "SpaceKit",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(identifier:displayName:icon:)",
+            "printedName": "init(identifier:displayName:icon:priority:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -494,11 +777,18 @@
                   }
                 ],
                 "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Priority",
+                "printedName": "SpaceKit.Destination.Priority",
+                "hasDefaultArg": true,
+                "usr": "s:8SpaceKit11DestinationV8PriorityO"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:8SpaceKit11DestinationV10identifier11displayName4iconACSS_SSSo7UIImageCSgtcfc",
-            "mangledName": "$s8SpaceKit11DestinationV10identifier11displayName4iconACSS_SSSo7UIImageCSgtcfc",
+            "usr": "s:8SpaceKit11DestinationV10identifier11displayName4icon8priorityACSS_SSSo7UIImageCSgAC8PriorityOtcfc",
+            "mangledName": "$s8SpaceKit11DestinationV10identifier11displayName4icon8priorityACSS_SSSo7UIImageCSgAC8PriorityOtcfc",
             "moduleName": "SpaceKit",
             "declAttributes": [
               "AccessControl"
@@ -2964,6 +3254,1009 @@
         "moduleName": "SpaceKit",
         "declAttributes": [
           "ImplementationOnly"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "SpaceKit",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "HyperUI",
+        "printedName": "HyperUI",
+        "declKind": "Import",
+        "moduleName": "SpaceKit",
+        "declAttributes": [
+          "ImplementationOnly"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Theme",
+        "printedName": "Theme",
+        "children": [
+          {
+            "kind": "TypeDecl",
+            "name": "CornerStyle",
+            "printedName": "CornerStyle",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "square",
+                "printedName": "square",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(SpaceKit.Theme.CornerStyle.Type) -> SpaceKit.Theme.CornerStyle",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CornerStyle",
+                        "printedName": "SpaceKit.Theme.CornerStyle",
+                        "usr": "s:8SpaceKit5ThemeV11CornerStyleO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "SpaceKit.Theme.CornerStyle.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "CornerStyle",
+                            "printedName": "SpaceKit.Theme.CornerStyle",
+                            "usr": "s:8SpaceKit5ThemeV11CornerStyleO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:8SpaceKit5ThemeV11CornerStyleO6squareyA2EmF",
+                "mangledName": "$s8SpaceKit5ThemeV11CornerStyleO6squareyA2EmF",
+                "moduleName": "SpaceKit"
+              },
+              {
+                "kind": "Var",
+                "name": "semiRounded",
+                "printedName": "semiRounded",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(SpaceKit.Theme.CornerStyle.Type) -> SpaceKit.Theme.CornerStyle",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CornerStyle",
+                        "printedName": "SpaceKit.Theme.CornerStyle",
+                        "usr": "s:8SpaceKit5ThemeV11CornerStyleO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "SpaceKit.Theme.CornerStyle.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "CornerStyle",
+                            "printedName": "SpaceKit.Theme.CornerStyle",
+                            "usr": "s:8SpaceKit5ThemeV11CornerStyleO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:8SpaceKit5ThemeV11CornerStyleO11semiRoundedyA2EmF",
+                "mangledName": "$s8SpaceKit5ThemeV11CornerStyleO11semiRoundedyA2EmF",
+                "moduleName": "SpaceKit"
+              },
+              {
+                "kind": "Var",
+                "name": "rounded",
+                "printedName": "rounded",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(SpaceKit.Theme.CornerStyle.Type) -> SpaceKit.Theme.CornerStyle",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CornerStyle",
+                        "printedName": "SpaceKit.Theme.CornerStyle",
+                        "usr": "s:8SpaceKit5ThemeV11CornerStyleO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "SpaceKit.Theme.CornerStyle.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "CornerStyle",
+                            "printedName": "SpaceKit.Theme.CornerStyle",
+                            "usr": "s:8SpaceKit5ThemeV11CornerStyleO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:8SpaceKit5ThemeV11CornerStyleO7roundedyA2EmF",
+                "mangledName": "$s8SpaceKit5ThemeV11CornerStyleO7roundedyA2EmF",
+                "moduleName": "SpaceKit"
+              },
+              {
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init(rawValue:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "SpaceKit.Theme.CornerStyle?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CornerStyle",
+                        "printedName": "SpaceKit.Theme.CornerStyle",
+                        "usr": "s:8SpaceKit5ThemeV11CornerStyleO"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Constructor",
+                "usr": "s:8SpaceKit5ThemeV11CornerStyleO8rawValueAESgSS_tcfc",
+                "mangledName": "$s8SpaceKit5ThemeV11CornerStyleO8rawValueAESgSS_tcfc",
+                "moduleName": "SpaceKit",
+                "implicit": true,
+                "init_kind": "Designated"
+              },
+              {
+                "kind": "Var",
+                "name": "rawValue",
+                "printedName": "rawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:8SpaceKit5ThemeV11CornerStyleO8rawValueSSvp",
+                "mangledName": "$s8SpaceKit5ThemeV11CornerStyleO8rawValueSSvp",
+                "moduleName": "SpaceKit",
+                "implicit": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:8SpaceKit5ThemeV11CornerStyleO8rawValueSSvg",
+                    "mangledName": "$s8SpaceKit5ThemeV11CornerStyleO8rawValueSSvg",
+                    "moduleName": "SpaceKit",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Enum",
+            "usr": "s:8SpaceKit5ThemeV11CornerStyleO",
+            "mangledName": "$s8SpaceKit5ThemeV11CornerStyleO",
+            "moduleName": "SpaceKit",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "enumRawTypeName": "String",
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Equatable",
+                "printedName": "Equatable",
+                "usr": "s:SQ",
+                "mangledName": "$sSQ"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Hashable",
+                "printedName": "Hashable",
+                "usr": "s:SH",
+                "mangledName": "$sSH"
+              },
+              {
+                "kind": "Conformance",
+                "name": "RawRepresentable",
+                "printedName": "RawRepresentable",
+                "children": [
+                  {
+                    "kind": "TypeWitness",
+                    "name": "RawValue",
+                    "printedName": "RawValue",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:SY",
+                "mangledName": "$sSY"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Decodable",
+                "printedName": "Decodable",
+                "usr": "s:Se",
+                "mangledName": "$sSe"
+              }
+            ]
+          },
+          {
+            "kind": "TypeDecl",
+            "name": "Font",
+            "printedName": "Font",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "default",
+                "printedName": "default",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(SpaceKit.Theme.Font.Type) -> SpaceKit.Theme.Font",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Font",
+                        "printedName": "SpaceKit.Theme.Font",
+                        "usr": "s:8SpaceKit5ThemeV4FontO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "SpaceKit.Theme.Font.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Font",
+                            "printedName": "SpaceKit.Theme.Font",
+                            "usr": "s:8SpaceKit5ThemeV4FontO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:8SpaceKit5ThemeV4FontO7defaultyA2EmF",
+                "mangledName": "$s8SpaceKit5ThemeV4FontO7defaultyA2EmF",
+                "moduleName": "SpaceKit"
+              },
+              {
+                "kind": "Function",
+                "name": "==",
+                "printedName": "==(_:_:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Font",
+                    "printedName": "SpaceKit.Theme.Font",
+                    "usr": "s:8SpaceKit5ThemeV4FontO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Font",
+                    "printedName": "SpaceKit.Theme.Font",
+                    "usr": "s:8SpaceKit5ThemeV4FontO"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:8SpaceKit5ThemeV4FontO2eeoiySbAE_AEtFZ",
+                "mangledName": "$s8SpaceKit5ThemeV4FontO2eeoiySbAE_AEtFZ",
+                "moduleName": "SpaceKit",
+                "static": true,
+                "implicit": true,
+                "funcSelfKind": "NonMutating"
+              },
+              {
+                "kind": "Var",
+                "name": "hashValue",
+                "printedName": "hashValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:8SpaceKit5ThemeV4FontO9hashValueSivp",
+                "mangledName": "$s8SpaceKit5ThemeV4FontO9hashValueSivp",
+                "moduleName": "SpaceKit",
+                "implicit": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:8SpaceKit5ThemeV4FontO9hashValueSivg",
+                    "mangledName": "$s8SpaceKit5ThemeV4FontO9hashValueSivg",
+                    "moduleName": "SpaceKit",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Function",
+                "name": "hash",
+                "printedName": "hash(into:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Hasher",
+                    "printedName": "Swift.Hasher",
+                    "paramValueOwnership": "InOut",
+                    "usr": "s:s6HasherV"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:8SpaceKit5ThemeV4FontO4hash4intoys6HasherVz_tF",
+                "mangledName": "$s8SpaceKit5ThemeV4FontO4hash4intoys6HasherVz_tF",
+                "moduleName": "SpaceKit",
+                "implicit": true,
+                "funcSelfKind": "NonMutating"
+              }
+            ],
+            "declKind": "Enum",
+            "usr": "s:8SpaceKit5ThemeV4FontO",
+            "mangledName": "$s8SpaceKit5ThemeV4FontO",
+            "moduleName": "SpaceKit",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Equatable",
+                "printedName": "Equatable",
+                "usr": "s:SQ",
+                "mangledName": "$sSQ"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Hashable",
+                "printedName": "Hashable",
+                "usr": "s:SH",
+                "mangledName": "$sSH"
+              }
+            ]
+          },
+          {
+            "kind": "TypeDecl",
+            "name": "ThemeColor",
+            "printedName": "ThemeColor",
+            "children": [
+              {
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init(base:light:dark:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ThemeColor",
+                    "printedName": "SpaceKit.Theme.ThemeColor",
+                    "usr": "s:8SpaceKit5ThemeV0C5ColorV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "declKind": "Constructor",
+                "usr": "s:8SpaceKit5ThemeV0C5ColorV4base5light4darkAESo7UIColorC_A2Jtcfc",
+                "mangledName": "$s8SpaceKit5ThemeV0C5ColorV4base5light4darkAESo7UIColorC_A2Jtcfc",
+                "moduleName": "SpaceKit",
+                "declAttributes": [
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "init_kind": "Designated"
+              },
+              {
+                "kind": "Var",
+                "name": "base",
+                "printedName": "base",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:8SpaceKit5ThemeV0C5ColorV4baseSo7UIColorCvp",
+                "mangledName": "$s8SpaceKit5ThemeV0C5ColorV4baseSo7UIColorCvp",
+                "moduleName": "SpaceKit",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIColor",
+                        "printedName": "UIKit.UIColor",
+                        "usr": "c:objc(cs)UIColor"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:8SpaceKit5ThemeV0C5ColorV4baseSo7UIColorCvg",
+                    "mangledName": "$s8SpaceKit5ThemeV0C5ColorV4baseSo7UIColorCvg",
+                    "moduleName": "SpaceKit",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "light",
+                "printedName": "light",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:8SpaceKit5ThemeV0C5ColorV5lightSo7UIColorCvp",
+                "mangledName": "$s8SpaceKit5ThemeV0C5ColorV5lightSo7UIColorCvp",
+                "moduleName": "SpaceKit",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIColor",
+                        "printedName": "UIKit.UIColor",
+                        "usr": "c:objc(cs)UIColor"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:8SpaceKit5ThemeV0C5ColorV5lightSo7UIColorCvg",
+                    "mangledName": "$s8SpaceKit5ThemeV0C5ColorV5lightSo7UIColorCvg",
+                    "moduleName": "SpaceKit",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "dark",
+                "printedName": "dark",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:8SpaceKit5ThemeV0C5ColorV4darkSo7UIColorCvp",
+                "mangledName": "$s8SpaceKit5ThemeV0C5ColorV4darkSo7UIColorCvp",
+                "moduleName": "SpaceKit",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIColor",
+                        "printedName": "UIKit.UIColor",
+                        "usr": "c:objc(cs)UIColor"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:8SpaceKit5ThemeV0C5ColorV4darkSo7UIColorCvg",
+                    "mangledName": "$s8SpaceKit5ThemeV0C5ColorV4darkSo7UIColorCvg",
+                    "moduleName": "SpaceKit",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Struct",
+            "usr": "s:8SpaceKit5ThemeV0C5ColorV",
+            "mangledName": "$s8SpaceKit5ThemeV0C5ColorV",
+            "moduleName": "SpaceKit",
+            "declAttributes": [
+              "AccessControl"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "primaryColor",
+            "printedName": "primaryColor",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ThemeColor",
+                "printedName": "SpaceKit.Theme.ThemeColor",
+                "usr": "s:8SpaceKit5ThemeV0C5ColorV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8SpaceKit5ThemeV12primaryColorAC0cE0Vvp",
+            "mangledName": "$s8SpaceKit5ThemeV12primaryColorAC0cE0Vvp",
+            "moduleName": "SpaceKit",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ThemeColor",
+                    "printedName": "SpaceKit.Theme.ThemeColor",
+                    "usr": "s:8SpaceKit5ThemeV0C5ColorV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8SpaceKit5ThemeV12primaryColorAC0cE0Vvg",
+                "mangledName": "$s8SpaceKit5ThemeV12primaryColorAC0cE0Vvg",
+                "moduleName": "SpaceKit",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "secondaryColor",
+            "printedName": "secondaryColor",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ThemeColor",
+                "printedName": "SpaceKit.Theme.ThemeColor",
+                "usr": "s:8SpaceKit5ThemeV0C5ColorV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8SpaceKit5ThemeV14secondaryColorAC0cE0Vvp",
+            "mangledName": "$s8SpaceKit5ThemeV14secondaryColorAC0cE0Vvp",
+            "moduleName": "SpaceKit",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ThemeColor",
+                    "printedName": "SpaceKit.Theme.ThemeColor",
+                    "usr": "s:8SpaceKit5ThemeV0C5ColorV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8SpaceKit5ThemeV14secondaryColorAC0cE0Vvg",
+                "mangledName": "$s8SpaceKit5ThemeV14secondaryColorAC0cE0Vvg",
+                "moduleName": "SpaceKit",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "cornerStyle",
+            "printedName": "cornerStyle",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CornerStyle",
+                "printedName": "SpaceKit.Theme.CornerStyle",
+                "usr": "s:8SpaceKit5ThemeV11CornerStyleO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8SpaceKit5ThemeV11cornerStyleAC06CornerE0Ovp",
+            "mangledName": "$s8SpaceKit5ThemeV11cornerStyleAC06CornerE0Ovp",
+            "moduleName": "SpaceKit",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CornerStyle",
+                    "printedName": "SpaceKit.Theme.CornerStyle",
+                    "usr": "s:8SpaceKit5ThemeV11CornerStyleO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8SpaceKit5ThemeV11cornerStyleAC06CornerE0Ovg",
+                "mangledName": "$s8SpaceKit5ThemeV11cornerStyleAC06CornerE0Ovg",
+                "moduleName": "SpaceKit",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "font",
+            "printedName": "font",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Font",
+                "printedName": "SpaceKit.Theme.Font",
+                "usr": "s:8SpaceKit5ThemeV4FontO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8SpaceKit5ThemeV4fontAC4FontOvp",
+            "mangledName": "$s8SpaceKit5ThemeV4fontAC4FontOvp",
+            "moduleName": "SpaceKit",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Font",
+                    "printedName": "SpaceKit.Theme.Font",
+                    "usr": "s:8SpaceKit5ThemeV4FontO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8SpaceKit5ThemeV4fontAC4FontOvg",
+                "mangledName": "$s8SpaceKit5ThemeV4fontAC4FontOvg",
+                "moduleName": "SpaceKit",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(primaryColor:secondaryColor:cornerStyle:font:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Theme",
+                "printedName": "SpaceKit.Theme",
+                "usr": "s:8SpaceKit5ThemeV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ThemeColor",
+                "printedName": "SpaceKit.Theme.ThemeColor",
+                "usr": "s:8SpaceKit5ThemeV0C5ColorV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ThemeColor",
+                "printedName": "SpaceKit.Theme.ThemeColor",
+                "usr": "s:8SpaceKit5ThemeV0C5ColorV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CornerStyle",
+                "printedName": "SpaceKit.Theme.CornerStyle",
+                "usr": "s:8SpaceKit5ThemeV11CornerStyleO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Font",
+                "printedName": "SpaceKit.Theme.Font",
+                "usr": "s:8SpaceKit5ThemeV4FontO"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:8SpaceKit5ThemeV12primaryColor09secondaryE011cornerStyle4fontA2C0cE0V_AiC06CornerH0OAC4FontOtcfc",
+            "mangledName": "$s8SpaceKit5ThemeV12primaryColor09secondaryE011cornerStyle4fontA2C0cE0V_AiC06CornerH0OAC4FontOtcfc",
+            "moduleName": "SpaceKit",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "default",
+            "printedName": "default",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Theme",
+                "printedName": "SpaceKit.Theme",
+                "usr": "s:8SpaceKit5ThemeV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8SpaceKit5ThemeV7defaultACvpZ",
+            "mangledName": "$s8SpaceKit5ThemeV7defaultACvpZ",
+            "moduleName": "SpaceKit",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Theme",
+                    "printedName": "SpaceKit.Theme",
+                    "usr": "s:8SpaceKit5ThemeV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8SpaceKit5ThemeV7defaultACvgZ",
+                "mangledName": "$s8SpaceKit5ThemeV7defaultACvgZ",
+                "moduleName": "SpaceKit",
+                "static": true,
+                "implicit": true,
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "tealRounded",
+            "printedName": "tealRounded",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Theme",
+                "printedName": "SpaceKit.Theme",
+                "usr": "s:8SpaceKit5ThemeV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8SpaceKit5ThemeV11tealRoundedACvpZ",
+            "mangledName": "$s8SpaceKit5ThemeV11tealRoundedACvpZ",
+            "moduleName": "SpaceKit",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage"
+            ],
+            "isFromExtension": true,
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Theme",
+                    "printedName": "SpaceKit.Theme",
+                    "usr": "s:8SpaceKit5ThemeV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8SpaceKit5ThemeV11tealRoundedACvgZ",
+                "mangledName": "$s8SpaceKit5ThemeV11tealRoundedACvgZ",
+                "moduleName": "SpaceKit",
+                "static": true,
+                "implicit": true,
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "purpleSquared",
+            "printedName": "purpleSquared",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Theme",
+                "printedName": "SpaceKit.Theme",
+                "usr": "s:8SpaceKit5ThemeV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8SpaceKit5ThemeV13purpleSquaredACvpZ",
+            "mangledName": "$s8SpaceKit5ThemeV13purpleSquaredACvpZ",
+            "moduleName": "SpaceKit",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage"
+            ],
+            "isFromExtension": true,
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Theme",
+                    "printedName": "SpaceKit.Theme",
+                    "usr": "s:8SpaceKit5ThemeV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8SpaceKit5ThemeV13purpleSquaredACvgZ",
+                "mangledName": "$s8SpaceKit5ThemeV13purpleSquaredACvgZ",
+                "moduleName": "SpaceKit",
+                "static": true,
+                "implicit": true,
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:8SpaceKit5ThemeV",
+        "mangledName": "$s8SpaceKit5ThemeV",
+        "moduleName": "SpaceKit",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
         ]
       },
       {
@@ -6912,7 +8205,7 @@
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/DefaultSpaceKitViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 1200,
+      "offset": 1183,
       "length": 5,
       "value": "false"
     },
@@ -6926,63 +8219,63 @@
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/DefaultSpaceKitViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 12019,
+      "offset": 11970,
       "length": 3,
       "value": "0.3"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/DefaultSpaceKitViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 12068,
+      "offset": 12019,
       "length": 3,
       "value": "0.6"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/DefaultSpaceKitViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 12111,
+      "offset": 12062,
       "length": 2,
       "value": "74"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/DefaultSpaceKitViewController.swift",
       "kind": "StringLiteral",
-      "offset": 12179,
+      "offset": 12130,
       "length": 19,
       "value": "\"qrcode.viewfinder\""
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/DefaultSpaceKitViewController.swift",
       "kind": "StringLiteral",
-      "offset": 12250,
+      "offset": 12201,
       "length": 16,
       "value": "\"arrow.up.right\""
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/DefaultSpaceKitViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 12329,
+      "offset": 12280,
       "length": 2,
       "value": "16"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/DefaultSpaceKitViewController.swift",
       "kind": "StringLiteral",
-      "offset": 12390,
+      "offset": 12341,
       "length": 13,
       "value": "\"person.fill\""
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/DefaultSpaceKitViewController.swift",
       "kind": "StringLiteral",
-      "offset": 12449,
+      "offset": 12400,
       "length": 10,
       "value": "\"location\""
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/DefaultSpaceKitViewController.swift",
       "kind": "StringLiteral",
-      "offset": 12509,
+      "offset": 12460,
       "length": 15,
       "value": "\"location.fill\""
     },
@@ -8044,6 +9337,55 @@
       "value": "\"SpaceKit.HMGeneticAlgorithm\""
     },
     {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/Public\/Theme.swift",
+      "kind": "StringLiteral",
+      "offset": 2547,
+      "length": 9,
+      "value": "\"#0DBDBD\""
+    },
+    {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/Public\/Theme.swift",
+      "kind": "StringLiteral",
+      "offset": 2588,
+      "length": 9,
+      "value": "\"#3DCACA\""
+    },
+    {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/Public\/Theme.swift",
+      "kind": "StringLiteral",
+      "offset": 2628,
+      "length": 9,
+      "value": "\"#0A9797\""
+    },
+    {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/Public\/Theme.swift",
+      "kind": "StringLiteral",
+      "offset": 3054,
+      "length": 9,
+      "value": "\"#82459E\""
+    },
+    {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/Public\/Theme.swift",
+      "kind": "StringLiteral",
+      "offset": 3095,
+      "length": 9,
+      "value": "\"#9b6ab1\""
+    },
+    {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/Public\/Theme.swift",
+      "kind": "StringLiteral",
+      "offset": 3135,
+      "length": 9,
+      "value": "\"#68377e\""
+    },
+    {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/Public\/Theme.swift",
+      "kind": "StringLiteral",
+      "offset": 3222,
+      "length": 9,
+      "value": "\"#F8FFA5\""
+    },
+    {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/HyperSpaceView.swift",
       "kind": "Array",
       "offset": 1669,
@@ -8340,30 +9682,37 @@
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/VenueController\/VenueController.swift",
       "kind": "StringLiteral",
-      "offset": 8608,
+      "offset": 8839,
       "length": 13,
       "value": "\"pathfinding\""
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/VenueController\/VenueController.swift",
       "kind": "BooleanLiteral",
-      "offset": 9012,
+      "offset": 9243,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/VenueController\/VenueController.swift",
       "kind": "BooleanLiteral",
-      "offset": 9070,
+      "offset": 9301,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/VenueController\/VenueController.swift",
       "kind": "BooleanLiteral",
-      "offset": 9129,
+      "offset": 9360,
       "length": 4,
       "value": "true"
+    },
+    {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/VenueController\/VenueController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 9565,
+      "length": 5,
+      "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Updaters\/LocationUpdater.swift",
@@ -8389,35 +9738,35 @@
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/SpaceKitViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 1198,
+      "offset": 1181,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/SpaceKitViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 1277,
+      "offset": 1260,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/SpaceKitViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 1357,
+      "offset": 1340,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/SpaceKitViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 1433,
+      "offset": 1416,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/SpaceKitViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 1508,
+      "offset": 1491,
       "length": 5,
       "value": "false"
     },

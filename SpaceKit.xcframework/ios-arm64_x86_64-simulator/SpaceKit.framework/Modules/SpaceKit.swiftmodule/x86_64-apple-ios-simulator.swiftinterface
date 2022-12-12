@@ -27,10 +27,21 @@ public typealias InfoViewFactory = () -> SpaceKit.InfoView
 }
 public typealias SpaceKitImage = UIKit.UIImage
 public struct Destination : Swift.Equatable {
+  public enum Priority {
+    case first
+    case last
+    case unspecified
+    public static func == (a: SpaceKit.Destination.Priority, b: SpaceKit.Destination.Priority) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
   public let identifier: Swift.String
   public let displayName: Swift.String
   public let icon: SpaceKit.SpaceKitImage?
-  public init(identifier: Swift.String, displayName: Swift.String, icon: SpaceKit.SpaceKitImage?)
+  public let priority: SpaceKit.Destination.Priority
+  public init(identifier: Swift.String, displayName: Swift.String, icon: SpaceKit.SpaceKitImage?, priority: SpaceKit.Destination.Priority = .unspecified)
   public static func == (a: SpaceKit.Destination, b: SpaceKit.Destination) -> Swift.Bool
 }
 public struct LevelTransition {
@@ -111,6 +122,42 @@ extension ARKit.ARSCNView {
   @_Concurrency.MainActor(unsafe) public var userVerticalOrientation: Swift.Float {
     get
   }
+}
+public struct Theme {
+  public enum CornerStyle : Swift.String, Swift.Decodable {
+    case square
+    case semiRounded
+    case rounded
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum Font {
+    case `default`
+    public static func == (a: SpaceKit.Theme.Font, b: SpaceKit.Theme.Font) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public struct ThemeColor {
+    public init(base: UIKit.UIColor, light: UIKit.UIColor, dark: UIKit.UIColor)
+    public let base: UIKit.UIColor
+    public let light: UIKit.UIColor
+    public let dark: UIKit.UIColor
+  }
+  public let primaryColor: SpaceKit.Theme.ThemeColor
+  public let secondaryColor: SpaceKit.Theme.ThemeColor
+  public let cornerStyle: SpaceKit.Theme.CornerStyle
+  public let font: SpaceKit.Theme.Font
+  public init(primaryColor: SpaceKit.Theme.ThemeColor, secondaryColor: SpaceKit.Theme.ThemeColor, cornerStyle: SpaceKit.Theme.CornerStyle, font: SpaceKit.Theme.Font)
+}
+extension SpaceKit.Theme {
+  public static let `default`: SpaceKit.Theme
+  public static let tealRounded: SpaceKit.Theme
+  public static let purpleSquared: SpaceKit.Theme
 }
 public struct SpaceKitContextFactory {
   public init(venue: SpaceKit.Venue, isDebugEnabled: Swift.Bool = false)
@@ -219,8 +266,15 @@ public enum TraversalOption : Swift.String, Swift.CaseIterable {
   }
 }
 extension SpaceKit.SpaceKitViewControllerFactory : Swift.Sendable {}
+extension SpaceKit.Destination.Priority : Swift.Equatable {}
+extension SpaceKit.Destination.Priority : Swift.Hashable {}
 extension SpaceKit.Requisite : Swift.Equatable {}
 extension SpaceKit.Requisite : Swift.Hashable {}
+extension SpaceKit.Theme.CornerStyle : Swift.Equatable {}
+extension SpaceKit.Theme.CornerStyle : Swift.Hashable {}
+extension SpaceKit.Theme.CornerStyle : Swift.RawRepresentable {}
+extension SpaceKit.Theme.Font : Swift.Equatable {}
+extension SpaceKit.Theme.Font : Swift.Hashable {}
 extension SpaceKit.ItemProximity : SpaceKit.EventTrigger {}
 extension SpaceKit.PathProximity : SpaceKit.EventTrigger {}
 extension SpaceKit.EnterSection : SpaceKit.EventTrigger {}
