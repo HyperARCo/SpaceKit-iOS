@@ -32,6 +32,8 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v3
+      with:
+        token: ${{ secrets.HYPER_IOS_PAT }}
 
     - name: Set podspec version
       run: exec ./.github/scripts/set_podspec_version.sh
