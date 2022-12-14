@@ -44,8 +44,8 @@ jobs:
   Publish_Docs:
     name: Publish docs
     runs-on: macos-12
-    needs: changes
     if: ${{ needs.changes.outputs.docs == 'true' }}
+    needs: [changes, Update_Cocoapod]
     timeout-minutes: 60
 
     steps:
