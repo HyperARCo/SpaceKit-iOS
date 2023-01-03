@@ -237,19 +237,21 @@ public struct RoutingOptions {
 public protocol SpaceKitViewController : UIKit.UIViewController {
   var contentLayoutGuide: UIKit.UILayoutGuide { get }
 }
-public struct ItemProximity {
-  public init(itemCode: Swift.String, threshold: Swift.Double)
-}
-public struct PathProximity {
-  public init(itemCode: Swift.String, threshold: Swift.Double)
-}
-public struct EnterSection {
-  public init(sectionIdentifier: Swift.String)
-}
-public struct SectionProximity {
-  public init(sectionIdentifier: Swift.String, threshold: Swift.Double)
-}
-public struct EnterLevel {
+public enum Event {
+  public struct ItemProximity {
+    public init(itemCode: Swift.String, threshold: Swift.Double)
+  }
+  public struct PathProximity {
+    public init(itemCode: Swift.String, threshold: Swift.Double)
+  }
+  public struct EnterSection {
+    public init(sectionIdentifier: Swift.String)
+  }
+  public struct SectionProximity {
+    public init(sectionIdentifier: Swift.String, threshold: Swift.Double)
+  }
+  public struct EnterLevel {
+  }
 }
 public enum TraversalOption : Swift.String, Swift.CaseIterable {
   case elevator
@@ -275,11 +277,11 @@ extension SpaceKit.Theme.CornerStyle : Swift.Hashable {}
 extension SpaceKit.Theme.CornerStyle : Swift.RawRepresentable {}
 extension SpaceKit.Theme.Font : Swift.Equatable {}
 extension SpaceKit.Theme.Font : Swift.Hashable {}
-extension SpaceKit.ItemProximity : SpaceKit.EventTrigger {}
-extension SpaceKit.PathProximity : SpaceKit.EventTrigger {}
-extension SpaceKit.EnterSection : SpaceKit.EventTrigger {}
-extension SpaceKit.SectionProximity : SpaceKit.EventTrigger {}
-extension SpaceKit.EnterLevel : SpaceKit.EventTrigger {}
+extension SpaceKit.Event.ItemProximity : SpaceKit.EventTrigger {}
+extension SpaceKit.Event.PathProximity : SpaceKit.EventTrigger {}
+extension SpaceKit.Event.EnterSection : SpaceKit.EventTrigger {}
+extension SpaceKit.Event.SectionProximity : SpaceKit.EventTrigger {}
+extension SpaceKit.Event.EnterLevel : SpaceKit.EventTrigger {}
 extension SpaceKit.TraversalOption : Swift.Equatable {}
 extension SpaceKit.TraversalOption : Swift.Hashable {}
 extension SpaceKit.TraversalOption : Swift.RawRepresentable {}
