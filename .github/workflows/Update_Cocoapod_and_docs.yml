@@ -51,6 +51,8 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v3
+      with:
+        token: ${{ secrets.HYPER_IOS_PAT }}
     
     - name: Publish docs
       env:
