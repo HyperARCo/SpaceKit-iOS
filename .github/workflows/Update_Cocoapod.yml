@@ -40,22 +40,3 @@ jobs:
 
     - name: Add podspec tag
       run: exec ./.github/scripts/add_podspec_tag.sh
-  
-  Publish_Docs:
-    name: Publish docs
-    runs-on: macos-12
-    if: ${{ needs.changes.outputs.docs == 'true' }}
-    needs: [changes, Update_Cocoapod]
-    timeout-minutes: 60
-
-    steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
-      with:
-        token: ${{ secrets.HYPER_IOS_PAT }}
-    
-    - name: Publish docs
-      env:
-        SPACEKIT_DOCS_DIRECTORY: ./docs
-        SPACEKIT_HOSTING_BASE_PATH: SpaceKit-iOS
-      run: exec ./.github/scripts/publish-docs.sh
