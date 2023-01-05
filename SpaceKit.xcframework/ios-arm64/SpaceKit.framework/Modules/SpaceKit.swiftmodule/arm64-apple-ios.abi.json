@@ -1869,6 +1869,16 @@
       },
       {
         "kind": "Import",
+        "name": "SpaceKitFoundation",
+        "printedName": "SpaceKitFoundation",
+        "declKind": "Import",
+        "moduleName": "SpaceKit",
+        "declAttributes": [
+          "ImplementationOnly"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "SpaceKitUI",
         "printedName": "SpaceKitUI",
         "declKind": "Import",
@@ -2105,6 +2115,26 @@
         "kind": "Import",
         "name": "SpaceKitLocationAnalysis",
         "printedName": "SpaceKitLocationAnalysis",
+        "declKind": "Import",
+        "moduleName": "SpaceKit",
+        "declAttributes": [
+          "ImplementationOnly"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SpaceKit",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SpaceKitFoundation",
+        "printedName": "SpaceKitFoundation",
         "declKind": "Import",
         "moduleName": "SpaceKit",
         "declAttributes": [
@@ -9838,35 +9868,35 @@
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/VenueController\/VenueController.swift",
       "kind": "StringLiteral",
-      "offset": 8754,
+      "offset": 8997,
       "length": 13,
       "value": "\"pathfinding\""
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/VenueController\/VenueController.swift",
       "kind": "BooleanLiteral",
-      "offset": 9158,
+      "offset": 9401,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/VenueController\/VenueController.swift",
       "kind": "BooleanLiteral",
-      "offset": 9216,
+      "offset": 9459,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/VenueController\/VenueController.swift",
       "kind": "BooleanLiteral",
-      "offset": 9275,
+      "offset": 9518,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/VenueController\/VenueController.swift",
       "kind": "BooleanLiteral",
-      "offset": 9480,
+      "offset": 9723,
       "length": 5,
       "value": "false"
     },
