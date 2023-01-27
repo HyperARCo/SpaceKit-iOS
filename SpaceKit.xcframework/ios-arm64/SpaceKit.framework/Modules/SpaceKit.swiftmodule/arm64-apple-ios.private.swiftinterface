@@ -12,6 +12,7 @@ import Foundation
 import SceneKit
 @_exported import SpaceKit
 import Swift
+import SwiftUI
 import UIKit.UIImage
 import UIKit
 import UIKit.UIViewController
@@ -21,12 +22,15 @@ import _Concurrency
 import _StringProcessing
 public typealias InfoViewFactory = () -> SpaceKit.InfoView
 @_Concurrency.MainActor public struct SpaceKitViewControllerFactory {
-  @_Concurrency.MainActor public init(context: SpaceKit.Context)
-  @_Concurrency.MainActor public init(context: SpaceKit.Context, infoViewFactory: @autoclosure @escaping SpaceKit.InfoViewFactory)
+  @_Concurrency.MainActor public init(context: SpaceKit.Context, theme: SpaceKit.Theme = .default)
+  @_Concurrency.MainActor public init(context: SpaceKit.Context, theme: SpaceKit.Theme = .default, infoViewFactory: @autoclosure @escaping SpaceKit.InfoViewFactory)
   @_Concurrency.MainActor public func make() -> SpaceKit.SpaceKitViewController
 }
 public typealias SpaceKitImage = UIKit.UIImage
-public struct Destination : Swift.Equatable {
+public struct DestinationAdditionalInfoKey {
+  public static let aisleName: Swift.String
+}
+public struct Destination {
   public enum Priority {
     case first
     case last
@@ -41,8 +45,8 @@ public struct Destination : Swift.Equatable {
   public let displayName: Swift.String
   public let icon: SpaceKit.SpaceKitImage?
   public let priority: SpaceKit.Destination.Priority
-  public init(identifier: Swift.String, displayName: Swift.String, icon: SpaceKit.SpaceKitImage?, priority: SpaceKit.Destination.Priority = .unspecified)
-  public static func == (a: SpaceKit.Destination, b: SpaceKit.Destination) -> Swift.Bool
+  public let additionalInfo: [Swift.String : Any]
+  public init(identifier: Swift.String, displayName: Swift.String, icon: SpaceKit.SpaceKitImage?, priority: SpaceKit.Destination.Priority = .unspecified, additionalInfo: [Swift.String : Any] = [:])
 }
 public struct LevelTransition {
   public let traversalOption: SpaceKit.TraversalOption
@@ -68,6 +72,50 @@ public enum Requisite : Swift.CaseIterable {
 }
 public protocol SpaceKitRequisitesDelegate : AnyObject {
   func spaceKitContext(_ context: SpaceKit.Context, requiresRequisites requisites: [SpaceKit.Requisite])
+}
+extension Swift.Sequence {
+  #if compiler(>=5.3) && $AsyncAwait
+  public func asyncForEach(_ operation: (Self.Element) async throws -> Swift.Void) async rethrows
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func concurrentForEach(withPriority priority: _Concurrency.TaskPriority? = nil, _ operation: @escaping (Self.Element) async -> Swift.Void) async
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func concurrentForEach(withPriority priority: _Concurrency.TaskPriority? = nil, _ operation: @escaping (Self.Element) async throws -> Swift.Void) async throws
+  #endif
+}
+extension Swift.Sequence {
+  #if compiler(>=5.3) && $AsyncAwait
+  public func asyncMap<T>(_ transform: (Self.Element) async throws -> T) async rethrows -> [T]
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func concurrentMap<T>(withPriority priority: _Concurrency.TaskPriority? = nil, _ transform: @escaping (Self.Element) async -> T) async -> [T]
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func concurrentMap<T>(withPriority priority: _Concurrency.TaskPriority? = nil, _ transform: @escaping (Self.Element) async throws -> T) async throws -> [T]
+  #endif
+}
+extension Swift.Sequence {
+  #if compiler(>=5.3) && $AsyncAwait
+  public func asyncCompactMap<T>(_ transform: (Self.Element) async throws -> T?) async rethrows -> [T]
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func concurrentCompactMap<T>(withPriority priority: _Concurrency.TaskPriority? = nil, _ transform: @escaping (Self.Element) async -> T?) async -> [T]
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func concurrentCompactMap<T>(withPriority priority: _Concurrency.TaskPriority? = nil, _ transform: @escaping (Self.Element) async throws -> T?) async throws -> [T]
+  #endif
+}
+extension Swift.Sequence {
+  #if compiler(>=5.3) && $AsyncAwait
+  public func asyncFlatMap<T>(_ transform: (Self.Element) async throws -> T) async rethrows -> [T.Element] where T : Swift.Sequence
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func concurrentFlatMap<T>(withPriority priority: _Concurrency.TaskPriority? = nil, _ transform: @escaping (Self.Element) async -> T) async -> [T.Element] where T : Swift.Sequence
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func concurrentFlatMap<T>(withPriority priority: _Concurrency.TaskPriority? = nil, _ transform: @escaping (Self.Element) async throws -> T) async throws -> [T.Element] where T : Swift.Sequence
+  #endif
 }
 public protocol EventTrigger {
 }
@@ -107,6 +155,17 @@ extension UIKit.UIControl : SpaceKit.InfoViewButton {
   final public func hash(into hasher: inout Swift.Hasher)
   @objc deinit
   final public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum NavigationLayout : Swift.Equatable {
+  case map
+  case ar
+  case compass
+  case scanner
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: SpaceKit.NavigationLayout, b: SpaceKit.NavigationLayout) -> Swift.Bool
+  public var hashValue: Swift.Int {
     get
   }
 }
@@ -162,7 +221,7 @@ extension SpaceKit.Theme {
 public struct SpaceKitContextFactory {
   public init(venue: SpaceKit.Venue, isDebugEnabled: Swift.Bool = false)
   #if compiler(>=5.3) && $AsyncAwait
-  public func make() async throws -> SpaceKit.Context & SpaceKit.EventFactory
+  public func make() async throws -> SpaceKit.Context
   #endif
 }
 public struct ScanResult : Swift.Equatable {
@@ -188,8 +247,9 @@ public protocol LocalVenueRegion {
   var radiusMeters: Swift.Int { get }
   var centrePoint: CoreLocation.CLLocationCoordinate2D { get }
 }
-public struct VenueMetadata {
-  public init(hash: Swift.String, timestamp: Foundation.Date)
+public protocol VenueMetadata {
+  var hash: Swift.String { get }
+  var timestamp: Foundation.Date { get }
 }
 public protocol Venue {
   #if compiler(>=5.3) && $AsyncAwait
@@ -199,17 +259,24 @@ public protocol Venue {
 public protocol VenueManager {
   init(configuration: SpaceKit.VenueManagerConfiguration)
   #if compiler(>=5.3) && $AsyncAwait
-  func fetchLocalVenues(forLocation coordinates: CoreLocation.CLLocationCoordinate2D) async throws -> [SpaceKit.LocalVenue]
+  func fetchLocalVenues(forLocation location: CoreLocation.CLLocationCoordinate2D, searchRadius: Swift.Int, limit: Swift.Int) async throws -> [SpaceKit.LocalVenue]
   #endif
   #if compiler(>=5.3) && $AsyncAwait
   func fetchMetadata(forVenueWithIdentifier venueIdentifier: Swift.String) async throws -> SpaceKit.VenueMetadata
   #endif
   #if compiler(>=5.3) && $AsyncAwait
-  func fetchVenue(forVenueWithIdentifier venueIdentifier: Swift.String) async throws -> SpaceKit.Venue
+  @discardableResult
+  func fetchVenue(forVenueWithIdentifier venueIdentifier: Swift.String, destinationPath: Swift.String) async throws -> SpaceKit.Venue
   #endif
 }
 public struct VenueManagerFactory {
+  public init(configuration: SpaceKit.VenueManagerConfiguration)
   public func make() -> SpaceKit.VenueManager
+}
+public struct SpaceKitVenueMetadata : SpaceKit.VenueMetadata {
+  public let hash: Swift.String
+  public let version: Swift.Int
+  public let timestamp: Foundation.Date
 }
 public struct SpaceKitLocalVenue : SpaceKit.LocalVenue {
   public let identifier: Swift.String
@@ -220,11 +287,10 @@ public struct SpaceKitLocalVenueRegion : SpaceKit.LocalVenueRegion {
   public let radiusMeters: Swift.Int
   public let centrePoint: CoreLocation.CLLocationCoordinate2D
 }
-public protocol Context : AnyObject {
+public protocol Context : AnyObject, SpaceKit.EventFactory {
   var requisitesDelegate: SpaceKit.SpaceKitRequisitesDelegate? { get set }
   var listDelegate: SpaceKit.SpaceKitListDelegate? { get set }
   var barcodeDelegate: SpaceKit.SpaceKitBarcodeDelegate? { get set }
-  var isDebugEnabled: Swift.Bool { get }
   func setRoutingOptions(_ options: SpaceKit.RoutingOptions)
   func setDestinations(_ destinations: [SpaceKit.Destination])
   func requestUnfulfilledRequisites(from requisites: [SpaceKit.Requisite])
@@ -251,6 +317,7 @@ public enum Event {
     public init(sectionIdentifier: Swift.String, threshold: Swift.Double)
   }
   public struct EnterLevel {
+    public init(levelIdentifier: Swift.String)
   }
 }
 public enum TraversalOption : Swift.String, Swift.CaseIterable {
@@ -272,6 +339,7 @@ extension SpaceKit.Destination.Priority : Swift.Equatable {}
 extension SpaceKit.Destination.Priority : Swift.Hashable {}
 extension SpaceKit.Requisite : Swift.Equatable {}
 extension SpaceKit.Requisite : Swift.Hashable {}
+extension SpaceKit.NavigationLayout : Swift.Hashable {}
 extension SpaceKit.Theme.CornerStyle : Swift.Equatable {}
 extension SpaceKit.Theme.CornerStyle : Swift.Hashable {}
 extension SpaceKit.Theme.CornerStyle : Swift.RawRepresentable {}

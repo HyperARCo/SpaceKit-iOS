@@ -11,7 +11,8 @@
         "declKind": "Import",
         "moduleName": "SpaceKit",
         "declAttributes": [
-          "ImplementationOnly"
+          "ImplementationOnly",
+          "RawDocComment"
         ]
       },
       {
@@ -73,43 +74,6 @@
       },
       {
         "kind": "Import",
-        "name": "SpaceKitUI",
-        "printedName": "SpaceKitUI",
-        "declKind": "Import",
-        "moduleName": "SpaceKit",
-        "declAttributes": [
-          "ImplementationOnly"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "HyperUI",
-        "printedName": "HyperUI",
-        "declKind": "Import",
-        "moduleName": "SpaceKit",
-        "declAttributes": [
-          "ImplementationOnly"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
-        "declKind": "Import",
-        "moduleName": "SpaceKit",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Combine",
-        "printedName": "Combine",
-        "declKind": "Import",
-        "moduleName": "SpaceKit"
-      },
-      {
-        "kind": "Import",
         "name": "ARKit",
         "printedName": "ARKit",
         "declKind": "Import",
@@ -137,11 +101,12 @@
       },
       {
         "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
+        "name": "SpaceKitFoundation",
+        "printedName": "SpaceKitFoundation",
         "declKind": "Import",
         "moduleName": "SpaceKit",
         "declAttributes": [
+          "ImplementationOnly",
           "RawDocComment"
         ]
       },
@@ -163,7 +128,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(context:)",
+            "printedName": "init(context:theme:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -176,11 +141,18 @@
                 "name": "Context",
                 "printedName": "SpaceKit.Context",
                 "usr": "s:8SpaceKit7ContextP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Theme",
+                "printedName": "SpaceKit.Theme",
+                "hasDefaultArg": true,
+                "usr": "s:8SpaceKit5ThemeV"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:8SpaceKit0aB21ViewControllerFactoryV7contextAcA7Context_p_tcfc",
-            "mangledName": "$s8SpaceKit0aB21ViewControllerFactoryV7contextAcA7Context_p_tcfc",
+            "usr": "s:8SpaceKit0aB21ViewControllerFactoryV7context5themeAcA7Context_p_AA5ThemeVtcfc",
+            "mangledName": "$s8SpaceKit0aB21ViewControllerFactoryV7context5themeAcA7Context_p_AA5ThemeVtcfc",
             "moduleName": "SpaceKit",
             "declAttributes": [
               "Custom",
@@ -191,7 +163,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(context:infoViewFactory:)",
+            "printedName": "init(context:theme:infoViewFactory:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -204,6 +176,13 @@
                 "name": "Context",
                 "printedName": "SpaceKit.Context",
                 "usr": "s:8SpaceKit7ContextP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Theme",
+                "printedName": "SpaceKit.Theme",
+                "hasDefaultArg": true,
+                "usr": "s:8SpaceKit5ThemeV"
               },
               {
                 "kind": "TypeFunc",
@@ -225,8 +204,8 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:8SpaceKit0aB21ViewControllerFactoryV7context04infocE0AcA7Context_p_AA04InfoC0_pyXAtcfc",
-            "mangledName": "$s8SpaceKit0aB21ViewControllerFactoryV7context04infocE0AcA7Context_p_AA04InfoC0_pyXAtcfc",
+            "usr": "s:8SpaceKit0aB21ViewControllerFactoryV7context5theme04infocE0AcA7Context_p_AA5ThemeVAA04InfoC0_pyXAtcfc",
+            "mangledName": "$s8SpaceKit0aB21ViewControllerFactoryV7context5theme04infocE0AcA7Context_p_AA5ThemeVAA04InfoC0_pyXAtcfc",
             "moduleName": "SpaceKit",
             "declAttributes": [
               "Custom",
@@ -281,6 +260,69 @@
         "printedName": "UIKit.UIImage",
         "declKind": "Import",
         "moduleName": "SpaceKit"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "DestinationAdditionalInfoKey",
+        "printedName": "DestinationAdditionalInfoKey",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "aisleName",
+            "printedName": "aisleName",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8SpaceKit28DestinationAdditionalInfoKeyV9aisleNameSSvpZ",
+            "mangledName": "$s8SpaceKit28DestinationAdditionalInfoKeyV9aisleNameSSvpZ",
+            "moduleName": "SpaceKit",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8SpaceKit28DestinationAdditionalInfoKeyV9aisleNameSSvgZ",
+                "mangledName": "$s8SpaceKit28DestinationAdditionalInfoKeyV9aisleNameSSvgZ",
+                "moduleName": "SpaceKit",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:8SpaceKit28DestinationAdditionalInfoKeyV",
+        "mangledName": "$s8SpaceKit28DestinationAdditionalInfoKeyV",
+        "moduleName": "SpaceKit",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ]
       },
       {
         "kind": "TypeDecl",
@@ -722,9 +764,80 @@
             ]
           },
           {
+            "kind": "Var",
+            "name": "additionalInfo",
+            "printedName": "additionalInfo",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8SpaceKit11DestinationV14additionalInfoSDySSypGvp",
+            "mangledName": "$s8SpaceKit11DestinationV14additionalInfoSDySSypGvp",
+            "moduleName": "SpaceKit",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8SpaceKit11DestinationV14additionalInfoSDySSypGvg",
+                "mangledName": "$s8SpaceKit11DestinationV14additionalInfoSDySSypGvg",
+                "moduleName": "SpaceKit",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(identifier:displayName:icon:priority:)",
+            "printedName": "init(identifier:displayName:icon:priority:additionalInfo:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -764,48 +877,37 @@
                 "printedName": "SpaceKit.Destination.Priority",
                 "hasDefaultArg": true,
                 "usr": "s:8SpaceKit11DestinationV8PriorityO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:SD"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:8SpaceKit11DestinationV10identifier11displayName4icon8priorityACSS_SSSo7UIImageCSgAC8PriorityOtcfc",
-            "mangledName": "$s8SpaceKit11DestinationV10identifier11displayName4icon8priorityACSS_SSSo7UIImageCSgAC8PriorityOtcfc",
+            "usr": "s:8SpaceKit11DestinationV10identifier11displayName4icon8priority14additionalInfoACSS_SSSo7UIImageCSgAC8PriorityOSDySSypGtcfc",
+            "mangledName": "$s8SpaceKit11DestinationV10identifier11displayName4icon8priority14additionalInfoACSS_SSSo7UIImageCSgAC8PriorityOSDySSypGtcfc",
             "moduleName": "SpaceKit",
             "declAttributes": [
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "init_kind": "Designated"
-          },
-          {
-            "kind": "Function",
-            "name": "==",
-            "printedName": "==(_:_:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Destination",
-                "printedName": "SpaceKit.Destination",
-                "usr": "s:8SpaceKit11DestinationV"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Destination",
-                "printedName": "SpaceKit.Destination",
-                "usr": "s:8SpaceKit11DestinationV"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:8SpaceKit11DestinationV2eeoiySbAC_ACtFZ",
-            "mangledName": "$s8SpaceKit11DestinationV2eeoiySbAC_ACtFZ",
-            "moduleName": "SpaceKit",
-            "static": true,
-            "implicit": true,
-            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Struct",
@@ -815,15 +917,6 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          }
         ]
       },
       {
@@ -849,7 +942,8 @@
             "moduleName": "SpaceKit",
             "declAttributes": [
               "HasStorage",
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "isLet": true,
             "hasStorage": true,
@@ -893,7 +987,8 @@
             "moduleName": "SpaceKit",
             "declAttributes": [
               "HasStorage",
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "isLet": true,
             "hasStorage": true,
@@ -937,7 +1032,8 @@
             "moduleName": "SpaceKit",
             "declAttributes": [
               "HasStorage",
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "isLet": true,
             "hasStorage": true,
@@ -969,7 +1065,8 @@
         "mangledName": "$s8SpaceKit15LevelTransitionV",
         "moduleName": "SpaceKit",
         "declAttributes": [
-          "AccessControl"
+          "AccessControl",
+          "RawDocComment"
         ]
       },
       {
@@ -1683,8 +1780,8 @@
       },
       {
         "kind": "Import",
-        "name": "SpaceKitLocationAnalysis",
-        "printedName": "SpaceKitLocationAnalysis",
+        "name": "HyperMap",
+        "printedName": "HyperMap",
         "declKind": "Import",
         "moduleName": "SpaceKit",
         "declAttributes": [
@@ -1693,8 +1790,8 @@
       },
       {
         "kind": "Import",
-        "name": "HyperMap",
-        "printedName": "HyperMap",
+        "name": "SpaceKitLocationAnalysis",
+        "printedName": "SpaceKitLocationAnalysis",
         "declKind": "Import",
         "moduleName": "SpaceKit",
         "declAttributes": [
@@ -1769,7 +1866,8 @@
         "declKind": "Import",
         "moduleName": "SpaceKit",
         "declAttributes": [
-          "ImplementationOnly"
+          "ImplementationOnly",
+          "RawDocComment"
         ]
       },
       {
@@ -1811,6 +1909,33 @@
       },
       {
         "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "SpaceKit",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "SpaceKit"
+      },
+      {
+        "kind": "Import",
+        "name": "HyperUI",
+        "printedName": "HyperUI",
+        "declKind": "Import",
+        "moduleName": "SpaceKit",
+        "declAttributes": [
+          "ImplementationOnly"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
         "declKind": "Import",
@@ -1825,6 +1950,80 @@
         "printedName": "Combine",
         "declKind": "Import",
         "moduleName": "SpaceKit"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "SpaceKit",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "SpaceKit",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Combine",
+        "printedName": "Combine",
+        "declKind": "Import",
+        "moduleName": "SpaceKit"
+      },
+      {
+        "kind": "Import",
+        "name": "HyperUI",
+        "printedName": "HyperUI",
+        "declKind": "Import",
+        "moduleName": "SpaceKit",
+        "declAttributes": [
+          "ImplementationOnly"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Combine",
+        "printedName": "Combine",
+        "declKind": "Import",
+        "moduleName": "SpaceKit",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "SpaceKit"
+      },
+      {
+        "kind": "Import",
+        "name": "Combine",
+        "printedName": "Combine",
+        "declKind": "Import",
+        "moduleName": "SpaceKit",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SpaceKitUI",
+        "printedName": "SpaceKitUI",
+        "declKind": "Import",
+        "moduleName": "SpaceKit",
+        "declAttributes": [
+          "ImplementationOnly"
+        ]
       },
       {
         "kind": "Import",
@@ -1899,6 +2098,16 @@
       },
       {
         "kind": "Import",
+        "name": "SpaceKitLocationAnalysis",
+        "printedName": "SpaceKitLocationAnalysis",
+        "declKind": "Import",
+        "moduleName": "SpaceKit",
+        "declAttributes": [
+          "ImplementationOnly"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -1958,12 +2167,12 @@
                 "kind": "TypeNominal",
                 "name": "VenueMetadata",
                 "printedName": "SpaceKit.VenueMetadata",
-                "usr": "s:8SpaceKit13VenueMetadataV"
+                "usr": "s:8SpaceKit13VenueMetadataP"
               }
             ],
             "declKind": "Func",
-            "usr": "s:8SpaceKit0aB5VenueC13fetchMetadataAA0cE0VyYaKF",
-            "mangledName": "$s8SpaceKit0aB5VenueC13fetchMetadataAA0cE0VyYaKF",
+            "usr": "s:8SpaceKit0aB5VenueC13fetchMetadataAA0cE0_pyYaKF",
+            "mangledName": "$s8SpaceKit0aB5VenueC13fetchMetadataAA0cE0_pyYaKF",
             "moduleName": "SpaceKit",
             "declAttributes": [
               "Final",
@@ -1991,6 +2200,17 @@
             "usr": "s:8SpaceKit5VenueP",
             "mangledName": "$s8SpaceKit5VenueP"
           }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SpaceKitFoundation",
+        "printedName": "SpaceKitFoundation",
+        "declKind": "Import",
+        "moduleName": "SpaceKit",
+        "declAttributes": [
+          "ImplementationOnly",
+          "RawDocComment"
         ]
       },
       {
@@ -2837,6 +3057,281 @@
         "moduleName": "SpaceKit",
         "declAttributes": [
           "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "NavigationLayout",
+        "printedName": "NavigationLayout",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "map",
+            "printedName": "map",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SpaceKit.NavigationLayout.Type) -> SpaceKit.NavigationLayout",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NavigationLayout",
+                    "printedName": "SpaceKit.NavigationLayout",
+                    "usr": "s:8SpaceKit16NavigationLayoutO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SpaceKit.NavigationLayout.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NavigationLayout",
+                        "printedName": "SpaceKit.NavigationLayout",
+                        "usr": "s:8SpaceKit16NavigationLayoutO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:8SpaceKit16NavigationLayoutO3mapyA2CmF",
+            "mangledName": "$s8SpaceKit16NavigationLayoutO3mapyA2CmF",
+            "moduleName": "SpaceKit"
+          },
+          {
+            "kind": "Var",
+            "name": "ar",
+            "printedName": "ar",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SpaceKit.NavigationLayout.Type) -> SpaceKit.NavigationLayout",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NavigationLayout",
+                    "printedName": "SpaceKit.NavigationLayout",
+                    "usr": "s:8SpaceKit16NavigationLayoutO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SpaceKit.NavigationLayout.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NavigationLayout",
+                        "printedName": "SpaceKit.NavigationLayout",
+                        "usr": "s:8SpaceKit16NavigationLayoutO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:8SpaceKit16NavigationLayoutO2aryA2CmF",
+            "mangledName": "$s8SpaceKit16NavigationLayoutO2aryA2CmF",
+            "moduleName": "SpaceKit"
+          },
+          {
+            "kind": "Var",
+            "name": "compass",
+            "printedName": "compass",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SpaceKit.NavigationLayout.Type) -> SpaceKit.NavigationLayout",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NavigationLayout",
+                    "printedName": "SpaceKit.NavigationLayout",
+                    "usr": "s:8SpaceKit16NavigationLayoutO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SpaceKit.NavigationLayout.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NavigationLayout",
+                        "printedName": "SpaceKit.NavigationLayout",
+                        "usr": "s:8SpaceKit16NavigationLayoutO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:8SpaceKit16NavigationLayoutO7compassyA2CmF",
+            "mangledName": "$s8SpaceKit16NavigationLayoutO7compassyA2CmF",
+            "moduleName": "SpaceKit"
+          },
+          {
+            "kind": "Var",
+            "name": "scanner",
+            "printedName": "scanner",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SpaceKit.NavigationLayout.Type) -> SpaceKit.NavigationLayout",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NavigationLayout",
+                    "printedName": "SpaceKit.NavigationLayout",
+                    "usr": "s:8SpaceKit16NavigationLayoutO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SpaceKit.NavigationLayout.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NavigationLayout",
+                        "printedName": "SpaceKit.NavigationLayout",
+                        "usr": "s:8SpaceKit16NavigationLayoutO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:8SpaceKit16NavigationLayoutO7scanneryA2CmF",
+            "mangledName": "$s8SpaceKit16NavigationLayoutO7scanneryA2CmF",
+            "moduleName": "SpaceKit"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8SpaceKit16NavigationLayoutO9hashValueSivp",
+            "mangledName": "$s8SpaceKit16NavigationLayoutO9hashValueSivp",
+            "moduleName": "SpaceKit",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8SpaceKit16NavigationLayoutO9hashValueSivg",
+                "mangledName": "$s8SpaceKit16NavigationLayoutO9hashValueSivg",
+                "moduleName": "SpaceKit",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8SpaceKit16NavigationLayoutO4hash4intoys6HasherVz_tF",
+            "mangledName": "$s8SpaceKit16NavigationLayoutO4hash4intoys6HasherVz_tF",
+            "moduleName": "SpaceKit",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NavigationLayout",
+                "printedName": "SpaceKit.NavigationLayout",
+                "usr": "s:8SpaceKit16NavigationLayoutO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NavigationLayout",
+                "printedName": "SpaceKit.NavigationLayout",
+                "usr": "s:8SpaceKit16NavigationLayoutO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8SpaceKit16NavigationLayoutO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s8SpaceKit16NavigationLayoutO2eeoiySbAC_ACtFZ",
+            "moduleName": "SpaceKit",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:8SpaceKit16NavigationLayoutO",
+        "mangledName": "$s8SpaceKit16NavigationLayoutO",
+        "moduleName": "SpaceKit",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          }
         ]
       },
       {
@@ -4446,13 +4941,14 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "ProtocolComposition",
-                "printedName": "SpaceKit.Context & SpaceKit.EventFactory"
+                "name": "Context",
+                "printedName": "SpaceKit.Context",
+                "usr": "s:8SpaceKit7ContextP"
               }
             ],
             "declKind": "Func",
-            "usr": "s:8SpaceKit0aB14ContextFactoryV4makeAA0C0_AA05EventD0pyYaKF",
-            "mangledName": "$s8SpaceKit0aB14ContextFactoryV4makeAA0C0_AA05EventD0pyYaKF",
+            "usr": "s:8SpaceKit0aB14ContextFactoryV4makeAA0C0_pyYaKF",
+            "mangledName": "$s8SpaceKit0aB14ContextFactoryV4makeAA0C0_pyYaKF",
             "moduleName": "SpaceKit",
             "declAttributes": [
               "AccessControl"
@@ -4467,6 +4963,43 @@
         "moduleName": "SpaceKit",
         "declAttributes": [
           "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "SpaceKit",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Combine",
+        "printedName": "Combine",
+        "declKind": "Import",
+        "moduleName": "SpaceKit"
+      },
+      {
+        "kind": "Import",
+        "name": "SpaceKitUI",
+        "printedName": "SpaceKitUI",
+        "declKind": "Import",
+        "moduleName": "SpaceKit",
+        "declAttributes": [
+          "ImplementationOnly"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "HyperUI",
+        "printedName": "HyperUI",
+        "declKind": "Import",
+        "moduleName": "SpaceKit",
+        "declAttributes": [
+          "ImplementationOnly"
         ]
       },
       {
@@ -4543,7 +5076,8 @@
         "declKind": "Import",
         "moduleName": "SpaceKit",
         "declAttributes": [
-          "ImplementationOnly"
+          "ImplementationOnly",
+          "RawDocComment"
         ]
       },
       {
@@ -4553,7 +5087,8 @@
         "declKind": "Import",
         "moduleName": "SpaceKit",
         "declAttributes": [
-          "ImplementationOnly"
+          "ImplementationOnly",
+          "RawDocComment"
         ]
       },
       {
@@ -4583,7 +5118,8 @@
         "declKind": "Import",
         "moduleName": "SpaceKit",
         "declAttributes": [
-          "ImplementationOnly"
+          "ImplementationOnly",
+          "RawDocComment"
         ]
       },
       {
@@ -4622,6 +5158,53 @@
         "printedName": "SceneKit",
         "declKind": "Import",
         "moduleName": "SpaceKit"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "SpaceKit",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Combine",
+        "printedName": "Combine",
+        "declKind": "Import",
+        "moduleName": "SpaceKit"
+      },
+      {
+        "kind": "Import",
+        "name": "SpaceKitUI",
+        "printedName": "SpaceKitUI",
+        "declKind": "Import",
+        "moduleName": "SpaceKit",
+        "declAttributes": [
+          "ImplementationOnly"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "HyperUI",
+        "printedName": "HyperUI",
+        "declKind": "Import",
+        "moduleName": "SpaceKit",
+        "declAttributes": [
+          "ImplementationOnly"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "SpaceKit",
+        "declAttributes": [
+          "RawDocComment"
+        ]
       },
       {
         "kind": "Import",
@@ -5036,6 +5619,16 @@
         "moduleName": "SpaceKit"
       },
       {
+        "kind": "Import",
+        "name": "HyperNetwork",
+        "printedName": "HyperNetwork",
+        "declKind": "Import",
+        "moduleName": "SpaceKit",
+        "declAttributes": [
+          "ImplementationOnly"
+        ]
+      },
+      {
         "kind": "TypeDecl",
         "name": "VenueManagerConfiguration",
         "printedName": "VenueManagerConfiguration",
@@ -5376,22 +5969,55 @@
         "printedName": "VenueMetadata",
         "children": [
           {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init(hash:timestamp:)",
+            "kind": "Var",
+            "name": "hash",
+            "printedName": "hash",
             "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "VenueMetadata",
-                "printedName": "SpaceKit.VenueMetadata",
-                "usr": "s:8SpaceKit13VenueMetadataV"
-              },
               {
                 "kind": "TypeNominal",
                 "name": "String",
                 "printedName": "Swift.String",
                 "usr": "s:SS"
-              },
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8SpaceKit13VenueMetadataP4hashSSvp",
+            "mangledName": "$s8SpaceKit13VenueMetadataP4hashSSvp",
+            "moduleName": "SpaceKit",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8SpaceKit13VenueMetadataP4hashSSvg",
+                "mangledName": "$s8SpaceKit13VenueMetadataP4hashSSvg",
+                "moduleName": "SpaceKit",
+                "genericSig": "<τ_0_0 where τ_0_0 : SpaceKit.VenueMetadata>",
+                "sugared_genericSig": "<Self where Self : SpaceKit.VenueMetadata>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "timestamp",
+            "printedName": "timestamp",
+            "children": [
               {
                 "kind": "TypeNominal",
                 "name": "Date",
@@ -5399,19 +6025,43 @@
                 "usr": "s:10Foundation4DateV"
               }
             ],
-            "declKind": "Constructor",
-            "usr": "s:8SpaceKit13VenueMetadataV4hash9timestampACSS_10Foundation4DateVtcfc",
-            "mangledName": "$s8SpaceKit13VenueMetadataV4hash9timestampACSS_10Foundation4DateVtcfc",
+            "declKind": "Var",
+            "usr": "s:8SpaceKit13VenueMetadataP9timestamp10Foundation4DateVvp",
+            "mangledName": "$s8SpaceKit13VenueMetadataP9timestamp10Foundation4DateVvp",
             "moduleName": "SpaceKit",
+            "protocolReq": true,
             "declAttributes": [
-              "AccessControl"
+              "RawDocComment"
             ],
-            "init_kind": "Designated"
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Date",
+                    "printedName": "Foundation.Date",
+                    "usr": "s:10Foundation4DateV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8SpaceKit13VenueMetadataP9timestamp10Foundation4DateVvg",
+                "mangledName": "$s8SpaceKit13VenueMetadataP9timestamp10Foundation4DateVvg",
+                "moduleName": "SpaceKit",
+                "genericSig": "<τ_0_0 where τ_0_0 : SpaceKit.VenueMetadata>",
+                "sugared_genericSig": "<Self where Self : SpaceKit.VenueMetadata>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
           }
         ],
-        "declKind": "Struct",
-        "usr": "s:8SpaceKit13VenueMetadataV",
-        "mangledName": "$s8SpaceKit13VenueMetadataV",
+        "declKind": "Protocol",
+        "usr": "s:8SpaceKit13VenueMetadataP",
+        "mangledName": "$s8SpaceKit13VenueMetadataP",
         "moduleName": "SpaceKit",
         "declAttributes": [
           "AccessControl",
@@ -5432,12 +6082,12 @@
                 "kind": "TypeNominal",
                 "name": "VenueMetadata",
                 "printedName": "SpaceKit.VenueMetadata",
-                "usr": "s:8SpaceKit13VenueMetadataV"
+                "usr": "s:8SpaceKit13VenueMetadataP"
               }
             ],
             "declKind": "Func",
-            "usr": "s:8SpaceKit5VenueP13fetchMetadataAA0cE0VyYaKF",
-            "mangledName": "$s8SpaceKit5VenueP13fetchMetadataAA0cE0VyYaKF",
+            "usr": "s:8SpaceKit5VenueP13fetchMetadataAA0cE0_pyYaKF",
+            "mangledName": "$s8SpaceKit5VenueP13fetchMetadataAA0cE0_pyYaKF",
             "moduleName": "SpaceKit",
             "genericSig": "<τ_0_0 where τ_0_0 : SpaceKit.Venue>",
             "sugared_genericSig": "<Self where Self : SpaceKit.Venue>",
@@ -5497,7 +6147,7 @@
           {
             "kind": "Function",
             "name": "fetchLocalVenues",
-            "printedName": "fetchLocalVenues(forLocation:)",
+            "printedName": "fetchLocalVenues(forLocation:searchRadius:limit:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -5518,11 +6168,23 @@
                 "name": "CLLocationCoordinate2D",
                 "printedName": "CoreLocation.CLLocationCoordinate2D",
                 "usr": "c:@S@CLLocationCoordinate2D"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
               }
             ],
             "declKind": "Func",
-            "usr": "s:8SpaceKit12VenueManagerP16fetchLocalVenues11forLocationSayAA0fC0_pGSo22CLLocationCoordinate2DV_tYaKF",
-            "mangledName": "$s8SpaceKit12VenueManagerP16fetchLocalVenues11forLocationSayAA0fC0_pGSo22CLLocationCoordinate2DV_tYaKF",
+            "usr": "s:8SpaceKit12VenueManagerP16fetchLocalVenues11forLocation12searchRadius5limitSayAA0fC0_pGSo22CLLocationCoordinate2DV_S2itYaKF",
+            "mangledName": "$s8SpaceKit12VenueManagerP16fetchLocalVenues11forLocation12searchRadius5limitSayAA0fC0_pGSo22CLLocationCoordinate2DV_S2itYaKF",
             "moduleName": "SpaceKit",
             "genericSig": "<τ_0_0 where τ_0_0 : SpaceKit.VenueManager>",
             "sugared_genericSig": "<Self where Self : SpaceKit.VenueManager>",
@@ -5543,7 +6205,7 @@
                 "kind": "TypeNominal",
                 "name": "VenueMetadata",
                 "printedName": "SpaceKit.VenueMetadata",
-                "usr": "s:8SpaceKit13VenueMetadataV"
+                "usr": "s:8SpaceKit13VenueMetadataP"
               },
               {
                 "kind": "TypeNominal",
@@ -5553,8 +6215,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:8SpaceKit12VenueManagerP13fetchMetadata03forC14WithIdentifierAA0cF0VSS_tYaKF",
-            "mangledName": "$s8SpaceKit12VenueManagerP13fetchMetadata03forC14WithIdentifierAA0cF0VSS_tYaKF",
+            "usr": "s:8SpaceKit12VenueManagerP13fetchMetadata03forC14WithIdentifierAA0cF0_pSS_tYaKF",
+            "mangledName": "$s8SpaceKit12VenueManagerP13fetchMetadata03forC14WithIdentifierAA0cF0_pSS_tYaKF",
             "moduleName": "SpaceKit",
             "genericSig": "<τ_0_0 where τ_0_0 : SpaceKit.VenueManager>",
             "sugared_genericSig": "<Self where Self : SpaceKit.VenueManager>",
@@ -5569,7 +6231,7 @@
           {
             "kind": "Function",
             "name": "fetchVenue",
-            "printedName": "fetchVenue(forVenueWithIdentifier:)",
+            "printedName": "fetchVenue(forVenueWithIdentifier:destinationPath:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -5582,16 +6244,23 @@
                 "name": "String",
                 "printedName": "Swift.String",
                 "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
               }
             ],
             "declKind": "Func",
-            "usr": "s:8SpaceKit12VenueManagerP05fetchC003forC14WithIdentifierAA0C0_pSS_tYaKF",
-            "mangledName": "$s8SpaceKit12VenueManagerP05fetchC003forC14WithIdentifierAA0C0_pSS_tYaKF",
+            "usr": "s:8SpaceKit12VenueManagerP05fetchC003forC14WithIdentifier15destinationPathAA0C0_pSS_SStYaKF",
+            "mangledName": "$s8SpaceKit12VenueManagerP05fetchC003forC14WithIdentifier15destinationPathAA0C0_pSS_SStYaKF",
             "moduleName": "SpaceKit",
             "genericSig": "<τ_0_0 where τ_0_0 : SpaceKit.VenueManager>",
             "sugared_genericSig": "<Self where Self : SpaceKit.VenueManager>",
             "protocolReq": true,
             "declAttributes": [
+              "DiscardableResult",
               "RawDocComment"
             ],
             "throwing": true,
@@ -5641,6 +6310,33 @@
         "printedName": "VenueManagerFactory",
         "children": [
           {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(configuration:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "VenueManagerFactory",
+                "printedName": "SpaceKit.VenueManagerFactory",
+                "usr": "s:8SpaceKit19VenueManagerFactoryV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VenueManagerConfiguration",
+                "printedName": "SpaceKit.VenueManagerConfiguration",
+                "usr": "s:8SpaceKit25VenueManagerConfigurationV"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:8SpaceKit19VenueManagerFactoryV13configurationAcA0cD13ConfigurationV_tcfc",
+            "mangledName": "$s8SpaceKit19VenueManagerFactoryV13configurationAcA0cD13ConfigurationV_tcfc",
+            "moduleName": "SpaceKit",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
             "kind": "Function",
             "name": "make",
             "printedName": "make()",
@@ -5668,6 +6364,161 @@
         "moduleName": "SpaceKit",
         "declAttributes": [
           "AccessControl"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SpaceKitVenueMetadata",
+        "printedName": "SpaceKitVenueMetadata",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "hash",
+            "printedName": "hash",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8SpaceKit0aB13VenueMetadataV4hashSSvp",
+            "mangledName": "$s8SpaceKit0aB13VenueMetadataV4hashSSvp",
+            "moduleName": "SpaceKit",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8SpaceKit0aB13VenueMetadataV4hashSSvg",
+                "mangledName": "$s8SpaceKit0aB13VenueMetadataV4hashSSvg",
+                "moduleName": "SpaceKit",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "version",
+            "printedName": "version",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8SpaceKit0aB13VenueMetadataV7versionSivp",
+            "mangledName": "$s8SpaceKit0aB13VenueMetadataV7versionSivp",
+            "moduleName": "SpaceKit",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8SpaceKit0aB13VenueMetadataV7versionSivg",
+                "mangledName": "$s8SpaceKit0aB13VenueMetadataV7versionSivg",
+                "moduleName": "SpaceKit",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "timestamp",
+            "printedName": "timestamp",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Date",
+                "printedName": "Foundation.Date",
+                "usr": "s:10Foundation4DateV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8SpaceKit0aB13VenueMetadataV9timestamp10Foundation4DateVvp",
+            "mangledName": "$s8SpaceKit0aB13VenueMetadataV9timestamp10Foundation4DateVvp",
+            "moduleName": "SpaceKit",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Date",
+                    "printedName": "Foundation.Date",
+                    "usr": "s:10Foundation4DateV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8SpaceKit0aB13VenueMetadataV9timestamp10Foundation4DateVvg",
+                "mangledName": "$s8SpaceKit0aB13VenueMetadataV9timestamp10Foundation4DateVvg",
+                "moduleName": "SpaceKit",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:8SpaceKit0aB13VenueMetadataV",
+        "mangledName": "$s8SpaceKit0aB13VenueMetadataV",
+        "moduleName": "SpaceKit",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "VenueMetadata",
+            "printedName": "VenueMetadata",
+            "usr": "s:8SpaceKit13VenueMetadataP",
+            "mangledName": "$s8SpaceKit13VenueMetadataP"
+          }
         ]
       },
       {
@@ -5958,8 +6809,8 @@
       },
       {
         "kind": "Import",
-        "name": "SpaceKitLocationAnalysis",
-        "printedName": "SpaceKitLocationAnalysis",
+        "name": "HyperMap",
+        "printedName": "HyperMap",
         "declKind": "Import",
         "moduleName": "SpaceKit",
         "declAttributes": [
@@ -5968,8 +6819,8 @@
       },
       {
         "kind": "Import",
-        "name": "HyperMap",
-        "printedName": "HyperMap",
+        "name": "SpaceKitLocationAnalysis",
+        "printedName": "SpaceKitLocationAnalysis",
         "declKind": "Import",
         "moduleName": "SpaceKit",
         "declAttributes": [
@@ -6343,51 +7194,6 @@
             ]
           },
           {
-            "kind": "Var",
-            "name": "isDebugEnabled",
-            "printedName": "isDebugEnabled",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:8SpaceKit7ContextP14isDebugEnabledSbvp",
-            "mangledName": "$s8SpaceKit7ContextP14isDebugEnabledSbvp",
-            "moduleName": "SpaceKit",
-            "protocolReq": true,
-            "declAttributes": [
-              "RawDocComment"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Bool",
-                    "printedName": "Swift.Bool",
-                    "usr": "s:Sb"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:8SpaceKit7ContextP14isDebugEnabledSbvg",
-                "mangledName": "$s8SpaceKit7ContextP14isDebugEnabledSbvg",
-                "moduleName": "SpaceKit",
-                "genericSig": "<τ_0_0 where τ_0_0 : SpaceKit.Context>",
-                "sugared_genericSig": "<Self where Self : SpaceKit.Context>",
-                "protocolReq": true,
-                "reqNewWitnessTableEntry": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
             "kind": "Function",
             "name": "setRoutingOptions",
             "printedName": "setRoutingOptions(_:)",
@@ -6559,11 +7365,20 @@
         "usr": "s:8SpaceKit7ContextP",
         "mangledName": "$s8SpaceKit7ContextP",
         "moduleName": "SpaceKit",
-        "genericSig": "<τ_0_0 : AnyObject>",
-        "sugared_genericSig": "<Self : AnyObject>",
+        "genericSig": "<τ_0_0 : AnyObject, τ_0_0 : SpaceKit.EventFactory>",
+        "sugared_genericSig": "<Self : AnyObject, Self : SpaceKit.EventFactory>",
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "EventFactory",
+            "printedName": "EventFactory",
+            "usr": "s:8SpaceKit12EventFactoryP",
+            "mangledName": "$s8SpaceKit12EventFactoryP"
+          }
         ]
       },
       {
@@ -6957,6 +7772,36 @@
             "kind": "TypeDecl",
             "name": "EnterLevel",
             "printedName": "EnterLevel",
+            "children": [
+              {
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init(levelIdentifier:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EnterLevel",
+                    "printedName": "SpaceKit.Event.EnterLevel",
+                    "usr": "s:8SpaceKit5EventO10EnterLevelV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Constructor",
+                "usr": "s:8SpaceKit5EventO10EnterLevelV15levelIdentifierAESS_tcfc",
+                "mangledName": "$s8SpaceKit5EventO10EnterLevelV15levelIdentifierAESS_tcfc",
+                "moduleName": "SpaceKit",
+                "declAttributes": [
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "init_kind": "Designated"
+              }
+            ],
             "declKind": "Struct",
             "usr": "s:8SpaceKit5EventO10EnterLevelV",
             "mangledName": "$s8SpaceKit5EventO10EnterLevelV",
@@ -6981,7 +7826,8 @@
         "mangledName": "$s8SpaceKit5EventO",
         "moduleName": "SpaceKit",
         "declAttributes": [
-          "AccessControl"
+          "AccessControl",
+          "RawDocComment"
         ]
       },
       {
@@ -7018,7 +7864,8 @@
         "declKind": "Import",
         "moduleName": "SpaceKit",
         "declAttributes": [
-          "ImplementationOnly"
+          "ImplementationOnly",
+          "RawDocComment"
         ]
       },
       {
@@ -7363,6 +8210,26 @@
       },
       {
         "kind": "Import",
+        "name": "Combine",
+        "printedName": "Combine",
+        "declKind": "Import",
+        "moduleName": "SpaceKit",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SpaceKitUI",
+        "printedName": "SpaceKitUI",
+        "declKind": "Import",
+        "moduleName": "SpaceKit",
+        "declAttributes": [
+          "ImplementationOnly"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -7441,53 +8308,6 @@
       },
       {
         "kind": "Import",
-        "name": "Combine",
-        "printedName": "Combine",
-        "declKind": "Import",
-        "moduleName": "SpaceKit",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "CoreLocation",
-        "printedName": "CoreLocation",
-        "declKind": "Import",
-        "moduleName": "SpaceKit"
-      },
-      {
-        "kind": "Import",
-        "name": "SpaceKitFoundation",
-        "printedName": "SpaceKitFoundation",
-        "declKind": "Import",
-        "moduleName": "SpaceKit",
-        "declAttributes": [
-          "ImplementationOnly"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "SpaceKitLocationAnalysis",
-        "printedName": "SpaceKitLocationAnalysis",
-        "declKind": "Import",
-        "moduleName": "SpaceKit",
-        "declAttributes": [
-          "ImplementationOnly"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "SpaceKitUI",
-        "printedName": "SpaceKitUI",
-        "declKind": "Import",
-        "moduleName": "SpaceKit",
-        "declAttributes": [
-          "ImplementationOnly"
-        ]
-      },
-      {
-        "kind": "Import",
         "name": "CoreLocation",
         "printedName": "CoreLocation",
         "declKind": "Import",
@@ -7548,6 +8368,812 @@
         "moduleName": "SpaceKit",
         "declAttributes": [
           "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Sequence",
+        "printedName": "Sequence",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "asyncForEach",
+            "printedName": "asyncForEach(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(τ_0_0.Element) async throws -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DependentMember",
+                    "printedName": "τ_0_0.Element"
+                  }
+                ],
+                "typeAttributes": [
+                  "noescape"
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:ST8SpaceKitE12asyncForEachyyy7ElementQzYaKXEYaKF",
+            "mangledName": "$sST8SpaceKitE12asyncForEachyyy7ElementQzYaKXEYaKF",
+            "moduleName": "SpaceKit",
+            "genericSig": "<τ_0_0 where τ_0_0 : Swift.Sequence>",
+            "sugared_genericSig": "<Self where Self : Swift.Sequence>",
+            "declAttributes": [
+              "Rethrows",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "concurrentForEach",
+            "printedName": "concurrentForEach(withPriority:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "_Concurrency.TaskPriority?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TaskPriority",
+                    "printedName": "_Concurrency.TaskPriority",
+                    "usr": "s:ScP"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(τ_0_0.Element) async -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DependentMember",
+                    "printedName": "τ_0_0.Element"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:ST8SpaceKitE17concurrentForEach12withPriority_yScPSg_y7ElementQzYactYaF",
+            "mangledName": "$sST8SpaceKitE17concurrentForEach12withPriority_yScPSg_y7ElementQzYactYaF",
+            "moduleName": "SpaceKit",
+            "genericSig": "<τ_0_0 where τ_0_0 : Swift.Sequence>",
+            "sugared_genericSig": "<Self where Self : Swift.Sequence>",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "concurrentForEach",
+            "printedName": "concurrentForEach(withPriority:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "_Concurrency.TaskPriority?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TaskPriority",
+                    "printedName": "_Concurrency.TaskPriority",
+                    "usr": "s:ScP"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(τ_0_0.Element) async throws -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DependentMember",
+                    "printedName": "τ_0_0.Element"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:ST8SpaceKitE17concurrentForEach12withPriority_yScPSg_y7ElementQzYaKctYaKF",
+            "mangledName": "$sST8SpaceKitE17concurrentForEach12withPriority_yScPSg_y7ElementQzYaKctYaKF",
+            "moduleName": "SpaceKit",
+            "genericSig": "<τ_0_0 where τ_0_0 : Swift.Sequence>",
+            "sugared_genericSig": "<Self where Self : Swift.Sequence>",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "asyncMap",
+            "printedName": "asyncMap(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[τ_1_0]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_1_0"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(τ_0_0.Element) async throws -> τ_1_0",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_1_0"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DependentMember",
+                    "printedName": "τ_0_0.Element"
+                  }
+                ],
+                "typeAttributes": [
+                  "noescape"
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:ST8SpaceKitE8asyncMapySayqd__Gqd__7ElementQzYaKXEYaKlF",
+            "mangledName": "$sST8SpaceKitE8asyncMapySayqd__Gqd__7ElementQzYaKXEYaKlF",
+            "moduleName": "SpaceKit",
+            "genericSig": "<τ_0_0, τ_1_0 where τ_0_0 : Swift.Sequence>",
+            "sugared_genericSig": "<Self, T where Self : Swift.Sequence>",
+            "declAttributes": [
+              "Rethrows",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "concurrentMap",
+            "printedName": "concurrentMap(withPriority:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[τ_1_0]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_1_0"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "_Concurrency.TaskPriority?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TaskPriority",
+                    "printedName": "_Concurrency.TaskPriority",
+                    "usr": "s:ScP"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(τ_0_0.Element) async -> τ_1_0",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_1_0"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DependentMember",
+                    "printedName": "τ_0_0.Element"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:ST8SpaceKitE13concurrentMap12withPriority_Sayqd__GScPSg_qd__7ElementQzYactYalF",
+            "mangledName": "$sST8SpaceKitE13concurrentMap12withPriority_Sayqd__GScPSg_qd__7ElementQzYactYalF",
+            "moduleName": "SpaceKit",
+            "genericSig": "<τ_0_0, τ_1_0 where τ_0_0 : Swift.Sequence>",
+            "sugared_genericSig": "<Self, T where Self : Swift.Sequence>",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "concurrentMap",
+            "printedName": "concurrentMap(withPriority:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[τ_1_0]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_1_0"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "_Concurrency.TaskPriority?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TaskPriority",
+                    "printedName": "_Concurrency.TaskPriority",
+                    "usr": "s:ScP"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(τ_0_0.Element) async throws -> τ_1_0",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_1_0"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DependentMember",
+                    "printedName": "τ_0_0.Element"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:ST8SpaceKitE13concurrentMap12withPriority_Sayqd__GScPSg_qd__7ElementQzYaKctYaKlF",
+            "mangledName": "$sST8SpaceKitE13concurrentMap12withPriority_Sayqd__GScPSg_qd__7ElementQzYaKctYaKlF",
+            "moduleName": "SpaceKit",
+            "genericSig": "<τ_0_0, τ_1_0 where τ_0_0 : Swift.Sequence>",
+            "sugared_genericSig": "<Self, T where Self : Swift.Sequence>",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "asyncCompactMap",
+            "printedName": "asyncCompactMap(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[τ_1_0]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_1_0"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(τ_0_0.Element) async throws -> τ_1_0?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "τ_1_0?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_1_0"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DependentMember",
+                    "printedName": "τ_0_0.Element"
+                  }
+                ],
+                "typeAttributes": [
+                  "noescape"
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:ST8SpaceKitE15asyncCompactMapySayqd__Gqd__Sg7ElementQzYaKXEYaKlF",
+            "mangledName": "$sST8SpaceKitE15asyncCompactMapySayqd__Gqd__Sg7ElementQzYaKXEYaKlF",
+            "moduleName": "SpaceKit",
+            "genericSig": "<τ_0_0, τ_1_0 where τ_0_0 : Swift.Sequence>",
+            "sugared_genericSig": "<Self, T where Self : Swift.Sequence>",
+            "declAttributes": [
+              "Rethrows",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "concurrentCompactMap",
+            "printedName": "concurrentCompactMap(withPriority:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[τ_1_0]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_1_0"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "_Concurrency.TaskPriority?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TaskPriority",
+                    "printedName": "_Concurrency.TaskPriority",
+                    "usr": "s:ScP"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(τ_0_0.Element) async -> τ_1_0?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "τ_1_0?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_1_0"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DependentMember",
+                    "printedName": "τ_0_0.Element"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:ST8SpaceKitE20concurrentCompactMap12withPriority_Sayqd__GScPSg_qd__Sg7ElementQzYactYalF",
+            "mangledName": "$sST8SpaceKitE20concurrentCompactMap12withPriority_Sayqd__GScPSg_qd__Sg7ElementQzYactYalF",
+            "moduleName": "SpaceKit",
+            "genericSig": "<τ_0_0, τ_1_0 where τ_0_0 : Swift.Sequence>",
+            "sugared_genericSig": "<Self, T where Self : Swift.Sequence>",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "concurrentCompactMap",
+            "printedName": "concurrentCompactMap(withPriority:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[τ_1_0]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_1_0"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "_Concurrency.TaskPriority?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TaskPriority",
+                    "printedName": "_Concurrency.TaskPriority",
+                    "usr": "s:ScP"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(τ_0_0.Element) async throws -> τ_1_0?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "τ_1_0?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_1_0"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DependentMember",
+                    "printedName": "τ_0_0.Element"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:ST8SpaceKitE20concurrentCompactMap12withPriority_Sayqd__GScPSg_qd__Sg7ElementQzYaKctYaKlF",
+            "mangledName": "$sST8SpaceKitE20concurrentCompactMap12withPriority_Sayqd__GScPSg_qd__Sg7ElementQzYaKctYaKlF",
+            "moduleName": "SpaceKit",
+            "genericSig": "<τ_0_0, τ_1_0 where τ_0_0 : Swift.Sequence>",
+            "sugared_genericSig": "<Self, T where Self : Swift.Sequence>",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "asyncFlatMap",
+            "printedName": "asyncFlatMap(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[τ_1_0.Element]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DependentMember",
+                    "printedName": "τ_1_0.Element"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(τ_0_0.Element) async throws -> τ_1_0",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_1_0"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DependentMember",
+                    "printedName": "τ_0_0.Element"
+                  }
+                ],
+                "typeAttributes": [
+                  "noescape"
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:ST8SpaceKitE12asyncFlatMapySay7ElementQyd__Gqd__ACQzYaKXEYaKSTRd__lF",
+            "mangledName": "$sST8SpaceKitE12asyncFlatMapySay7ElementQyd__Gqd__ACQzYaKXEYaKSTRd__lF",
+            "moduleName": "SpaceKit",
+            "genericSig": "<τ_0_0, τ_1_0 where τ_0_0 : Swift.Sequence, τ_1_0 : Swift.Sequence>",
+            "sugared_genericSig": "<Self, T where Self : Swift.Sequence, T : Swift.Sequence>",
+            "declAttributes": [
+              "Rethrows",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "concurrentFlatMap",
+            "printedName": "concurrentFlatMap(withPriority:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[τ_1_0.Element]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DependentMember",
+                    "printedName": "τ_1_0.Element"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "_Concurrency.TaskPriority?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TaskPriority",
+                    "printedName": "_Concurrency.TaskPriority",
+                    "usr": "s:ScP"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(τ_0_0.Element) async -> τ_1_0",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_1_0"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DependentMember",
+                    "printedName": "τ_0_0.Element"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:ST8SpaceKitE17concurrentFlatMap12withPriority_Say7ElementQyd__GScPSg_qd__ADQzYactYaSTRd__lF",
+            "mangledName": "$sST8SpaceKitE17concurrentFlatMap12withPriority_Say7ElementQyd__GScPSg_qd__ADQzYactYaSTRd__lF",
+            "moduleName": "SpaceKit",
+            "genericSig": "<τ_0_0, τ_1_0 where τ_0_0 : Swift.Sequence, τ_1_0 : Swift.Sequence>",
+            "sugared_genericSig": "<Self, T where Self : Swift.Sequence, T : Swift.Sequence>",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "concurrentFlatMap",
+            "printedName": "concurrentFlatMap(withPriority:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[τ_1_0.Element]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DependentMember",
+                    "printedName": "τ_1_0.Element"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "_Concurrency.TaskPriority?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TaskPriority",
+                    "printedName": "_Concurrency.TaskPriority",
+                    "usr": "s:ScP"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(τ_0_0.Element) async throws -> τ_1_0",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_1_0"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DependentMember",
+                    "printedName": "τ_0_0.Element"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:ST8SpaceKitE17concurrentFlatMap12withPriority_Say7ElementQyd__GScPSg_qd__ADQzYaKctYaKSTRd__lF",
+            "mangledName": "$sST8SpaceKitE17concurrentFlatMap12withPriority_Say7ElementQyd__GScPSg_qd__ADQzYaKctYaKSTRd__lF",
+            "moduleName": "SpaceKit",
+            "genericSig": "<τ_0_0, τ_1_0 where τ_0_0 : Swift.Sequence, τ_1_0 : Swift.Sequence>",
+            "sugared_genericSig": "<Self, T where Self : Swift.Sequence, T : Swift.Sequence>",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:ST",
+        "mangledName": "$sST",
+        "moduleName": "Swift",
+        "genericSig": "<τ_0_0.Element == τ_0_0.Iterator.Element, τ_0_0.Iterator : Swift.IteratorProtocol>",
+        "sugared_genericSig": "<Self.Element == Self.Iterator.Element, Self.Iterator : Swift.IteratorProtocol>",
+        "isExternal": true
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "FileManager",
+        "printedName": "FileManager",
+        "declKind": "Class",
+        "usr": "c:objc(cs)NSFileManager",
+        "moduleName": "Foundation",
+        "isOpen": true,
+        "objc_name": "NSFileManager",
+        "declAttributes": [
+          "ObjC",
+          "NonSendable",
+          "Dynamic"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "isExternal": true,
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
         ]
       },
       {
@@ -8249,135 +9875,79 @@
       "value": "\"#3198FF\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/DefaultSpaceKitViewController.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1191,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/DefaultSpaceKitViewController.swift",
-      "kind": "StringLiteral",
-      "offset": 248,
-      "length": 29,
-      "value": "\"SpaceKit.DefaultSpaceKitViewController\""
-    },
-    {
-      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/DefaultSpaceKitViewController.swift",
-      "kind": "FloatLiteral",
-      "offset": 11978,
-      "length": 3,
-      "value": "0.3"
-    },
-    {
-      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/DefaultSpaceKitViewController.swift",
-      "kind": "FloatLiteral",
-      "offset": 12027,
-      "length": 3,
-      "value": "0.6"
-    },
-    {
-      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/DefaultSpaceKitViewController.swift",
-      "kind": "IntegerLiteral",
-      "offset": 12070,
-      "length": 2,
-      "value": "74"
-    },
-    {
-      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/DefaultSpaceKitViewController.swift",
-      "kind": "StringLiteral",
-      "offset": 12138,
-      "length": 19,
-      "value": "\"qrcode.viewfinder\""
-    },
-    {
-      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/DefaultSpaceKitViewController.swift",
-      "kind": "StringLiteral",
-      "offset": 12209,
-      "length": 16,
-      "value": "\"arrow.up.right\""
-    },
-    {
-      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/DefaultSpaceKitViewController.swift",
-      "kind": "IntegerLiteral",
-      "offset": 12288,
-      "length": 2,
-      "value": "16"
-    },
-    {
-      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/DefaultSpaceKitViewController.swift",
-      "kind": "StringLiteral",
-      "offset": 12349,
-      "length": 13,
-      "value": "\"person.fill\""
-    },
-    {
-      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/DefaultSpaceKitViewController.swift",
-      "kind": "StringLiteral",
-      "offset": 12408,
-      "length": 10,
-      "value": "\"location\""
-    },
-    {
-      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/DefaultSpaceKitViewController.swift",
-      "kind": "StringLiteral",
-      "offset": 12468,
-      "length": 15,
-      "value": "\"location.fill\""
-    },
-    {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/ARViewController\/ARViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 1527,
+      "offset": 683,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/ARViewController\/ARViewController.swift",
       "kind": "Array",
-      "offset": 1947,
+      "offset": 1103,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/ARViewController\/ARViewController.swift",
       "kind": "Array",
-      "offset": 2034,
+      "offset": 1190,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/ARViewController\/ARViewController.swift",
       "kind": "StringLiteral",
-      "offset": 2427,
+      "offset": 1583,
       "length": 16,
       "value": "\"SpaceKit.ARViewController\""
     },
     {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/Public\/Destination.swift",
+      "kind": "StringLiteral",
+      "offset": 422,
+      "length": 11,
+      "value": "\"aisleName\""
+    },
+    {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/Public\/Destination.swift",
+      "kind": "Dictionary",
+      "offset": 1368,
+      "length": 3,
+      "value": "[]"
+    },
+    {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitController\/SpaceKitController.swift",
       "kind": "Array",
-      "offset": 669,
+      "offset": 644,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitController\/SpaceKitController.swift",
       "kind": "Array",
-      "offset": 764,
+      "offset": 739,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitController\/SpaceKitController.swift",
       "kind": "Array",
-      "offset": 859,
+      "offset": 834,
       "length": 2,
       "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitController\/SpaceKitController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1010,
+      "length": 5,
+      "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitController\/SpaceKitController.swift",
       "kind": "IntegerLiteral",
-      "offset": 2215,
+      "offset": 2313,
       "length": 1,
       "value": "2"
     },
@@ -8454,7 +10024,7 @@
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/Source\/LocationAnalysis\/Location Controller\/LocationController.swift",
       "kind": "BooleanLiteral",
-      "offset": 3015,
+      "offset": 2390,
       "length": 5,
       "value": "false"
     },
@@ -8475,58 +10045,261 @@
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/RoutePlanner\/RoutePlanner.swift",
       "kind": "BooleanLiteral",
-      "offset": 1653,
+      "offset": 1596,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/RoutePlanner\/RoutePlanner.swift",
       "kind": "IntegerLiteral",
-      "offset": 3444,
+      "offset": 3387,
       "length": 2,
       "value": "16"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/RoutePlanner\/RoutePlanner.swift",
       "kind": "IntegerLiteral",
-      "offset": 3486,
+      "offset": 3429,
       "length": 1,
       "value": "8"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/RoutePlanner\/RoutePlanner.swift",
       "kind": "BooleanLiteral",
-      "offset": 3550,
+      "offset": 3493,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/ARViewController\/ARViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 7848,
+      "offset": 4598,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/ARViewController\/ARViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 8098,
+      "offset": 4848,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/ARViewController\/ARViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 8186,
+      "offset": 4936,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/ARViewController\/ARViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 8435,
+      "offset": 5185,
       "length": 5,
       "value": "false"
+    },
+    {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Compass\/LegacyCompassSummaryView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 293,
+      "length": 2,
+      "value": "66"
+    },
+    {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Compass\/LegacyCompassSummaryView.swift",
+      "kind": "FloatLiteral",
+      "offset": 665,
+      "length": 3,
+      "value": "0.0"
+    },
+    {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Compass\/LegacyCompassSummaryView.swift",
+      "kind": "FloatLiteral",
+      "offset": 697,
+      "length": 3,
+      "value": "1.0"
+    },
+    {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Compass\/LegacyCompassSummaryView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 743,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Compass\/LegacyCompassSummaryView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 887,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Compass\/LegacyCompassSummaryView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1010,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Compass\/LegacyCompassSummaryView.swift",
+      "kind": "StringLiteral",
+      "offset": 185,
+      "length": 24,
+      "value": "\"SpaceKit.LegacyCompassSummaryView\""
+    },
+    {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Compass\/LegacyCompassSummaryView.swift",
+      "kind": "FloatLiteral",
+      "offset": 7426,
+      "length": 4,
+      "value": "42.0"
+    },
+    {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Compass\/LegacyCompassSummaryView.swift",
+      "kind": "FloatLiteral",
+      "offset": 7473,
+      "length": 4,
+      "value": "12.0"
+    },
+    {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Compass\/LegacyCompassSummaryView.swift",
+      "kind": "StringLiteral",
+      "offset": 7515,
+      "length": 15,
+      "value": "\"shadowOpacity\""
+    },
+    {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Compass\/LegacyCompassSummaryView.swift",
+      "kind": "FloatLiteral",
+      "offset": 7570,
+      "length": 3,
+      "value": "1.5"
+    },
+    {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Compass\/LegacyCompassSummaryView.swift",
+      "kind": "FloatLiteral",
+      "offset": 7614,
+      "length": 3,
+      "value": "1.0"
+    },
+    {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Compass\/LegacyCompassSummaryView.swift",
+      "kind": "FloatLiteral",
+      "offset": 7656,
+      "length": 3,
+      "value": "0.8"
+    },
+    {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Compass\/LegacyCompassSummaryViewModel.swift",
+      "kind": "IntegerLiteral",
+      "offset": 216,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Compass\/LegacyCompassSummaryViewModel.swift",
+      "kind": "IntegerLiteral",
+      "offset": 273,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Compass\/LegacyCompassSummaryViewModel.swift",
+      "kind": "BooleanLiteral",
+      "offset": 373,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/LegacySpaceKitViewModel.swift",
+      "kind": "BooleanLiteral",
+      "offset": 803,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/LegacySpaceKitViewModel.swift",
+      "kind": "BooleanLiteral",
+      "offset": 882,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/LegacySpaceKitViewModel.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1062,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/LegacySpaceKitViewModel.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1214,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/LegacySpaceKitViewModel.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1293,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/LegacySpaceKitViewModel.swift",
+      "kind": "StringLiteral",
+      "offset": 4899,
+      "length": 10,
+      "value": "\"location\""
+    },
+    {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/LegacySpaceKitViewModel.swift",
+      "kind": "StringLiteral",
+      "offset": 4934,
+      "length": 15,
+      "value": "\"location.fill\""
+    },
+    {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/LegacySpaceKitViewModel.swift",
+      "kind": "StringLiteral",
+      "offset": 4963,
+      "length": 10,
+      "value": "\"map.fill\""
+    },
+    {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/LegacySpaceKitViewModel.swift",
+      "kind": "StringLiteral",
+      "offset": 4989,
+      "length": 7,
+      "value": "\"xmark\""
+    },
+    {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/LegacySpaceKitViewModel.swift",
+      "kind": "StringLiteral",
+      "offset": 4899,
+      "length": 10,
+      "value": "\"location\""
+    },
+    {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/LegacySpaceKitViewModel.swift",
+      "kind": "StringLiteral",
+      "offset": 4934,
+      "length": 15,
+      "value": "\"location.fill\""
+    },
+    {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/LegacySpaceKitViewModel.swift",
+      "kind": "StringLiteral",
+      "offset": 4963,
+      "length": 10,
+      "value": "\"map.fill\""
+    },
+    {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/LegacySpaceKitViewModel.swift",
+      "kind": "StringLiteral",
+      "offset": 4989,
+      "length": 7,
+      "value": "\"xmark\""
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/HyperLocationView.swift",
@@ -8564,86 +10337,170 @@
       "value": "\"SpaceKit.HyperLocationView\""
     },
     {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/SpaceKitViewModelFactory.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4609,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/SpaceKitViewModelFactory.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4637,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/SpaceKitViewModelFactory.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4667,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/SpaceKitViewModelFactory.swift",
+      "kind": "Array",
+      "offset": 4692,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/SpaceKitViewModelFactory.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4729,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/SpaceKitViewModelFactory.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4762,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/SpaceKitViewModelFactory.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4958,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/SpaceKitViewModelFactory.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4985,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/SpaceKitViewModelFactory.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5014,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/SpaceKitViewModelFactory.swift",
+      "kind": "Array",
+      "offset": 5039,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/SpaceKitViewModelFactory.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5076,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/SpaceKitViewModelFactory.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5109,
+      "length": 5,
+      "value": "false"
+    },
+    {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/RoutePlanner\/GeneticAlgorithm\/GeneticAlgorithm.swift",
       "kind": "Array",
-      "offset": 5187,
+      "offset": 5325,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/RoutePlanner\/GeneticAlgorithm\/GeneticAlgorithm.swift",
       "kind": "Array",
-      "offset": 5655,
+      "offset": 5811,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Compass\/CompassOverlayView.swift",
       "kind": "FloatLiteral",
-      "offset": 1907,
+      "offset": 1645,
       "length": 3,
       "value": "0.5"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Compass\/CompassOverlayView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1941,
+      "offset": 1679,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Compass\/CompassOverlayView.swift",
       "kind": "IntegerLiteral",
-      "offset": 1974,
+      "offset": 1712,
       "length": 3,
       "value": "100"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Compass\/CompassOverlayView.swift",
       "kind": "StringLiteral",
-      "offset": 2375,
+      "offset": 2113,
       "length": 13,
       "value": "\"circle.fill\""
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Compass\/CompassOverlayView.swift",
       "kind": "BooleanLiteral",
-      "offset": 2638,
+      "offset": 2376,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Compass\/CompassOverlayView.swift",
       "kind": "BooleanLiteral",
-      "offset": 2713,
+      "offset": 2451,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Compass\/CompassOverlayView.swift",
       "kind": "IntegerLiteral",
-      "offset": 3015,
+      "offset": 2753,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Compass\/CompassOverlayView.swift",
       "kind": "Array",
-      "offset": 3104,
+      "offset": 2842,
       "length": 7,
       "value": "[0, 20]"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Compass\/CompassOverlayView.swift",
       "kind": "StringLiteral",
-      "offset": 1435,
+      "offset": 1173,
       "length": 18,
       "value": "\"SpaceKit.CompassOverlayView\""
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Compass\/CompassOverlayView.swift",
       "kind": "FloatLiteral",
-      "offset": 13590,
+      "offset": 13328,
       "length": 3,
       "value": "0.2"
     },
@@ -8734,98 +10591,98 @@
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Compass\/CompassViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 5670,
+      "offset": 5013,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Compass\/CompassViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 6110,
+      "offset": 5453,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Compass\/CompassViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 6157,
+      "offset": 5500,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Compass\/CompassViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 6212,
+      "offset": 5555,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Compass\/CompassViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 6299,
+      "offset": 5642,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Compass\/CompassViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 6348,
+      "offset": 5691,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Compass\/CompassViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 6392,
+      "offset": 5735,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/InfoView\/InfoView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1434,
+      "offset": 1295,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/InfoView\/InfoView.swift",
       "kind": "IntegerLiteral",
-      "offset": 1596,
+      "offset": 1457,
       "length": 2,
       "value": "20"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/InfoView\/InfoView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1759,
+      "offset": 1620,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/InfoView\/InfoView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1909,
+      "offset": 1770,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/InfoView\/InfoView.swift",
       "kind": "StringLiteral",
-      "offset": 1936,
+      "offset": 1797,
       "length": 8,
       "value": "\"Got it\""
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/InfoView\/InfoView.swift",
       "kind": "StringLiteral",
-      "offset": 1118,
+      "offset": 979,
       "length": 15,
       "value": "\"SpaceKit.DefaultInfoView\""
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/InfoView\/InfoView.swift",
       "kind": "IntegerLiteral",
-      "offset": 3585,
+      "offset": 3446,
       "length": 2,
       "value": "44"
     },
@@ -8867,77 +10724,77 @@
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Compass\/CompassSummaryView.swift",
       "kind": "IntegerLiteral",
-      "offset": 831,
+      "offset": 560,
       "length": 2,
       "value": "66"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Compass\/CompassSummaryView.swift",
       "kind": "FloatLiteral",
-      "offset": 1084,
+      "offset": 813,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Compass\/CompassSummaryView.swift",
       "kind": "FloatLiteral",
-      "offset": 1116,
+      "offset": 845,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Compass\/CompassSummaryView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1162,
+      "offset": 891,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Compass\/CompassSummaryView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1306,
+      "offset": 1035,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Compass\/CompassSummaryView.swift",
       "kind": "StringLiteral",
-      "offset": 757,
+      "offset": 486,
       "length": 18,
       "value": "\"SpaceKit.CompassSummaryView\""
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Compass\/CompassSummaryView.swift",
       "kind": "FloatLiteral",
-      "offset": 4736,
+      "offset": 4465,
       "length": 4,
       "value": "42.0"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Compass\/CompassSummaryView.swift",
       "kind": "FloatLiteral",
-      "offset": 4783,
+      "offset": 4512,
       "length": 4,
       "value": "24.0"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Compass\/CompassSummaryView.swift",
       "kind": "StringLiteral",
-      "offset": 4822,
+      "offset": 4551,
       "length": 15,
       "value": "\"shadowOpacity\""
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Compass\/CompassSummaryView.swift",
       "kind": "FloatLiteral",
-      "offset": 4877,
+      "offset": 4606,
       "length": 3,
       "value": "1.5"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Compass\/CompassSummaryView.swift",
       "kind": "FloatLiteral",
-      "offset": 4921,
+      "offset": 4650,
       "length": 3,
       "value": "1.0"
     },
@@ -8965,427 +10822,427 @@
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "IntegerLiteral",
-      "offset": 367,
+      "offset": 310,
       "length": 2,
       "value": "48"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "StringLiteral",
-      "offset": 298,
+      "offset": 241,
       "length": 20,
       "value": "\"SpaceKit.HyperDestinationView\""
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "IntegerLiteral",
-      "offset": 2219,
+      "offset": 2162,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "IntegerLiteral",
-      "offset": 2230,
+      "offset": 2173,
       "length": 3,
       "value": "115"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "IntegerLiteral",
-      "offset": 2511,
+      "offset": 2454,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "FloatLiteral",
-      "offset": 3020,
+      "offset": 2963,
       "length": 4,
       "value": "1.25"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "FloatLiteral",
-      "offset": 3029,
+      "offset": 2972,
       "length": 5,
       "value": "14.09"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "FloatLiteral",
-      "offset": 3073,
+      "offset": 3016,
       "length": 5,
       "value": "20.22"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "FloatLiteral",
-      "offset": 3083,
+      "offset": 3026,
       "length": 4,
       "value": "0.56"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "FloatLiteral",
-      "offset": 3127,
+      "offset": 3070,
       "length": 5,
       "value": "24.43"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "FloatLiteral",
-      "offset": 3137,
+      "offset": 3080,
       "length": 4,
       "value": "1.23"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "FloatLiteral",
-      "offset": 3170,
+      "offset": 3113,
       "length": 5,
       "value": "21.57"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "FloatLiteral",
-      "offset": 3180,
+      "offset": 3123,
       "length": 4,
       "value": "0.4"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "FloatLiteral",
-      "offset": 3213,
+      "offset": 3156,
       "length": 5,
       "value": "23.45"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "FloatLiteral",
-      "offset": 3223,
+      "offset": 3166,
       "length": 4,
       "value": "0.1"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "IntegerLiteral",
-      "offset": 3267,
+      "offset": 3210,
       "length": 2,
       "value": "25"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "FloatLiteral",
-      "offset": 3274,
+      "offset": 3217,
       "length": 4,
       "value": "2.98"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "FloatLiteral",
-      "offset": 3307,
+      "offset": 3250,
       "length": 4,
       "value": "24.8"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "FloatLiteral",
-      "offset": 3316,
+      "offset": 3259,
       "length": 4,
       "value": "1.74"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "IntegerLiteral",
-      "offset": 3349,
+      "offset": 3292,
       "length": 2,
       "value": "25"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "FloatLiteral",
-      "offset": 3356,
+      "offset": 3299,
       "length": 4,
       "value": "2.35"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "IntegerLiteral",
-      "offset": 3399,
+      "offset": 3342,
       "length": 2,
       "value": "25"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "FloatLiteral",
-      "offset": 3406,
+      "offset": 3349,
       "length": 5,
       "value": "30.02"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "FloatLiteral",
-      "offset": 3451,
+      "offset": 3394,
       "length": 5,
       "value": "21.99"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "IntegerLiteral",
-      "offset": 3461,
+      "offset": 3404,
       "length": 2,
       "value": "33"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "IntegerLiteral",
-      "offset": 3492,
+      "offset": 3435,
       "length": 2,
       "value": "25"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "FloatLiteral",
-      "offset": 3499,
+      "offset": 3442,
       "length": 5,
       "value": "31.67"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "FloatLiteral",
-      "offset": 3533,
+      "offset": 3476,
       "length": 5,
       "value": "23.65"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "IntegerLiteral",
-      "offset": 3543,
+      "offset": 3486,
       "length": 2,
       "value": "33"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "FloatLiteral",
-      "offset": 3585,
+      "offset": 3528,
       "length": 5,
       "value": "20.22"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "FloatLiteral",
-      "offset": 3595,
+      "offset": 3538,
       "length": 5,
       "value": "32.44"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "FloatLiteral",
-      "offset": 3629,
+      "offset": 3572,
       "length": 5,
       "value": "21.35"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "IntegerLiteral",
-      "offset": 3639,
+      "offset": 3582,
       "length": 2,
       "value": "33"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "FloatLiteral",
-      "offset": 3670,
+      "offset": 3613,
       "length": 5,
       "value": "20.73"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "FloatLiteral",
-      "offset": 3680,
+      "offset": 3623,
       "length": 4,
       "value": "32.8"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "FloatLiteral",
-      "offset": 3723,
+      "offset": 3666,
       "length": 4,
       "value": "1.25"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "FloatLiteral",
-      "offset": 3732,
+      "offset": 3675,
       "length": 5,
       "value": "18.91"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "FloatLiteral",
-      "offset": 3777,
+      "offset": 3720,
       "length": 4,
       "value": "0.57"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "FloatLiteral",
-      "offset": 3786,
+      "offset": 3729,
       "length": 5,
       "value": "14.76"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "FloatLiteral",
-      "offset": 3820,
+      "offset": 3763,
       "length": 4,
       "value": "0.1"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "FloatLiteral",
-      "offset": 3829,
+      "offset": 3772,
       "length": 5,
       "value": "17.95"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "FloatLiteral",
-      "offset": 3863,
+      "offset": 3806,
       "length": 4,
       "value": "0.4"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "FloatLiteral",
-      "offset": 3872,
+      "offset": 3815,
       "length": 5,
       "value": "16.09"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "FloatLiteral",
-      "offset": 3917,
+      "offset": 3860,
       "length": 4,
       "value": "1.25"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "FloatLiteral",
-      "offset": 3926,
+      "offset": 3869,
       "length": 5,
       "value": "14.09"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "FloatLiteral",
-      "offset": 3960,
+      "offset": 3903,
       "length": 4,
       "value": "0.76"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "FloatLiteral",
-      "offset": 3969,
+      "offset": 3912,
       "length": 4,
       "value": "14.5"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "FloatLiteral",
-      "offset": 4002,
+      "offset": 3945,
       "length": 4,
       "value": "0.99"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "FloatLiteral",
-      "offset": 4011,
+      "offset": 3954,
       "length": 5,
       "value": "14.27"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "FloatLiteral",
-      "offset": 4064,
+      "offset": 4007,
       "length": 4,
       "value": "0.01"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "StringLiteral",
-      "offset": 6103,
+      "offset": 6046,
       "length": 8,
       "value": "\"bounce\""
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "StringLiteral",
-      "offset": 6132,
+      "offset": 6075,
       "length": 6,
       "value": "\"fade\""
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "StringLiteral",
-      "offset": 6160,
+      "offset": 6103,
       "length": 7,
       "value": "\"scale\""
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "FloatLiteral",
-      "offset": 6226,
+      "offset": 6169,
       "length": 3,
       "value": "0.2"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "BooleanLiteral",
-      "offset": 7607,
+      "offset": 7550,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "StringLiteral",
-      "offset": 2069,
+      "offset": 2012,
       "length": 20,
       "value": "\"SpaceKit.HyperDestinationNode\""
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Compass\/PacmanRoute.swift",
       "kind": "FloatLiteral",
-      "offset": 537,
+      "offset": 512,
       "length": 4,
       "value": "20.0"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Compass\/PacmanRoute.swift",
       "kind": "IntegerLiteral",
-      "offset": 580,
+      "offset": 555,
       "length": 2,
       "value": "75"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Compass\/PacmanRoute.swift",
       "kind": "IntegerLiteral",
-      "offset": 631,
+      "offset": 606,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Compass\/PacmanRoute.swift",
       "kind": "IntegerLiteral",
-      "offset": 685,
+      "offset": 660,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/RoutePlanner\/GeneticAlgorithm\/HMGeneticAlgorithm.swift",
       "kind": "StringLiteral",
-      "offset": 197,
+      "offset": 140,
       "length": 18,
       "value": "\"SpaceKit.HMGeneticAlgorithm\""
     },
@@ -9455,28 +11312,28 @@
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/HyperSpaceView.swift",
       "kind": "Array",
-      "offset": 1669,
+      "offset": 1535,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/HyperSpaceView.swift",
       "kind": "Array",
-      "offset": 1724,
+      "offset": 1590,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/HyperSpaceView.swift",
       "kind": "BooleanLiteral",
-      "offset": 2208,
+      "offset": 2074,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/HyperSpaceView.swift",
       "kind": "StringLiteral",
-      "offset": 1180,
+      "offset": 1046,
       "length": 14,
       "value": "\"SpaceKit.HyperSpaceView\""
     },
@@ -9637,9 +11494,100 @@
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/Public\/SpaceKitContextFactory.swift",
       "kind": "BooleanLiteral",
-      "offset": 364,
+      "offset": 362,
       "length": 5,
       "value": "false"
+    },
+    {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/Public\/SpaceKitContextFactory.swift",
+      "kind": "Array",
+      "offset": 5685,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/LegacySpaceKitViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1450,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/LegacySpaceKitViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1854,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/LegacySpaceKitViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 231,
+      "length": 28,
+      "value": "\"SpaceKit.LegacySpaceKitViewController\""
+    },
+    {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/LegacySpaceKitViewController.swift",
+      "kind": "FloatLiteral",
+      "offset": 15164,
+      "length": 3,
+      "value": "0.3"
+    },
+    {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/LegacySpaceKitViewController.swift",
+      "kind": "FloatLiteral",
+      "offset": 15213,
+      "length": 3,
+      "value": "0.6"
+    },
+    {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/LegacySpaceKitViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 15256,
+      "length": 2,
+      "value": "74"
+    },
+    {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/LegacySpaceKitViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 15324,
+      "length": 19,
+      "value": "\"qrcode.viewfinder\""
+    },
+    {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/LegacySpaceKitViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 15395,
+      "length": 16,
+      "value": "\"arrow.up.right\""
+    },
+    {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/LegacySpaceKitViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 15474,
+      "length": 2,
+      "value": "16"
+    },
+    {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/LegacySpaceKitViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 15539,
+      "length": 10,
+      "value": "\"location\""
+    },
+    {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/LegacySpaceKitViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 15599,
+      "length": 15,
+      "value": "\"location.fill\""
+    },
+    {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/LegacySpaceKitViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 15661,
+      "length": 12,
+      "value": "\"chevron.up\""
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/BeaconNode.swift",
@@ -9775,6 +11723,62 @@
       "value": "\"SpaceKit.MatchPositionUpdater\""
     },
     {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/NewSpaceKitViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2434,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/NewSpaceKitViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2838,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/NewSpaceKitViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 1347,
+      "length": 25,
+      "value": "\"SpaceKit.NewSpaceKitViewController\""
+    },
+    {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/NewSpaceKitViewController.swift",
+      "kind": "FloatLiteral",
+      "offset": 13708,
+      "length": 3,
+      "value": "0.3"
+    },
+    {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/NewSpaceKitViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 13777,
+      "length": 19,
+      "value": "\"qrcode.viewfinder\""
+    },
+    {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/NewSpaceKitViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 13848,
+      "length": 16,
+      "value": "\"arrow.up.right\""
+    },
+    {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/NewSpaceKitViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 13927,
+      "length": 2,
+      "value": "16"
+    },
+    {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/NewSpaceKitViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 14004,
+      "length": 15,
+      "value": "\"location.fill\""
+    },
+    {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/AROffScreenIndicatorView.swift",
       "kind": "IntegerLiteral",
       "offset": 242,
@@ -9861,42 +11865,42 @@
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/VenueController\/UserLocationService.swift",
       "kind": "BooleanLiteral",
-      "offset": 1906,
+      "offset": 1745,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/VenueController\/VenueController.swift",
       "kind": "StringLiteral",
-      "offset": 8997,
+      "offset": 4977,
       "length": 13,
       "value": "\"pathfinding\""
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/VenueController\/VenueController.swift",
       "kind": "BooleanLiteral",
-      "offset": 9401,
+      "offset": 5381,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/VenueController\/VenueController.swift",
       "kind": "BooleanLiteral",
-      "offset": 9459,
+      "offset": 5439,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/VenueController\/VenueController.swift",
       "kind": "BooleanLiteral",
-      "offset": 9518,
+      "offset": 5498,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/VenueController\/VenueController.swift",
       "kind": "BooleanLiteral",
-      "offset": 9723,
+      "offset": 5800,
       "length": 5,
       "value": "false"
     },
@@ -9906,6 +11910,90 @@
       "offset": 195,
       "length": 15,
       "value": "\"SpaceKit.LocationUpdater\""
+    },
+    {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/NewSpaceKitViewModel.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2083,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/NewSpaceKitViewModel.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2165,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/NewSpaceKitViewModel.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2244,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/NewSpaceKitViewModel.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2424,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/NewSpaceKitViewModel.swift",
+      "kind": "StringLiteral",
+      "offset": 6890,
+      "length": 15,
+      "value": "\"location.fill\""
+    },
+    {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/NewSpaceKitViewModel.swift",
+      "kind": "StringLiteral",
+      "offset": 6919,
+      "length": 10,
+      "value": "\"map.fill\""
+    },
+    {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/NewSpaceKitViewModel.swift",
+      "kind": "StringLiteral",
+      "offset": 6947,
+      "length": 19,
+      "value": "\"qrcode.viewfinder\""
+    },
+    {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/NewSpaceKitViewModel.swift",
+      "kind": "StringLiteral",
+      "offset": 6982,
+      "length": 7,
+      "value": "\"xmark\""
+    },
+    {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/NewSpaceKitViewModel.swift",
+      "kind": "StringLiteral",
+      "offset": 6890,
+      "length": 15,
+      "value": "\"location.fill\""
+    },
+    {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/NewSpaceKitViewModel.swift",
+      "kind": "StringLiteral",
+      "offset": 6919,
+      "length": 10,
+      "value": "\"map.fill\""
+    },
+    {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/NewSpaceKitViewModel.swift",
+      "kind": "StringLiteral",
+      "offset": 6947,
+      "length": 19,
+      "value": "\"qrcode.viewfinder\""
+    },
+    {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/NewSpaceKitViewModel.swift",
+      "kind": "StringLiteral",
+      "offset": 6982,
+      "length": 7,
+      "value": "\"xmark\""
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Updaters\/NodeUpdater.swift",
@@ -9920,41 +12008,6 @@
       "offset": 192,
       "length": 17,
       "value": "\"SpaceKit.HyperSpaceHUDView\""
-    },
-    {
-      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/SpaceKitViewModel.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1181,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/SpaceKitViewModel.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1260,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/SpaceKitViewModel.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1340,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/SpaceKitViewModel.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1416,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/SpaceKitViewModel.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1491,
-      "length": 5,
-      "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/Source\/LocationAnalysis\/SpaceKitLocationManager.swift",
@@ -10022,14 +12075,14 @@
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/Source\/LocationAnalysis\/CoreLocationManagerProxy.swift",
       "kind": "StringLiteral",
-      "offset": 709,
+      "offset": 491,
       "length": 24,
       "value": "\"SpaceKit.CoreLocationManagerProxy\""
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Updaters\/HeadingTargetUpdater.swift",
       "kind": "StringLiteral",
-      "offset": 465,
+      "offset": 408,
       "length": 20,
       "value": "\"SpaceKit.HeadingTargetUpdater\""
     }
