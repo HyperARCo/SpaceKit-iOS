@@ -20,6 +20,7 @@ import SpaceKit
 	private var products: [Product] = []
 
 	private let locationManager = CLLocationManager()
+	private let locationDelegate = LocationDelegate()
 
 	init(navigationController: UINavigationController) {
 		self.navigationController = navigationController
@@ -30,8 +31,10 @@ import SpaceKit
 		navigationController.setViewControllers([viewController], animated: false)
 
 		guard
-			let productsURL = Bundle.main.url(forResource: "sampleProducts", withExtension: "json",
-											  subdirectory: "CustomResources"),
+			let productsURL = Bundle.main.url(
+				forResource: "sampleProducts",
+				withExtension: "json",
+				subdirectory: "CustomResources"),
 			let productsData = try? Data(contentsOf: productsURL),
 			let products = try? JSONDecoder().decode([Product].self, from: productsData),
 			let hmdfURL = Bundle.main.urls(forResourcesWithExtension: "zip", subdirectory: "HMDF")?.first else
@@ -62,17 +65,19 @@ import SpaceKit
 		guard let listManager = listManager, let settingsManager = settingsManager else {
 			return
 		}
-
+		
+		listManager.spaceKitContext = context
+		context.listDelegate = listManager
+		context.locationDelegate = locationDelegate
+		
 		let spaceKitViewController = SpaceKit.SpaceKitViewControllerFactory(context: context).make()
 		let rootViewController = RootViewController(spaceKitViewController: spaceKitViewController, spaceKitContext: context)
 
-		listManager.spaceKitContext = context
-		context.listDelegate = listManager
-
 		settingsManager.spaceKitContext = context
-
-		context.requisitesDelegate = self
-		context.requestUnfulfilledRequisites(from: Requisite.allCases)
+		
+		Task {
+			await checkPermissions()
+		}
 
 		rootViewController.listButtonAction = { [weak self] in
 			guard let self = self else { return }
@@ -100,19 +105,30 @@ import SpaceKit
 	}
 }
 
-extension AppCoordinator: SpaceKitRequisitesDelegate {
-	func spaceKitContext(_ context: Context, requiresRequisites: [Requisite]) {
-		for requisite in requiresRequisites {
+extension AppCoordinator {
+	func checkPermissions() async {
+		let outstandingRequisites = await Requisite.requestUnfulfilledRequisites(from: Requisite.allCases)
+		for requisite in outstandingRequisites {
 			switch requisite {
 			case .locationPermission:
-				locationManager.requestWhenInUseAuthorization()
-			case .preciseLocationPermission:
-				break
+				await MainActor.run { [weak self] in
+					self?.locationManager.requestAlwaysAuthorization()
+				}
 			case .cameraPermission:
-				AVCaptureDevice.requestAccess(for: .video) { _ in }
+				await MainActor.run {
+					AVCaptureDevice.requestAccess(for: .video) { _ in }
+				}
+			case .backgroundLocationPermission, .preciseLocationPermission:
+				break
 			@unknown default:
 				break
 			}
 		}
+	}
+}
+
+private final class LocationDelegate: SpaceKitLocationDelegate {
+	func spaceKitContextShouldAllowBackgroundLocationUpdates(_ context: Context) -> Bool {
+		true
 	}
 }
