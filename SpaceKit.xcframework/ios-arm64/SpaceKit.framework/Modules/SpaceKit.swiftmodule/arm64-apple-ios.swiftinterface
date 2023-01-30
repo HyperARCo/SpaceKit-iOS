@@ -56,22 +56,30 @@ public struct LevelTransition {
 public protocol SpaceKitListDelegate : AnyObject {
   func spaceKitContext(_ context: SpaceKit.Context, didUpdateOrderedDestinations orderedDestinations: [SpaceKit.Destination], with levelTransitions: [[SpaceKit.LevelTransition]])
 }
-public enum Requisite : Swift.CaseIterable {
+public enum Requisite : Swift.Int, Swift.CaseIterable {
   case locationPermission
   case preciseLocationPermission
+  case backgroundLocationPermission
   case cameraPermission
-  public static func == (a: SpaceKit.Requisite, b: SpaceKit.Requisite) -> Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
+  public init?(rawValue: Swift.Int)
   public typealias AllCases = [SpaceKit.Requisite]
+  public typealias RawValue = Swift.Int
   public static var allCases: [SpaceKit.Requisite] {
     get
   }
-  public var hashValue: Swift.Int {
+  public var rawValue: Swift.Int {
     get
   }
 }
+@available(*, deprecated, message: "The delegate pattern for interrogating requisites has been deprecated. Instead use static function `Requisite.requestUnfulfilledRequisites()`.")
 public protocol SpaceKitRequisitesDelegate : AnyObject {
+  @available(*, deprecated, message: "Replace with async static function `Requisite.requestUnfulfilledRequisites()`.")
   func spaceKitContext(_ context: SpaceKit.Context, requiresRequisites requisites: [SpaceKit.Requisite])
+}
+extension SpaceKit.Requisite {
+  #if compiler(>=5.3) && $AsyncAwait
+  public static func requestUnfulfilledRequisites(from requisites: [SpaceKit.Requisite]) async -> [SpaceKit.Requisite]
+  #endif
 }
 extension Swift.Sequence {
   #if compiler(>=5.3) && $AsyncAwait
@@ -173,6 +181,12 @@ public protocol SubscriptionEvent {
   var onFulfill: () -> Swift.Void { get set }
   func onSubscribe()
   func evaluateFulfilled() -> Swift.Bool
+}
+public protocol SpaceKitLocationDelegate : AnyObject {
+  func spaceKitContextShouldAllowBackgroundLocationUpdates(_ context: SpaceKit.Context) -> Swift.Bool
+}
+extension SpaceKit.SpaceKitLocationDelegate {
+  public func spaceKitContextShouldAllowBackgroundLocationUpdates(_ context: SpaceKit.Context) -> Swift.Bool
 }
 extension ARKit.ARSCNView {
   @_Concurrency.MainActor(unsafe) public var userSceneHeading: Swift.Float? {
@@ -288,9 +302,11 @@ public struct SpaceKitLocalVenueRegion : SpaceKit.LocalVenueRegion {
   public let centrePoint: CoreLocation.CLLocationCoordinate2D
 }
 public protocol Context : AnyObject, SpaceKit.EventFactory {
+  @available(*, deprecated, message: "The delegate pattern for interrogating requisites has been deprecated. Instead use static function `Requisite.requestUnfulfilledRequisites()`.")
   var requisitesDelegate: SpaceKit.SpaceKitRequisitesDelegate? { get set }
   var listDelegate: SpaceKit.SpaceKitListDelegate? { get set }
   var barcodeDelegate: SpaceKit.SpaceKitBarcodeDelegate? { get set }
+  var locationDelegate: SpaceKit.SpaceKitLocationDelegate? { get set }
   func setRoutingOptions(_ options: SpaceKit.RoutingOptions)
   func setDestinations(_ destinations: [SpaceKit.Destination])
   func requestUnfulfilledRequisites(from requisites: [SpaceKit.Requisite])
@@ -339,6 +355,7 @@ extension SpaceKit.Destination.Priority : Swift.Equatable {}
 extension SpaceKit.Destination.Priority : Swift.Hashable {}
 extension SpaceKit.Requisite : Swift.Equatable {}
 extension SpaceKit.Requisite : Swift.Hashable {}
+extension SpaceKit.Requisite : Swift.RawRepresentable {}
 extension SpaceKit.NavigationLayout : Swift.Hashable {}
 extension SpaceKit.Theme.CornerStyle : Swift.Equatable {}
 extension SpaceKit.Theme.CornerStyle : Swift.Hashable {}
