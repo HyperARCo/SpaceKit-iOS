@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		325B9F0A099C2E4ED22C3843 /* SpaceKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 403D0047CE73E775FC3D97A6 /* SpaceKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		121778F3857D1209CA26EDF3 /* SpaceKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EBD828AC1E590E29E3C55B2C /* SpaceKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		832140A2297022A800439155 /* AppIcon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 832140A129701F9300439155 /* AppIcon.xcassets */; };
 		C2A34AA7290FF74D00F69B1D /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A34AA6290FF74D00F69B1D /* SettingsView.swift */; };
 		C2AE8385290C21F700E8D8E2 /* SettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AE8384290C21F700E8D8E2 /* SettingsCoordinator.swift */; };
@@ -30,7 +30,7 @@
 		C4EC318F285A09B500DFBD8A /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EC318E285A09B500DFBD8A /* RootViewController.swift */; };
 		C4EC3192285A217400DFBD8A /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EC3191285A217400DFBD8A /* ListCell.swift */; };
 		C4FEB7D2286B0D4B009B29CE /* ListManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FEB7D1286B0D4B009B29CE /* ListManager.swift */; };
-		F18C91E197E9D3C02C39A358 /* SpaceKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 403D0047CE73E775FC3D97A6 /* SpaceKit.xcframework */; };
+		D6E275F5367036E95BB0EE77 /* SpaceKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBD828AC1E590E29E3C55B2C /* SpaceKit.xcframework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,7 +58,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				C46C6AD92851FD7500C5038F /* geos in Embed Frameworks */,
-				325B9F0A099C2E4ED22C3843 /* SpaceKit.xcframework in Embed Frameworks */,
+				121778F3857D1209CA26EDF3 /* SpaceKit.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -66,7 +66,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		403D0047CE73E775FC3D97A6 /* SpaceKit.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = SpaceKit.xcframework; path = ../SpaceKit.xcframework; sourceTree = "<group>"; };
 		832140A129701F9300439155 /* AppIcon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AppIcon.xcassets; sourceTree = "<group>"; };
 		C2A34AA6290FF74D00F69B1D /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		C2AE8384290C21F700E8D8E2 /* SettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinator.swift; sourceTree = "<group>"; };
@@ -92,6 +91,7 @@
 		C4EC318E285A09B500DFBD8A /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		C4EC3191285A217400DFBD8A /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
 		C4FEB7D1286B0D4B009B29CE /* ListManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListManager.swift; sourceTree = "<group>"; };
+		EBD828AC1E590E29E3C55B2C /* SpaceKit.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = SpaceKit.xcframework; path = ../SpaceKit.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +100,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C46C6AD82851FD5800C5038F /* geos in Frameworks */,
-				F18C91E197E9D3C02C39A358 /* SpaceKit.xcframework in Frameworks */,
+				D6E275F5367036E95BB0EE77 /* SpaceKit.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,7 +193,7 @@
 		C4E3775128042E4A00886C88 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				403D0047CE73E775FC3D97A6 /* SpaceKit.xcframework */,
+				EBD828AC1E590E29E3C55B2C /* SpaceKit.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
