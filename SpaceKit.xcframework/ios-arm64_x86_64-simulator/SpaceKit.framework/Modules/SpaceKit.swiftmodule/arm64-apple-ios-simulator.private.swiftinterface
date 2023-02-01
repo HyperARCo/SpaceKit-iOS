@@ -166,17 +166,6 @@ extension UIKit.UIControl : SpaceKit.InfoViewButton {
     get
   }
 }
-public enum NavigationLayout : Swift.Equatable {
-  case map
-  case ar
-  case compass
-  case scanner
-  public func hash(into hasher: inout Swift.Hasher)
-  public static func == (a: SpaceKit.NavigationLayout, b: SpaceKit.NavigationLayout) -> Swift.Bool
-  public var hashValue: Swift.Int {
-    get
-  }
-}
 public protocol SubscriptionEvent {
   var onFulfill: () -> Swift.Void { get set }
   func onSubscribe()
@@ -356,7 +345,6 @@ extension SpaceKit.Destination.Priority : Swift.Hashable {}
 extension SpaceKit.Requisite : Swift.Equatable {}
 extension SpaceKit.Requisite : Swift.Hashable {}
 extension SpaceKit.Requisite : Swift.RawRepresentable {}
-extension SpaceKit.NavigationLayout : Swift.Hashable {}
 extension SpaceKit.Theme.CornerStyle : Swift.Equatable {}
 extension SpaceKit.Theme.CornerStyle : Swift.Hashable {}
 extension SpaceKit.Theme.CornerStyle : Swift.RawRepresentable {}
