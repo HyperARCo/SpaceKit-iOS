@@ -21,9 +21,12 @@ import Vision
 import _Concurrency
 import _StringProcessing
 public typealias InfoViewFactory = () -> SpaceKit.InfoView
+public typealias RecenterButtonFactory = () -> SpaceKit.RecenterButton
+public typealias LevelSwitcherFactory = (_ levelOrdinals: [Swift.Int]) -> SpaceKit.LevelSwitcher?
 @_Concurrency.MainActor public struct SpaceKitViewControllerFactory {
   @_Concurrency.MainActor public init(context: SpaceKit.Context, theme: SpaceKit.Theme = .default)
   @_Concurrency.MainActor public init(context: SpaceKit.Context, theme: SpaceKit.Theme = .default, infoViewFactory: @autoclosure @escaping SpaceKit.InfoViewFactory)
+  @_Concurrency.MainActor public init(context: SpaceKit.Context, theme: SpaceKit.Theme = .default, infoViewFactory: @autoclosure @escaping SpaceKit.InfoViewFactory, levelSwitcherFactory: @escaping SpaceKit.LevelSwitcherFactory, recenterButtonFactory: @autoclosure @escaping SpaceKit.RecenterButtonFactory)
   @_Concurrency.MainActor public func make() -> SpaceKit.SpaceKitViewController
 }
 public typealias SpaceKitImage = UIKit.UIImage
@@ -130,6 +133,9 @@ public protocol EventTrigger {
 public protocol EventFactory {
   func makeEvent(_ trigger: SpaceKit.EventTrigger, handler: @escaping () -> Swift.Void) -> SpaceKit.SubscriptionEvent
 }
+public protocol RecenterButton : UIKit.UIControl {
+  func setIsMapTrackingUser(_ isTracking: Swift.Bool)
+}
 final public class SpaceKitVenue {
   public init(from url: Foundation.URL)
   @objc deinit
@@ -170,6 +176,10 @@ public protocol SubscriptionEvent {
   var onFulfill: () -> Swift.Void { get set }
   func onSubscribe()
   func evaluateFulfilled() -> Swift.Bool
+}
+public protocol LevelSwitcher : UIKit.UIView {
+  var setLevelOrdinalHandler: (Swift.Int) -> Swift.Void { get set }
+  func spaceKitDidSetDisplayLevelOrdinal(_ ordinal: Swift.Int)
 }
 public protocol SpaceKitLocationDelegate : AnyObject {
   func spaceKitContextShouldAllowBackgroundLocationUpdates(_ context: SpaceKit.Context) -> Swift.Bool
