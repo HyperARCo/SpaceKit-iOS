@@ -51,13 +51,18 @@ import SpaceKit
 		self.products = products
 
 		let venue = SpaceKitVenue(from: hmdfURL)
+		let configuration = Bundle.main.url(forResource: "spacekitconfiguration", withExtension: "json")
 
 		Task.detached {
-			guard let context = try? await SpaceKitContextFactory(venue: venue, isDebugEnabled: true).make() else {
-				return
+			do {
+				let context = try await SpaceKitContextFactory(
+					venue: venue,
+					configurationFileURL: configuration).make()
+				await self.setSpaceKitViewController(context: context)
+			} catch {
+				fatalError(error.localizedDescription)
 			}
 
-			await self.setSpaceKitViewController(context: context)
 		}
 	}
 
