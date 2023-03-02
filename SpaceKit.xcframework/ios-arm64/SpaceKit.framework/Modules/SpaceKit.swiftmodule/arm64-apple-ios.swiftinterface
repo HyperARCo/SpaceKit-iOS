@@ -26,6 +26,10 @@ public typealias LevelSwitcherFactory = (_ levelOrdinals: [Swift.Int]) -> SpaceK
 @_Concurrency.MainActor public struct SpaceKitViewControllerFactory {
   @_Concurrency.MainActor public init(context: SpaceKit.Context, theme: SpaceKit.Theme = .default)
   @_Concurrency.MainActor public init(context: SpaceKit.Context, theme: SpaceKit.Theme = .default, infoViewFactory: @autoclosure @escaping SpaceKit.InfoViewFactory)
+  @_Concurrency.MainActor public init(context: SpaceKit.Context, theme: SpaceKit.Theme = .default, recenterButtonFactory: @autoclosure @escaping SpaceKit.RecenterButtonFactory)
+  @_Concurrency.MainActor public init(context: SpaceKit.Context, theme: SpaceKit.Theme = .default, levelSwitcherFactory: @escaping SpaceKit.LevelSwitcherFactory)
+  @_Concurrency.MainActor public init(context: SpaceKit.Context, theme: SpaceKit.Theme = .default, infoViewFactory: @autoclosure @escaping SpaceKit.InfoViewFactory, levelSwitcherFactory: @escaping SpaceKit.LevelSwitcherFactory)
+  @_Concurrency.MainActor public init(context: SpaceKit.Context, theme: SpaceKit.Theme = .default, infoViewFactory: @autoclosure @escaping SpaceKit.InfoViewFactory, recenterButtonFactory: @autoclosure @escaping SpaceKit.RecenterButtonFactory)
   @_Concurrency.MainActor public init(context: SpaceKit.Context, theme: SpaceKit.Theme = .default, infoViewFactory: @autoclosure @escaping SpaceKit.InfoViewFactory, levelSwitcherFactory: @escaping SpaceKit.LevelSwitcherFactory, recenterButtonFactory: @autoclosure @escaping SpaceKit.RecenterButtonFactory)
   @_Concurrency.MainActor public func make() -> SpaceKit.SpaceKitViewController
 }
@@ -195,6 +199,15 @@ extension ARKit.ARSCNView {
     get
   }
 }
+public protocol UnixTimestampedMetadata {
+  var timestampUnix: Swift.Double { get }
+  var timestamp: Foundation.Date { get }
+}
+extension SpaceKit.UnixTimestampedMetadata {
+  public var timestamp: Foundation.Date {
+    get
+  }
+}
 public struct Theme {
   public enum CornerStyle : Swift.String, Swift.Decodable {
     case square
@@ -232,7 +245,9 @@ extension SpaceKit.Theme {
   public static let purpleSquared: SpaceKit.Theme
 }
 public struct SpaceKitContextFactory {
-  public init(venue: SpaceKit.Venue, isDebugEnabled: Swift.Bool = false)
+  @available(*, deprecated, message: "`isDebugEnabled` parameter has been obsoleted by configuration files. This initialiser will be removed in future versions. Please use `SpaceKitContextFactory.init(venue:configurationFileURL:)` instead.")
+  public init(venue: SpaceKit.Venue, isDebugEnabled: Swift.Bool)
+  public init(venue: SpaceKit.Venue, configurationFileURL: Foundation.URL? = nil)
   #if compiler(>=5.3) && $AsyncAwait
   public func make() async throws -> SpaceKit.Context
   #endif
@@ -263,6 +278,7 @@ public protocol LocalVenueRegion {
 public protocol VenueMetadata {
   var hash: Swift.String { get }
   var timestamp: Foundation.Date { get }
+  var timestampUnix: Swift.Double { get }
 }
 public protocol Venue {
   #if compiler(>=5.3) && $AsyncAwait
@@ -286,10 +302,10 @@ public struct VenueManagerFactory {
   public init(configuration: SpaceKit.VenueManagerConfiguration)
   public func make() -> SpaceKit.VenueManager
 }
-public struct SpaceKitVenueMetadata : SpaceKit.VenueMetadata {
+public struct SpaceKitVenueMetadata : SpaceKit.VenueMetadata, SpaceKit.UnixTimestampedMetadata {
   public let hash: Swift.String
   public let version: Swift.Int
-  public let timestamp: Foundation.Date
+  public let timestampUnix: Swift.Double
 }
 public struct SpaceKitLocalVenue : SpaceKit.LocalVenue {
   public let identifier: Swift.String
