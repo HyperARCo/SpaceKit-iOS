@@ -58,7 +58,7 @@ import SpaceKit
 				let context = try await SpaceKitContextFactory(
 					venue: venue,
 					configurationFileURL: configuration).make()
-				await self.setSpaceKitViewController(context: context)
+				await self.setStaticMapViewController(context: context)
 			} catch {
 				fatalError(error.localizedDescription)
 			}
@@ -107,6 +107,58 @@ import SpaceKit
 		}
 
 		self.navigationController.setViewControllers([rootViewController], animated: false)
+	}
+	
+	private func setStaticMapViewController(context: Context) {
+		guard let firstDestination = listManager?.firstDestination() else { return }
+		
+		let staticMapViewController = StaticMapViewControllerFactory(
+			context: context,
+			destination: firstDestination
+		).make()
+		
+		let containerViewController = ProductListViewController()
+		containerViewController.staticMapViewController = staticMapViewController
+		
+		self.navigationController.setViewControllers([containerViewController], animated: false)
+	}
+}
+
+class ProductListViewController: UIViewController {
+	var staticMapViewController: UIViewController!
+	
+	init() {
+		super.init(nibName: nil, bundle: nil)
+	}
+	
+	required init?(coder: NSCoder) {
+		fatalError("init(coder:) has not been implemented")
+	}
+	
+	override func loadView() {
+		super.loadView()
+		
+		view.backgroundColor = .systemBlue
+	}
+	
+	override func viewDidLoad() {
+		let containerView = UIView()
+		view.addSubview(containerView)
+		containerView.translatesAutoresizingMaskIntoConstraints = false
+		containerView.layer.cornerRadius = 20
+		containerView.layer.masksToBounds = true
+		
+		addChild(staticMapViewController)
+		containerView.addSubview(staticMapViewController.view)
+		staticMapViewController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+		staticMapViewController.didMove(toParent: self)
+		
+		NSLayoutConstraint.activate([
+			containerView.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor, multiplier: 0.9),
+			containerView.heightAnchor.constraint(equalToConstant: 300),
+			containerView.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
+			containerView.centerYAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerYAnchor),
+		])
 	}
 }
 

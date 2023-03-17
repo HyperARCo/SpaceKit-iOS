@@ -55,6 +55,12 @@ class ListManager {
 			.sorted()
 			.map(\.itemCode)
 	}
+	
+	func firstDestination() -> SpaceKit.Destination? {
+		products.first.map {
+			Destination(identifier: $0.itemCode, displayName: $0.name, icon: UIImage(named: $0.icon))
+		}
+	}
 }
 
 extension ListManager: SpaceKit.SpaceKitListDelegate {
