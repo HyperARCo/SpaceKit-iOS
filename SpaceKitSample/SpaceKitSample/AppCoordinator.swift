@@ -159,6 +159,15 @@ class ProductListViewController: UIViewController {
 			containerView.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
 			containerView.centerYAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerYAnchor),
 		])
+		
+		let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(staticMapWasTapped(_:)))
+		staticMapViewController.view.addGestureRecognizer(tapGestureRecognizer)
+	}
+	
+	@objc private func staticMapWasTapped(_ sender: AnyObject) {
+		let alertController = UIAlertController(title: "Static map tapped", message: "Static map was tapped", preferredStyle: .alert)
+		alertController.addAction(UIAlertAction(title: "OK", style: .default))
+		present(alertController, animated: true)
 	}
 }
 
