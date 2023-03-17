@@ -53,7 +53,7 @@ public struct Destination {
   public let icon: SpaceKit.SpaceKitImage?
   public let priority: SpaceKit.Destination.Priority
   public let additionalInfo: [Swift.String : Any]
-  public init(identifier: Swift.String, displayName: Swift.String, icon: SpaceKit.SpaceKitImage?, priority: SpaceKit.Destination.Priority = .unspecified, additionalInfo: [Swift.String : Any] = [:])
+  public init(identifier: Swift.String, displayName: Swift.String, icon: SpaceKit.SpaceKitImage?, priority: SpaceKit.Destination.Priority = .unspecified)
 }
 public struct LevelTransition {
   public let traversalOption: SpaceKit.TraversalOption
@@ -252,6 +252,10 @@ public struct SpaceKitContextFactory {
   public func make() async throws -> SpaceKit.Context
   #endif
 }
+public struct StaticMapViewControllerFactory {
+  public init(context: SpaceKit.Context, destination: SpaceKit.Destination)
+  public func make() -> UIKit.UIViewController
+}
 public struct ScanResult : Swift.Equatable {
   public let stringValue: Swift.String
   public let symbology: Vision.VNBarcodeSymbology
@@ -297,6 +301,19 @@ public protocol VenueManager {
   @discardableResult
   func fetchVenue(forVenueWithIdentifier venueIdentifier: Swift.String, destinationPath: Swift.String) async throws -> SpaceKit.Venue
   #endif
+}
+public enum SpacekitVenueManagerError : Swift.Error {
+  case invalidDestinationPath
+  public static func == (a: SpaceKit.SpacekitVenueManagerError, b: SpaceKit.SpacekitVenueManagerError) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension SpaceKit.SpacekitVenueManagerError : Foundation.LocalizedError {
+  public var errorDescription: Swift.String? {
+    get
+  }
 }
 public struct VenueManagerFactory {
   public init(configuration: SpaceKit.VenueManagerConfiguration)
@@ -376,11 +393,13 @@ extension SpaceKit.Theme.CornerStyle : Swift.Hashable {}
 extension SpaceKit.Theme.CornerStyle : Swift.RawRepresentable {}
 extension SpaceKit.Theme.Font : Swift.Equatable {}
 extension SpaceKit.Theme.Font : Swift.Hashable {}
+extension SpaceKit.TraversalOption : Swift.Equatable {}
+extension SpaceKit.TraversalOption : Swift.Hashable {}
+extension SpaceKit.TraversalOption : Swift.RawRepresentable {}
+extension SpaceKit.SpacekitVenueManagerError : Swift.Equatable {}
+extension SpaceKit.SpacekitVenueManagerError : Swift.Hashable {}
 extension SpaceKit.Event.ItemProximity : SpaceKit.EventTrigger {}
 extension SpaceKit.Event.PathProximity : SpaceKit.EventTrigger {}
 extension SpaceKit.Event.EnterSection : SpaceKit.EventTrigger {}
 extension SpaceKit.Event.SectionProximity : SpaceKit.EventTrigger {}
 extension SpaceKit.Event.EnterLevel : SpaceKit.EventTrigger {}
-extension SpaceKit.TraversalOption : Swift.Equatable {}
-extension SpaceKit.TraversalOption : Swift.Hashable {}
-extension SpaceKit.TraversalOption : Swift.RawRepresentable {}
