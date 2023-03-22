@@ -7,3 +7,6 @@ DerivedData/
 .swiftpm/config/registries.json
 .swiftpm/xcode/package.xcworkspace/contents.xcworkspacedata
 .netrc
+
+# SPM
+/SpaceKitSample/SpaceKitSample.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved
