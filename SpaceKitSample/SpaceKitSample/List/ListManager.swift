@@ -40,10 +40,10 @@ class ListManager {
 		spaceKitContext?.setDestinations(destinations)
 	}
 	
-	private func destinations(for identifiers: [String]) -> [SpaceKit.Destination] {
+	private func destinations(for identifiers: [String]) -> [SpaceKitDestination] {
 		identifiers.compactMap { identifier in
 			guard let product = product(with: identifier) else { return nil }
-			return Destination(identifier: identifier, displayName: product.name, icon: UIImage(named: product.icon))
+			return SpaceKitDestination(identifier: identifier, displayName: product.name, icon: UIImage(named: product.icon))
 		}
 	}
 	
