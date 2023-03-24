@@ -9,6 +9,7 @@ import CoreGraphics
 import CoreLocation
 import CoreVideo
 import Foundation
+import GameplayKit
 import SceneKit
 @_exported import SpaceKit
 import Swift
@@ -37,12 +38,23 @@ public typealias SpaceKitImage = UIKit.UIImage
 public struct DestinationAdditionalInfoKey {
   public static let aisleName: Swift.String
 }
-public struct Destination {
+public protocol DestinationProtocol {
+  var identifier: Swift.String { get }
+  var displayName: Swift.String { get }
+  var icon: SpaceKit.SpaceKitImage? { get }
+  var priority: SpaceKit.SpaceKitDestination.Priority { get }
+  var additionalInfo: [Swift.String : Any] { get }
+  var userInfo: [Swift.String : Any] { get }
+  init(identifier: Swift.String, displayName: Swift.String, icon: SpaceKit.SpaceKitImage?, priority: SpaceKit.SpaceKitDestination.Priority, userInfo: [Swift.String : Any])
+}
+@available(*, deprecated, renamed: "SpaceKitDestination", message: "`Destination` has been renamed `SpaceKitDestination`. This will break in future versions.")
+public typealias Destination = SpaceKit.SpaceKitDestination
+public struct SpaceKitDestination : SpaceKit.DestinationProtocol {
   public enum Priority {
     case first
     case last
     case unspecified
-    public static func == (a: SpaceKit.Destination.Priority, b: SpaceKit.Destination.Priority) -> Swift.Bool
+    public static func == (a: SpaceKit.SpaceKitDestination.Priority, b: SpaceKit.SpaceKitDestination.Priority) -> Swift.Bool
     public func hash(into hasher: inout Swift.Hasher)
     public var hashValue: Swift.Int {
       get
@@ -51,9 +63,12 @@ public struct Destination {
   public let identifier: Swift.String
   public let displayName: Swift.String
   public let icon: SpaceKit.SpaceKitImage?
-  public let priority: SpaceKit.Destination.Priority
-  public let additionalInfo: [Swift.String : Any]
-  public init(identifier: Swift.String, displayName: Swift.String, icon: SpaceKit.SpaceKitImage?, priority: SpaceKit.Destination.Priority = .unspecified)
+  public let priority: SpaceKit.SpaceKitDestination.Priority
+  public var additionalInfo: [Swift.String : Any] {
+    get
+  }
+  public let userInfo: [Swift.String : Any]
+  public init(identifier: Swift.String, displayName: Swift.String, icon: SpaceKit.SpaceKitImage?, priority: SpaceKit.SpaceKitDestination.Priority = .unspecified, userInfo: [Swift.String : Any] = [:])
 }
 public struct LevelTransition {
   public let traversalOption: SpaceKit.TraversalOption
@@ -61,7 +76,7 @@ public struct LevelTransition {
   public let destinationOrdinal: Swift.Int
 }
 public protocol SpaceKitListDelegate : AnyObject {
-  func spaceKitContext(_ context: SpaceKit.Context, didUpdateOrderedDestinations orderedDestinations: [SpaceKit.Destination], with levelTransitions: [[SpaceKit.LevelTransition]])
+  func spaceKitContext(_ context: SpaceKit.Context, didUpdateOrderedDestinations orderedDestinations: [SpaceKit.SpaceKitDestination], with levelTransitions: [[SpaceKit.LevelTransition]])
 }
 public enum Requisite : Swift.Int, Swift.CaseIterable {
   case locationPermission
@@ -253,7 +268,8 @@ public struct SpaceKitContextFactory {
   #endif
 }
 public struct StaticMapViewControllerFactory {
-  public init(context: SpaceKit.Context, destination: SpaceKit.Destination)
+  public init(context: SpaceKit.Context, destination: SpaceKit.SpaceKitDestination, theme: SpaceKit.Theme = .default)
+  public init(context: SpaceKit.Context, destination: SpaceKit.SpaceKitDestination, theme: SpaceKit.Theme, recenterButtonFactory: @autoclosure @escaping SpaceKit.RecenterButtonFactory)
   public func make() -> UIKit.UIViewController
 }
 public struct ScanResult : Swift.Equatable {
@@ -340,7 +356,7 @@ public protocol Context : AnyObject, SpaceKit.EventFactory {
   var barcodeDelegate: SpaceKit.SpaceKitBarcodeDelegate? { get set }
   var locationDelegate: SpaceKit.SpaceKitLocationDelegate? { get set }
   func setRoutingOptions(_ options: SpaceKit.RoutingOptions)
-  func setDestinations(_ destinations: [SpaceKit.Destination])
+  func setDestinations(_ destinations: [SpaceKit.SpaceKitDestination])
   func requestUnfulfilledRequisites(from requisites: [SpaceKit.Requisite])
   func subscribeToEvent(_ subscriptionEvent: SpaceKit.SubscriptionEvent) -> SpaceKit.SpaceKitSubscriptionToken
   func unsubscribeFromEventWithSubscriptionToken(_ subscriptionToken: SpaceKit.SpaceKitSubscriptionToken)
@@ -383,8 +399,8 @@ public enum TraversalOption : Swift.String, Swift.CaseIterable {
   }
 }
 extension SpaceKit.SpaceKitViewControllerFactory : Swift.Sendable {}
-extension SpaceKit.Destination.Priority : Swift.Equatable {}
-extension SpaceKit.Destination.Priority : Swift.Hashable {}
+extension SpaceKit.SpaceKitDestination.Priority : Swift.Equatable {}
+extension SpaceKit.SpaceKitDestination.Priority : Swift.Hashable {}
 extension SpaceKit.Requisite : Swift.Equatable {}
 extension SpaceKit.Requisite : Swift.Hashable {}
 extension SpaceKit.Requisite : Swift.RawRepresentable {}
