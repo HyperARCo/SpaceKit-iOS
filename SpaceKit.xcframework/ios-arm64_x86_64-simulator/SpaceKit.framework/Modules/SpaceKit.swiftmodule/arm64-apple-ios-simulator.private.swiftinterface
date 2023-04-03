@@ -26,12 +26,16 @@ public typealias RecenterButtonFactory = () -> SpaceKit.RecenterButton
 public typealias LevelSwitcherFactory = (_ levelOrdinals: [Swift.Int]) -> SpaceKit.LevelSwitcher?
 @_Concurrency.MainActor public struct SpaceKitViewControllerFactory {
   @_Concurrency.MainActor public init(context: SpaceKit.Context, theme: SpaceKit.Theme = .default)
+  @_Concurrency.MainActor public init(context: SpaceKit.Context, layout: SpaceKit.SpaceKitLayout, theme: SpaceKit.Theme = .default)
   @_Concurrency.MainActor public init(context: SpaceKit.Context, theme: SpaceKit.Theme = .default, infoViewFactory: @autoclosure @escaping SpaceKit.InfoViewFactory)
+  @_Concurrency.MainActor public init(context: SpaceKit.Context, layout: SpaceKit.SpaceKitLayout, theme: SpaceKit.Theme = .default, infoViewFactory: @autoclosure @escaping SpaceKit.InfoViewFactory)
   @_Concurrency.MainActor public init(context: SpaceKit.Context, theme: SpaceKit.Theme = .default, recenterButtonFactory: @autoclosure @escaping SpaceKit.RecenterButtonFactory)
+  @_Concurrency.MainActor public init(context: SpaceKit.Context, layout: SpaceKit.SpaceKitLayout, theme: SpaceKit.Theme = .default, recenterButtonFactory: @autoclosure @escaping SpaceKit.RecenterButtonFactory)
   @_Concurrency.MainActor public init(context: SpaceKit.Context, theme: SpaceKit.Theme = .default, levelSwitcherFactory: @escaping SpaceKit.LevelSwitcherFactory)
+  @_Concurrency.MainActor public init(context: SpaceKit.Context, layout: SpaceKit.SpaceKitLayout, theme: SpaceKit.Theme = .default, levelSwitcherFactory: @escaping SpaceKit.LevelSwitcherFactory)
   @_Concurrency.MainActor public init(context: SpaceKit.Context, theme: SpaceKit.Theme = .default, infoViewFactory: @autoclosure @escaping SpaceKit.InfoViewFactory, levelSwitcherFactory: @escaping SpaceKit.LevelSwitcherFactory)
-  @_Concurrency.MainActor public init(context: SpaceKit.Context, theme: SpaceKit.Theme = .default, infoViewFactory: @autoclosure @escaping SpaceKit.InfoViewFactory, recenterButtonFactory: @autoclosure @escaping SpaceKit.RecenterButtonFactory)
-  @_Concurrency.MainActor public init(context: SpaceKit.Context, theme: SpaceKit.Theme = .default, infoViewFactory: @autoclosure @escaping SpaceKit.InfoViewFactory, levelSwitcherFactory: @escaping SpaceKit.LevelSwitcherFactory, recenterButtonFactory: @autoclosure @escaping SpaceKit.RecenterButtonFactory)
+  @_Concurrency.MainActor public init(context: SpaceKit.Context, layout: SpaceKit.SpaceKitLayout, theme: SpaceKit.Theme = .default, infoViewFactory: @autoclosure @escaping SpaceKit.InfoViewFactory, recenterButtonFactory: @autoclosure @escaping SpaceKit.RecenterButtonFactory)
+  @_Concurrency.MainActor public init(context: SpaceKit.Context, layout: SpaceKit.SpaceKitLayout, theme: SpaceKit.Theme = .default, infoViewFactory: @autoclosure @escaping SpaceKit.InfoViewFactory, levelSwitcherFactory: @escaping SpaceKit.LevelSwitcherFactory, recenterButtonFactory: @autoclosure @escaping SpaceKit.RecenterButtonFactory)
   @_Concurrency.MainActor public func make() -> SpaceKit.SpaceKitViewController
 }
 public typealias SpaceKitImage = UIKit.UIImage
@@ -267,9 +271,22 @@ public struct SpaceKitContextFactory {
   public func make() async throws -> SpaceKit.Context
   #endif
 }
+public enum SpaceKitViewKey : Swift.String {
+  case levelSwitcher
+  case buttonStack
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public protocol SpaceKitLayout {
+  func layoutLevelSwitcher(views: [SpaceKit.SpaceKitViewKey : UIKit.UIView], inLayoutGuide layoutGuide: UIKit.UILayoutGuide)
+  func layoutButtonStack(views: [SpaceKit.SpaceKitViewKey : UIKit.UIView], inLayoutGuide layoutGuide: UIKit.UILayoutGuide)
+}
 public struct StaticMapViewControllerFactory {
-  public init(context: SpaceKit.Context, destination: SpaceKit.SpaceKitDestination, theme: SpaceKit.Theme = .default)
-  public init(context: SpaceKit.Context, destination: SpaceKit.SpaceKitDestination, theme: SpaceKit.Theme, recenterButtonFactory: @autoclosure @escaping SpaceKit.RecenterButtonFactory)
+  public init(context: SpaceKit.Context, theme: SpaceKit.Theme = .default)
+  public init(context: SpaceKit.Context, theme: SpaceKit.Theme, recenterButtonFactory: @autoclosure @escaping SpaceKit.RecenterButtonFactory)
   public func make() -> UIKit.UIViewController
 }
 public struct ScanResult : Swift.Equatable {
@@ -355,14 +372,29 @@ public protocol Context : AnyObject, SpaceKit.EventFactory {
   var listDelegate: SpaceKit.SpaceKitListDelegate? { get set }
   var barcodeDelegate: SpaceKit.SpaceKitBarcodeDelegate? { get set }
   var locationDelegate: SpaceKit.SpaceKitLocationDelegate? { get set }
+  var mapDelegate: SpaceKit.SpaceKitMapDelegate? { get set }
   func setRoutingOptions(_ options: SpaceKit.RoutingOptions)
   func setDestinations(_ destinations: [SpaceKit.SpaceKitDestination])
   func requestUnfulfilledRequisites(from requisites: [SpaceKit.Requisite])
   func subscribeToEvent(_ subscriptionEvent: SpaceKit.SubscriptionEvent) -> SpaceKit.SpaceKitSubscriptionToken
   func unsubscribeFromEventWithSubscriptionToken(_ subscriptionToken: SpaceKit.SpaceKitSubscriptionToken)
+  func updateAnnotations()
 }
 public struct RoutingOptions {
   public init(traversalOptions: Swift.Set<SpaceKit.TraversalOption>)
+}
+public enum MapAnnotationState {
+  case normal
+  case highlighted
+  public static func == (a: SpaceKit.MapAnnotationState, b: SpaceKit.MapAnnotationState) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public protocol SpaceKitMapDelegate : AnyObject {
+  func spaceKitContext(_ context: SpaceKit.Context, didTapAnnotationWithAlias alias: Swift.String)
+  func spaceKitContext(_ context: SpaceKit.Context, stateForAnnotationWithAlias alias: Swift.String) -> SpaceKit.MapAnnotationState
 }
 public protocol SpaceKitViewController : UIKit.UIViewController {
   var contentLayoutGuide: UIKit.UILayoutGuide { get }
@@ -409,11 +441,16 @@ extension SpaceKit.Theme.CornerStyle : Swift.Hashable {}
 extension SpaceKit.Theme.CornerStyle : Swift.RawRepresentable {}
 extension SpaceKit.Theme.Font : Swift.Equatable {}
 extension SpaceKit.Theme.Font : Swift.Hashable {}
+extension SpaceKit.SpaceKitViewKey : Swift.Equatable {}
+extension SpaceKit.SpaceKitViewKey : Swift.Hashable {}
+extension SpaceKit.SpaceKitViewKey : Swift.RawRepresentable {}
 extension SpaceKit.TraversalOption : Swift.Equatable {}
 extension SpaceKit.TraversalOption : Swift.Hashable {}
 extension SpaceKit.TraversalOption : Swift.RawRepresentable {}
 extension SpaceKit.SpacekitVenueManagerError : Swift.Equatable {}
 extension SpaceKit.SpacekitVenueManagerError : Swift.Hashable {}
+extension SpaceKit.MapAnnotationState : Swift.Equatable {}
+extension SpaceKit.MapAnnotationState : Swift.Hashable {}
 extension SpaceKit.Event.ItemProximity : SpaceKit.EventTrigger {}
 extension SpaceKit.Event.PathProximity : SpaceKit.EventTrigger {}
 extension SpaceKit.Event.EnterSection : SpaceKit.EventTrigger {}
