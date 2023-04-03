@@ -194,6 +194,48 @@
           {
             "kind": "Constructor",
             "name": "init",
+            "printedName": "init(context:layout:theme:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SpaceKitViewControllerFactory",
+                "printedName": "SpaceKit.SpaceKitViewControllerFactory",
+                "usr": "s:8SpaceKit0aB21ViewControllerFactoryV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Context",
+                "printedName": "SpaceKit.Context",
+                "usr": "s:8SpaceKit7ContextP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SpaceKitLayout",
+                "printedName": "SpaceKit.SpaceKitLayout",
+                "usr": "s:8SpaceKit0aB6LayoutP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Theme",
+                "printedName": "SpaceKit.Theme",
+                "hasDefaultArg": true,
+                "usr": "s:8SpaceKit5ThemeV"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:8SpaceKit0aB21ViewControllerFactoryV7context6layout5themeAcA7Context_p_AA0aB6Layout_pAA5ThemeVtcfc",
+            "mangledName": "$s8SpaceKit0aB21ViewControllerFactoryV7context6layout5themeAcA7Context_p_AA0aB6Layout_pAA5ThemeVtcfc",
+            "moduleName": "SpaceKit",
+            "declAttributes": [
+              "Custom",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
             "printedName": "init(context:theme:infoViewFactory:)",
             "children": [
               {
@@ -248,6 +290,66 @@
           {
             "kind": "Constructor",
             "name": "init",
+            "printedName": "init(context:layout:theme:infoViewFactory:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SpaceKitViewControllerFactory",
+                "printedName": "SpaceKit.SpaceKitViewControllerFactory",
+                "usr": "s:8SpaceKit0aB21ViewControllerFactoryV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Context",
+                "printedName": "SpaceKit.Context",
+                "usr": "s:8SpaceKit7ContextP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SpaceKitLayout",
+                "printedName": "SpaceKit.SpaceKitLayout",
+                "usr": "s:8SpaceKit0aB6LayoutP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Theme",
+                "printedName": "SpaceKit.Theme",
+                "hasDefaultArg": true,
+                "usr": "s:8SpaceKit5ThemeV"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> SpaceKit.InfoView",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "InfoView",
+                    "printedName": "SpaceKit.InfoView",
+                    "usr": "s:8SpaceKit8InfoViewP"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:8SpaceKit0aB21ViewControllerFactoryV7context6layout5theme04infocE0AcA7Context_p_AA0aB6Layout_pAA5ThemeVAA04InfoC0_pyXAtcfc",
+            "mangledName": "$s8SpaceKit0aB21ViewControllerFactoryV7context6layout5theme04infocE0AcA7Context_p_AA0aB6Layout_pAA5ThemeVAA04InfoC0_pyXAtcfc",
+            "moduleName": "SpaceKit",
+            "declAttributes": [
+              "Custom",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
             "printedName": "init(context:theme:recenterButtonFactory:)",
             "children": [
               {
@@ -291,6 +393,66 @@
             "declKind": "Constructor",
             "usr": "s:8SpaceKit0aB21ViewControllerFactoryV7context5theme014recenterButtonE0AcA7Context_p_AA5ThemeVAA08RecenterI0_pyXAtcfc",
             "mangledName": "$s8SpaceKit0aB21ViewControllerFactoryV7context5theme014recenterButtonE0AcA7Context_p_AA5ThemeVAA08RecenterI0_pyXAtcfc",
+            "moduleName": "SpaceKit",
+            "declAttributes": [
+              "Custom",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(context:layout:theme:recenterButtonFactory:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SpaceKitViewControllerFactory",
+                "printedName": "SpaceKit.SpaceKitViewControllerFactory",
+                "usr": "s:8SpaceKit0aB21ViewControllerFactoryV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Context",
+                "printedName": "SpaceKit.Context",
+                "usr": "s:8SpaceKit7ContextP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SpaceKitLayout",
+                "printedName": "SpaceKit.SpaceKitLayout",
+                "usr": "s:8SpaceKit0aB6LayoutP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Theme",
+                "printedName": "SpaceKit.Theme",
+                "hasDefaultArg": true,
+                "usr": "s:8SpaceKit5ThemeV"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> SpaceKit.RecenterButton",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "RecenterButton",
+                    "printedName": "SpaceKit.RecenterButton",
+                    "usr": "s:8SpaceKit14RecenterButtonP"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:8SpaceKit0aB21ViewControllerFactoryV7context6layout5theme014recenterButtonE0AcA7Context_p_AA0aB6Layout_pAA5ThemeVAA08RecenterJ0_pyXAtcfc",
+            "mangledName": "$s8SpaceKit0aB21ViewControllerFactoryV7context6layout5theme014recenterButtonE0AcA7Context_p_AA0aB6Layout_pAA5ThemeVAA08RecenterJ0_pyXAtcfc",
             "moduleName": "SpaceKit",
             "declAttributes": [
               "Custom",
@@ -362,6 +524,83 @@
             "declKind": "Constructor",
             "usr": "s:8SpaceKit0aB21ViewControllerFactoryV7context5theme013levelSwitcherE0AcA7Context_p_AA5ThemeVAA05LevelI0_pSgSaySiGctcfc",
             "mangledName": "$s8SpaceKit0aB21ViewControllerFactoryV7context5theme013levelSwitcherE0AcA7Context_p_AA5ThemeVAA05LevelI0_pSgSaySiGctcfc",
+            "moduleName": "SpaceKit",
+            "declAttributes": [
+              "Custom",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(context:layout:theme:levelSwitcherFactory:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SpaceKitViewControllerFactory",
+                "printedName": "SpaceKit.SpaceKitViewControllerFactory",
+                "usr": "s:8SpaceKit0aB21ViewControllerFactoryV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Context",
+                "printedName": "SpaceKit.Context",
+                "usr": "s:8SpaceKit7ContextP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SpaceKitLayout",
+                "printedName": "SpaceKit.SpaceKitLayout",
+                "usr": "s:8SpaceKit0aB6LayoutP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Theme",
+                "printedName": "SpaceKit.Theme",
+                "hasDefaultArg": true,
+                "usr": "s:8SpaceKit5ThemeV"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "([Swift.Int]) -> SpaceKit.LevelSwitcher?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "SpaceKit.LevelSwitcher?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LevelSwitcher",
+                        "printedName": "SpaceKit.LevelSwitcher",
+                        "usr": "s:8SpaceKit13LevelSwitcherP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Swift.Int]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:8SpaceKit0aB21ViewControllerFactoryV7context6layout5theme013levelSwitcherE0AcA7Context_p_AA0aB6Layout_pAA5ThemeVAA05LevelJ0_pSgSaySiGctcfc",
+            "mangledName": "$s8SpaceKit0aB21ViewControllerFactoryV7context6layout5theme013levelSwitcherE0AcA7Context_p_AA0aB6Layout_pAA5ThemeVAA05LevelJ0_pSgSaySiGctcfc",
             "moduleName": "SpaceKit",
             "declAttributes": [
               "Custom",
@@ -462,7 +701,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(context:theme:infoViewFactory:recenterButtonFactory:)",
+            "printedName": "init(context:layout:theme:infoViewFactory:recenterButtonFactory:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -475,6 +714,12 @@
                 "name": "Context",
                 "printedName": "SpaceKit.Context",
                 "usr": "s:8SpaceKit7ContextP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SpaceKitLayout",
+                "printedName": "SpaceKit.SpaceKitLayout",
+                "usr": "s:8SpaceKit0aB6LayoutP"
               },
               {
                 "kind": "TypeNominal",
@@ -521,8 +766,8 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:8SpaceKit0aB21ViewControllerFactoryV7context5theme04infocE0014recenterButtonE0AcA7Context_p_AA5ThemeVAA04InfoC0_pyXAAA08RecenterJ0_pyXAtcfc",
-            "mangledName": "$s8SpaceKit0aB21ViewControllerFactoryV7context5theme04infocE0014recenterButtonE0AcA7Context_p_AA5ThemeVAA04InfoC0_pyXAAA08RecenterJ0_pyXAtcfc",
+            "usr": "s:8SpaceKit0aB21ViewControllerFactoryV7context6layout5theme04infocE0014recenterButtonE0AcA7Context_p_AA0aB6Layout_pAA5ThemeVAA04InfoC0_pyXAAA08RecenterK0_pyXAtcfc",
+            "mangledName": "$s8SpaceKit0aB21ViewControllerFactoryV7context6layout5theme04infocE0014recenterButtonE0AcA7Context_p_AA0aB6Layout_pAA5ThemeVAA04InfoC0_pyXAAA08RecenterK0_pyXAtcfc",
             "moduleName": "SpaceKit",
             "declAttributes": [
               "Custom",
@@ -534,7 +779,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(context:theme:infoViewFactory:levelSwitcherFactory:recenterButtonFactory:)",
+            "printedName": "init(context:layout:theme:infoViewFactory:levelSwitcherFactory:recenterButtonFactory:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -547,6 +792,12 @@
                 "name": "Context",
                 "printedName": "SpaceKit.Context",
                 "usr": "s:8SpaceKit7ContextP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SpaceKitLayout",
+                "printedName": "SpaceKit.SpaceKitLayout",
+                "usr": "s:8SpaceKit0aB6LayoutP"
               },
               {
                 "kind": "TypeNominal",
@@ -628,8 +879,8 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:8SpaceKit0aB21ViewControllerFactoryV7context5theme04infocE0013levelSwitcherE0014recenterButtonE0AcA7Context_p_AA5ThemeVAA04InfoC0_pyXAAA05LevelJ0_pSgSaySiGcAA08RecenterL0_pyXAtcfc",
-            "mangledName": "$s8SpaceKit0aB21ViewControllerFactoryV7context5theme04infocE0013levelSwitcherE0014recenterButtonE0AcA7Context_p_AA5ThemeVAA04InfoC0_pyXAAA05LevelJ0_pSgSaySiGcAA08RecenterL0_pyXAtcfc",
+            "usr": "s:8SpaceKit0aB21ViewControllerFactoryV7context6layout5theme04infocE0013levelSwitcherE0014recenterButtonE0AcA7Context_p_AA0aB6Layout_pAA5ThemeVAA04InfoC0_pyXAAA05LevelK0_pSgSaySiGcAA08RecenterM0_pyXAtcfc",
+            "mangledName": "$s8SpaceKit0aB21ViewControllerFactoryV7context6layout5theme04infocE0013levelSwitcherE0014recenterButtonE0AcA7Context_p_AA0aB6Layout_pAA5ThemeVAA04InfoC0_pyXAAA05LevelK0_pSgSaySiGcAA08RecenterM0_pyXAtcfc",
             "moduleName": "SpaceKit",
             "declAttributes": [
               "Custom",
@@ -2650,6 +2901,16 @@
         "declAttributes": [
           "AccessControl",
           "Available",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "SpaceKit",
+        "declAttributes": [
           "RawDocComment"
         ]
       },
@@ -6142,6 +6403,16 @@
       },
       {
         "kind": "Import",
+        "name": "HyperUI",
+        "printedName": "HyperUI",
+        "declKind": "Import",
+        "moduleName": "SpaceKit",
+        "declAttributes": [
+          "ImplementationOnly"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "CoreLocation",
         "printedName": "CoreLocation",
         "declKind": "Import",
@@ -6149,6 +6420,13 @@
         "declAttributes": [
           "RawDocComment"
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "Combine",
+        "printedName": "Combine",
+        "declKind": "Import",
+        "moduleName": "SpaceKit"
       },
       {
         "kind": "Import",
@@ -6350,6 +6628,331 @@
       },
       {
         "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "SpaceKit",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SpaceKitViewKey",
+        "printedName": "SpaceKitViewKey",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "levelSwitcher",
+            "printedName": "levelSwitcher",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SpaceKit.SpaceKitViewKey.Type) -> SpaceKit.SpaceKitViewKey",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SpaceKitViewKey",
+                    "printedName": "SpaceKit.SpaceKitViewKey",
+                    "usr": "s:8SpaceKit0aB7ViewKeyO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SpaceKit.SpaceKitViewKey.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SpaceKitViewKey",
+                        "printedName": "SpaceKit.SpaceKitViewKey",
+                        "usr": "s:8SpaceKit0aB7ViewKeyO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:8SpaceKit0aB7ViewKeyO13levelSwitcheryA2CmF",
+            "mangledName": "$s8SpaceKit0aB7ViewKeyO13levelSwitcheryA2CmF",
+            "moduleName": "SpaceKit"
+          },
+          {
+            "kind": "Var",
+            "name": "buttonStack",
+            "printedName": "buttonStack",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SpaceKit.SpaceKitViewKey.Type) -> SpaceKit.SpaceKitViewKey",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SpaceKitViewKey",
+                    "printedName": "SpaceKit.SpaceKitViewKey",
+                    "usr": "s:8SpaceKit0aB7ViewKeyO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SpaceKit.SpaceKitViewKey.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SpaceKitViewKey",
+                        "printedName": "SpaceKit.SpaceKitViewKey",
+                        "usr": "s:8SpaceKit0aB7ViewKeyO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:8SpaceKit0aB7ViewKeyO11buttonStackyA2CmF",
+            "mangledName": "$s8SpaceKit0aB7ViewKeyO11buttonStackyA2CmF",
+            "moduleName": "SpaceKit"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "SpaceKit.SpaceKitViewKey?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SpaceKitViewKey",
+                    "printedName": "SpaceKit.SpaceKitViewKey",
+                    "usr": "s:8SpaceKit0aB7ViewKeyO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:8SpaceKit0aB7ViewKeyO8rawValueACSgSS_tcfc",
+            "mangledName": "$s8SpaceKit0aB7ViewKeyO8rawValueACSgSS_tcfc",
+            "moduleName": "SpaceKit",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8SpaceKit0aB7ViewKeyO8rawValueSSvp",
+            "mangledName": "$s8SpaceKit0aB7ViewKeyO8rawValueSSvp",
+            "moduleName": "SpaceKit",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8SpaceKit0aB7ViewKeyO8rawValueSSvg",
+                "mangledName": "$s8SpaceKit0aB7ViewKeyO8rawValueSSvg",
+                "moduleName": "SpaceKit",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:8SpaceKit0aB7ViewKeyO",
+        "mangledName": "$s8SpaceKit0aB7ViewKeyO",
+        "moduleName": "SpaceKit",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "enumRawTypeName": "String",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SpaceKitLayout",
+        "printedName": "SpaceKitLayout",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "layoutLevelSwitcher",
+            "printedName": "layoutLevelSwitcher(views:inLayoutGuide:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[SpaceKit.SpaceKitViewKey : UIKit.UIView]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SpaceKitViewKey",
+                    "printedName": "SpaceKit.SpaceKitViewKey",
+                    "usr": "s:8SpaceKit0aB7ViewKeyO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIView",
+                    "printedName": "UIKit.UIView",
+                    "usr": "c:objc(cs)UIView"
+                  }
+                ],
+                "usr": "s:SD"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UILayoutGuide",
+                "printedName": "UIKit.UILayoutGuide",
+                "usr": "c:objc(cs)UILayoutGuide"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8SpaceKit0aB6LayoutP19layoutLevelSwitcher5views02inC5GuideySDyAA0aB7ViewKeyOSo6UIViewCG_So08UILayoutI0CtF",
+            "mangledName": "$s8SpaceKit0aB6LayoutP19layoutLevelSwitcher5views02inC5GuideySDyAA0aB7ViewKeyOSo6UIViewCG_So08UILayoutI0CtF",
+            "moduleName": "SpaceKit",
+            "genericSig": "<τ_0_0 where τ_0_0 : SpaceKit.SpaceKitLayout>",
+            "sugared_genericSig": "<Self where Self : SpaceKit.SpaceKitLayout>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "layoutButtonStack",
+            "printedName": "layoutButtonStack(views:inLayoutGuide:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[SpaceKit.SpaceKitViewKey : UIKit.UIView]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SpaceKitViewKey",
+                    "printedName": "SpaceKit.SpaceKitViewKey",
+                    "usr": "s:8SpaceKit0aB7ViewKeyO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIView",
+                    "printedName": "UIKit.UIView",
+                    "usr": "c:objc(cs)UIView"
+                  }
+                ],
+                "usr": "s:SD"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UILayoutGuide",
+                "printedName": "UIKit.UILayoutGuide",
+                "usr": "c:objc(cs)UILayoutGuide"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8SpaceKit0aB6LayoutP17layoutButtonStack5views02inC5GuideySDyAA0aB7ViewKeyOSo6UIViewCG_So08UILayoutI0CtF",
+            "mangledName": "$s8SpaceKit0aB6LayoutP17layoutButtonStack5views02inC5GuideySDyAA0aB7ViewKeyOSo6UIViewCG_So08UILayoutI0CtF",
+            "moduleName": "SpaceKit",
+            "genericSig": "<τ_0_0 where τ_0_0 : SpaceKit.SpaceKitLayout>",
+            "sugared_genericSig": "<Self where Self : SpaceKit.SpaceKitLayout>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:8SpaceKit0aB6LayoutP",
+        "mangledName": "$s8SpaceKit0aB6LayoutP",
+        "moduleName": "SpaceKit",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "SceneKit",
         "printedName": "SceneKit",
         "declKind": "Import",
@@ -6509,7 +7112,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(context:destination:theme:)",
+            "printedName": "init(context:theme:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -6522,12 +7125,6 @@
                 "name": "Context",
                 "printedName": "SpaceKit.Context",
                 "usr": "s:8SpaceKit7ContextP"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "SpaceKitDestination",
-                "printedName": "SpaceKit.SpaceKitDestination",
-                "usr": "s:8SpaceKit0aB11DestinationV"
               },
               {
                 "kind": "TypeNominal",
@@ -6538,8 +7135,8 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:8SpaceKit30StaticMapViewControllerFactoryV7context11destination5themeAcA7Context_p_AA0aB11DestinationVAA5ThemeVtcfc",
-            "mangledName": "$s8SpaceKit30StaticMapViewControllerFactoryV7context11destination5themeAcA7Context_p_AA0aB11DestinationVAA5ThemeVtcfc",
+            "usr": "s:8SpaceKit30StaticMapViewControllerFactoryV7context5themeAcA7Context_p_AA5ThemeVtcfc",
+            "mangledName": "$s8SpaceKit30StaticMapViewControllerFactoryV7context5themeAcA7Context_p_AA5ThemeVtcfc",
             "moduleName": "SpaceKit",
             "declAttributes": [
               "AccessControl",
@@ -6550,7 +7147,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(context:destination:theme:recenterButtonFactory:)",
+            "printedName": "init(context:theme:recenterButtonFactory:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -6563,12 +7160,6 @@
                 "name": "Context",
                 "printedName": "SpaceKit.Context",
                 "usr": "s:8SpaceKit7ContextP"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "SpaceKitDestination",
-                "printedName": "SpaceKit.SpaceKitDestination",
-                "usr": "s:8SpaceKit0aB11DestinationV"
               },
               {
                 "kind": "TypeNominal",
@@ -6596,8 +7187,8 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:8SpaceKit30StaticMapViewControllerFactoryV7context11destination5theme014recenterButtonG0AcA7Context_p_AA0aB11DestinationVAA5ThemeVAA08RecenterL0_pyXAtcfc",
-            "mangledName": "$s8SpaceKit30StaticMapViewControllerFactoryV7context11destination5theme014recenterButtonG0AcA7Context_p_AA0aB11DestinationVAA5ThemeVAA08RecenterL0_pyXAtcfc",
+            "usr": "s:8SpaceKit30StaticMapViewControllerFactoryV7context5theme014recenterButtonG0AcA7Context_p_AA5ThemeVAA08RecenterK0_pyXAtcfc",
+            "mangledName": "$s8SpaceKit30StaticMapViewControllerFactoryV7context5theme014recenterButtonG0AcA7Context_p_AA5ThemeVAA08RecenterK0_pyXAtcfc",
             "moduleName": "SpaceKit",
             "declAttributes": [
               "AccessControl",
@@ -9100,6 +9691,124 @@
             ]
           },
           {
+            "kind": "Var",
+            "name": "mapDelegate",
+            "printedName": "mapDelegate",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "SpaceKit.SpaceKitMapDelegate?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SpaceKitMapDelegate",
+                    "printedName": "SpaceKit.SpaceKitMapDelegate",
+                    "usr": "s:8SpaceKit0aB11MapDelegateP"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8SpaceKit7ContextP11mapDelegateAA0ab3MapE0_pSgvp",
+            "mangledName": "$s8SpaceKit7ContextP11mapDelegateAA0ab3MapE0_pSgvp",
+            "moduleName": "SpaceKit",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "SpaceKit.SpaceKitMapDelegate?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SpaceKitMapDelegate",
+                        "printedName": "SpaceKit.SpaceKitMapDelegate",
+                        "usr": "s:8SpaceKit0aB11MapDelegateP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8SpaceKit7ContextP11mapDelegateAA0ab3MapE0_pSgvg",
+                "mangledName": "$s8SpaceKit7ContextP11mapDelegateAA0ab3MapE0_pSgvg",
+                "moduleName": "SpaceKit",
+                "genericSig": "<τ_0_0 where τ_0_0 : SpaceKit.Context>",
+                "sugared_genericSig": "<Self where Self : SpaceKit.Context>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "SpaceKit.SpaceKitMapDelegate?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SpaceKitMapDelegate",
+                        "printedName": "SpaceKit.SpaceKitMapDelegate",
+                        "usr": "s:8SpaceKit0aB11MapDelegateP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8SpaceKit7ContextP11mapDelegateAA0ab3MapE0_pSgvs",
+                "mangledName": "$s8SpaceKit7ContextP11mapDelegateAA0ab3MapE0_pSgvs",
+                "moduleName": "SpaceKit",
+                "genericSig": "<τ_0_0 where τ_0_0 : SpaceKit.Context>",
+                "sugared_genericSig": "<Self where Self : SpaceKit.Context>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8SpaceKit7ContextP11mapDelegateAA0ab3MapE0_pSgvM",
+                "mangledName": "$s8SpaceKit7ContextP11mapDelegateAA0ab3MapE0_pSgvM",
+                "moduleName": "SpaceKit",
+                "genericSig": "<τ_0_0 where τ_0_0 : SpaceKit.Context>",
+                "sugared_genericSig": "<Self where Self : SpaceKit.Context>",
+                "protocolReq": true,
+                "implicit": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
             "kind": "Function",
             "name": "setRoutingOptions",
             "printedName": "setRoutingOptions(_:)",
@@ -9265,6 +9974,30 @@
             ],
             "reqNewWitnessTableEntry": true,
             "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "updateAnnotations",
+            "printedName": "updateAnnotations()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8SpaceKit7ContextP17updateAnnotationsyyF",
+            "mangledName": "$s8SpaceKit7ContextP17updateAnnotationsyyF",
+            "moduleName": "SpaceKit",
+            "genericSig": "<τ_0_0 where τ_0_0 : SpaceKit.Context>",
+            "sugared_genericSig": "<Self where Self : SpaceKit.Context>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Protocol",
@@ -9332,6 +10065,303 @@
         "usr": "s:8SpaceKit14RoutingOptionsV",
         "mangledName": "$s8SpaceKit14RoutingOptionsV",
         "moduleName": "SpaceKit",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "MapAnnotationState",
+        "printedName": "MapAnnotationState",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "normal",
+            "printedName": "normal",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SpaceKit.MapAnnotationState.Type) -> SpaceKit.MapAnnotationState",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "MapAnnotationState",
+                    "printedName": "SpaceKit.MapAnnotationState",
+                    "usr": "s:8SpaceKit18MapAnnotationStateO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SpaceKit.MapAnnotationState.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MapAnnotationState",
+                        "printedName": "SpaceKit.MapAnnotationState",
+                        "usr": "s:8SpaceKit18MapAnnotationStateO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:8SpaceKit18MapAnnotationStateO6normalyA2CmF",
+            "mangledName": "$s8SpaceKit18MapAnnotationStateO6normalyA2CmF",
+            "moduleName": "SpaceKit",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "highlighted",
+            "printedName": "highlighted",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SpaceKit.MapAnnotationState.Type) -> SpaceKit.MapAnnotationState",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "MapAnnotationState",
+                    "printedName": "SpaceKit.MapAnnotationState",
+                    "usr": "s:8SpaceKit18MapAnnotationStateO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SpaceKit.MapAnnotationState.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MapAnnotationState",
+                        "printedName": "SpaceKit.MapAnnotationState",
+                        "usr": "s:8SpaceKit18MapAnnotationStateO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:8SpaceKit18MapAnnotationStateO11highlightedyA2CmF",
+            "mangledName": "$s8SpaceKit18MapAnnotationStateO11highlightedyA2CmF",
+            "moduleName": "SpaceKit",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "MapAnnotationState",
+                "printedName": "SpaceKit.MapAnnotationState",
+                "usr": "s:8SpaceKit18MapAnnotationStateO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "MapAnnotationState",
+                "printedName": "SpaceKit.MapAnnotationState",
+                "usr": "s:8SpaceKit18MapAnnotationStateO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8SpaceKit18MapAnnotationStateO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s8SpaceKit18MapAnnotationStateO2eeoiySbAC_ACtFZ",
+            "moduleName": "SpaceKit",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8SpaceKit18MapAnnotationStateO9hashValueSivp",
+            "mangledName": "$s8SpaceKit18MapAnnotationStateO9hashValueSivp",
+            "moduleName": "SpaceKit",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8SpaceKit18MapAnnotationStateO9hashValueSivg",
+                "mangledName": "$s8SpaceKit18MapAnnotationStateO9hashValueSivg",
+                "moduleName": "SpaceKit",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8SpaceKit18MapAnnotationStateO4hash4intoys6HasherVz_tF",
+            "mangledName": "$s8SpaceKit18MapAnnotationStateO4hash4intoys6HasherVz_tF",
+            "moduleName": "SpaceKit",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:8SpaceKit18MapAnnotationStateO",
+        "mangledName": "$s8SpaceKit18MapAnnotationStateO",
+        "moduleName": "SpaceKit",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SpaceKitMapDelegate",
+        "printedName": "SpaceKitMapDelegate",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "spaceKitContext",
+            "printedName": "spaceKitContext(_:didTapAnnotationWithAlias:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Context",
+                "printedName": "SpaceKit.Context",
+                "usr": "s:8SpaceKit7ContextP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8SpaceKit0aB11MapDelegateP05spaceB7Context_25didTapAnnotationWithAliasyAA0F0_p_SStF",
+            "mangledName": "$s8SpaceKit0aB11MapDelegateP05spaceB7Context_25didTapAnnotationWithAliasyAA0F0_p_SStF",
+            "moduleName": "SpaceKit",
+            "genericSig": "<τ_0_0 where τ_0_0 : SpaceKit.SpaceKitMapDelegate>",
+            "sugared_genericSig": "<Self where Self : SpaceKit.SpaceKitMapDelegate>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "spaceKitContext",
+            "printedName": "spaceKitContext(_:stateForAnnotationWithAlias:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "MapAnnotationState",
+                "printedName": "SpaceKit.MapAnnotationState",
+                "usr": "s:8SpaceKit18MapAnnotationStateO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Context",
+                "printedName": "SpaceKit.Context",
+                "usr": "s:8SpaceKit7ContextP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8SpaceKit0aB11MapDelegateP05spaceB7Context_27stateForAnnotationWithAliasAA0cI5StateOAA0F0_p_SStF",
+            "mangledName": "$s8SpaceKit0aB11MapDelegateP05spaceB7Context_27stateForAnnotationWithAliasAA0cI5StateOAA0F0_p_SStF",
+            "moduleName": "SpaceKit",
+            "genericSig": "<τ_0_0 where τ_0_0 : SpaceKit.SpaceKitMapDelegate>",
+            "sugared_genericSig": "<Self where Self : SpaceKit.SpaceKitMapDelegate>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:8SpaceKit0aB11MapDelegateP",
+        "mangledName": "$s8SpaceKit0aB11MapDelegateP",
+        "moduleName": "SpaceKit",
+        "genericSig": "<τ_0_0 : AnyObject>",
+        "sugared_genericSig": "<Self : AnyObject>",
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
@@ -9891,6 +10921,63 @@
             "moduleName": "SpaceKit"
           },
           {
+            "kind": "Var",
+            "name": "allCases",
+            "printedName": "allCases",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[SpaceKit.TraversalOption]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TraversalOption",
+                    "printedName": "SpaceKit.TraversalOption",
+                    "usr": "s:8SpaceKit15TraversalOptionO"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8SpaceKit15TraversalOptionO8allCasesSayACGvpZ",
+            "mangledName": "$s8SpaceKit15TraversalOptionO8allCasesSayACGvpZ",
+            "moduleName": "SpaceKit",
+            "static": true,
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[SpaceKit.TraversalOption]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TraversalOption",
+                        "printedName": "SpaceKit.TraversalOption",
+                        "usr": "s:8SpaceKit15TraversalOptionO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8SpaceKit15TraversalOptionO8allCasesSayACGvgZ",
+                "mangledName": "$s8SpaceKit15TraversalOptionO8allCasesSayACGvgZ",
+                "moduleName": "SpaceKit",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
             "kind": "Constructor",
             "name": "init",
             "printedName": "init(rawValue:)",
@@ -9957,63 +11044,6 @@
                 "usr": "s:8SpaceKit15TraversalOptionO8rawValueSSvg",
                 "mangledName": "$s8SpaceKit15TraversalOptionO8rawValueSSvg",
                 "moduleName": "SpaceKit",
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "allCases",
-            "printedName": "allCases",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Array",
-                "printedName": "[SpaceKit.TraversalOption]",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "TraversalOption",
-                    "printedName": "SpaceKit.TraversalOption",
-                    "usr": "s:8SpaceKit15TraversalOptionO"
-                  }
-                ],
-                "usr": "s:Sa"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:8SpaceKit15TraversalOptionO8allCasesSayACGvpZ",
-            "mangledName": "$s8SpaceKit15TraversalOptionO8allCasesSayACGvpZ",
-            "moduleName": "SpaceKit",
-            "static": true,
-            "implicit": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Array",
-                    "printedName": "[SpaceKit.TraversalOption]",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "TraversalOption",
-                        "printedName": "SpaceKit.TraversalOption",
-                        "usr": "s:8SpaceKit15TraversalOptionO"
-                      }
-                    ],
-                    "usr": "s:Sa"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:8SpaceKit15TraversalOptionO8allCasesSayACGvgZ",
-                "mangledName": "$s8SpaceKit15TraversalOptionO8allCasesSayACGvgZ",
-                "moduleName": "SpaceKit",
-                "static": true,
                 "implicit": true,
                 "accessorKind": "get"
               }
@@ -12121,21 +13151,7 @@
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Style.swift",
       "kind": "StringLiteral",
-      "offset": 140,
-      "length": 9,
-      "value": "\"#468CF6\""
-    },
-    {
-      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Style.swift",
-      "kind": "StringLiteral",
-      "offset": 198,
-      "length": 9,
-      "value": "\"#798EA9\""
-    },
-    {
-      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Style.swift",
-      "kind": "StringLiteral",
-      "offset": 258,
+      "offset": 142,
       "length": 9,
       "value": "\"#3198FF\""
     },
@@ -12155,15 +13171,8 @@
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/ARViewController\/ARViewController.swift",
-      "kind": "Array",
-      "offset": 1234,
-      "length": 2,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/ARViewController\/ARViewController.swift",
       "kind": "StringLiteral",
-      "offset": 1624,
+      "offset": 1631,
       "length": 16,
       "value": "\"SpaceKit.ARViewController\""
     },
@@ -12211,22 +13220,15 @@
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitController\/SpaceKitController.swift",
-      "kind": "Array",
-      "offset": 1122,
-      "length": 2,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitController\/SpaceKitController.swift",
       "kind": "BooleanLiteral",
-      "offset": 1200,
+      "offset": 1105,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitController\/SpaceKitController.swift",
       "kind": "IntegerLiteral",
-      "offset": 3576,
+      "offset": 3347,
       "length": 1,
       "value": "2"
     },
@@ -12350,6 +13352,13 @@
       "value": "3"
     },
     {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/LayoutGuideView.swift",
+      "kind": "StringLiteral",
+      "offset": 93,
+      "length": 15,
+      "value": "\"SpaceKit.LayoutGuideView\""
+    },
+    {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Compass\/DirectionIndicatorView.swift",
       "kind": "BooleanLiteral",
       "offset": 194,
@@ -12471,28 +13480,28 @@
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/ARViewController\/ARViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 4371,
+      "offset": 4335,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/ARViewController\/ARViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 4621,
+      "offset": 4585,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/ARViewController\/ARViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 4806,
+      "offset": 4770,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/ARViewController\/ARViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 5055,
+      "offset": 5019,
       "length": 5,
       "value": "false"
     },
@@ -12877,49 +13886,49 @@
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Compass\/CompassViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 5017,
+      "offset": 4918,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Compass\/CompassViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 5457,
+      "offset": 5358,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Compass\/CompassViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 5504,
+      "offset": 5405,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Compass\/CompassViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 5559,
+      "offset": 5460,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Compass\/CompassViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 5646,
+      "offset": 5547,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Compass\/CompassViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 5695,
+      "offset": 5596,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Compass\/CompassViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 5739,
+      "offset": 5640,
       "length": 4,
       "value": "true"
     },
@@ -13640,154 +14649,161 @@
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/BarcodeScanningMaskView.swift",
       "kind": "IntegerLiteral",
-      "offset": 246,
+      "offset": 329,
       "length": 11,
       "value": "1"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/BarcodeScanningMaskView.swift",
       "kind": "IntegerLiteral",
-      "offset": 265,
+      "offset": 348,
       "length": 7,
       "value": "2"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/BarcodeScanningMaskView.swift",
       "kind": "IntegerLiteral",
-      "offset": 246,
+      "offset": 329,
       "length": 11,
       "value": "1"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/BarcodeScanningMaskView.swift",
       "kind": "IntegerLiteral",
-      "offset": 265,
+      "offset": 348,
       "length": 7,
       "value": "2"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/BarcodeScanningMaskView.swift",
       "kind": "IntegerLiteral",
-      "offset": 246,
+      "offset": 329,
       "length": 11,
       "value": "1"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/BarcodeScanningMaskView.swift",
       "kind": "IntegerLiteral",
-      "offset": 265,
+      "offset": 348,
       "length": 7,
       "value": "2"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/BarcodeScanningMaskView.swift",
       "kind": "FloatLiteral",
-      "offset": 1200,
+      "offset": 1296,
       "length": 3,
       "value": "0.4"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/BarcodeScanningMaskView.swift",
       "kind": "StringLiteral",
-      "offset": 162,
+      "offset": 245,
       "length": 23,
       "value": "\"SpaceKit.BarcodeScanningMaskView\""
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/BarcodeScanningMaskView.swift",
       "kind": "IntegerLiteral",
-      "offset": 4920,
+      "offset": 5016,
       "length": 2,
       "value": "50"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/BarcodeScanningMaskView.swift",
       "kind": "IntegerLiteral",
-      "offset": 4975,
+      "offset": 5071,
       "length": 2,
       "value": "80"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/BarcodeScanningMaskView.swift",
       "kind": "FloatLiteral",
-      "offset": 5036,
+      "offset": 5132,
       "length": 4,
       "value": "0.63"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/BarcodeScanningMaskView.swift",
       "kind": "IntegerLiteral",
-      "offset": 5081,
+      "offset": 5177,
       "length": 2,
       "value": "24"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/BarcodeScanningMaskView.swift",
       "kind": "IntegerLiteral",
-      "offset": 5122,
+      "offset": 5218,
       "length": 2,
       "value": "16"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/BarcodeScanningMaskView.swift",
       "kind": "IntegerLiteral",
-      "offset": 5180,
+      "offset": 5276,
       "length": 2,
       "value": "14"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/BarcodeScanningMaskView.swift",
       "kind": "IntegerLiteral",
-      "offset": 5235,
+      "offset": 5331,
       "length": 1,
       "value": "8"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/BarcodeScanningMaskView.swift",
       "kind": "IntegerLiteral",
-      "offset": 5288,
+      "offset": 5384,
       "length": 2,
       "value": "24"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/BarcodeScanningMaskView.swift",
       "kind": "FloatLiteral",
-      "offset": 5352,
+      "offset": 5448,
       "length": 3,
       "value": "0.2"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/BarcodeScanningMaskView.swift",
       "kind": "StringLiteral",
-      "offset": 5409,
+      "offset": 5505,
       "length": 14,
       "value": "\"Scan barcode\""
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/BarcodeScanningMaskView.swift",
       "kind": "StringLiteral",
-      "offset": 5487,
+      "offset": 5583,
       "length": 26,
       "value": "\"Scan barcode instruction\""
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/Public\/SpaceKitContextFactory.swift",
       "kind": "Array",
-      "offset": 8145,
+      "offset": 4986,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/Public\/SpaceKitContextFactory.swift",
+      "kind": "Array",
+      "offset": 8996,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/LegacySpaceKitViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 1459,
+      "offset": 1493,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/LegacySpaceKitViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 1863,
+      "offset": 1897,
       "length": 1,
       "value": "1"
     },
@@ -13801,49 +14817,49 @@
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/LegacySpaceKitViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 15221,
+      "offset": 14925,
       "length": 3,
       "value": "0.3"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/LegacySpaceKitViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 15270,
+      "offset": 14974,
       "length": 3,
       "value": "0.6"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/LegacySpaceKitViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 15313,
+      "offset": 15017,
       "length": 2,
       "value": "74"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/LegacySpaceKitViewController.swift",
       "kind": "StringLiteral",
-      "offset": 15381,
+      "offset": 15085,
       "length": 19,
       "value": "\"qrcode.viewfinder\""
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/LegacySpaceKitViewController.swift",
       "kind": "StringLiteral",
-      "offset": 15452,
+      "offset": 15156,
       "length": 16,
       "value": "\"arrow.up.right\""
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/LegacySpaceKitViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 15531,
+      "offset": 15235,
       "length": 2,
       "value": "16"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/LegacySpaceKitViewController.swift",
       "kind": "StringLiteral",
-      "offset": 15597,
+      "offset": 15301,
       "length": 12,
       "value": "\"chevron.up\""
     },
@@ -13969,14 +14985,14 @@
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/Public\/StaticMapViewControllerFactory.swift",
       "kind": "BooleanLiteral",
-      "offset": 4182,
+      "offset": 4292,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/Public\/StaticMapViewControllerFactory.swift",
       "kind": "StringLiteral",
-      "offset": 4252,
+      "offset": 4362,
       "length": 23,
       "value": "\"SpaceKit.StaticMapViewController\""
     },
@@ -13990,56 +15006,56 @@
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/NewSpaceKitViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 2818,
+      "offset": 2915,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/NewSpaceKitViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 3222,
+      "offset": 3319,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/NewSpaceKitViewController.swift",
       "kind": "StringLiteral",
-      "offset": 1731,
+      "offset": 1828,
       "length": 25,
       "value": "\"SpaceKit.NewSpaceKitViewController\""
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/NewSpaceKitViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 13838,
+      "offset": 13935,
       "length": 3,
       "value": "0.3"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/NewSpaceKitViewController.swift",
       "kind": "StringLiteral",
-      "offset": 13907,
+      "offset": 14004,
       "length": 19,
       "value": "\"qrcode.viewfinder\""
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/NewSpaceKitViewController.swift",
       "kind": "StringLiteral",
-      "offset": 13978,
+      "offset": 14075,
       "length": 16,
       "value": "\"arrow.up.right\""
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/NewSpaceKitViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 14057,
+      "offset": 14154,
       "length": 2,
       "value": "16"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/NewSpaceKitViewController.swift",
       "kind": "StringLiteral",
-      "offset": 14134,
+      "offset": 14231,
       "length": 15,
       "value": "\"location.fill\""
     },
