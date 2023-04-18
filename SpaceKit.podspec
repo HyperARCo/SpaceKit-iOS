@@ -1,13 +1,13 @@
 Pod::Spec.new do |spec|
     spec.name               = "SpaceKit"
-    spec.version            = "0.0.8298"
+    spec.version            = "0.0.8379"
     spec.summary            = "SpaceKit iOS"
     spec.description        = "SpaceKit SDK for iOS"
-    spec.homepage           = "https://www.dentreality.com"
-    spec.documentation_url  = "https://github.com/DentReality/SpaceKit-iOS"
+    spec.homepage           = "https://www.hyperar.com"
+    spec.documentation_url  = "https://github.com/HyperARCo/SpaceKit-iOS"
     spec.license            = { :file => 'LICENSE.md' }
-    spec.author             = { "SpaceKit" => "Dent Reality" }
-    spec.source             = { :git => 'https://github.com/DentReality/SpaceKit-iOS.git', :tag => "#{spec.version}" }
+    spec.author             = { "SpaceKit" => "Hyper AR" }
+    spec.source             = { :git => 'https://github.com/HyperARCo/SpaceKit-iOS.git', :tag => "#{spec.version}" }
     spec.swift_version      = "5.5"
   
     # Supported deployment targets
