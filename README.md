@@ -5,7 +5,7 @@ This repository contains:
 * Binary `SpaceKit.xcframework`
 * Documentation archive `SpaceKit.doccarchive`
 
-The Android repository can be found [here](https://github.com/DentReality/SpaceKit-Android).
+The Android repository can be found [here](https://github.com/HyperARCo/SpaceKit-Android).
 
 ## Requirements
 
@@ -19,7 +19,7 @@ The Android repository can be found [here](https://github.com/DentReality/SpaceK
 1. Update your `Podfile` to include:
 
         use_frameworks!
-        pod 'SpaceKit', :git => 'https://github.com/DentReality/SpaceKit-iOS'
+        pod 'SpaceKit', :git => 'https://github.com/HyperARCo/SpaceKit-iOS'
 
 2. Run `$ pod install`
 
@@ -27,7 +27,7 @@ The Android repository can be found [here](https://github.com/DentReality/SpaceK
 
 1. Update the top-level dependencies in your `Package.swift` to include:
 
-        .package(url: "https://github.com/DentReality/SpaceKit-iOS", from: "0.0.1")
+        .package(url: "https://github.com/HyperARCo/SpaceKit-iOS", from: "0.0.1")
 
 2. Update the target dependencies in your `Package.swift` to include
 
@@ -43,4 +43,4 @@ The Android repository can be found [here](https://github.com/DentReality/SpaceK
 
 ## Documentation
 
-API documentation is available [here](https://dentreality.github.io/SpaceKit-iOS/documentation/spacekit/).
+API documentation is available [here](https://HyperARCo.github.io/SpaceKit-iOS/documentation/spacekit/).
