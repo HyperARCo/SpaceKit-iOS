@@ -74,13 +74,17 @@ public struct SpaceKitDestination : SpaceKit.DestinationProtocol {
   public let userInfo: [Swift.String : Any]
   public init(identifier: Swift.String, displayName: Swift.String, icon: SpaceKit.SpaceKitImage?, priority: SpaceKit.SpaceKitDestination.Priority = .unspecified, userInfo: [Swift.String : Any] = [:])
 }
-public struct LevelTransition {
+public struct LevelTransition : Swift.Equatable {
   public let traversalOption: SpaceKit.TraversalOption
   public let originOrdinal: Swift.Int
   public let destinationOrdinal: Swift.Int
+  public static func == (a: SpaceKit.LevelTransition, b: SpaceKit.LevelTransition) -> Swift.Bool
 }
 public protocol SpaceKitListDelegate : AnyObject {
   func spaceKitContext(_ context: SpaceKit.Context, didUpdateOrderedDestinations orderedDestinations: [SpaceKit.SpaceKitDestination], with levelTransitions: [[SpaceKit.LevelTransition]])
+}
+extension SpaceKit.SpaceKitDestination : Swift.Equatable {
+  public static func == (lhs: SpaceKit.SpaceKitDestination, rhs: SpaceKit.SpaceKitDestination) -> Swift.Bool
 }
 public enum Requisite : Swift.Int, Swift.CaseIterable {
   case locationPermission
@@ -379,6 +383,8 @@ public protocol Context : AnyObject, SpaceKit.EventFactory {
   func subscribeToEvent(_ subscriptionEvent: SpaceKit.SubscriptionEvent) -> SpaceKit.SpaceKitSubscriptionToken
   func unsubscribeFromEventWithSubscriptionToken(_ subscriptionToken: SpaceKit.SpaceKitSubscriptionToken)
   func updateAnnotations()
+  func createHeatMap(aliases: [Swift.String], threshold: Swift.Double) -> SpaceKit.HeatMap
+  func requestDataPointForHeatMap(_ heatMap: SpaceKit.HeatMap)
 }
 public struct RoutingOptions {
   public init(traversalOptions: Swift.Set<SpaceKit.TraversalOption>)
@@ -399,6 +405,16 @@ public protocol SpaceKitMapDelegate : AnyObject {
 public protocol SpaceKitViewController : UIKit.UIViewController {
   var contentLayoutGuide: UIKit.UILayoutGuide { get }
 }
+public struct HeatMapEvent : Swift.Codable {
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+@_hasMissingDesignatedInitializers public class HeatMap {
+  public var eventStream: _Concurrency.AsyncStream<SpaceKit.HeatMapEvent> {
+    get
+  }
+  @objc deinit
+}
 public enum Event {
   public struct ItemProximity {
     public init(itemCode: Swift.String, threshold: Swift.Double)
@@ -414,6 +430,9 @@ public enum Event {
   }
   public struct EnterLevel {
     public init(levelIdentifier: Swift.String)
+  }
+  public struct ArrivedAtDestination {
+    public init(threshold: Swift.Double)
   }
 }
 public enum TraversalOption : Swift.String, Swift.CaseIterable {
@@ -456,3 +475,4 @@ extension SpaceKit.Event.PathProximity : SpaceKit.EventTrigger {}
 extension SpaceKit.Event.EnterSection : SpaceKit.EventTrigger {}
 extension SpaceKit.Event.SectionProximity : SpaceKit.EventTrigger {}
 extension SpaceKit.Event.EnterLevel : SpaceKit.EventTrigger {}
+extension SpaceKit.Event.ArrivedAtDestination : SpaceKit.EventTrigger {}
