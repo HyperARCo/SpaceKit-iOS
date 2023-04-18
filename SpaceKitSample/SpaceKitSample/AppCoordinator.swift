@@ -116,13 +116,9 @@ extension AppCoordinator {
 		for requisite in outstandingRequisites {
 			switch requisite {
 			case .locationPermission:
-				await MainActor.run { [weak self] in
-					self?.locationManager.requestAlwaysAuthorization()
-				}
+				locationManager.requestAlwaysAuthorization()
 			case .cameraPermission:
-				await MainActor.run {
-					AVCaptureDevice.requestAccess(for: .video) { _ in }
-				}
+				await AVCaptureDevice.requestAccess(for: .video) { _ in }
 			case .backgroundLocationPermission, .preciseLocationPermission:
 				break
 			@unknown default:
