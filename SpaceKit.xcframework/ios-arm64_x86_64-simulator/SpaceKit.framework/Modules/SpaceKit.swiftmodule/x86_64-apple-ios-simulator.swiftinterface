@@ -41,6 +41,7 @@ public typealias LevelSwitcherFactory = (_ levelOrdinals: [Swift.Int]) -> SpaceK
 public typealias SpaceKitImage = UIKit.UIImage
 public struct DestinationAdditionalInfoKey {
   public static let aisleName: Swift.String
+  public static let levelOrdinal: Swift.String
 }
 public protocol DestinationProtocol {
   var identifier: Swift.String { get }
@@ -406,6 +407,8 @@ public protocol SpaceKitViewController : UIKit.UIViewController {
   var contentLayoutGuide: UIKit.UILayoutGuide { get }
 }
 public struct HeatMapEvent : Swift.Codable {
+  public let date: Foundation.Date
+  public let alias: Swift.String
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
