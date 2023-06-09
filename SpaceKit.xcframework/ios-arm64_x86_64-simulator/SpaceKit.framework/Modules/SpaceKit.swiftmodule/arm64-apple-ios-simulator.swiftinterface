@@ -291,7 +291,8 @@ public protocol SpaceKitLayout {
 }
 public struct StaticMapViewControllerFactory {
   public init(context: SpaceKit.Context, theme: SpaceKit.Theme = .default)
-  public init(context: SpaceKit.Context, theme: SpaceKit.Theme, recenterButtonFactory: @autoclosure @escaping SpaceKit.RecenterButtonFactory)
+  public init(context: SpaceKit.Context, theme: SpaceKit.Theme = .default, recenterButtonFactory: @autoclosure @escaping SpaceKit.RecenterButtonFactory)
+  public init(context: SpaceKit.Context, layout: SpaceKit.SpaceKitLayout, theme: SpaceKit.Theme = .default, levelSwitcherFactory: @escaping SpaceKit.LevelSwitcherFactory, recenterButtonFactory: @autoclosure @escaping SpaceKit.RecenterButtonFactory)
   public func make() -> UIKit.UIViewController
 }
 public struct ScanResult : Swift.Equatable {
@@ -400,8 +401,14 @@ public enum MapAnnotationState {
   }
 }
 public protocol SpaceKitMapDelegate : AnyObject {
+  @available(*, deprecated, renamed: "spaceKitContext(_:didTapAnnotationWithAlias:onLevelOrdinal:)")
   func spaceKitContext(_ context: SpaceKit.Context, didTapAnnotationWithAlias alias: Swift.String)
+  func spaceKitContext(_ context: SpaceKit.Context, didTapAnnotationWithAlias alias: Swift.String, onLevelOrdinal levelOrdinal: Swift.Int)
   func spaceKitContext(_ context: SpaceKit.Context, stateForAnnotationWithAlias alias: Swift.String) -> SpaceKit.MapAnnotationState
+}
+extension SpaceKit.SpaceKitMapDelegate {
+  public func spaceKitContext(_ context: SpaceKit.Context, didTapAnnotationWithAlias alias: Swift.String)
+  public func spaceKitContext(_ context: SpaceKit.Context, didTapAnnotationWithAlias alias: Swift.String, onLevelOrdinal levelOrdinal: Swift.Int)
 }
 public protocol SpaceKitViewController : UIKit.UIViewController {
   var contentLayoutGuide: UIKit.UILayoutGuide { get }
@@ -433,6 +440,7 @@ public enum Event {
   }
   public struct EnterLevel {
     public init(levelIdentifier: Swift.String)
+    public init(ordinal: Swift.Int)
   }
   public struct ArrivedAtDestination {
     public init(threshold: Swift.Double)
