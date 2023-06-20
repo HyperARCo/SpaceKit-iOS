@@ -443,7 +443,9 @@ public enum Event {
     public init(ordinal: Swift.Int)
   }
   public struct ArrivedAtDestination {
+    @available(*, deprecated, renamed: "init", message: "The distance threshold is no longer configurable.")
     public init(threshold: Swift.Double)
+    public init()
   }
 }
 public enum TraversalOption : Swift.String, Swift.CaseIterable {
