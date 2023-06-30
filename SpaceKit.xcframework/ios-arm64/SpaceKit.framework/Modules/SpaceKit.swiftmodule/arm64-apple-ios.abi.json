@@ -14256,7 +14256,7 @@
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitController\/SpaceKitController.swift",
       "kind": "IntegerLiteral",
-      "offset": 4417,
+      "offset": 4356,
       "length": 1,
       "value": "2"
     },
@@ -14473,14 +14473,14 @@
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDirectionNode.swift",
       "kind": "StringLiteral",
-      "offset": 1753,
+      "offset": 1664,
       "length": 24,
       "value": "\"SpaceKit.HyperLevelTransitionNode\""
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDirectionNode.swift",
       "kind": "BooleanLiteral",
-      "offset": 3678,
+      "offset": 3695,
       "length": 4,
       "value": "true"
     },
@@ -14501,28 +14501,28 @@
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/ARViewController\/ARViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 2772,
+      "offset": 3774,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/ARViewController\/ARViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 3022,
+      "offset": 4024,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/ARViewController\/ARViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 3207,
+      "offset": 4209,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/ARViewController\/ARViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 3376,
+      "offset": 4378,
       "length": 5,
       "value": "false"
     },
@@ -14704,49 +14704,42 @@
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/LegacySpaceKitViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 969,
+      "offset": 1046,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/LegacySpaceKitViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 1121,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/LegacySpaceKitViewModel.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1200,
+      "offset": 1125,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/LegacySpaceKitViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 5190,
+      "offset": 5125,
       "length": 10,
       "value": "\"map.fill\""
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/LegacySpaceKitViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 5216,
+      "offset": 5151,
       "length": 7,
       "value": "\"xmark\""
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/LegacySpaceKitViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 5190,
+      "offset": 5125,
       "length": 10,
       "value": "\"map.fill\""
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/LegacySpaceKitViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 5216,
+      "offset": 5151,
       "length": 7,
       "value": "\"xmark\""
     },
@@ -14956,56 +14949,56 @@
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Compass\/CompassViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 7455,
+      "offset": 7467,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Compass\/CompassViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 7799,
+      "offset": 7811,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Compass\/CompassViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 7945,
+      "offset": 7957,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Compass\/CompassViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 7992,
+      "offset": 8004,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Compass\/CompassViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 8047,
+      "offset": 8059,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Compass\/CompassViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 8090,
+      "offset": 8102,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Compass\/CompassViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 8139,
+      "offset": 8151,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Compass\/CompassViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 8183,
+      "offset": 8195,
       "length": 4,
       "value": "true"
     },
@@ -15103,7 +15096,7 @@
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/RouteNode.swift",
       "kind": "StringLiteral",
-      "offset": 372,
+      "offset": 244,
       "length": 9,
       "value": "\"SpaceKit.RouteNode\""
     },
@@ -15271,371 +15264,371 @@
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "IntegerLiteral",
-      "offset": 2218,
+      "offset": 2210,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "IntegerLiteral",
-      "offset": 2229,
+      "offset": 2221,
       "length": 3,
       "value": "115"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "IntegerLiteral",
-      "offset": 2510,
+      "offset": 2502,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "FloatLiteral",
-      "offset": 3019,
+      "offset": 3011,
       "length": 4,
       "value": "1.25"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "FloatLiteral",
-      "offset": 3028,
+      "offset": 3020,
       "length": 5,
       "value": "14.09"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "FloatLiteral",
-      "offset": 3072,
+      "offset": 3064,
       "length": 5,
       "value": "20.22"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "FloatLiteral",
-      "offset": 3082,
+      "offset": 3074,
       "length": 4,
       "value": "0.56"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "FloatLiteral",
-      "offset": 3126,
+      "offset": 3118,
       "length": 5,
       "value": "24.43"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "FloatLiteral",
-      "offset": 3136,
+      "offset": 3128,
       "length": 4,
       "value": "1.23"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "FloatLiteral",
-      "offset": 3169,
+      "offset": 3161,
       "length": 5,
       "value": "21.57"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "FloatLiteral",
-      "offset": 3179,
+      "offset": 3171,
       "length": 4,
       "value": "0.4"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "FloatLiteral",
-      "offset": 3212,
+      "offset": 3204,
       "length": 5,
       "value": "23.45"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "FloatLiteral",
-      "offset": 3222,
+      "offset": 3214,
       "length": 4,
       "value": "0.1"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "IntegerLiteral",
-      "offset": 3266,
+      "offset": 3258,
       "length": 2,
       "value": "25"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "FloatLiteral",
-      "offset": 3273,
+      "offset": 3265,
       "length": 4,
       "value": "2.98"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "FloatLiteral",
-      "offset": 3306,
+      "offset": 3298,
       "length": 4,
       "value": "24.8"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "FloatLiteral",
-      "offset": 3315,
+      "offset": 3307,
       "length": 4,
       "value": "1.74"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "IntegerLiteral",
-      "offset": 3348,
+      "offset": 3340,
       "length": 2,
       "value": "25"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "FloatLiteral",
-      "offset": 3355,
+      "offset": 3347,
       "length": 4,
       "value": "2.35"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "IntegerLiteral",
-      "offset": 3398,
+      "offset": 3390,
       "length": 2,
       "value": "25"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "FloatLiteral",
-      "offset": 3405,
+      "offset": 3397,
       "length": 5,
       "value": "30.02"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "FloatLiteral",
-      "offset": 3450,
+      "offset": 3442,
       "length": 5,
       "value": "21.99"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "IntegerLiteral",
-      "offset": 3460,
+      "offset": 3452,
       "length": 2,
       "value": "33"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "IntegerLiteral",
-      "offset": 3491,
+      "offset": 3483,
       "length": 2,
       "value": "25"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "FloatLiteral",
-      "offset": 3498,
+      "offset": 3490,
       "length": 5,
       "value": "31.67"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "FloatLiteral",
-      "offset": 3532,
+      "offset": 3524,
       "length": 5,
       "value": "23.65"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "IntegerLiteral",
-      "offset": 3542,
+      "offset": 3534,
       "length": 2,
       "value": "33"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "FloatLiteral",
-      "offset": 3584,
+      "offset": 3576,
       "length": 5,
       "value": "20.22"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "FloatLiteral",
-      "offset": 3594,
+      "offset": 3586,
       "length": 5,
       "value": "32.44"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "FloatLiteral",
-      "offset": 3628,
+      "offset": 3620,
       "length": 5,
       "value": "21.35"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "IntegerLiteral",
-      "offset": 3638,
+      "offset": 3630,
       "length": 2,
       "value": "33"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "FloatLiteral",
-      "offset": 3669,
+      "offset": 3661,
       "length": 5,
       "value": "20.73"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "FloatLiteral",
-      "offset": 3679,
+      "offset": 3671,
       "length": 4,
       "value": "32.8"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "FloatLiteral",
-      "offset": 3722,
+      "offset": 3714,
       "length": 4,
       "value": "1.25"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "FloatLiteral",
-      "offset": 3731,
+      "offset": 3723,
       "length": 5,
       "value": "18.91"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "FloatLiteral",
-      "offset": 3776,
+      "offset": 3768,
       "length": 4,
       "value": "0.57"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "FloatLiteral",
-      "offset": 3785,
+      "offset": 3777,
       "length": 5,
       "value": "14.76"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "FloatLiteral",
-      "offset": 3819,
+      "offset": 3811,
       "length": 4,
       "value": "0.1"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "FloatLiteral",
-      "offset": 3828,
+      "offset": 3820,
       "length": 5,
       "value": "17.95"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "FloatLiteral",
-      "offset": 3862,
+      "offset": 3854,
       "length": 4,
       "value": "0.4"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "FloatLiteral",
-      "offset": 3871,
+      "offset": 3863,
       "length": 5,
       "value": "16.09"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "FloatLiteral",
-      "offset": 3916,
+      "offset": 3908,
       "length": 4,
       "value": "1.25"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "FloatLiteral",
-      "offset": 3925,
+      "offset": 3917,
       "length": 5,
       "value": "14.09"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "FloatLiteral",
-      "offset": 3959,
+      "offset": 3951,
       "length": 4,
       "value": "0.76"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "FloatLiteral",
-      "offset": 3968,
+      "offset": 3960,
       "length": 4,
       "value": "14.5"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "FloatLiteral",
-      "offset": 4001,
+      "offset": 3993,
       "length": 4,
       "value": "0.99"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "FloatLiteral",
-      "offset": 4010,
+      "offset": 4002,
       "length": 5,
       "value": "14.27"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "FloatLiteral",
-      "offset": 4063,
+      "offset": 4055,
       "length": 4,
       "value": "0.01"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "StringLiteral",
-      "offset": 6102,
+      "offset": 6094,
       "length": 8,
       "value": "\"bounce\""
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "StringLiteral",
-      "offset": 6131,
+      "offset": 6123,
       "length": 6,
       "value": "\"fade\""
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "StringLiteral",
-      "offset": 6159,
+      "offset": 6151,
       "length": 7,
       "value": "\"scale\""
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "FloatLiteral",
-      "offset": 6225,
+      "offset": 6217,
       "length": 3,
       "value": "0.2"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationNode.swift",
       "kind": "BooleanLiteral",
-      "offset": 7606,
+      "offset": 7598,
       "length": 4,
       "value": "true"
     },
@@ -15747,28 +15740,28 @@
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/HyperSpaceView.swift",
       "kind": "Array",
-      "offset": 1472,
+      "offset": 1468,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/HyperSpaceView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1959,
+      "offset": 1869,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/HyperSpaceView.swift",
       "kind": "StringLiteral",
-      "offset": 1092,
+      "offset": 1198,
       "length": 14,
       "value": "\"SpaceKit.HyperSpaceView\""
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/Wayfinding\/WayfindingElement.swift",
       "kind": "BooleanLiteral",
-      "offset": 3413,
+      "offset": 1631,
       "length": 5,
       "value": "false"
     },
@@ -16251,7 +16244,7 @@
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationWayfindingNode.swift",
       "kind": "BooleanLiteral",
-      "offset": 3235,
+      "offset": 3227,
       "length": 4,
       "value": "true"
     },
@@ -16265,7 +16258,7 @@
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/HyperSpaceView\/Wayfinding UX\/HyperDestinationWayfindingNode.swift",
       "kind": "StringLiteral",
-      "offset": 5138,
+      "offset": 5133,
       "length": 28,
       "value": "\"SpaceKit.HyperFloatingDestinationNode\""
     },
@@ -16335,77 +16328,77 @@
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/NewSpaceKitViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 1774,
+      "offset": 1847,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/NewSpaceKitViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 1856,
+      "offset": 1929,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/NewSpaceKitViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 1935,
+      "offset": 2008,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/NewSpaceKitViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 6591,
+      "offset": 6723,
       "length": 15,
       "value": "\"location.fill\""
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/NewSpaceKitViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 6620,
+      "offset": 6752,
       "length": 10,
       "value": "\"map.fill\""
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/NewSpaceKitViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 6648,
+      "offset": 6780,
       "length": 19,
       "value": "\"qrcode.viewfinder\""
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/NewSpaceKitViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 6683,
+      "offset": 6815,
       "length": 7,
       "value": "\"xmark\""
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/NewSpaceKitViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 6591,
+      "offset": 6723,
       "length": 15,
       "value": "\"location.fill\""
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/NewSpaceKitViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 6620,
+      "offset": 6752,
       "length": 10,
       "value": "\"map.fill\""
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/NewSpaceKitViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 6648,
+      "offset": 6780,
       "length": 19,
       "value": "\"qrcode.viewfinder\""
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/NewSpaceKitViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 6683,
+      "offset": 6815,
       "length": 7,
       "value": "\"xmark\""
     },
