@@ -60,7 +60,7 @@ class ListManager {
 extension ListManager: SpaceKit.SpaceKitListDelegate {
 	func spaceKitContext(
 		_ context: SpaceKit.Context,
-		didUpdateOrderedDestinations orderedDestinations: [SpaceKit.Destination],
+		didUpdateOrderedDestinations orderedDestinations: [SpaceKitDestination],
 		with levelTransitions: [[SpaceKit.LevelTransition]])
 	{
 		self.listItems = orderedDestinations.map(\.identifier)
