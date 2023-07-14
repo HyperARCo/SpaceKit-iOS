@@ -118,7 +118,7 @@ extension AppCoordinator {
 			case .locationPermission:
 				locationManager.requestAlwaysAuthorization()
 			case .cameraPermission:
-				await AVCaptureDevice.requestAccess(for: .video) { _ in }
+				AVCaptureDevice.requestAccess(for: .video) { _ in }
 			case .backgroundLocationPermission, .preciseLocationPermission:
 				break
 			@unknown default:
