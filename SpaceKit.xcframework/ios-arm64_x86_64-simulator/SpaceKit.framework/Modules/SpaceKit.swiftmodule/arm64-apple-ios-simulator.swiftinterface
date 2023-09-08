@@ -309,6 +309,9 @@ public struct VenueManagerConfiguration {
   public let organizationIdentifier: Swift.String
   public init(organizationIdentifier: Swift.String)
 }
+extension SpaceKit.VenueManagerConfiguration : Swift.Decodable {
+  public init(from decoder: Swift.Decoder) throws
+}
 public protocol LocalVenue {
   var identifier: Swift.String { get }
   var name: Swift.String { get }
