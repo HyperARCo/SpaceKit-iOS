@@ -88,16 +88,15 @@ extension SpaceKit.SpaceKitDestination : Swift.Equatable {
   public static func == (lhs: SpaceKit.SpaceKitDestination, rhs: SpaceKit.SpaceKitDestination) -> Swift.Bool
 }
 public enum Requisite : Swift.Int, Swift.CaseIterable {
+  public static var allCases: [SpaceKit.Requisite]
   case locationPermission
   case preciseLocationPermission
+  @available(iOS, obsoleted: 13.0, message: "SpaceKit does not use 'Always' location permission. It is recommended to enable the 'Location Updates' background mode in applications that use SpaceKit.")
   case backgroundLocationPermission
   case cameraPermission
   public init?(rawValue: Swift.Int)
   public typealias AllCases = [SpaceKit.Requisite]
   public typealias RawValue = Swift.Int
-  public static var allCases: [SpaceKit.Requisite] {
-    get
-  }
   public var rawValue: Swift.Int {
     get
   }
@@ -209,11 +208,10 @@ public protocol LevelSwitcher : UIKit.UIView {
   var setLevelOrdinalHandler: (Swift.Int) -> Swift.Void { get set }
   func spaceKitDidSetDisplayLevelOrdinal(_ ordinal: Swift.Int)
 }
+@available(*, deprecated, message: "SpaceKit will allow background location updates automatically if your app has registered the background location capability.")
 public protocol SpaceKitLocationDelegate : AnyObject {
+  @available(*, deprecated, message: "SpaceKit will allow background location updates automatically if your app has registered the background location capability.")
   func spaceKitContextShouldAllowBackgroundLocationUpdates(_ context: SpaceKit.Context) -> Swift.Bool
-}
-extension SpaceKit.SpaceKitLocationDelegate {
-  public func spaceKitContextShouldAllowBackgroundLocationUpdates(_ context: SpaceKit.Context) -> Swift.Bool
 }
 extension ARKit.ARSCNView {
   @_Concurrency.MainActor(unsafe) public var userSceneHeading: Swift.Float? {
@@ -344,15 +342,13 @@ public protocol VenueManager {
   func fetchVenue(forVenueWithIdentifier venueIdentifier: Swift.String, destinationPath: Swift.String) async throws -> SpaceKit.Venue
   #endif
 }
-public enum SpacekitVenueManagerError : Swift.Error {
+@available(*, deprecated, renamed: "SpaceKitVenueManagerError")
+public typealias SpacekitVenueManagerError = SpaceKit.SpaceKitVenueManagerError
+public enum SpaceKitVenueManagerError : Swift.Error {
   case invalidDestinationPath
-  public static func == (a: SpaceKit.SpacekitVenueManagerError, b: SpaceKit.SpacekitVenueManagerError) -> Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
-  public var hashValue: Swift.Int {
-    get
-  }
+  case networkError(_: Foundation.LocalizedError)
 }
-extension SpaceKit.SpacekitVenueManagerError : Foundation.LocalizedError {
+extension SpaceKit.SpaceKitVenueManagerError : Foundation.LocalizedError {
   public var errorDescription: Swift.String? {
     get
   }
@@ -438,6 +434,9 @@ public enum Event {
   public struct EnterSection {
     public init(sectionIdentifier: Swift.String)
   }
+  public struct BackgroundEnterSection {
+    public init(sectionIdentifier: Swift.String)
+  }
   public struct SectionProximity {
     public init(sectionIdentifier: Swift.String, threshold: Swift.Double)
   }
@@ -482,13 +481,12 @@ extension SpaceKit.SpaceKitViewKey : Swift.RawRepresentable {}
 extension SpaceKit.TraversalOption : Swift.Equatable {}
 extension SpaceKit.TraversalOption : Swift.Hashable {}
 extension SpaceKit.TraversalOption : Swift.RawRepresentable {}
-extension SpaceKit.SpacekitVenueManagerError : Swift.Equatable {}
-extension SpaceKit.SpacekitVenueManagerError : Swift.Hashable {}
 extension SpaceKit.MapAnnotationState : Swift.Equatable {}
 extension SpaceKit.MapAnnotationState : Swift.Hashable {}
 extension SpaceKit.Event.ItemProximity : SpaceKit.EventTrigger {}
 extension SpaceKit.Event.PathProximity : SpaceKit.EventTrigger {}
 extension SpaceKit.Event.EnterSection : SpaceKit.EventTrigger {}
+extension SpaceKit.Event.BackgroundEnterSection : SpaceKit.EventTrigger {}
 extension SpaceKit.Event.SectionProximity : SpaceKit.EventTrigger {}
 extension SpaceKit.Event.EnterLevel : SpaceKit.EventTrigger {}
 extension SpaceKit.Event.ArrivedAtDestination : SpaceKit.EventTrigger {}
