@@ -20,8 +20,7 @@ import SpaceKit
 	private var products: [Product] = []
 
 	private let locationManager = CLLocationManager()
-	private let locationDelegate = LocationDelegate()
-
+	
 	init(navigationController: UINavigationController) {
 		self.navigationController = navigationController
 	}
@@ -73,7 +72,6 @@ import SpaceKit
 		
 		listManager.spaceKitContext = context
 		context.listDelegate = listManager
-		context.locationDelegate = locationDelegate
 		
 		let spaceKitViewController = SpaceKit.SpaceKitViewControllerFactory(context: context).make()
 		let rootViewController = RootViewController(spaceKitViewController: spaceKitViewController, spaceKitContext: context)
@@ -116,20 +114,14 @@ extension AppCoordinator {
 		for requisite in outstandingRequisites {
 			switch requisite {
 			case .locationPermission:
-				locationManager.requestAlwaysAuthorization()
+				locationManager.requestWhenInUseAuthorization()
 			case .cameraPermission:
 				AVCaptureDevice.requestAccess(for: .video) { _ in }
-			case .backgroundLocationPermission, .preciseLocationPermission:
+			case .preciseLocationPermission:
 				break
 			@unknown default:
 				break
 			}
 		}
-	}
-}
-
-private final class LocationDelegate: SpaceKitLocationDelegate {
-	func spaceKitContextShouldAllowBackgroundLocationUpdates(_ context: Context) -> Bool {
-		true
 	}
 }
