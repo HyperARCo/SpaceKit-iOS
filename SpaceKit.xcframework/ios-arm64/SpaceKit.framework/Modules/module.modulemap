@@ -1,7 +1,7 @@
 framework module SpaceKit {
   umbrella header "SpaceKit.h"
-
   export *
+
   module * { export * }
 }
 
