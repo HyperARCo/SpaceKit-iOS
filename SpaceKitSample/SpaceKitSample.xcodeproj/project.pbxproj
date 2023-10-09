@@ -7,10 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		709EE38EC12039494B4BDA6F /* SpaceKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1C7314362ABDC657B663C0CF /* SpaceKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		832140A2297022A800439155 /* AppIcon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 832140A129701F9300439155 /* AppIcon.xcassets */; };
 		8332B954299BF0D500384CB7 /* spacekitconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 8332B953299BF0D500384CB7 /* spacekitconfiguration.json */; };
-		96C35B213172B9C2C6388720 /* SpaceKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C7314362ABDC657B663C0CF /* SpaceKit.xcframework */; };
+		9B5335B85863E1BA416BC97F /* SpaceKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68240528C7B11435BB2796C6 /* SpaceKit.xcframework */; };
 		C2A34AA7290FF74D00F69B1D /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A34AA6290FF74D00F69B1D /* SettingsView.swift */; };
 		C2AE8385290C21F700E8D8E2 /* SettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AE8384290C21F700E8D8E2 /* SettingsCoordinator.swift */; };
 		C2BAE66029114AAD00D57437 /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BAE65F29114AAD00D57437 /* SettingsManager.swift */; };
@@ -32,6 +31,7 @@
 		C4EC318F285A09B500DFBD8A /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EC318E285A09B500DFBD8A /* RootViewController.swift */; };
 		C4EC3192285A217400DFBD8A /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EC3191285A217400DFBD8A /* ListCell.swift */; };
 		C4FEB7D2286B0D4B009B29CE /* ListManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FEB7D1286B0D4B009B29CE /* ListManager.swift */; };
+		F0F0F65162ABEAB1BB77A73D /* SpaceKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 68240528C7B11435BB2796C6 /* SpaceKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,7 +59,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				C46C6AD92851FD7500C5038F /* geos in Embed Frameworks */,
-				709EE38EC12039494B4BDA6F /* SpaceKit.xcframework in Embed Frameworks */,
+				F0F0F65162ABEAB1BB77A73D /* SpaceKit.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -67,7 +67,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1C7314362ABDC657B663C0CF /* SpaceKit.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = SpaceKit.xcframework; path = ../SpaceKit.xcframework; sourceTree = "<group>"; };
+		68240528C7B11435BB2796C6 /* SpaceKit.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = SpaceKit.xcframework; path = ../SpaceKit.xcframework; sourceTree = "<group>"; };
 		832140A129701F9300439155 /* AppIcon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AppIcon.xcassets; sourceTree = "<group>"; };
 		8332B953299BF0D500384CB7 /* spacekitconfiguration.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = spacekitconfiguration.json; sourceTree = "<group>"; };
 		C2A34AA6290FF74D00F69B1D /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -102,7 +102,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C46C6AD82851FD5800C5038F /* geos in Frameworks */,
-				96C35B213172B9C2C6388720 /* SpaceKit.xcframework in Frameworks */,
+				9B5335B85863E1BA416BC97F /* SpaceKit.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,7 +197,7 @@
 		C4E3775128042E4A00886C88 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1C7314362ABDC657B663C0CF /* SpaceKit.xcframework */,
+				68240528C7B11435BB2796C6 /* SpaceKit.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
