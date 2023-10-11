@@ -11,6 +11,7 @@ import CoreVideo
 import DeveloperToolsSupport
 import Foundation
 import GameplayKit
+import Lottie
 import SceneKit
 @_exported import SpaceKit
 import Swift
@@ -272,6 +273,7 @@ public struct SpaceKitContextFactory {
   @available(*, deprecated, message: "`isDebugEnabled` parameter has been obsoleted by configuration files. This initialiser will be removed in future versions. Please use `SpaceKitContextFactory.init(venue:configurationFileURL:)` instead.")
   public init(venue: any SpaceKit.Venue, isDebugEnabled: Swift.Bool)
   public init(venue: any SpaceKit.Venue, configurationFileURL: Foundation.URL? = nil)
+  public init(venue: any SpaceKit.Venue, configuration: [SpaceKit.ConfigurationKey : Any] = [:])
   #if compiler(>=5.3) && $AsyncAwait
   public func make() async throws -> any SpaceKit.Context
   #endif
@@ -425,6 +427,16 @@ public struct HeatMapEvent : Swift.Codable {
     get
   }
   @objc deinit
+}
+public struct ConfigurationKey : Swift.Hashable, Swift.RawRepresentable, Swift.Sendable, Swift.ExpressibleByStringLiteral {
+  public let rawValue: Swift.String
+  public init(rawValue: Swift.String)
+  public init(_ key: Swift.String)
+  public init(stringLiteral value: Swift.StringLiteralType)
+  public typealias ExtendedGraphemeClusterLiteralType = Swift.StringLiteralType
+  public typealias RawValue = Swift.String
+  public typealias StringLiteralType = Swift.StringLiteralType
+  public typealias UnicodeScalarLiteralType = Swift.StringLiteralType
 }
 public enum Event {
   public struct ItemProximity {
