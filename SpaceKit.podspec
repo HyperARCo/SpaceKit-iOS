@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
     spec.name               = "SpaceKit"
-    spec.version            = "0.0.9128"
+    spec.version            = "0.0.9260"
     spec.summary            = "SpaceKit iOS"
     spec.description        = "SpaceKit SDK for iOS"
     spec.homepage           = "https://www.hyperar.com"
