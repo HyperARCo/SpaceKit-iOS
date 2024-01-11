@@ -18,4 +18,5 @@ Pod::Spec.new do |spec|
 
     # Dependencies
     spec.dependency 'geos', '~> 7.0.0'
+    spec.dependency 'lottie-ios', '~> 4.3.3'
   end

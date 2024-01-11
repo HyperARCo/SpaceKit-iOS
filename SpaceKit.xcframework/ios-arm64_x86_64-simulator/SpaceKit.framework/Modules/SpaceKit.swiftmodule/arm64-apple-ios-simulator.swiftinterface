@@ -5,12 +5,12 @@
 import ARKit
 import AVFoundation
 import Combine
-import CoreGraphics
 import CoreLocation
 import CoreVideo
 import DeveloperToolsSupport
 import Foundation
 import GameplayKit
+import HyperMap
 import Lottie
 import SceneKit
 @_exported import SpaceKit
@@ -307,6 +307,7 @@ public protocol SpaceKitBarcodeDelegate : AnyObject {
   func spaceKitContext(_ context: any SpaceKit.Context, didScanBarcodeWithResult result: SpaceKit.ScanResult)
   func spaceKitContext(_ context: any SpaceKit.Context, didScanBarcodeWithError error: any Swift.Error)
 }
+#Preview()
 public struct VenueManagerConfiguration {
   public let organizationIdentifier: Swift.String
   public init(organizationIdentifier: Swift.String)
@@ -380,6 +381,7 @@ public protocol Context : AnyObject, SpaceKit.EventFactory {
   var requisitesDelegate: (any SpaceKit.SpaceKitRequisitesDelegate)? { get set }
   var listDelegate: (any SpaceKit.SpaceKitListDelegate)? { get set }
   var barcodeDelegate: (any SpaceKit.SpaceKitBarcodeDelegate)? { get set }
+  @available(*, deprecated, message: "SpaceKit will allow background location updates automatically if your app has registered the background location capability. Setting this property will have no effect.")
   var locationDelegate: (any SpaceKit.SpaceKitLocationDelegate)? { get set }
   var mapDelegate: (any SpaceKit.SpaceKitMapDelegate)? { get set }
   func setRoutingOptions(_ options: SpaceKit.RoutingOptions)
@@ -410,6 +412,7 @@ public protocol SpaceKitMapDelegate : AnyObject {
   func spaceKitContext(_ context: any SpaceKit.Context, stateForAnnotationWithAlias alias: Swift.String) -> SpaceKit.MapAnnotationState
 }
 extension SpaceKit.SpaceKitMapDelegate {
+  @available(*, deprecated)
   public func spaceKitContext(_ context: any SpaceKit.Context, didTapAnnotationWithAlias alias: Swift.String)
   public func spaceKitContext(_ context: any SpaceKit.Context, didTapAnnotationWithAlias alias: Swift.String, onLevelOrdinal levelOrdinal: Swift.Int)
 }

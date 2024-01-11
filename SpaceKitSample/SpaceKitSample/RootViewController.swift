@@ -17,10 +17,15 @@ class RootViewController: UIViewController {
 		button.translatesAutoresizingMaskIntoConstraints = false
 		let config = UIImage.SymbolConfiguration(pointSize: 32)
 		button.setImage(UIImage(systemName: "list.bullet", withConfiguration: config), for: .normal)
+		button.tintColor = UIColor.gray
 		button.addTarget(self, action: #selector(listButtonTapped), for: .primaryActionTriggered)
 		button.backgroundColor = .white
-		button.layer.cornerRadius = 10
+		button.layer.cornerRadius = 16
 		button.contentEdgeInsets = .init(top: 8, left: 8, bottom: 8, right: 8)
+		button.layer.shadowColor = UIColor.black.cgColor
+		button.layer.shadowOffset = CGSize(width: 0, height: 4)
+		button.layer.shadowRadius = 15
+		button.layer.shadowOpacity = 0.1
 		return button
 	}()
 	
@@ -29,11 +34,15 @@ class RootViewController: UIViewController {
 		button.translatesAutoresizingMaskIntoConstraints = false
 		let config = UIImage.SymbolConfiguration(pointSize: 32)
 		button.setImage(UIImage(systemName: "gearshape.fill", withConfiguration: config), for: .normal)
+		button.tintColor = UIColor.gray
 		button.addTarget(self, action: #selector(settingsButtonTapped), for: .primaryActionTriggered)
 		button.backgroundColor = .white
-		button.layer.cornerRadius = 10
+		button.layer.cornerRadius = 16
 		button.contentEdgeInsets = .init(top: 8, left: 8, bottom: 8, right: 8)
-		
+		button.layer.shadowColor = UIColor.black.cgColor
+		button.layer.shadowOffset = CGSize(width: 0, height: 4)
+		button.layer.shadowRadius = 15
+		button.layer.shadowOpacity = 0.1
 		return button
 	}()
 	 
@@ -52,21 +61,24 @@ class RootViewController: UIViewController {
 		view.addSubview(spaceKitViewController.view)
 		spaceKitViewController.didMove(toParent: self)
 		
-		view.addSubview(listButton)
 		NSLayoutConstraint.activate([
-			listButton.leadingAnchor.constraint(equalTo: spaceKitViewController.contentLayoutGuide.leadingAnchor),
-			listButton.bottomAnchor.constraint(equalTo: spaceKitViewController.contentLayoutGuide.bottomAnchor),
-			
-			listButton.widthAnchor.constraint(equalToConstant: 44),
+			listButton.widthAnchor.constraint(equalToConstant: 32),
 			listButton.heightAnchor.constraint(equalTo: listButton.widthAnchor),
 		])
 		
-		view.addSubview(settingsButton)
 		NSLayoutConstraint.activate([
-			settingsButton.leadingAnchor.constraint(equalTo: spaceKitViewController.contentLayoutGuide.leadingAnchor),
-			settingsButton.bottomAnchor.constraint(equalTo: listButton.topAnchor, constant: -10),
-			settingsButton.widthAnchor.constraint(equalToConstant: 44),
+			settingsButton.widthAnchor.constraint(equalToConstant: 32),
 			settingsButton.heightAnchor.constraint(equalTo: settingsButton.widthAnchor),
+		])
+		
+		let buttonStackView = UIStackView(arrangedSubviews: [settingsButton, listButton])
+		buttonStackView.axis = .vertical
+		buttonStackView.spacing = 8
+		buttonStackView.translatesAutoresizingMaskIntoConstraints = false
+		view.addSubview(buttonStackView)
+		NSLayoutConstraint.activate([
+			buttonStackView.leadingAnchor.constraint(equalTo: spaceKitViewController.contentLayoutGuide.leadingAnchor),
+			buttonStackView.bottomAnchor.constraint(equalTo: spaceKitViewController.contentLayoutGuide.bottomAnchor),
 		])
 	}
 	

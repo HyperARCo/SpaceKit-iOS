@@ -24,7 +24,7 @@ jobs:
 
   Update_Cocoapod:
     name: Update podspec version
-    runs-on: macos-13
+    runs-on: [self-hosted, macOS]
     needs: changes
     if: ${{ needs.changes.outputs.framework == 'true' }}
     timeout-minutes: 60
