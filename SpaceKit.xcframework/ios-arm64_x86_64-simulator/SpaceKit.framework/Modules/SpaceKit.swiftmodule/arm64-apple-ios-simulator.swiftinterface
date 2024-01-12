@@ -306,7 +306,6 @@ public protocol SpaceKitBarcodeDelegate : AnyObject {
   func spaceKitContext(_ context: any SpaceKit.Context, didScanBarcodeWithResult result: SpaceKit.ScanResult)
   func spaceKitContext(_ context: any SpaceKit.Context, didScanBarcodeWithError error: any Swift.Error)
 }
-#Preview()
 public struct VenueManagerConfiguration {
   public let organizationIdentifier: Swift.String
   public init(organizationIdentifier: Swift.String)

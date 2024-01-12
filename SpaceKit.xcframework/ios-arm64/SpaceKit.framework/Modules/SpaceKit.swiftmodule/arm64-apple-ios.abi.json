@@ -22704,49 +22704,14 @@
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/ARViewController\/StartWalkingOverlayView.swift",
       "kind": "StringLiteral",
-      "offset": 1768,
+      "offset": 1835,
       "length": 4,
       "value": "\"en\""
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/ARViewController\/StartWalkingOverlayView.swift",
       "kind": "StringLiteral",
-      "offset": 1896,
-      "length": 4,
-      "value": "\"de\""
-    },
-    {
-      "filePath": "@__swiftmacro_8SpaceKit33_860AC9F621B13C6EE238CF42A3BB5777Ll7PreviewfMf_.swift",
-      "kind": "StringLiteral",
-      "offset": 233,
-      "length": 40,
-      "value": "\"SpaceKit\/StartWalkingOverlayView.swift\""
-    },
-    {
-      "filePath": "@__swiftmacro_8SpaceKit33_860AC9F621B13C6EE238CF42A3BB5777Ll7PreviewfMf_.swift",
-      "kind": "IntegerLiteral",
-      "offset": 301,
-      "length": 2,
-      "value": "63"
-    },
-    {
-      "filePath": "@__swiftmacro_8SpaceKit33_860AC9F621B13C6EE238CF42A3BB5777Ll7PreviewfMf_.swift",
-      "kind": "IntegerLiteral",
-      "offset": 333,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "@__swiftmacro_8SpaceKit33_860AC9F621B13C6EE238CF42A3BB5777Ll7PreviewfMf_.swift",
-      "kind": "StringLiteral",
-      "offset": 616,
-      "length": 4,
-      "value": "\"en\""
-    },
-    {
-      "filePath": "@__swiftmacro_8SpaceKit33_860AC9F621B13C6EE238CF42A3BB5777Ll7PreviewfMf_.swift",
-      "kind": "StringLiteral",
-      "offset": 768,
+      "offset": 1966,
       "length": 4,
       "value": "\"de\""
     },
