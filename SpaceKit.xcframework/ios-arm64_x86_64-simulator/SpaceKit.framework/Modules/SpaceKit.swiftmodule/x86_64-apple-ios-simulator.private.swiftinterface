@@ -1,15 +1,16 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
+// swift-compiler-version: Apple Swift version 5.9 (swiftlang-5.9.0.128.108 clang-1500.0.40.1)
 // swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name SpaceKit
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import ARKit
 import AVFoundation
 import Combine
-import CoreGraphics
 import CoreLocation
 import CoreVideo
+import DeveloperToolsSupport
 import Foundation
 import GameplayKit
+import Lottie
 import SceneKit
 @_exported import SpaceKit
 import Swift
@@ -21,22 +22,23 @@ import Vision.VNTypes
 import Vision
 import _Concurrency
 import _StringProcessing
-public typealias InfoViewFactory = () -> SpaceKit.InfoView
-public typealias RecenterButtonFactory = () -> SpaceKit.RecenterButton
-public typealias LevelSwitcherFactory = (_ levelOrdinals: [Swift.Int]) -> SpaceKit.LevelSwitcher?
+import _SwiftConcurrencyShims
+public typealias InfoViewFactory = () -> any SpaceKit.InfoView
+public typealias RecenterButtonFactory = () -> any SpaceKit.RecenterButton
+public typealias LevelSwitcherFactory = (_ levelOrdinals: [Swift.Int]) -> (any SpaceKit.LevelSwitcher)?
 @_Concurrency.MainActor public struct SpaceKitViewControllerFactory {
-  @_Concurrency.MainActor public init(context: SpaceKit.Context, theme: SpaceKit.Theme = .default)
-  @_Concurrency.MainActor public init(context: SpaceKit.Context, layout: SpaceKit.SpaceKitLayout, theme: SpaceKit.Theme = .default)
-  @_Concurrency.MainActor public init(context: SpaceKit.Context, theme: SpaceKit.Theme = .default, infoViewFactory: @autoclosure @escaping SpaceKit.InfoViewFactory)
-  @_Concurrency.MainActor public init(context: SpaceKit.Context, layout: SpaceKit.SpaceKitLayout, theme: SpaceKit.Theme = .default, infoViewFactory: @autoclosure @escaping SpaceKit.InfoViewFactory)
-  @_Concurrency.MainActor public init(context: SpaceKit.Context, theme: SpaceKit.Theme = .default, recenterButtonFactory: @autoclosure @escaping SpaceKit.RecenterButtonFactory)
-  @_Concurrency.MainActor public init(context: SpaceKit.Context, layout: SpaceKit.SpaceKitLayout, theme: SpaceKit.Theme = .default, recenterButtonFactory: @autoclosure @escaping SpaceKit.RecenterButtonFactory)
-  @_Concurrency.MainActor public init(context: SpaceKit.Context, theme: SpaceKit.Theme = .default, levelSwitcherFactory: @escaping SpaceKit.LevelSwitcherFactory)
-  @_Concurrency.MainActor public init(context: SpaceKit.Context, layout: SpaceKit.SpaceKitLayout, theme: SpaceKit.Theme = .default, levelSwitcherFactory: @escaping SpaceKit.LevelSwitcherFactory)
-  @_Concurrency.MainActor public init(context: SpaceKit.Context, theme: SpaceKit.Theme = .default, infoViewFactory: @autoclosure @escaping SpaceKit.InfoViewFactory, levelSwitcherFactory: @escaping SpaceKit.LevelSwitcherFactory)
-  @_Concurrency.MainActor public init(context: SpaceKit.Context, layout: SpaceKit.SpaceKitLayout, theme: SpaceKit.Theme = .default, infoViewFactory: @autoclosure @escaping SpaceKit.InfoViewFactory, recenterButtonFactory: @autoclosure @escaping SpaceKit.RecenterButtonFactory)
-  @_Concurrency.MainActor public init(context: SpaceKit.Context, layout: SpaceKit.SpaceKitLayout, theme: SpaceKit.Theme = .default, infoViewFactory: @autoclosure @escaping SpaceKit.InfoViewFactory, levelSwitcherFactory: @escaping SpaceKit.LevelSwitcherFactory, recenterButtonFactory: @autoclosure @escaping SpaceKit.RecenterButtonFactory)
-  @_Concurrency.MainActor public func make() -> SpaceKit.SpaceKitViewController
+  @_Concurrency.MainActor public init(context: any SpaceKit.Context, theme: SpaceKit.Theme = .default)
+  @_Concurrency.MainActor public init(context: any SpaceKit.Context, layout: any SpaceKit.SpaceKitLayout, theme: SpaceKit.Theme = .default)
+  @_Concurrency.MainActor public init(context: any SpaceKit.Context, theme: SpaceKit.Theme = .default, infoViewFactory: @autoclosure @escaping SpaceKit.InfoViewFactory)
+  @_Concurrency.MainActor public init(context: any SpaceKit.Context, layout: any SpaceKit.SpaceKitLayout, theme: SpaceKit.Theme = .default, infoViewFactory: @autoclosure @escaping SpaceKit.InfoViewFactory)
+  @_Concurrency.MainActor public init(context: any SpaceKit.Context, theme: SpaceKit.Theme = .default, recenterButtonFactory: @autoclosure @escaping SpaceKit.RecenterButtonFactory)
+  @_Concurrency.MainActor public init(context: any SpaceKit.Context, layout: any SpaceKit.SpaceKitLayout, theme: SpaceKit.Theme = .default, recenterButtonFactory: @autoclosure @escaping SpaceKit.RecenterButtonFactory)
+  @_Concurrency.MainActor public init(context: any SpaceKit.Context, theme: SpaceKit.Theme = .default, levelSwitcherFactory: @escaping SpaceKit.LevelSwitcherFactory)
+  @_Concurrency.MainActor public init(context: any SpaceKit.Context, layout: any SpaceKit.SpaceKitLayout, theme: SpaceKit.Theme = .default, levelSwitcherFactory: @escaping SpaceKit.LevelSwitcherFactory)
+  @_Concurrency.MainActor public init(context: any SpaceKit.Context, theme: SpaceKit.Theme = .default, infoViewFactory: @autoclosure @escaping SpaceKit.InfoViewFactory, levelSwitcherFactory: @escaping SpaceKit.LevelSwitcherFactory)
+  @_Concurrency.MainActor public init(context: any SpaceKit.Context, layout: any SpaceKit.SpaceKitLayout, theme: SpaceKit.Theme = .default, infoViewFactory: @autoclosure @escaping SpaceKit.InfoViewFactory, recenterButtonFactory: @autoclosure @escaping SpaceKit.RecenterButtonFactory)
+  @_Concurrency.MainActor public init(context: any SpaceKit.Context, layout: any SpaceKit.SpaceKitLayout, theme: SpaceKit.Theme = .default, infoViewFactory: @autoclosure @escaping SpaceKit.InfoViewFactory, levelSwitcherFactory: @escaping SpaceKit.LevelSwitcherFactory, recenterButtonFactory: @autoclosure @escaping SpaceKit.RecenterButtonFactory)
+  @_Concurrency.MainActor public func make() -> any SpaceKit.SpaceKitViewController
 }
 public typealias SpaceKitImage = UIKit.UIImage
 public struct DestinationAdditionalInfoKey {
@@ -82,7 +84,7 @@ public struct LevelTransition : Swift.Equatable {
   public static func == (a: SpaceKit.LevelTransition, b: SpaceKit.LevelTransition) -> Swift.Bool
 }
 public protocol SpaceKitListDelegate : AnyObject {
-  func spaceKitContext(_ context: SpaceKit.Context, didUpdateOrderedDestinations orderedDestinations: [SpaceKit.SpaceKitDestination], with levelTransitions: [[SpaceKit.LevelTransition]])
+  func spaceKitContext(_ context: any SpaceKit.Context, didUpdateOrderedDestinations orderedDestinations: [SpaceKit.SpaceKitDestination], with levelTransitions: [[SpaceKit.LevelTransition]])
 }
 extension SpaceKit.SpaceKitDestination : Swift.Equatable {
   public static func == (lhs: SpaceKit.SpaceKitDestination, rhs: SpaceKit.SpaceKitDestination) -> Swift.Bool
@@ -104,7 +106,7 @@ public enum Requisite : Swift.Int, Swift.CaseIterable {
 @available(*, deprecated, message: "The delegate pattern for interrogating requisites has been deprecated. Instead use static function `Requisite.requestUnfulfilledRequisites()`.")
 public protocol SpaceKitRequisitesDelegate : AnyObject {
   @available(*, deprecated, message: "Replace with async static function `Requisite.requestUnfulfilledRequisites()`.")
-  func spaceKitContext(_ context: SpaceKit.Context, requiresRequisites requisites: [SpaceKit.Requisite])
+  func spaceKitContext(_ context: any SpaceKit.Context, requiresRequisites requisites: [SpaceKit.Requisite])
 }
 extension SpaceKit.Requisite {
   #if compiler(>=5.3) && $AsyncAwait
@@ -158,7 +160,7 @@ extension Swift.Sequence {
 public protocol EventTrigger {
 }
 public protocol EventFactory {
-  func makeEvent(_ trigger: SpaceKit.EventTrigger, handler: @escaping () -> Swift.Void) -> SpaceKit.SubscriptionEvent
+  func makeEvent(_ trigger: any SpaceKit.EventTrigger, handler: @escaping () -> Swift.Void) -> any SpaceKit.SubscriptionEvent
 }
 public protocol RecenterButton : UIKit.UIControl {
   func setIsMapTrackingUser(_ isTracking: Swift.Bool)
@@ -169,7 +171,7 @@ final public class SpaceKitVenue {
 }
 extension SpaceKit.SpaceKitVenue : SpaceKit.Venue {
   #if compiler(>=5.3) && $AsyncAwait
-  final public func fetchMetadata() async throws -> SpaceKit.VenueMetadata
+  final public func fetchMetadata() async throws -> any SpaceKit.VenueMetadata
   #endif
 }
 public protocol InfoViewIcon : AnyObject {
@@ -182,9 +184,9 @@ public protocol InfoViewButton : AnyObject {
   func addAction(_ action: @escaping () -> Swift.Void)
 }
 public protocol InfoView : UIKit.UIView {
-  var iconView: SpaceKit.InfoViewIcon? { get }
-  var displayNameLabel: SpaceKit.InfoViewLabel? { get }
-  var gotItButton: SpaceKit.InfoViewButton? { get }
+  var iconView: (any SpaceKit.InfoViewIcon)? { get }
+  var displayNameLabel: (any SpaceKit.InfoViewLabel)? { get }
+  var gotItButton: (any SpaceKit.InfoViewButton)? { get }
 }
 extension UIKit.UILabel : SpaceKit.InfoViewLabel {
 }
@@ -211,7 +213,7 @@ public protocol LevelSwitcher : UIKit.UIView {
 @available(*, deprecated, message: "SpaceKit will allow background location updates automatically if your app has registered the background location capability.")
 public protocol SpaceKitLocationDelegate : AnyObject {
   @available(*, deprecated, message: "SpaceKit will allow background location updates automatically if your app has registered the background location capability.")
-  func spaceKitContextShouldAllowBackgroundLocationUpdates(_ context: SpaceKit.Context) -> Swift.Bool
+  func spaceKitContextShouldAllowBackgroundLocationUpdates(_ context: any SpaceKit.Context) -> Swift.Bool
 }
 extension ARKit.ARSCNView {
   @_Concurrency.MainActor(unsafe) public var userSceneHeading: Swift.Float? {
@@ -268,10 +270,11 @@ extension SpaceKit.Theme {
 }
 public struct SpaceKitContextFactory {
   @available(*, deprecated, message: "`isDebugEnabled` parameter has been obsoleted by configuration files. This initialiser will be removed in future versions. Please use `SpaceKitContextFactory.init(venue:configurationFileURL:)` instead.")
-  public init(venue: SpaceKit.Venue, isDebugEnabled: Swift.Bool)
-  public init(venue: SpaceKit.Venue, configurationFileURL: Foundation.URL? = nil)
+  public init(venue: any SpaceKit.Venue, isDebugEnabled: Swift.Bool)
+  public init(venue: any SpaceKit.Venue, configurationFileURL: Foundation.URL? = nil)
+  public init(venue: any SpaceKit.Venue, configuration: [SpaceKit.ConfigurationKey : Any] = [:])
   #if compiler(>=5.3) && $AsyncAwait
-  public func make() async throws -> SpaceKit.Context
+  public func make() async throws -> any SpaceKit.Context
   #endif
 }
 public enum SpaceKitViewKey : Swift.String {
@@ -288,9 +291,9 @@ public protocol SpaceKitLayout {
   func layoutButtonStack(views: [SpaceKit.SpaceKitViewKey : UIKit.UIView], inLayoutGuide layoutGuide: UIKit.UILayoutGuide)
 }
 public struct StaticMapViewControllerFactory {
-  public init(context: SpaceKit.Context, theme: SpaceKit.Theme = .default)
-  public init(context: SpaceKit.Context, theme: SpaceKit.Theme = .default, recenterButtonFactory: @autoclosure @escaping SpaceKit.RecenterButtonFactory)
-  public init(context: SpaceKit.Context, layout: SpaceKit.SpaceKitLayout, theme: SpaceKit.Theme = .default, levelSwitcherFactory: @escaping SpaceKit.LevelSwitcherFactory, recenterButtonFactory: @autoclosure @escaping SpaceKit.RecenterButtonFactory)
+  public init(context: any SpaceKit.Context, theme: SpaceKit.Theme = .default)
+  public init(context: any SpaceKit.Context, theme: SpaceKit.Theme = .default, recenterButtonFactory: @autoclosure @escaping SpaceKit.RecenterButtonFactory)
+  public init(context: any SpaceKit.Context, layout: any SpaceKit.SpaceKitLayout, theme: SpaceKit.Theme = .default, levelSwitcherFactory: @escaping SpaceKit.LevelSwitcherFactory, recenterButtonFactory: @autoclosure @escaping SpaceKit.RecenterButtonFactory)
   public func make() -> UIKit.UIViewController
 }
 public struct ScanResult : Swift.Equatable {
@@ -300,20 +303,20 @@ public struct ScanResult : Swift.Equatable {
   public static func == (a: SpaceKit.ScanResult, b: SpaceKit.ScanResult) -> Swift.Bool
 }
 public protocol SpaceKitBarcodeDelegate : AnyObject {
-  func spaceKitContext(_ context: SpaceKit.Context, didScanBarcodeWithResult result: SpaceKit.ScanResult)
-  func spaceKitContext(_ context: SpaceKit.Context, didScanBarcodeWithError error: Swift.Error)
+  func spaceKitContext(_ context: any SpaceKit.Context, didScanBarcodeWithResult result: SpaceKit.ScanResult)
+  func spaceKitContext(_ context: any SpaceKit.Context, didScanBarcodeWithError error: any Swift.Error)
 }
 public struct VenueManagerConfiguration {
   public let organizationIdentifier: Swift.String
   public init(organizationIdentifier: Swift.String)
 }
 extension SpaceKit.VenueManagerConfiguration : Swift.Decodable {
-  public init(from decoder: Swift.Decoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public protocol LocalVenue {
   var identifier: Swift.String { get }
   var name: Swift.String { get }
-  var region: SpaceKit.LocalVenueRegion { get }
+  var region: any SpaceKit.LocalVenueRegion { get }
 }
 public protocol LocalVenueRegion {
   var radiusMeters: Swift.Int { get }
@@ -326,27 +329,27 @@ public protocol VenueMetadata {
 }
 public protocol Venue {
   #if compiler(>=5.3) && $AsyncAwait
-  func fetchMetadata() async throws -> SpaceKit.VenueMetadata
+  func fetchMetadata() async throws -> any SpaceKit.VenueMetadata
   #endif
 }
 public protocol VenueManager {
   init(configuration: SpaceKit.VenueManagerConfiguration)
   #if compiler(>=5.3) && $AsyncAwait
-  func fetchLocalVenues(forLocation location: CoreLocation.CLLocationCoordinate2D, searchRadius: Swift.Int, limit: Swift.Int) async throws -> [SpaceKit.LocalVenue]
+  func fetchLocalVenues(forLocation location: CoreLocation.CLLocationCoordinate2D, searchRadius: Swift.Int, limit: Swift.Int) async throws -> [any SpaceKit.LocalVenue]
   #endif
   #if compiler(>=5.3) && $AsyncAwait
-  func fetchMetadata(forVenueWithIdentifier venueIdentifier: Swift.String) async throws -> SpaceKit.VenueMetadata
+  func fetchMetadata(forVenueWithIdentifier venueIdentifier: Swift.String) async throws -> any SpaceKit.VenueMetadata
   #endif
   #if compiler(>=5.3) && $AsyncAwait
   @discardableResult
-  func fetchVenue(forVenueWithIdentifier venueIdentifier: Swift.String, destinationPath: Swift.String) async throws -> SpaceKit.Venue
+  func fetchVenue(forVenueWithIdentifier venueIdentifier: Swift.String, destinationPath: Swift.String) async throws -> any SpaceKit.Venue
   #endif
 }
 @available(*, deprecated, renamed: "SpaceKitVenueManagerError")
 public typealias SpacekitVenueManagerError = SpaceKit.SpaceKitVenueManagerError
 public enum SpaceKitVenueManagerError : Swift.Error {
   case invalidDestinationPath
-  case networkError(_: Foundation.LocalizedError)
+  case networkError(_: any Foundation.LocalizedError)
 }
 extension SpaceKit.SpaceKitVenueManagerError : Foundation.LocalizedError {
   public var errorDescription: Swift.String? {
@@ -355,7 +358,7 @@ extension SpaceKit.SpaceKitVenueManagerError : Foundation.LocalizedError {
 }
 public struct VenueManagerFactory {
   public init(configuration: SpaceKit.VenueManagerConfiguration)
-  public func make() -> SpaceKit.VenueManager
+  public func make() -> any SpaceKit.VenueManager
 }
 public struct SpaceKitVenueMetadata : SpaceKit.VenueMetadata, SpaceKit.UnixTimestampedMetadata {
   public let hash: Swift.String
@@ -365,7 +368,7 @@ public struct SpaceKitVenueMetadata : SpaceKit.VenueMetadata, SpaceKit.UnixTimes
 public struct SpaceKitLocalVenue : SpaceKit.LocalVenue {
   public let identifier: Swift.String
   public let name: Swift.String
-  public let region: SpaceKit.LocalVenueRegion
+  public let region: any SpaceKit.LocalVenueRegion
 }
 public struct SpaceKitLocalVenueRegion : SpaceKit.LocalVenueRegion {
   public let radiusMeters: Swift.Int
@@ -373,15 +376,16 @@ public struct SpaceKitLocalVenueRegion : SpaceKit.LocalVenueRegion {
 }
 public protocol Context : AnyObject, SpaceKit.EventFactory {
   @available(*, deprecated, message: "The delegate pattern for interrogating requisites has been deprecated. Instead use static function `Requisite.requestUnfulfilledRequisites()`.")
-  var requisitesDelegate: SpaceKit.SpaceKitRequisitesDelegate? { get set }
-  var listDelegate: SpaceKit.SpaceKitListDelegate? { get set }
-  var barcodeDelegate: SpaceKit.SpaceKitBarcodeDelegate? { get set }
-  var locationDelegate: SpaceKit.SpaceKitLocationDelegate? { get set }
-  var mapDelegate: SpaceKit.SpaceKitMapDelegate? { get set }
+  var requisitesDelegate: (any SpaceKit.SpaceKitRequisitesDelegate)? { get set }
+  var listDelegate: (any SpaceKit.SpaceKitListDelegate)? { get set }
+  var barcodeDelegate: (any SpaceKit.SpaceKitBarcodeDelegate)? { get set }
+  @available(*, deprecated, message: "SpaceKit will allow background location updates automatically if your app has registered the background location capability. Setting this property will have no effect.")
+  var locationDelegate: (any SpaceKit.SpaceKitLocationDelegate)? { get set }
+  var mapDelegate: (any SpaceKit.SpaceKitMapDelegate)? { get set }
   func setRoutingOptions(_ options: SpaceKit.RoutingOptions)
   func setDestinations(_ destinations: [SpaceKit.SpaceKitDestination])
   func requestUnfulfilledRequisites(from requisites: [SpaceKit.Requisite])
-  func subscribeToEvent(_ subscriptionEvent: SpaceKit.SubscriptionEvent) -> SpaceKit.SpaceKitSubscriptionToken
+  func subscribeToEvent(_ subscriptionEvent: any SpaceKit.SubscriptionEvent) -> SpaceKit.SpaceKitSubscriptionToken
   func unsubscribeFromEventWithSubscriptionToken(_ subscriptionToken: SpaceKit.SpaceKitSubscriptionToken)
   func updateAnnotations()
   func createHeatMap(aliases: [Swift.String], threshold: Swift.Double) -> SpaceKit.HeatMap
@@ -401,13 +405,14 @@ public enum MapAnnotationState {
 }
 public protocol SpaceKitMapDelegate : AnyObject {
   @available(*, deprecated, renamed: "spaceKitContext(_:didTapAnnotationWithAlias:onLevelOrdinal:)")
-  func spaceKitContext(_ context: SpaceKit.Context, didTapAnnotationWithAlias alias: Swift.String)
-  func spaceKitContext(_ context: SpaceKit.Context, didTapAnnotationWithAlias alias: Swift.String, onLevelOrdinal levelOrdinal: Swift.Int)
-  func spaceKitContext(_ context: SpaceKit.Context, stateForAnnotationWithAlias alias: Swift.String) -> SpaceKit.MapAnnotationState
+  func spaceKitContext(_ context: any SpaceKit.Context, didTapAnnotationWithAlias alias: Swift.String)
+  func spaceKitContext(_ context: any SpaceKit.Context, didTapAnnotationWithAlias alias: Swift.String, onLevelOrdinal levelOrdinal: Swift.Int)
+  func spaceKitContext(_ context: any SpaceKit.Context, stateForAnnotationWithAlias alias: Swift.String) -> SpaceKit.MapAnnotationState
 }
 extension SpaceKit.SpaceKitMapDelegate {
-  public func spaceKitContext(_ context: SpaceKit.Context, didTapAnnotationWithAlias alias: Swift.String)
-  public func spaceKitContext(_ context: SpaceKit.Context, didTapAnnotationWithAlias alias: Swift.String, onLevelOrdinal levelOrdinal: Swift.Int)
+  @available(*, deprecated)
+  public func spaceKitContext(_ context: any SpaceKit.Context, didTapAnnotationWithAlias alias: Swift.String)
+  public func spaceKitContext(_ context: any SpaceKit.Context, didTapAnnotationWithAlias alias: Swift.String, onLevelOrdinal levelOrdinal: Swift.Int)
 }
 public protocol SpaceKitViewController : UIKit.UIViewController {
   var contentLayoutGuide: UIKit.UILayoutGuide { get }
@@ -415,14 +420,24 @@ public protocol SpaceKitViewController : UIKit.UIViewController {
 public struct HeatMapEvent : Swift.Codable {
   public let date: Foundation.Date
   public let alias: Swift.String
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 @_hasMissingDesignatedInitializers public class HeatMap {
   public var eventStream: _Concurrency.AsyncStream<SpaceKit.HeatMapEvent> {
     get
   }
   @objc deinit
+}
+public struct ConfigurationKey : Swift.Hashable, Swift.RawRepresentable, Swift.Sendable, Swift.ExpressibleByStringLiteral {
+  public let rawValue: Swift.String
+  public init(rawValue: Swift.String)
+  public init(_ key: Swift.String)
+  public init(stringLiteral value: Swift.StringLiteralType)
+  public typealias ExtendedGraphemeClusterLiteralType = Swift.StringLiteralType
+  public typealias RawValue = Swift.String
+  public typealias StringLiteralType = Swift.StringLiteralType
+  public typealias UnicodeScalarLiteralType = Swift.StringLiteralType
 }
 public enum Event {
   public struct ItemProximity {
