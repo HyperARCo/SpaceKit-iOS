@@ -979,7 +979,10 @@
         "name": "HyperMap",
         "printedName": "HyperMap",
         "declKind": "Import",
-        "moduleName": "SpaceKit"
+        "moduleName": "SpaceKit",
+        "declAttributes": [
+          "ImplementationOnly"
+        ]
       },
       {
         "kind": "Import",
@@ -12947,84 +12950,6 @@
       },
       {
         "kind": "TypeDecl",
-        "name": "SVGKImage",
-        "printedName": "SVGKImage",
-        "declKind": "Class",
-        "usr": "c:objc(cs)SVGKImage",
-        "moduleName": "SVGKit",
-        "isOpen": true,
-        "objc_name": "SVGKImage",
-        "declAttributes": [
-          "ObjC",
-          "Dynamic"
-        ],
-        "superclassUsr": "c:objc(cs)NSObject",
-        "isExternal": true,
-        "inheritsConvenienceInitializers": true,
-        "superclassNames": [
-          "ObjectiveC.NSObject"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_KeyValueCodingAndObservingPublishing",
-            "printedName": "_KeyValueCodingAndObservingPublishing",
-            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
-            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_KeyValueCodingAndObserving",
-            "printedName": "_KeyValueCodingAndObserving",
-            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
-            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomStringConvertible",
-            "printedName": "CustomStringConvertible",
-            "usr": "s:s23CustomStringConvertibleP",
-            "mangledName": "$ss23CustomStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomDebugStringConvertible",
-            "printedName": "CustomDebugStringConvertible",
-            "usr": "s:s28CustomDebugStringConvertibleP",
-            "mangledName": "$ss28CustomDebugStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "MapViewAsset",
-            "printedName": "MapViewAsset",
-            "usr": "s:8HyperMap0B9ViewAssetP",
-            "mangledName": "$s8HyperMap0B9ViewAssetP"
-          }
-        ]
-      },
-      {
-        "kind": "TypeDecl",
         "name": "CLLocationManager",
         "printedName": "CLLocationManager",
         "declKind": "Class",
@@ -14939,56 +14864,56 @@
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/MapViewAsset+SVG.swift",
       "kind": "Array",
-      "offset": 358,
+      "offset": 883,
       "length": 4,
       "value": "[\"\"]"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/MapViewAsset+SVG.swift",
       "kind": "StringLiteral",
-      "offset": 971,
+      "offset": 1496,
       "length": 10,
       "value": "\"MapIcons\""
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/MapViewAsset+SVG.swift",
       "kind": "Dictionary",
-      "offset": 1089,
+      "offset": 1614,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/MapViewAsset+SVG.swift",
       "kind": "StringLiteral",
-      "offset": 1431,
+      "offset": 1956,
       "length": 44,
       "value": "\"Found asset with identifier: \""
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/MapViewAsset+SVG.swift",
       "kind": "StringLiteral",
-      "offset": 1474,
+      "offset": 1999,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/MapViewAsset+SVG.swift",
       "kind": "StringLiteral",
-      "offset": 1513,
+      "offset": 2065,
       "length": 61,
       "value": "\"Cannot fetch asset with identifier: \""
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/MapViewAsset+SVG.swift",
       "kind": "StringLiteral",
-      "offset": 1563,
+      "offset": 2115,
       "length": 1,
       "value": "\": \""
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/MapViewAsset+SVG.swift",
       "kind": "StringLiteral",
-      "offset": 1573,
+      "offset": 2125,
       "length": 2,
       "value": "\"\""
     },
