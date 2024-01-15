@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -105,7 +105,7 @@
 		C4EC318E285A09B500DFBD8A /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		C4EC3191285A217400DFBD8A /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
 		C4FEB7D1286B0D4B009B29CE /* ListManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListManager.swift; sourceTree = "<group>"; };
-		F0BD9719DBDC2C4796B3EB08 /* SpaceKit.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = SpaceKit.xcframework; path = ../SpaceKit.xcframework; sourceTree = "<group>"; };
+		F0BD9719DBDC2C4796B3EB08 /* SpaceKit.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:344R59CSRM:Dent Reality LTD"; includeInIndex = 1; lastKnownFileType = wrapper.xcframework; name = SpaceKit.xcframework; path = ../SpaceKit.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -331,7 +331,7 @@
 			);
 			mainGroup = C4E3771528042D9600886C88;
 			packageReferences = (
-				C46C6AD62851FD5800C5038F /* XCRemoteSwiftPackageReference "geos.git" */,
+				C46C6AD62851FD5800C5038F /* XCRemoteSwiftPackageReference "geos" */,
 				654A10952AD5AAB6006382FF /* XCRemoteSwiftPackageReference "lottie-spm" */,
 			);
 			productRefGroup = C4E3771F28042D9600886C88 /* Products */;
@@ -767,7 +767,7 @@
 				minimumVersion = 4.3.3;
 			};
 		};
-		C46C6AD62851FD5800C5038F /* XCRemoteSwiftPackageReference "geos.git" */ = {
+		C46C6AD62851FD5800C5038F /* XCRemoteSwiftPackageReference "geos" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/GEOSwift/geos.git";
 			requirement = {
@@ -785,7 +785,7 @@
 		};
 		C46C6AD72851FD5800C5038F /* geos */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = C46C6AD62851FD5800C5038F /* XCRemoteSwiftPackageReference "geos.git" */;
+			package = C46C6AD62851FD5800C5038F /* XCRemoteSwiftPackageReference "geos" */;
 			productName = geos;
 		};
 /* End XCSwiftPackageProductDependency section */
