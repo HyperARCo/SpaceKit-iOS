@@ -37,9 +37,9 @@ The Android repository can be found [here](https://github.com/HyperARCo/SpaceKit
 
 1. Download `SpaceKit.xcframework` and then drag it into your project's Frameworks, Libraries and Embedded Content pane in project settings.
 
-2. Add [geos](https://github.com/GEOSwift/geos) as a dependency, using the method of your choosing (CocoaPods, SPM or manual).
+2. Add [geos](https://github.com/GEOSwift/geos) and [lottie-iOS](https://github.com/airbnb/lottie-ios) as a dependency, using the method of your choosing (CocoaPods, SPM or manual).
 
-3. Embed and sign `SpaceKit` and `geos` in your project settings. 
+3. Embed and sign `SpaceKit`, `geos` and `lottie` in your project settings. 
 
 ## Documentation
 
