@@ -26,23 +26,23 @@
 		</data>
 		<key>ios-arm64/SpaceKit.framework/HyperARComponents_HyperARComponents.bundle/Info.plist</key>
 		<data>
-		iXgEMw46sNsX2fCcV7nj6uJCtFI=
+		7wQ0Se0NDGdty3S2z6sjdlgcr60=
 		</data>
 		<key>ios-arm64/SpaceKit.framework/HyperUI_HyperUI.bundle/Assets.car</key>
 		<data>
-		pcNSCX5nv0TnE50FHv34E+VAbQM=
+		yeHAytG9b3WE76O89O+szF9C7fo=
 		</data>
 		<key>ios-arm64/SpaceKit.framework/HyperUI_HyperUI.bundle/Info.plist</key>
 		<data>
-		knJCX2M4qaAzx0Nm95T6PxX7LCM=
+		DRV6lNaYW6+rvCC2HEJpGtNCMgo=
 		</data>
 		<key>ios-arm64/SpaceKit.framework/Info.plist</key>
 		<data>
-		rFmnzTCfKqvHfjU3iR5IcmRSN+g=
+		44Ck+G6bcK4CcjiU77XKPEPZ7l8=
 		</data>
 		<key>ios-arm64/SpaceKit.framework/Modules/SpaceKit.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		BftriGlI460uhfdceeq7veUHCtY=
+		2dLJf85F4N3tAnPr3xG3boMZjZw=
 		</data>
 		<key>ios-arm64/SpaceKit.framework/Modules/SpaceKit.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
@@ -62,19 +62,19 @@
 		</data>
 		<key>ios-arm64/SpaceKit.framework/SpaceKit</key>
 		<data>
-		0BRbTSjOOB8IeCqLUiapj6E9IZU=
+		gRiK8tUgjRRnQori5yMEdr59adA=
 		</data>
 		<key>ios-arm64/SpaceKit.framework/SpaceKitPackage_HyperMap.bundle/Assets.car</key>
 		<data>
-		1PjayccpdgJ95QwS60gMDPaic8A=
+		dyOhqyyvPBg44u9M3fctOV9ZepQ=
 		</data>
 		<key>ios-arm64/SpaceKit.framework/SpaceKitPackage_HyperMap.bundle/Info.plist</key>
 		<data>
-		zuMapaeOJSvDtVCX0JoX7DZwd8E=
+		vctfOFbuumQT+KQQV6hQfwcPjGE=
 		</data>
 		<key>ios-arm64/SpaceKit.framework/SpaceKitPackage_SpaceKitFoundation.bundle/Info.plist</key>
 		<data>
-		9kAaDb1dmkjZCC1PQya0HEEf5lw=
+		WbW3/othHzg5IFFtT9dimDxck3Q=
 		</data>
 		<key>ios-arm64/SpaceKit.framework/SpaceKitPackage_SpaceKitFoundation.bundle/ca.lproj/Localizable.strings</key>
 		<dict>
@@ -168,7 +168,7 @@
 		</dict>
 		<key>ios-arm64/SpaceKit.framework/SpaceKitPackage_SpaceKitLocationAnalysis.bundle/Info.plist</key>
 		<data>
-		9A+0TCc5plZ5zs1aXS9eYVMsq18=
+		25GQ9dI/mPZ5pPLVtRUdrKRbKVM=
 		</data>
 		<key>ios-arm64/SpaceKit.framework/SpaceKitPackage_SpaceKitLocationAnalysis.bundle/default.metallib</key>
 		<data>
@@ -286,11 +286,11 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/SpaceKit.framework/HyperARComponents_HyperARComponents.bundle/Info.plist</key>
 		<data>
-		FAo85qsXgQr3shW11+O1vzbetww=
+		iM4tTNmv7wwZyENfCVzZXmIcsoI=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SpaceKit.framework/HyperARComponents_HyperARComponents.bundle/_CodeSignature/CodeDirectory</key>
 		<data>
-		TMsHtmjwMZkbPdWOBofKJBi5h4s=
+		C1cBSUrKj2ibyBM6ZorfYGFVUik=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SpaceKit.framework/HyperARComponents_HyperARComponents.bundle/_CodeSignature/CodeRequirements</key>
 		<data>
@@ -298,7 +298,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/SpaceKit.framework/HyperARComponents_HyperARComponents.bundle/_CodeSignature/CodeRequirements-1</key>
 		<data>
-		8z5nwX+ACaJlzOX40n8g7xmbTy0=
+		L3A3H321GycKWC4LVfiUm/Zy/eg=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SpaceKit.framework/HyperARComponents_HyperARComponents.bundle/_CodeSignature/CodeResources</key>
 		<data>
@@ -314,11 +314,11 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/SpaceKit.framework/HyperUI_HyperUI.bundle/Info.plist</key>
 		<data>
-		oHWiStBGsl/GL3jUGKG1eexse/Y=
+		Rl4q68xMX2rVdERzwq6Wa9KbaRI=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SpaceKit.framework/HyperUI_HyperUI.bundle/_CodeSignature/CodeDirectory</key>
 		<data>
-		rglWMNZZ52Q4iAm+OPtO9w3jU0I=
+		WBYNJb7WaJllKEH1MQVNbT1N2Dw=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SpaceKit.framework/HyperUI_HyperUI.bundle/_CodeSignature/CodeRequirements</key>
 		<data>
@@ -326,7 +326,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/SpaceKit.framework/HyperUI_HyperUI.bundle/_CodeSignature/CodeRequirements-1</key>
 		<data>
-		Z1LkeyTlHmNubdRgELfpQr9oWIo=
+		yHjvSijLJbnm71e8xXSiwKgLi5w=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SpaceKit.framework/HyperUI_HyperUI.bundle/_CodeSignature/CodeResources</key>
 		<data>
@@ -338,11 +338,11 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/SpaceKit.framework/Info.plist</key>
 		<data>
-		9vhKpXy4AelAfj+cxaqLtCKsiX0=
+		25IeQB0S56rLaq66p9mEFZyWPSs=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SpaceKit.framework/Modules/SpaceKit.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		XNExCFbPGikHElu8kAQzc/ZKzkQ=
+		NkByG0AtRyHdAGFVhlCMjA37O9g=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SpaceKit.framework/Modules/SpaceKit.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -358,7 +358,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/SpaceKit.framework/Modules/SpaceKit.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		XNExCFbPGikHElu8kAQzc/ZKzkQ=
+		NkByG0AtRyHdAGFVhlCMjA37O9g=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SpaceKit.framework/Modules/SpaceKit.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -378,19 +378,19 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/SpaceKit.framework/SpaceKit</key>
 		<data>
-		Z0Uv7JZUoV6HBYB44Hgf/PYGRq4=
+		NJUre3qug9GLS/scNJTdsxIy3JQ=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SpaceKit.framework/SpaceKitPackage_HyperMap.bundle/Assets.car</key>
 		<data>
-		1PjayccpdgJ95QwS60gMDPaic8A=
+		dyOhqyyvPBg44u9M3fctOV9ZepQ=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SpaceKit.framework/SpaceKitPackage_HyperMap.bundle/Info.plist</key>
 		<data>
-		ykybLmDJEaqn3yUSjKkWfycuTcU=
+		8PU2jcU3h7kwX+195EGmoV8yamM=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SpaceKit.framework/SpaceKitPackage_HyperMap.bundle/_CodeSignature/CodeDirectory</key>
 		<data>
-		PZz9/rR6nuu0/EcWDr6NskFPclY=
+		SVXJKTZGOTNV04yy5tWku2CAwY8=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SpaceKit.framework/SpaceKitPackage_HyperMap.bundle/_CodeSignature/CodeRequirements</key>
 		<data>
@@ -398,11 +398,11 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/SpaceKit.framework/SpaceKitPackage_HyperMap.bundle/_CodeSignature/CodeRequirements-1</key>
 		<data>
-		w7XTd15oXOOxR01YfhMUcACUW2g=
+		m65TM4FQyKjEAgqmLNsoS2lvkO4=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SpaceKit.framework/SpaceKitPackage_HyperMap.bundle/_CodeSignature/CodeResources</key>
 		<data>
-		s1Okg1tC/5hIUP2ffHDfx4y9194=
+		WA0JkhRzxCY3nrnaKZLZSsRYApQ=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SpaceKit.framework/SpaceKitPackage_HyperMap.bundle/_CodeSignature/CodeSignature</key>
 		<data>
@@ -410,11 +410,11 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/SpaceKit.framework/SpaceKitPackage_SpaceKitFoundation.bundle/Info.plist</key>
 		<data>
-		kkZzJkpPHe+0hR1m24dH6lDrewE=
+		uRuumRN/5iJRvmMGhcp7pX6X7H8=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SpaceKit.framework/SpaceKitPackage_SpaceKitFoundation.bundle/_CodeSignature/CodeDirectory</key>
 		<data>
-		OOTvBcu4ji0oZ7YE81fSE9mCdyM=
+		g3C+GY0VROTpxiTQZ0HxmHxhdVY=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SpaceKit.framework/SpaceKitPackage_SpaceKitFoundation.bundle/_CodeSignature/CodeRequirements</key>
 		<data>
@@ -422,7 +422,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/SpaceKit.framework/SpaceKitPackage_SpaceKitFoundation.bundle/_CodeSignature/CodeRequirements-1</key>
 		<data>
-		iyLuAZhDnTsCyIYmENo9xk9+NKY=
+		/OBGwY/GopkQUi1maIPC0arbEYg=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SpaceKit.framework/SpaceKitPackage_SpaceKitFoundation.bundle/_CodeSignature/CodeResources</key>
 		<data>
@@ -524,11 +524,11 @@
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SpaceKit.framework/SpaceKitPackage_SpaceKitLocationAnalysis.bundle/Info.plist</key>
 		<data>
-		j09G6S+ntrfGVbyo53eYb+Oos4w=
+		gK8yMvJrmZt16XHKxUQBbD3ZvIM=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SpaceKit.framework/SpaceKitPackage_SpaceKitLocationAnalysis.bundle/_CodeSignature/CodeDirectory</key>
 		<data>
-		1vgU27G/lgJD3dcOhuEga9MojI0=
+		HktVRqDq29xBLmxkIyL5gm/dGKw=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SpaceKit.framework/SpaceKitPackage_SpaceKitLocationAnalysis.bundle/_CodeSignature/CodeRequirements</key>
 		<data>
@@ -536,7 +536,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/SpaceKit.framework/SpaceKitPackage_SpaceKitLocationAnalysis.bundle/_CodeSignature/CodeRequirements-1</key>
 		<data>
-		oiPYBxBsZnv1VLbmPa7OS5jRb7E=
+		RbXS8P1TTAKPwKSlx/5V07HXKkI=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SpaceKit.framework/SpaceKitPackage_SpaceKitLocationAnalysis.bundle/_CodeSignature/CodeResources</key>
 		<data>
@@ -702,55 +702,55 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			iXgEMw46sNsX2fCcV7nj6uJCtFI=
+			7wQ0Se0NDGdty3S2z6sjdlgcr60=
 			</data>
 			<key>hash2</key>
 			<data>
-			fAgtC/c3Oo1apv0byqXDYXRiANLUdWyVVwe1Fqsvj/k=
+			yQRS/VjZRZ5J7f9573sJe2wFphbcLMgvxL+Flk6roww=
 			</data>
 		</dict>
 		<key>ios-arm64/SpaceKit.framework/HyperUI_HyperUI.bundle/Assets.car</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			pcNSCX5nv0TnE50FHv34E+VAbQM=
+			yeHAytG9b3WE76O89O+szF9C7fo=
 			</data>
 			<key>hash2</key>
 			<data>
-			D26lQHqZcV3PeCwQkW+Qoxv6YVWG1EMpQrfO/BP9MOI=
+			6mmPj63ydc+FSz/v3TwDTJ6U8sy/LR8FTg/EPrr9/80=
 			</data>
 		</dict>
 		<key>ios-arm64/SpaceKit.framework/HyperUI_HyperUI.bundle/Info.plist</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			knJCX2M4qaAzx0Nm95T6PxX7LCM=
+			DRV6lNaYW6+rvCC2HEJpGtNCMgo=
 			</data>
 			<key>hash2</key>
 			<data>
-			Lw86YzZRzchBtVMptQlFO8/VtZjeb3g/ekK6Rja/31k=
+			HKbvtxOhFLO8iN6epsyVIQtAgdtNPhiDV7Tt8ttiyuA=
 			</data>
 		</dict>
 		<key>ios-arm64/SpaceKit.framework/Info.plist</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			rFmnzTCfKqvHfjU3iR5IcmRSN+g=
+			44Ck+G6bcK4CcjiU77XKPEPZ7l8=
 			</data>
 			<key>hash2</key>
 			<data>
-			4PqiLUCVTuv1BJKi/Q0gPgwHBzglp4UagdOrfBBD5VA=
+			uecyzWEvNx+UUfiM/XLN6tStBjiEAeNes6R3MsDcV+0=
 			</data>
 		</dict>
 		<key>ios-arm64/SpaceKit.framework/Modules/SpaceKit.swiftmodule/arm64-apple-ios.abi.json</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			BftriGlI460uhfdceeq7veUHCtY=
+			2dLJf85F4N3tAnPr3xG3boMZjZw=
 			</data>
 			<key>hash2</key>
 			<data>
-			1YcjXivbuGiQQs/5TRoA7BZ4iFVA+A10bds6qQGCN5g=
+			VXEIzV62aSbKsdCFW+x/9cQxa7jm8sAhcxka9weD9ag=
 			</data>
 		</dict>
 		<key>ios-arm64/SpaceKit.framework/Modules/SpaceKit.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
@@ -801,44 +801,44 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			0BRbTSjOOB8IeCqLUiapj6E9IZU=
+			gRiK8tUgjRRnQori5yMEdr59adA=
 			</data>
 			<key>hash2</key>
 			<data>
-			P/2t2AVxpVGJDx+VI+wRpynHzt8uvprtgJQ+BYdsaPE=
+			VUckplx64u4JwTMyZIbjW9g83n+HvvJs1zHEUz7BGJo=
 			</data>
 		</dict>
 		<key>ios-arm64/SpaceKit.framework/SpaceKitPackage_HyperMap.bundle/Assets.car</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			1PjayccpdgJ95QwS60gMDPaic8A=
+			dyOhqyyvPBg44u9M3fctOV9ZepQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			keAGHReQWpkMNGR75NCWOwPuOf1q0ksKxO/inW7GtKQ=
+			+jHaL7g++D4sabJ/HeiTYFNolsYhAuVao+RTkoApoSM=
 			</data>
 		</dict>
 		<key>ios-arm64/SpaceKit.framework/SpaceKitPackage_HyperMap.bundle/Info.plist</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			zuMapaeOJSvDtVCX0JoX7DZwd8E=
+			vctfOFbuumQT+KQQV6hQfwcPjGE=
 			</data>
 			<key>hash2</key>
 			<data>
-			7AWE5NbAx9j5RetwGBo1yD15FufyGAU+F7WsnLVQ3cw=
+			Kad13GcETCyqQA4HVAfD3KTiOwSUrHEK8DDGu2uLvQc=
 			</data>
 		</dict>
 		<key>ios-arm64/SpaceKit.framework/SpaceKitPackage_SpaceKitFoundation.bundle/Info.plist</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			9kAaDb1dmkjZCC1PQya0HEEf5lw=
+			WbW3/othHzg5IFFtT9dimDxck3Q=
 			</data>
 			<key>hash2</key>
 			<data>
-			ViImgDzPX7mbbmWQnTov686IzOIaIemRLKAuHxz4P7w=
+			BeJObjjJ3Q77yfNnd1+NfNPdUien619a2/+ejc0ufTw=
 			</data>
 		</dict>
 		<key>ios-arm64/SpaceKit.framework/SpaceKitPackage_SpaceKitFoundation.bundle/ca.lproj/Localizable.strings</key>
@@ -975,11 +975,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			9A+0TCc5plZ5zs1aXS9eYVMsq18=
+			25GQ9dI/mPZ5pPLVtRUdrKRbKVM=
 			</data>
 			<key>hash2</key>
 			<data>
-			3qi4KvtS7HsdFQP0wr51Q3zBp7meCY3plbCENRosK3A=
+			7Iq+HxLBXI+vtuu+qgpZRiXd7Yzt/7Qz3rfdx5rwlcQ=
 			</data>
 		</dict>
 		<key>ios-arm64/SpaceKit.framework/SpaceKitPackage_SpaceKitLocationAnalysis.bundle/default.metallib</key>
@@ -1182,22 +1182,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			FAo85qsXgQr3shW11+O1vzbetww=
+			iM4tTNmv7wwZyENfCVzZXmIcsoI=
 			</data>
 			<key>hash2</key>
 			<data>
-			Ww4lblmZa9XLrhcFWhARVmFz5/rTZkQrBZv3IjF7r2w=
+			iCS0W4JpKyO4bkJrPV1iTw4k1gHk8J/DscXJzP2IOHY=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SpaceKit.framework/HyperARComponents_HyperARComponents.bundle/_CodeSignature/CodeDirectory</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			TMsHtmjwMZkbPdWOBofKJBi5h4s=
+			C1cBSUrKj2ibyBM6ZorfYGFVUik=
 			</data>
 			<key>hash2</key>
 			<data>
-			J/rJBR7NmK0kCQ06aDDQaLy53ecP3ICCEeA7AsIk9+g=
+			NX7XVCLj7dP7JdiGIN5aQ5pIHcXO/CUDD2Of3XltQyI=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SpaceKit.framework/HyperARComponents_HyperARComponents.bundle/_CodeSignature/CodeRequirements</key>
@@ -1215,11 +1215,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			8z5nwX+ACaJlzOX40n8g7xmbTy0=
+			L3A3H321GycKWC4LVfiUm/Zy/eg=
 			</data>
 			<key>hash2</key>
 			<data>
-			Gpa+VgGFewpM267L2kL8znLlR1XWxxy6oC71XVGzwEc=
+			sWl+5v0Jcf+RrDZZ2DQecbKGSSjUxW8OABApi8k6hUI=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SpaceKit.framework/HyperARComponents_HyperARComponents.bundle/_CodeSignature/CodeResources</key>
@@ -1259,22 +1259,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			oHWiStBGsl/GL3jUGKG1eexse/Y=
+			Rl4q68xMX2rVdERzwq6Wa9KbaRI=
 			</data>
 			<key>hash2</key>
 			<data>
-			PGmuDatwPd9pQmG/crCA8HPXHh2wNb4+DSo3Q94v0yw=
+			l9Z+cCkLi2bgcPJeq5g81xs/KhQsqn1tsiTdXvhfTk0=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SpaceKit.framework/HyperUI_HyperUI.bundle/_CodeSignature/CodeDirectory</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			rglWMNZZ52Q4iAm+OPtO9w3jU0I=
+			WBYNJb7WaJllKEH1MQVNbT1N2Dw=
 			</data>
 			<key>hash2</key>
 			<data>
-			Fif3m7PYMkVY8dTJ4Q3SlI1d8bBmVrkjq+DCEYLK+iw=
+			7iV6wtXAwGo9OvyHSMBnpR+WSw13QKr51ALnsEbVXZo=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SpaceKit.framework/HyperUI_HyperUI.bundle/_CodeSignature/CodeRequirements</key>
@@ -1292,11 +1292,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Z1LkeyTlHmNubdRgELfpQr9oWIo=
+			yHjvSijLJbnm71e8xXSiwKgLi5w=
 			</data>
 			<key>hash2</key>
 			<data>
-			YsG3aeySAqsZDFXEe2PBHtY5HDFQKZkiXjlAG4jVa6k=
+			kUq4GSzATVzeRjzNg3vr+Lutv8mJkJMoDKLym9ck+oM=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SpaceKit.framework/HyperUI_HyperUI.bundle/_CodeSignature/CodeResources</key>
@@ -1325,22 +1325,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			9vhKpXy4AelAfj+cxaqLtCKsiX0=
+			25IeQB0S56rLaq66p9mEFZyWPSs=
 			</data>
 			<key>hash2</key>
 			<data>
-			UToAYK5dgFpTUs0K6V2mnrFFsfiWL0gbmMDGE3lsqPQ=
+			K8Ja8JbnEoc6v0LPX6QO4GvIn1JkYr6Nz2QPn9VyRPk=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SpaceKit.framework/Modules/SpaceKit.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			XNExCFbPGikHElu8kAQzc/ZKzkQ=
+			NkByG0AtRyHdAGFVhlCMjA37O9g=
 			</data>
 			<key>hash2</key>
 			<data>
-			usQq0M3/bC/mGffCReWLOvYkkInuhiEWu97DM+EGw8E=
+			yR1E2/lVo6cDwtHRjBrdeX6APeJ39ReBA2QvbT9yWV0=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SpaceKit.framework/Modules/SpaceKit.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -1380,11 +1380,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			XNExCFbPGikHElu8kAQzc/ZKzkQ=
+			NkByG0AtRyHdAGFVhlCMjA37O9g=
 			</data>
 			<key>hash2</key>
 			<data>
-			usQq0M3/bC/mGffCReWLOvYkkInuhiEWu97DM+EGw8E=
+			yR1E2/lVo6cDwtHRjBrdeX6APeJ39ReBA2QvbT9yWV0=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SpaceKit.framework/Modules/SpaceKit.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -1435,44 +1435,44 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Z0Uv7JZUoV6HBYB44Hgf/PYGRq4=
+			NJUre3qug9GLS/scNJTdsxIy3JQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			I4Wo1lWrFjbwMewWtAJCxNZGS7MiCVE7KZGGX6NxhOs=
+			/V8CixlwAlj3XnFt0UqU1mLcolCVLxQsSsX/98EZ1yw=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SpaceKit.framework/SpaceKitPackage_HyperMap.bundle/Assets.car</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			1PjayccpdgJ95QwS60gMDPaic8A=
+			dyOhqyyvPBg44u9M3fctOV9ZepQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			keAGHReQWpkMNGR75NCWOwPuOf1q0ksKxO/inW7GtKQ=
+			+jHaL7g++D4sabJ/HeiTYFNolsYhAuVao+RTkoApoSM=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SpaceKit.framework/SpaceKitPackage_HyperMap.bundle/Info.plist</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ykybLmDJEaqn3yUSjKkWfycuTcU=
+			8PU2jcU3h7kwX+195EGmoV8yamM=
 			</data>
 			<key>hash2</key>
 			<data>
-			FaJvvB/umPViSeLP2drtSvPPaBEVmpyb/ZzTfVMDF1Q=
+			CTB4oYH2s8M6LD3nslvawyjphDT4yzAcb/Ia5FCQDlQ=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SpaceKit.framework/SpaceKitPackage_HyperMap.bundle/_CodeSignature/CodeDirectory</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			PZz9/rR6nuu0/EcWDr6NskFPclY=
+			SVXJKTZGOTNV04yy5tWku2CAwY8=
 			</data>
 			<key>hash2</key>
 			<data>
-			Pe9SJl5AdUAvDevx0mUCkilfxgIK6U2SSs553AFeuoc=
+			9BJ+TSXsIB+X26MQltRHYiVQun8gHNJQTe14lW/2SGs=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SpaceKit.framework/SpaceKitPackage_HyperMap.bundle/_CodeSignature/CodeRequirements</key>
@@ -1490,22 +1490,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			w7XTd15oXOOxR01YfhMUcACUW2g=
+			m65TM4FQyKjEAgqmLNsoS2lvkO4=
 			</data>
 			<key>hash2</key>
 			<data>
-			VpqOPz8CMK6S7aMmwQyCrz/GjksqzaCOpwFu0KmdyYM=
+			FGEJeXYHzDra1fSnpGPtcLweKrSv/L1vccHTcMn4rD0=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SpaceKit.framework/SpaceKitPackage_HyperMap.bundle/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			s1Okg1tC/5hIUP2ffHDfx4y9194=
+			WA0JkhRzxCY3nrnaKZLZSsRYApQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			cW1KriUSgerVI0EushSjXarGQiZTiEvsGmyeuc/ptqM=
+			mWwJzo5v3E4ThE005X3V7qZ98Lc2pQ04fNmEYE1f+GU=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SpaceKit.framework/SpaceKitPackage_HyperMap.bundle/_CodeSignature/CodeSignature</key>
@@ -1523,22 +1523,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			kkZzJkpPHe+0hR1m24dH6lDrewE=
+			uRuumRN/5iJRvmMGhcp7pX6X7H8=
 			</data>
 			<key>hash2</key>
 			<data>
-			cIhiZ98W0anxg4UaD7Soa2faq+FIIN/5Xe4vQnegiFk=
+			UkwShapCfdG+ePF8LsSMdIrmPoBThW/IsXjV9HmR0xM=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SpaceKit.framework/SpaceKitPackage_SpaceKitFoundation.bundle/_CodeSignature/CodeDirectory</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			OOTvBcu4ji0oZ7YE81fSE9mCdyM=
+			g3C+GY0VROTpxiTQZ0HxmHxhdVY=
 			</data>
 			<key>hash2</key>
 			<data>
-			zmMBTCA7bDfFJsWfwWWWEpZ/opSvlQaEIhJ12qN6+24=
+			/KXSentNbUYe5+WO3LIcRVKaObegWYlFbP/Eo7fGC9U=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SpaceKit.framework/SpaceKitPackage_SpaceKitFoundation.bundle/_CodeSignature/CodeRequirements</key>
@@ -1556,11 +1556,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			iyLuAZhDnTsCyIYmENo9xk9+NKY=
+			/OBGwY/GopkQUi1maIPC0arbEYg=
 			</data>
 			<key>hash2</key>
 			<data>
-			n/CEBnDsI5/sHYLSpXALk89qgpO02F4V3rO6xX2VXGg=
+			JSQrfI3xqIVxMSJm2ccDmcS9VxHDDc7eVCqaeOxUZng=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SpaceKit.framework/SpaceKitPackage_SpaceKitFoundation.bundle/_CodeSignature/CodeResources</key>
@@ -1719,22 +1719,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			j09G6S+ntrfGVbyo53eYb+Oos4w=
+			gK8yMvJrmZt16XHKxUQBbD3ZvIM=
 			</data>
 			<key>hash2</key>
 			<data>
-			LpDeYd8fcuDAuYPfze4kXLz1rTqyXQdUdCY5vI2KhOQ=
+			/VoUdWvfwjnhfkezgGyEJlbt2HnHk/+EWICx6iSsANQ=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SpaceKit.framework/SpaceKitPackage_SpaceKitLocationAnalysis.bundle/_CodeSignature/CodeDirectory</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			1vgU27G/lgJD3dcOhuEga9MojI0=
+			HktVRqDq29xBLmxkIyL5gm/dGKw=
 			</data>
 			<key>hash2</key>
 			<data>
-			0uCA6hl8lPzk/179Uj8u+yHRjApBs6lJagcbyfrHSpY=
+			MdIGB7b0HU2Gce8iLBPF3JWDy3atPql4cT8E0DPWLjg=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SpaceKit.framework/SpaceKitPackage_SpaceKitLocationAnalysis.bundle/_CodeSignature/CodeRequirements</key>
@@ -1752,11 +1752,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			oiPYBxBsZnv1VLbmPa7OS5jRb7E=
+			RbXS8P1TTAKPwKSlx/5V07HXKkI=
 			</data>
 			<key>hash2</key>
 			<data>
-			63Jd7lzkW0H8vVyOZOd1UHqb7QWPJvpPcSTrXxOJQpo=
+			hglktyar9VC2xtcYz/OATLzm00m1/WLN8d1QSUXM2wI=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SpaceKit.framework/SpaceKitPackage_SpaceKitLocationAnalysis.bundle/_CodeSignature/CodeResources</key>
