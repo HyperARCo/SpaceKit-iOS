@@ -14843,23 +14843,30 @@
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/Public\/SpaceKitViewControllerFactory.swift",
       "kind": "StringLiteral",
-      "offset": 10531,
+      "offset": 10489,
+      "length": 9,
+      "value": "\"#007FEB\""
+    },
+    {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/Public\/SpaceKitViewControllerFactory.swift",
+      "kind": "StringLiteral",
+      "offset": 10551,
+      "length": 9,
+      "value": "\"#D0D6DA\""
+    },
+    {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/Public\/SpaceKitViewControllerFactory.swift",
+      "kind": "StringLiteral",
+      "offset": 10694,
       "length": 9,
       "value": "\"#9FB493\""
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/Public\/SpaceKitViewControllerFactory.swift",
       "kind": "StringLiteral",
-      "offset": 10593,
+      "offset": 10756,
       "length": 9,
       "value": "\"#5397F8\""
-    },
-    {
-      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/Public\/SpaceKitViewControllerFactory.swift",
-      "kind": "StringLiteral",
-      "offset": 11412,
-      "length": 9,
-      "value": "\"#F8F9FA\""
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/MapViewAsset+SVG.swift",
@@ -16739,43 +16746,50 @@
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/SpaceKitViewModelFactory.swift",
+      "kind": "Array",
+      "offset": 4101,
+      "length": 22,
+      "value": "[\"\", \"sections\/icons\"]"
+    },
+    {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/SpaceKitViewModelFactory.swift",
       "kind": "BooleanLiteral",
-      "offset": 6094,
+      "offset": 6066,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/SpaceKitViewModelFactory.swift",
       "kind": "BooleanLiteral",
-      "offset": 7279,
+      "offset": 7251,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/SpaceKitViewModelFactory.swift",
       "kind": "BooleanLiteral",
-      "offset": 8167,
+      "offset": 8139,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/SpaceKitViewModelFactory.swift",
       "kind": "BooleanLiteral",
-      "offset": 8529,
+      "offset": 8501,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/SpaceKitViewModelFactory.swift",
       "kind": "BooleanLiteral",
-      "offset": 12195,
+      "offset": 12167,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/SpaceKitViewController\/SpaceKitViewModelFactory.swift",
       "kind": "BooleanLiteral",
-      "offset": 12221,
+      "offset": 12193,
       "length": 5,
       "value": "false"
     },
@@ -21331,113 +21345,120 @@
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/Public\/StaticMapViewControllerFactory.swift",
+      "kind": "Array",
+      "offset": 4680,
+      "length": 22,
+      "value": "[\"\", \"sections\/icons\"]"
+    },
+    {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/Public\/StaticMapViewControllerFactory.swift",
       "kind": "BooleanLiteral",
-      "offset": 6678,
+      "offset": 6650,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/Public\/StaticMapViewControllerFactory.swift",
       "kind": "StringLiteral",
-      "offset": 7463,
+      "offset": 7435,
       "length": 39,
       "value": "\"init(coder:) has not been implemented\""
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/Public\/StaticMapViewControllerFactory.swift",
       "kind": "BooleanLiteral",
-      "offset": 7599,
+      "offset": 7571,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/Public\/StaticMapViewControllerFactory.swift",
       "kind": "IntegerLiteral",
-      "offset": 7645,
+      "offset": 7617,
       "length": 1,
       "value": "8"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/Public\/StaticMapViewControllerFactory.swift",
       "kind": "IntegerLiteral",
-      "offset": 7685,
+      "offset": 7657,
       "length": 1,
       "value": "8"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/Public\/StaticMapViewControllerFactory.swift",
       "kind": "StringLiteral",
-      "offset": 7838,
+      "offset": 7810,
       "length": 21,
       "value": "\"recenter_map_button\""
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/Public\/StaticMapViewControllerFactory.swift",
       "kind": "IntegerLiteral",
-      "offset": 8106,
+      "offset": 8078,
       "length": 1,
       "value": "8"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/Public\/StaticMapViewControllerFactory.swift",
       "kind": "StringLiteral",
-      "offset": 6748,
+      "offset": 6720,
       "length": 23,
       "value": "\"SpaceKit.StaticMapViewController\""
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/Public\/StaticMapViewControllerFactory.swift",
       "kind": "BooleanLiteral",
-      "offset": 9219,
+      "offset": 9191,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/Public\/StaticMapViewControllerFactory.swift",
       "kind": "BooleanLiteral",
-      "offset": 9414,
+      "offset": 9386,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/Public\/StaticMapViewControllerFactory.swift",
       "kind": "BooleanLiteral",
-      "offset": 10728,
+      "offset": 10700,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/Public\/StaticMapViewControllerFactory.swift",
       "kind": "IntegerLiteral",
-      "offset": 10745,
+      "offset": 10717,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/Public\/StaticMapViewControllerFactory.swift",
       "kind": "Array",
-      "offset": 11196,
+      "offset": 11168,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/Public\/StaticMapViewControllerFactory.swift",
       "kind": "Array",
-      "offset": 11217,
+      "offset": 11189,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/Public\/StaticMapViewControllerFactory.swift",
       "kind": "Array",
-      "offset": 11325,
+      "offset": 11297,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/iOS-Hyper\/iOS-Hyper\/SpaceKit\/SpaceKit\/Public\/StaticMapViewControllerFactory.swift",
       "kind": "Array",
-      "offset": 11541,
+      "offset": 11513,
       "length": 2,
       "value": "[]"
     },
