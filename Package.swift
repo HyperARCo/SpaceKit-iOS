@@ -1,4 +1,4 @@
-// swift-tools-version: 5.7
+// swift-tools-version: 5.5
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
@@ -15,7 +15,7 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/GEOSwift/geos.git", from: "7.0.0"),
-        .package(url: "https://github.com/airbnb/lottie-spm.git", exact: "4.3.3")
+        .package(url: "https://github.com/airbnb/lottie-spm.git", from: "4.3.3")
     ],
     targets: [
         .target(name: "SpaceKitSDK", dependencies: [
