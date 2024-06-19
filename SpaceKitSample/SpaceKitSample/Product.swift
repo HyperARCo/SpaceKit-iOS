@@ -5,7 +5,7 @@
 struct Product: Decodable {
 	let itemCode: String
 	let name: String
-	let icon: String
+	let icon: String?
 }
 
 extension Product: Comparable {

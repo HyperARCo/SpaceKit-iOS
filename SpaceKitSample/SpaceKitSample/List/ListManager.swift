@@ -43,7 +43,8 @@ class ListManager {
 	private func destinations(for identifiers: [String]) -> [SpaceKitDestination] {
 		identifiers.compactMap { identifier in
 			guard let product = product(with: identifier) else { return nil }
-			return SpaceKitDestination(identifier: identifier, displayName: product.name, icon: UIImage(named: product.icon))
+			let icon: UIImage? = if let icon = product.icon { UIImage(named: icon) } else { nil }
+			return SpaceKitDestination(identifier: identifier, displayName: product.name, icon: icon)
 		}
 	}
 	

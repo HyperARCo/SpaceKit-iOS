@@ -1,4 +1,5 @@
 {
 	"enableTeleport": true,
 	"enableLevelSwitcher": true,
+	"remoteAssets": true,
 }
