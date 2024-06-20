@@ -9,6 +9,6 @@ xcodebuild -project SpaceKitSample.xcodeproj  \
     -testPlan SpaceKitSampleTestPlan \
     -destination platform=iOS\ Simulator,OS=17.4,name=iPhone\ 15\ Pro \
     clean test \
-    | xcpretty
+    | xcbeautify --renderer github-actions
 
 cd ..
