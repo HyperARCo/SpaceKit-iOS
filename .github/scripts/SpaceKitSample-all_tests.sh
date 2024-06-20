@@ -7,7 +7,7 @@ cd SpaceKitSample
 xcodebuild -project SpaceKitSample.xcodeproj  \
     -scheme SpaceKitSample \
     -testPlan SpaceKitSampleTestPlan \
-    -destination platform=iOS\ Simulator,OS=16.2,name=iPhone\ 14\ Pro \
+    -destination platform=iOS\ Simulator,OS=17.4,name=iPhone\ 15\ Pro \
     clean test \
     | xcpretty
 
