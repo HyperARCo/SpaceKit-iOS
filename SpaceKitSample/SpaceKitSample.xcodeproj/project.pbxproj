@@ -7,12 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3BB89EE75BF9A70A4E32CFCB /* SpaceKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6C63BCF74C6BA5D0F90C83B6 /* SpaceKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		4638895AB35ADCCB02DB6944 /* SpaceKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C63BCF74C6BA5D0F90C83B6 /* SpaceKit.xcframework */; };
 		654A10972AD5AAB6006382FF /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 654A10962AD5AAB6006382FF /* Lottie */; };
 		654A24592B0F868A005ECD53 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 654A245B2B0F868A005ECD53 /* Localizable.strings */; };
 		832140A2297022A800439155 /* AppIcon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 832140A129701F9300439155 /* AppIcon.xcassets */; };
 		8332B954299BF0D500384CB7 /* spacekitconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 8332B953299BF0D500384CB7 /* spacekitconfiguration.json */; };
+		A240E232E4ACA97AA77E3944 /* SpaceKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9262101FE628D2D278A186F3 /* SpaceKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C2A34AA7290FF74D00F69B1D /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A34AA6290FF74D00F69B1D /* SettingsView.swift */; };
 		C2AE8385290C21F700E8D8E2 /* SettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AE8384290C21F700E8D8E2 /* SettingsCoordinator.swift */; };
 		C2BAE66029114AAD00D57437 /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BAE65F29114AAD00D57437 /* SettingsManager.swift */; };
@@ -32,6 +31,7 @@
 		C4EC318F285A09B500DFBD8A /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EC318E285A09B500DFBD8A /* RootViewController.swift */; };
 		C4EC3192285A217400DFBD8A /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EC3191285A217400DFBD8A /* ListCell.swift */; };
 		C4FEB7D2286B0D4B009B29CE /* ListManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FEB7D1286B0D4B009B29CE /* ListManager.swift */; };
+		DF007887A0EB75E8B8956D62 /* SpaceKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9262101FE628D2D278A186F3 /* SpaceKit.xcframework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,7 +59,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				C46C6AD92851FD7500C5038F /* geos in Embed Frameworks */,
-				3BB89EE75BF9A70A4E32CFCB /* SpaceKit.xcframework in Embed Frameworks */,
+				A240E232E4ACA97AA77E3944 /* SpaceKit.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -77,9 +77,9 @@
 		654A24622B0F8695005ECD53 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		654A24632B0F8696005ECD53 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		654A24642B0F8697005ECD53 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
-		6C63BCF74C6BA5D0F90C83B6 /* SpaceKit.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = SpaceKit.xcframework; path = ../SpaceKit.xcframework; sourceTree = "<group>"; };
 		832140A129701F9300439155 /* AppIcon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AppIcon.xcassets; sourceTree = "<group>"; };
 		8332B953299BF0D500384CB7 /* spacekitconfiguration.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = spacekitconfiguration.json; sourceTree = "<group>"; };
+		9262101FE628D2D278A186F3 /* SpaceKit.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = SpaceKit.xcframework; path = ../SpaceKit.xcframework; sourceTree = "<group>"; };
 		C2A34AA6290FF74D00F69B1D /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		C2AE8384290C21F700E8D8E2 /* SettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinator.swift; sourceTree = "<group>"; };
 		C2BAE65F29114AAD00D57437 /* SettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
@@ -111,7 +111,7 @@
 			files = (
 				C46C6AD82851FD5800C5038F /* geos in Frameworks */,
 				654A10972AD5AAB6006382FF /* Lottie in Frameworks */,
-				4638895AB35ADCCB02DB6944 /* SpaceKit.xcframework in Frameworks */,
+				DF007887A0EB75E8B8956D62 /* SpaceKit.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,7 +205,7 @@
 		C4E3775128042E4A00886C88 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6C63BCF74C6BA5D0F90C83B6 /* SpaceKit.xcframework */,
+				9262101FE628D2D278A186F3 /* SpaceKit.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
