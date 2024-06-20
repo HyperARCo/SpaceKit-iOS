@@ -6,7 +6,11 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		pcNSCX5nv0TnE50FHv34E+VAbQM=
+		W5UohHZEc4fDqmMHp3w7Ut8Bt3M=
+		</data>
+		<key>Lottie/figure_tiltPhone.json</key>
+		<data>
+		DOoGYUfbcfhkclcvlIIEN0USsL0=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -15,11 +19,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			pcNSCX5nv0TnE50FHv34E+VAbQM=
+			W5UohHZEc4fDqmMHp3w7Ut8Bt3M=
 			</data>
 			<key>hash2</key>
 			<data>
-			D26lQHqZcV3PeCwQkW+Qoxv6YVWG1EMpQrfO/BP9MOI=
+			rCUdj3nIXGNXdIlaMGpig2IenHolKjn3F/CEK/fW8uU=
+			</data>
+		</dict>
+		<key>Lottie/figure_tiltPhone.json</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			DOoGYUfbcfhkclcvlIIEN0USsL0=
+			</data>
+			<key>hash2</key>
+			<data>
+			ptSU1jX0smjBIEf8tHy/BMgCqXXQ0YCu0wLjF8MyRM4=
 			</data>
 		</dict>
 	</dict>

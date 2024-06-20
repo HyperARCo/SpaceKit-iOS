@@ -32,7 +32,7 @@ struct ListItem: Hashable {
 	
 	let identifier: String
 	let name: String
-	let iconName: String
+	let iconName: String?
 	var accessory: Accessory
 }
 
@@ -50,7 +50,11 @@ class ListCell: UITableViewCell {
 	
 	func configure(with item: ListItem) {
 		textLabel?.text = item.name
-		imageView?.image = UIImage(named: item.iconName)
+		if let iconName = item.iconName {
+			imageView?.image = UIImage(named: iconName)
+		} else {
+			imageView?.image = nil
+		}
 		accessoryImageView.image = item.accessory.image
 		accessoryImageView.tintColor = item.accessory.tintColor
 	}

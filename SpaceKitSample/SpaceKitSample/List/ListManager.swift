@@ -26,6 +26,7 @@ class ListManager {
 	func removeListItem(at index: Int) {
 		listItems.remove(at: index)
 		updateListView?()
+		updateProductItems()
 		
 		let destinations = destinations(for: listItems)
 		spaceKitContext?.setDestinations(destinations)
@@ -33,17 +34,18 @@ class ListManager {
 	
 	func addProduct(at index: Int) {
 		let productItem = productItems.remove(at: index)
+		listItems.append(productItem)
 		updateListView?()
 
-		let newListItems = listItems + [productItem]
-		let destinations = destinations(for: newListItems)
+		let destinations = destinations(for: listItems)
 		spaceKitContext?.setDestinations(destinations)
 	}
 	
 	private func destinations(for identifiers: [String]) -> [SpaceKitDestination] {
 		identifiers.compactMap { identifier in
 			guard let product = product(with: identifier) else { return nil }
-			return SpaceKitDestination(identifier: identifier, displayName: product.name, icon: UIImage(named: product.icon))
+			let icon: UIImage? = if let icon = product.icon { UIImage(named: icon) } else { nil }
+			return SpaceKitDestination(identifier: identifier, displayName: product.name, icon: icon)
 		}
 	}
 	
@@ -59,11 +61,19 @@ class ListManager {
 
 extension ListManager: SpaceKit.SpaceKitListDelegate {
 	func spaceKitContext(
-		_ context: SpaceKit.Context,
+		_ context: any Context,
 		didUpdateOrderedDestinations orderedDestinations: [SpaceKitDestination],
-		with levelTransitions: [[SpaceKit.LevelTransition]])
-	{
-		self.listItems = orderedDestinations.map(\.identifier)
+		withLevelTransitions levelTransitions: [[LevelTransition]],
+		failures: [RoutingFailure]
+	) {
+		let unorderedItems = failures.compactMap {
+			if case .couldNotRouteToDestination(let identifier) = $0 {
+				return identifier
+			}
+			return nil
+		}
+		
+		self.listItems = orderedDestinations.map(\.identifier) + unorderedItems
 		updateProductItems()
 		updateListView?()
 	}

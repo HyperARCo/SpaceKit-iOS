@@ -16,7 +16,9 @@ import SpaceKit
 
 	private var settingsManager: SettingsManager?
 	private var settingsCoordinator: SettingsCoordinator?
-
+	
+	private let demoAPIKey: String = "_INSERT_API_KEY_HERE_"
+	
 	private var products: [Product] = []
 
 	private let locationManager = CLLocationManager()
@@ -35,8 +37,7 @@ import SpaceKit
 				withExtension: "json",
 				subdirectory: "CustomResources"),
 			let productsData = try? Data(contentsOf: productsURL),
-			let products = try? JSONDecoder().decode([Product].self, from: productsData),
-			let hmdfURL = Bundle.main.urls(forResourcesWithExtension: "zip", subdirectory: "HMDF")?.first else
+			let products = try? JSONDecoder().decode([Product].self, from: productsData) else
 		{
 			return
 		}
@@ -48,21 +49,35 @@ import SpaceKit
 		self.settingsManager = settingsManager
 
 		self.products = products
-
-		let venue = SpaceKitVenue(from: hmdfURL)
-		let configuration = Bundle.main.url(forResource: "spacekitconfiguration", withExtension: "json")
-
+		
+		let organizationIdentifier: String = "_INSERT_ORGANISATION_ID_HERE_"
+		let venueIdentifier: String = "_INSERT_VENUE_ID_HERE_"
+		
 		Task.detached {
 			do {
-				let context = try await SpaceKitContextFactory(
-					venue: venue,
-					configurationFileURL: configuration).make()
-				await self.setSpaceKitViewController(context: context)
+				try await self.loadVenue(in: organizationIdentifier, with: venueIdentifier)
 			} catch {
-				fatalError(error.localizedDescription)
+				print(error.localizedDescription)
 			}
-
 		}
+	}
+	
+	private nonisolated func loadVenue(in organizationIdentifier: String, with venueIdentifier: String) async throws {
+		let managerConfig = VenueManagerConfiguration(
+			organizationIdentifier: organizationIdentifier,
+			apiKey: demoAPIKey
+		)
+		
+		let venueManager = VenueManagerFactory(configuration: managerConfig).make()
+		let venue = try await venueManager.fetchVenue(forVenueWithIdentifier: venueIdentifier)
+		
+		let configurationURL = Bundle.main.url(forResource: "spacekitconfiguration", withExtension: "json")
+		let context = try await SpaceKitContextFactory(
+			venue: venue,
+			configurationFileURL: configurationURL
+		).make()
+		
+		await setSpaceKitViewController(context: context)
 	}
 
 	private func setSpaceKitViewController(context: Context) {
