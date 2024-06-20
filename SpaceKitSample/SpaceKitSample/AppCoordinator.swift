@@ -57,7 +57,7 @@ import SpaceKit
 			do {
 				try await self.loadVenue(in: organizationIdentifier, with: venueIdentifier)
 			} catch {
-				fatalError(error.localizedDescription)
+				print(error.localizedDescription)
 			}
 		}
 	}
