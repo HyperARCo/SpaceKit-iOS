@@ -3,7 +3,7 @@
 set -eo pipefail
 
 PLISTBUDDY=/usr/libexec/plistbuddy
-PLIST=./SpaceKit.xcframework/ios-arm64/dSYMs/SpaceKit.framework.dSYM/Contents/Info.plist
+PLIST=./SpaceKit.xcframework/ios-arm64/SpaceKit.framework/Info.plist
 
 BUILDNUMBER=$($PLISTBUDDY -c "Print CFBundleVersion" $PLIST)
 BUILDSTRING='0.0.'$BUILDNUMBER
