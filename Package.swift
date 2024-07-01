@@ -15,7 +15,7 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/GEOSwift/geos.git", from: "8.1.0"),
-        .package(url: "https://github.com/airbnb/lottie-spm.git", exact: "4.3.3"),
+        .package(url: "https://github.com/airbnb/lottie-spm.git", exact: "4.4.3"),
     ],
     targets: [
         .target(name: "SpaceKitSDK", dependencies: [
