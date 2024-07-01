@@ -46,7 +46,7 @@
 		</data>
 		<key>ios-arm64/SpaceKit.framework/Info.plist</key>
 		<data>
-		NpiwEY/JfjHrYwoRig0n1aAhClg=
+		E+0tGHPy1Jrbxk+FDJa7XdRyqSo=
 		</data>
 		<key>ios-arm64/SpaceKit.framework/MaloryAR_MaloryAR.bundle/Arrow.usdz</key>
 		<data>
@@ -94,7 +94,7 @@
 		</data>
 		<key>ios-arm64/SpaceKit.framework/SpaceKit</key>
 		<data>
-		KfjnzIDPUb/aXVOalylIT1b6kMw=
+		HqUYFClzNNhMWaw7wgoZv4Q++W8=
 		</data>
 		<key>ios-arm64/SpaceKit.framework/SpaceKitPackage_HyperMap.bundle/Assets.car</key>
 		<data>
@@ -535,7 +535,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/SpaceKit.framework/Info.plist</key>
 		<data>
-		9idB4ke1Oz+d6eZV5Ftd8Au7YKQ=
+		Snyuz6IW8LJg8r9NAAH12ZnY+iU=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SpaceKit.framework/MaloryAR_MaloryAR.bundle/Arrow.usdz</key>
 		<data>
@@ -639,7 +639,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/SpaceKit.framework/SpaceKit</key>
 		<data>
-		lV8jbIWw+XRDJ3RTo9Z/5BhSyvQ=
+		/ZcH1L74EUGf8IUHztXRw1+FQMk=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SpaceKit.framework/SpaceKitPackage_HyperMap.bundle/Assets.car</key>
 		<data>
@@ -1195,11 +1195,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			NpiwEY/JfjHrYwoRig0n1aAhClg=
+			E+0tGHPy1Jrbxk+FDJa7XdRyqSo=
 			</data>
 			<key>hash2</key>
 			<data>
-			5RGrkjyPQQyqCgdMHCHsi3dkDcKr7tjlTTURbiNGGCI=
+			rpPtzP47fPJdcsqmgo/wL1BI7A9i75efCztnA5hAniU=
 			</data>
 		</dict>
 		<key>ios-arm64/SpaceKit.framework/MaloryAR_MaloryAR.bundle/Arrow.usdz</key>
@@ -1327,11 +1327,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			KfjnzIDPUb/aXVOalylIT1b6kMw=
+			HqUYFClzNNhMWaw7wgoZv4Q++W8=
 			</data>
 			<key>hash2</key>
 			<data>
-			neSoAojfqSG9rPYOwPOaj9aZOwC1TaZS71ZrYXPZ4xs=
+			/YJ0GUCiQBWi+5xRYVD3RirbQbfpLc19HA/wWfW403Y=
 			</data>
 		</dict>
 		<key>ios-arm64/SpaceKit.framework/SpaceKitPackage_HyperMap.bundle/Assets.car</key>
@@ -2105,11 +2105,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			9idB4ke1Oz+d6eZV5Ftd8Au7YKQ=
+			Snyuz6IW8LJg8r9NAAH12ZnY+iU=
 			</data>
 			<key>hash2</key>
 			<data>
-			uBE1qsNd17PoHXqNTK8SLHIHFFcNGZ8ehWYW2bwVd0w=
+			ghiL76r60GG+HOwwcFQs/hI+wBiyEcB9JPakOzoTJfI=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SpaceKit.framework/MaloryAR_MaloryAR.bundle/Arrow.usdz</key>
@@ -2391,11 +2391,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			lV8jbIWw+XRDJ3RTo9Z/5BhSyvQ=
+			/ZcH1L74EUGf8IUHztXRw1+FQMk=
 			</data>
 			<key>hash2</key>
 			<data>
-			r+RKd8JO6j4jgdiKQzcsSpWEkwQId+mh0lWMN69rqSY=
+			Xh4CrJqbPGlyRia0IvbZhw8i8Eigbqxu2bau8XfQrIw=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SpaceKit.framework/SpaceKitPackage_HyperMap.bundle/Assets.car</key>
