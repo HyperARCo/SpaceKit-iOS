@@ -46,7 +46,7 @@
 		</data>
 		<key>ios-arm64/SpaceKit.framework/Info.plist</key>
 		<data>
-		E+0tGHPy1Jrbxk+FDJa7XdRyqSo=
+		bb3dae9LQ+J3skN/UCvcMg+qW34=
 		</data>
 		<key>ios-arm64/SpaceKit.framework/MaloryAR_MaloryAR.bundle/Arrow.usdz</key>
 		<data>
@@ -535,7 +535,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/SpaceKit.framework/Info.plist</key>
 		<data>
-		Snyuz6IW8LJg8r9NAAH12ZnY+iU=
+		+aSZ5zN10TqpRJtVf9MMWaooia0=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SpaceKit.framework/MaloryAR_MaloryAR.bundle/Arrow.usdz</key>
 		<data>
@@ -1195,11 +1195,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			E+0tGHPy1Jrbxk+FDJa7XdRyqSo=
+			bb3dae9LQ+J3skN/UCvcMg+qW34=
 			</data>
 			<key>hash2</key>
 			<data>
-			rpPtzP47fPJdcsqmgo/wL1BI7A9i75efCztnA5hAniU=
+			VOSNKuZ9xRxqTJXQEI2pOWpoH8Ab5Ai14x/GaMlKgxc=
 			</data>
 		</dict>
 		<key>ios-arm64/SpaceKit.framework/MaloryAR_MaloryAR.bundle/Arrow.usdz</key>
@@ -2105,11 +2105,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Snyuz6IW8LJg8r9NAAH12ZnY+iU=
+			+aSZ5zN10TqpRJtVf9MMWaooia0=
 			</data>
 			<key>hash2</key>
 			<data>
-			ghiL76r60GG+HOwwcFQs/hI+wBiyEcB9JPakOzoTJfI=
+			Tg/Wc3gA82Vs0sgJIK3g9me0h2MRdiRVdToNPnC81CY=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SpaceKit.framework/MaloryAR_MaloryAR.bundle/Arrow.usdz</key>
