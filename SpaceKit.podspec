@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
     spec.name               = "SpaceKit"
-    spec.version            = "0.0.10170"
+    spec.version            = "0.0.10174"
     spec.summary            = "SpaceKit iOS"
     spec.description        = "SpaceKit SDK for iOS"
     spec.homepage           = "https://www.hyperar.com"
@@ -18,5 +18,5 @@ Pod::Spec.new do |spec|
 
     # Dependencies
     spec.dependency 'geos', '~> 7.0.0'
-    spec.dependency 'lottie-ios', '~> 4.3.3'
+    spec.dependency 'lottie-ios', '4.4.3'
   end
